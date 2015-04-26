@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
+     <Compile Include="Assets\Scripts\Constants.cs" />
      <Compile Include="Assets\Scripts\Engine\CollisionGroupComparer.cs" />
      <Compile Include="Assets\Scripts\Engine\GameConstants.cs" />
      <Compile Include="Assets\Scripts\Engine\GameGroupCollisionDetector.cs" />
@@ -74,6 +76,7 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\JewelMaterial.cs" />
      <Compile Include="Assets\Scripts\JewelTag.cs" />
+     <Compile Include="Assets\Scripts\SoundEffects.cs" />
      <Compile Include="Assets\Scripts\SwipeInput.cs" />
      <Compile Include="Assets\Scripts\ViewController.cs" />
  <Reference Include="UnityEngine.UI">

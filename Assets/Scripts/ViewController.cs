@@ -14,6 +14,7 @@ public class ViewController : IGameView
 	private Dictionary<JewelType, GameObject> jewelTypeDictionary = null;
 	private IGameStateProvider stateProvider = null;
 	private Material collisionGroupFlashMaterial = null;
+	private SoundEffects soundEffects = null;
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ViewController"/> class.
@@ -27,6 +28,7 @@ public class ViewController : IGameView
 		stateProvider = provider;
 		BuildJewelTypeDictionary (jewelPrefabs);
 		collisionGroupFlashMaterial = collisionMaterial;
+		soundEffects = GameObject.FindObjectOfType<SoundEffects>();
 		AddInitialJewelsToView ();
 	}
 
@@ -85,6 +87,10 @@ public class ViewController : IGameView
 			}
 		}
 		UpdateGroupCollisions ();
+		if(logicUpdate.FinalisedCollisions.Count > 0) soundEffects.PlayCollision();
+		if(logicUpdate.DeltaStationary) soundEffects.PlayStationary();
+		if(logicUpdate.DeltaJewelsSwapped) soundEffects.PlaySwap();
+		if(logicUpdate.LevelIncremented) soundEffects.PlayLevelUp();
 	}
 
 	/// <summary>

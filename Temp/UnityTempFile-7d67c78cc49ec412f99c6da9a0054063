@@ -55,6 +55,8 @@
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
+'Assets/Scripts/BackgroundMusic.cs'
+'Assets/Scripts/Constants.cs'
 'Assets/Scripts/Engine/CollisionGroupComparer.cs'
 'Assets/Scripts/Engine/GameConstants.cs'
 'Assets/Scripts/Engine/GameGroupCollisionDetector.cs'
@@ -81,7 +83,9 @@
 'Assets/Scripts/Engine/Models/SavedGameState.cs'
 'Assets/Scripts/GameController.cs'
 'Assets/Scripts/GameManager.cs'
+'Assets/Scripts/JewelMaterial.cs'
 'Assets/Scripts/JewelTag.cs'
+'Assets/Scripts/SoundEffects.cs'
 'Assets/Scripts/SwipeInput.cs'
 'Assets/Scripts/ViewController.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
