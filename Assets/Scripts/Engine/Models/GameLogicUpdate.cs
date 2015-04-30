@@ -120,6 +120,12 @@ namespace JewelMine.Engine.Models
         /// </value>
         public bool GameOver { get; set; }
 
+		/// <summary>
+		/// Gets or sets a value indicating whether this <see cref="JewelMine.Engine.Models.GameLogicUpdate"/> difficulty changed.
+		/// </summary>
+		/// <value><c>true</c> if difficulty changed; otherwise, <c>false</c>.</value>
+		public bool DifficultyChanged {get; set;}
+
         /// <summary>
         /// Gets or sets the messages.
         /// </summary>

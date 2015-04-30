@@ -73,12 +73,12 @@
      <Compile Include="Assets\Scripts\Engine\Models\MineObject.cs" />
      <Compile Include="Assets\Scripts\Engine\Models\SavedGameState.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\JewelMaterial.cs" />
      <Compile Include="Assets\Scripts\JewelTag.cs" />
      <Compile Include="Assets\Scripts\SoundEffects.cs" />
      <Compile Include="Assets\Scripts\SwipeInput.cs" />
      <Compile Include="Assets\Scripts\ViewController.cs" />
+     <Compile Include="Assets\Scripts\ViewControllerContext.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -37,7 +37,6 @@ public class SoundEffects : MonoBehaviour {
 	{
 		audioPlayer.clip = audioClipTypeDictionary[AudioClipType.Collision];
 		audioPlayer.Play();
-		audioPlayer.clip = null;
 	}
 
 	/// <summary>
@@ -47,7 +46,6 @@ public class SoundEffects : MonoBehaviour {
 	{
 		audioPlayer.clip = audioClipTypeDictionary[AudioClipType.LevelUp];
 		audioPlayer.Play();
-		audioPlayer.clip = null;
 	}
 
 	/// <summary>
@@ -57,7 +55,6 @@ public class SoundEffects : MonoBehaviour {
 	{
 		audioPlayer.clip = audioClipTypeDictionary[AudioClipType.Stationary];
 		audioPlayer.Play();
-		audioPlayer.clip = null;
 	}
 
 	/// <summary>
@@ -67,7 +64,6 @@ public class SoundEffects : MonoBehaviour {
 	{
 		audioPlayer.clip = audioClipTypeDictionary[AudioClipType.Swap];
 		audioPlayer.Play();
-		audioPlayer.clip = null;
 	}
 	
 }

@@ -186,6 +186,7 @@ namespace JewelMine.Engine
 				logicUpdate.GameStarted = true;
 				state.PlayState = GamePlayState.Playing;
 				logicUpdate.Messages.Add (string.Format (GameConstants.GAME_MESSAGE_CHANGED_DIFFICULTY_PATTERN, nextLevel.ToString (), state.Difficulty.LastLevel));
+				logicUpdate.DifficultyChanged = true;
 			}
 		}
 

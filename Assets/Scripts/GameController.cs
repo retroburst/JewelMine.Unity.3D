@@ -6,6 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
+
+//TODO: save and load game - probably use Unity
+//TODO: key bindings - maybe look into using the Unity Axis setup
+//TODO: UI for game settings and persistence of game settings (including difficulty level)
+//TODO: game state text (win, loose, paused, etc)
+//TODO: explosion on final collision
+//TODO: game messages
+//TODO: clean, refactor
 
 namespace JewelMine
 {
@@ -23,6 +32,11 @@ namespace JewelMine
 		private double lastTickTime = 0.0f;
 		private SwipeInput swipeInput = null;
 		public Material collisionGroupMaterial = null;
+		public Text difficultyText = null;
+		public Text levelText = null;
+		public Text scoreText = null;
+		public Text gameStateText = null;
+		public Text gameStateSubtext = null;
 
 		/// <summary>
 		/// Start this instance.
@@ -35,12 +49,30 @@ namespace JewelMine
 			GameLogicUserSettings settings = new GameLogicUserSettings ();
 			//BuildGameLogicUserSettings(settings);
 			gameLogic = new GameLogic (settings);
-			view = new ViewController ((IGameStateProvider)gameLogic, jewelPrefabs, collisionGroupMaterial);
-			logicInput.GameStarted = true;
-			swipeInput = GetComponent<SwipeInput>();
+			view = new ViewController (BuildViewControllerContext ());
+			swipeInput = GetComponent<SwipeInput> ();
 			swipeInput.LeftSwipeDetected += HandleLeftSwipeDetected;
 			swipeInput.RightSwipeDetected += HandleRightSwipeDetected;
 			swipeInput.DownSwipeDetected += HandleDownSwipeDetected;
+
+		}
+
+		/// <summary>
+		/// Builds the view controller context.
+		/// </summary>
+		/// <returns>The view controller context.</returns>
+		private ViewControllerContext BuildViewControllerContext ()
+		{
+			ViewControllerContext result = new ViewControllerContext ();
+			result.Provider = (IGameStateProvider)gameLogic;
+			result.CollisionGroupMaterial = collisionGroupMaterial;
+			result.JewelPrefabs = jewelPrefabs;
+			result.DifficultyText = difficultyText;
+			result.ScoreText = scoreText;
+			result.LevelText = levelText;
+			result.GameStateText = gameStateText;
+			result.GameStateSubtext = gameStateSubtext;
+			return(result);
 		}
 
 		private void HandleDownSwipeDetected (float obj)
@@ -56,6 +88,7 @@ namespace JewelMine
 		private void HandleLeftSwipeDetected (float obj)
 		{
 			logicInput.DeltaMovement = MovementType.Left;
+
 		}
 
 //        /// <summary>
@@ -132,15 +165,25 @@ namespace JewelMine
 		public void Update ()
 		{
 			// get input from traditional controls
-			Nullable<MovementType> movementInput = GetDeltaMovementInput();
-			if(movementInput.HasValue) logicInput.DeltaMovement = movementInput.Value;
-			if(Input.GetKeyDown(KeyCode.Space)) logicInput.DeltaSwapJewels = true;
+			if (gameLogic.State.PlayState == GamePlayState.NotStarted || gameLogic.State.PlayState == GamePlayState.Paused) {
+				if (Input.GetButton ("Submit"))
+					logicInput.GameStarted = true;
 
-				//gameAudioSystem.PlayBackgroundMusicLoop();
-				if (Time.time >= lastTickTime) {
-					GameLogicUpdate logicUpdate = gameLogic.PerformGameLogic (logicInput);
-					view.UpdateView (logicUpdate);
-					//gameAudioSystem.PlaySounds(logicUpdate);
+			}
+			if (Input.GetKeyUp (KeyCode.Space))
+				logicInput.DeltaSwapJewels = true;
+			if (Input.GetKey (KeyCode.LeftControl) && Input.GetKeyUp (KeyCode.U))
+				logicInput.ChangeDifficulty = true;
+
+			//gameAudioSystem.PlayBackgroundMusicLoop();
+			if (Time.time >= lastTickTime) {
+				Nullable<MovementType> movementInput = GetDeltaMovementInput ();
+				if (movementInput.HasValue)
+					logicInput.DeltaMovement = movementInput.Value;
+
+				GameLogicUpdate logicUpdate = gameLogic.PerformGameLogic (logicInput);
+				view.UpdateView (logicUpdate);
+				//gameAudioSystem.PlaySounds(logicUpdate);
 
 				// this is an example of setting the material at runtime
 //				for(int x=0; x < gameLogic.State.Mine.Columns; x++)
@@ -153,25 +196,29 @@ namespace JewelMine
 //				}
 
 
-					// reset user input descriptors
-					logicInput.Clear ();
-					lastTickTime = Time.time + GameHelpers.ConvertMillisecondsToSeconds (gameLogic.State.Difficulty.TickSpeedMilliseconds);
+				// reset user input descriptors
+				logicInput.Clear ();
+				lastTickTime = Time.time + GameHelpers.ConvertMillisecondsToSeconds (gameLogic.State.Difficulty.TickSpeedMilliseconds);
 			}
+
 		}
 
 		/// <summary>
 		/// Gets the delta movement input.
 		/// </summary>
 		/// <returns>The delta movement input.</returns>
-		public Nullable<MovementType> GetDeltaMovementInput()
+		public Nullable<MovementType> GetDeltaMovementInput ()
 		{
 			Nullable<MovementType> result = null;
 			float moveHorizontal = Input.GetAxis ("Horizontal");
 			float moveVertical = Input.GetAxis ("Vertical");
 
-			if(moveHorizontal < 0) result = MovementType.Left;
-			if(moveHorizontal > 0) result = MovementType.Right;
-			if(moveVertical < 0) result = MovementType.Down;
+			if (moveHorizontal < 0)
+				result = MovementType.Left;
+			if (moveHorizontal > 0)
+				result = MovementType.Right;
+			if (moveVertical < 0)
+				result = MovementType.Down;
 
 			return(result);
 		}
