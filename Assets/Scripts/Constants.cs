@@ -19,6 +19,10 @@ public class Constants {
 	public const string GAME_START_SUBTEXT = "Press submit to continue...";
 
 	public const float GAME_MESSAGE_VISIBLE_TIME = 2.0f;
+
+	public const string GAME_USER_PREF_DIFFICULTY = "JewelMine.User.Difficulty";
+	public const string GAME_USER_PREF_SOUND_EFFECTS_MUTED = "JewelMine.User.SoundEffectsMuted";
+	public const string GAME_USER_PREF_BACKGROUND_MUSIC_MUTED = "JewelMine.User.MusicMuted";
 }
 
 public enum AudioClipType {

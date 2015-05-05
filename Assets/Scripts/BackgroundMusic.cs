@@ -10,7 +10,22 @@ public class BackgroundMusic : MonoBehaviour {
 		audioPlayer = GetComponent<AudioSource>();
 		audioPlayer.clip = backgroundMusicClip;
 		audioPlayer.loop = true;
-		audioPlayer.Play();
+	}
+
+	/// <summary>
+	/// Starts the background music.
+	/// </summary>
+	public void StartBackgroundMusic()
+	{
+		audioPlayer.Play();	
+	}
+
+	/// <summary>
+	/// Stops the background music.
+	/// </summary>
+	public void StopBackgroundMusic()
+	{
+		audioPlayer.Stop();
 	}
 
 }

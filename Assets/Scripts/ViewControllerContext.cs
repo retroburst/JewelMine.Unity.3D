@@ -64,6 +64,5 @@ public class ViewControllerContext
 	/// Gets or sets the explosion prefab.
 	/// </summary>
 	/// <value>The explosion prefab.</value>
-	public GameObject ExplosionPrefab {get; set;}
-
+	public GameObject ExplosionPrefab { get; set; }
 }

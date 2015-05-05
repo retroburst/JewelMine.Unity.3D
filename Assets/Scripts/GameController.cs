@@ -26,6 +26,7 @@ namespace JewelMine
 	{
 		public List<GameObject> jewelPrefabs = null;
 		public IGameView view = null;
+		public AudioSystem audioSystem = null;
 		private IGameLogic gameLogic = null;
 		private GameLogicInput logicInput = null;
 		private double lastTickTime = 0.0f;
@@ -38,17 +39,24 @@ namespace JewelMine
 		public Text gameStateSubtext = null;
 		public List<Text> gameMessageSlots = null;
 		public GameObject explosionPrefab = null;
+		private bool savedUserPrefSoundEffectsMuted = false;
+		private bool savedUserPrefBackgroundMusicMuted = false;
+		private DifficultyLevel savedUserPrefDifficulty = DifficultyLevel.Easy;
+		public SoundEffects soundEffects = null;
+		public BackgroundMusic backgroundMusic = null;
 
 		/// <summary>
 		/// Start this instance.
 		/// </summary>
 		public void Start ()
 		{
+			RestoreUserPreferences();
 			logicInput = new GameLogicInput ();
 			GameLogicUserSettings settings = new GameLogicUserSettings ();
-			//BuildGameLogicUserSettings(settings);
+			BuildGameLogicUserSettings(settings);
 			gameLogic = new GameLogic (settings);
 			view = new ViewController (BuildViewControllerContext ());
+			audioSystem = new AudioSystem(backgroundMusic, soundEffects, savedUserPrefSoundEffectsMuted, savedUserPrefBackgroundMusicMuted);
 			swipeInput = GetComponent<SwipeInput> ();
 			swipeInput.LeftSwipeDetected += HandleLeftSwipeDetected;
 			swipeInput.RightSwipeDetected += HandleRightSwipeDetected;
@@ -107,6 +115,18 @@ namespace JewelMine
 				logicInput.DeltaSwapJewels = true;
 			if (Input.GetKey (KeyCode.LeftControl) && Input.GetKeyUp (KeyCode.U))
 				logicInput.ChangeDifficulty = true;
+			if (Input.GetKey (KeyCode.LeftControl) && Input.GetKeyUp (KeyCode.S))
+			{
+				audioSystem.ToggleSoundEffects();
+				//TODO;
+				view.AddGameInformationMessage("Sound changee,d.d...");
+			}
+			if (Input.GetKey (KeyCode.LeftControl) && Input.GetKeyUp (KeyCode.M))
+			{
+				audioSystem.ToggleBackgroundMusic();
+				//TODO;
+				view.AddGameInformationMessage("Background music changee,d.d...");
+			}
 
 			if (Time.time >= lastTickTime) {
 				Nullable<MovementType> movementInput = GetDeltaMovementInput ();
@@ -115,6 +135,7 @@ namespace JewelMine
 
 				GameLogicUpdate logicUpdate = gameLogic.PerformGameLogic (logicInput);
 				view.UpdateView (logicUpdate);
+				audioSystem.PlaySounds(logicUpdate);
 
 				// reset user input descriptors
 				logicInput.Clear ();
@@ -143,35 +164,54 @@ namespace JewelMine
 			return(result);
 		}
 
-//        /// <summary>
-//        /// Saves the user preferences.
-//        /// </summary>
-//        private void SaveUserPreferences()
-//        {
-//            Properties.Settings.Default.UserPreferenceMusicMuted = gameAudioSystem.BackgroundMusicMuted;
-//            Properties.Settings.Default.UserPreferenceSoundEffectsMuted = gameAudioSystem.SoundEffectsMuted;
-//            Properties.Settings.Default.UserPreferenceDifficulty = gameLogic.State.Difficulty.DifficultyLevel;
-//        }
-//
-//        /// <summary>
-//        /// Restores the user preferences.
-//        /// </summary>
-//        private void RestoreUserPreferences()
-//        {
-//            gameAudioSystem.BackgroundMusicMuted = Properties.Settings.Default.UserPreferenceMusicMuted;
-//            gameAudioSystem.AddBackgroundMusicStateMessage(view.AddGameInformationMessage);
-//            gameAudioSystem.SoundEffectsMuted = Properties.Settings.Default.UserPreferenceSoundEffectsMuted;
-//            gameAudioSystem.AddSoundEffectsStateMessage(view.AddGameInformationMessage);
-//        }
-//
-//        /// <summary>
-//        /// Builds the game logic user settings.
-//        /// </summary>
-//        /// <param name="settings">The settings.</param>
-//        private void BuildGameLogicUserSettings(GameLogicUserSettings settings)
-//        {
-//            settings.UserPreferredDifficulty = Properties.Settings.Default.UserPreferenceDifficulty;
-//        }
+		/// <summary>
+		/// Saves the user preferences.
+		/// </summary>
+		private void SaveUserPreferences ()
+		{
+			PlayerPrefs.SetInt(Constants.GAME_USER_PREF_DIFFICULTY, (int)gameLogic.State.Difficulty.DifficultyLevel);
+			PlayerPrefs.SetInt(Constants.GAME_USER_PREF_SOUND_EFFECTS_MUTED, Convert.ToInt32(audioSystem.SoundEffectsMuted));
+			PlayerPrefs.SetInt(Constants.GAME_USER_PREF_BACKGROUND_MUSIC_MUTED, Convert.ToInt32(audioSystem.BackgroundMusicMuted));
+			PlayerPrefs.Save ();
+		}
+
+        /// <summary>
+        /// Restores the user preferences.
+        /// </summary>
+        private void RestoreUserPreferences()
+        {
+			savedUserPrefDifficulty = (DifficultyLevel)PlayerPrefs.GetInt(Constants.GAME_USER_PREF_DIFFICULTY, 0);
+			savedUserPrefSoundEffectsMuted = Convert.ToBoolean(PlayerPrefs.GetInt(Constants.GAME_USER_PREF_SOUND_EFFECTS_MUTED, 0));
+			savedUserPrefBackgroundMusicMuted = Convert.ToBoolean(PlayerPrefs.GetInt(Constants.GAME_USER_PREF_BACKGROUND_MUSIC_MUTED, 0));
+        }
+
+        /// <summary>
+        /// Builds the game logic user settings.
+        /// </summary>
+        /// <param name="settings">The settings.</param>
+        private void BuildGameLogicUserSettings(GameLogicUserSettings settings)
+        {
+            settings.UserPreferredDifficulty = savedUserPrefDifficulty;
+        }
+
+		/// <summary>
+		/// Handles the application quit event.
+		/// </summary>
+		private void OnApplicationQuit ()
+		{
+			SaveUserPreferences ();
+		}
+
+		/// <summary>
+		/// Handles the application pause event.
+		/// </summary>
+		/// <param name="pauseStatus">If set to <c>true</c> pause status.</param>
+		private void OnApplicationPause (bool pauseStatus)
+		{
+			if (pauseStatus) {
+				SaveUserPreferences ();
+			}
+		}
 
         
 	}

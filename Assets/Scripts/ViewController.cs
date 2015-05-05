@@ -14,9 +14,9 @@ public class ViewController : IGameView
 {
 	private Dictionary<JewelType, GameObject> jewelTypeDictionary = null;
 	private IGameStateProvider stateProvider = null;
-	private SoundEffects soundEffects = null;
 	public ViewControllerContext context = null;
 	private GameMessageController gameMessageController = null;
+	private List<string> messages = null;
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ViewController"/> class.
@@ -25,10 +25,10 @@ public class ViewController : IGameView
 	public ViewController (ViewControllerContext viewControllerContext)
 	{
 		jewelTypeDictionary = new Dictionary<JewelType, GameObject> ();
+		messages = new List<string>();
 		context = viewControllerContext;
 		stateProvider = context.Provider;
 		BuildJewelTypeDictionary (context.JewelPrefabs);
-		soundEffects = GameObject.FindObjectOfType<SoundEffects> ();
 		gameMessageController = new GameMessageController(context.GameMessageSlots);
 		AddInitialJewelsToView ();
 		context.DifficultyText.text = stateProvider.State.Difficulty.DifficultyLevel.ToString ();
@@ -59,7 +59,6 @@ public class ViewController : IGameView
 		ProcessFinalisedGroupCollisions (logicUpdate);
 		ProcessGroupCollisions ();
 		ProcessInvalidGroupCollisions (logicUpdate);
-		PlaySounds (logicUpdate);
 		ProcessScore (logicUpdate);
 		ProcessLevel (logicUpdate);
 		ProcessMessages(logicUpdate);
@@ -71,7 +70,9 @@ public class ViewController : IGameView
 	/// <param name="logicUpdate">Logic update.</param>
 	private void ProcessMessages (GameLogicUpdate logicUpdate)
 	{
-		gameMessageController.DisplayMessages(logicUpdate.Messages);
+		messages.AddRange(logicUpdate.Messages);
+		gameMessageController.DisplayMessages(messages);
+		messages.Clear();
 	}
 
 	/// <summary>
@@ -105,22 +106,6 @@ public class ViewController : IGameView
 				m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = m.Jewel.GameObject.GetComponent<JewelMaterial> ().rendererMaterial;
 			}
 		}
-	}
-
-	/// <summary>
-	/// Plays the sounds.
-	/// </summary>
-	/// <param name="logicUpdate">Logic update.</param>
-	private void PlaySounds (GameLogicUpdate logicUpdate)
-	{
-		if (logicUpdate.FinalisedCollisions.Count > 0)
-			soundEffects.PlayCollision ();
-		if (logicUpdate.DeltaStationary)
-			soundEffects.PlayStationary ();
-		if (logicUpdate.DeltaJewelsSwapped)
-			soundEffects.PlaySwap ();
-		if (logicUpdate.LevelIncremented)
-			soundEffects.PlayLevelUp ();
 	}
 
 	/// <summary>
@@ -265,6 +250,7 @@ public class ViewController : IGameView
 	/// <param name="message">The message.</param>
 	public void AddGameInformationMessage (string message)
 	{
-		// don't know what to do here yet.
+		messages.Add(message);
 	}
+	
 }
