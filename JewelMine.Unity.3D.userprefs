@@ -1,19 +1,25 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ViewController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameController.cs">
     <Files>
-      <File FileName="Assets/Scripts/BackgroundMusic.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameController.cs" Line="164" Column="53" />
-      <File FileName="Assets/Scripts/ViewController.cs" Line="100" Column="50" />
-      <File FileName="Assets/Scripts/ViewControllerContext.cs" Line="7" Column="35" />
-      <File FileName="Assets/Scripts/Constants.cs" Line="8" Column="2" />
-      <File FileName="Assets/Scripts/Engine/GameLogic.cs" Line="183" Column="49" />
-      <File FileName="Assets/Scripts/Engine/Models/GameLogicUpdate.cs" Line="120" Column="21" />
-      <File FileName="Assets/Scripts/Engine/Models/GameLogicInput.cs" Line="19" Column="9" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="15" Column="14" />
+      <File FileName="Assets/Scripts/ViewController.cs" Line="136" Column="5" />
+      <File FileName="Assets/Scripts/ViewControllerContext.cs" Line="63" Column="15" />
+      <File FileName="Assets/Scripts/Constants.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Engine/GameLogic.cs" Line="289" Column="60" />
+      <File FileName="Assets/Scripts/Engine/Models/GameLogicUpdate.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Engine/Models/GameLogicInput.cs" Line="1" Column="1" />
+      <File FileName="../../../../Volumes/BOOTCAMP/Development/JewelMine/JewelMine.View.Forms/GameInformationView.cs" Line="1" Column="1" />
+      <File FileName="../../../../Volumes/BOOTCAMP/Development/JewelMine/JewelMine.View.Forms/ViewConstants.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameMessage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameMessageController.cs" Line="85" Column="43" />
+      <File FileName="Assets/Scripts/Engine/GameConstants.cs" Line="23" Column="87" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets/Scripts/ViewController.cs" line="84" offsetX="70" offsetY="1245" expression="logicUpdate.JewelMovements" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>

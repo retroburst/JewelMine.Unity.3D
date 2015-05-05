@@ -17,6 +17,8 @@ public class Constants {
 	
 	public const string GAME_START_TEXT = "JEWEL MINE";
 	public const string GAME_START_SUBTEXT = "Press submit to continue...";
+
+	public const float GAME_MESSAGE_VISIBLE_TIME = 2.0f;
 }
 
 public enum AudioClipType {

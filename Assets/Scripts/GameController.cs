@@ -11,9 +11,9 @@ using UnityEngine.UI;
 //TODO: save and load game - probably use Unity
 //TODO: key bindings - maybe look into using the Unity Axis setup
 //TODO: UI for game settings and persistence of game settings (including difficulty level)
-//TODO: game state text (win, loose, paused, etc)
-//TODO: explosion on final collision
-//TODO: game messages
+//TODO: DONE game state text (win, loose, paused, etc)
+//TODO: DONE explosion on final collision
+//TODO: DONE game messages
 //TODO: clean, refactor
 
 namespace JewelMine
@@ -28,7 +28,6 @@ namespace JewelMine
 		public IGameView view = null;
 		private IGameLogic gameLogic = null;
 		private GameLogicInput logicInput = null;
-		//private Dictionary<KeyCode, Action> keyBindingDictionary = null;
 		private double lastTickTime = 0.0f;
 		private SwipeInput swipeInput = null;
 		public Material collisionGroupMaterial = null;
@@ -37,6 +36,8 @@ namespace JewelMine
 		public Text scoreText = null;
 		public Text gameStateText = null;
 		public Text gameStateSubtext = null;
+		public List<Text> gameMessageSlots = null;
+		public GameObject explosionPrefab = null;
 
 		/// <summary>
 		/// Start this instance.
@@ -44,8 +45,6 @@ namespace JewelMine
 		public void Start ()
 		{
 			logicInput = new GameLogicInput ();
-			//keyBindingDictionary = new Dictionary<KeyCode, Action>();
-			//InitialiseKeyBindings();
 			GameLogicUserSettings settings = new GameLogicUserSettings ();
 			//BuildGameLogicUserSettings(settings);
 			gameLogic = new GameLogic (settings);
@@ -54,7 +53,6 @@ namespace JewelMine
 			swipeInput.LeftSwipeDetected += HandleLeftSwipeDetected;
 			swipeInput.RightSwipeDetected += HandleRightSwipeDetected;
 			swipeInput.DownSwipeDetected += HandleDownSwipeDetected;
-
 		}
 
 		/// <summary>
@@ -72,6 +70,8 @@ namespace JewelMine
 			result.LevelText = levelText;
 			result.GameStateText = gameStateText;
 			result.GameStateSubtext = gameStateSubtext;
+			result.GameMessageSlots = gameMessageSlots;
+			result.ExplosionPrefab = explosionPrefab;
 			return(result);
 		}
 
@@ -91,73 +91,6 @@ namespace JewelMine
 
 		}
 
-//        /// <summary>
-//        /// Handles the view key down.
-//        /// </summary>
-//        /// <param name="sender">The sender.</param>
-//        /// <param name="e">The <see cref="KeyEventArgs"/> instance containing the event data.</param>
-//        private void HandleViewKeyDown(object sender, KeyEventArgs e)
-//        {
-//            if (gameLogic.State.PlayState == GamePlayState.Paused || gameLogic.State.PlayState == GamePlayState.NotStarted)
-//            {
-//                logicInput.GameStarted = true;
-//                return;
-//            }
-//            ProcessInput(e);
-//        }
-//
-//        /// <summary>
-//        /// Processes the input.
-//        /// </summary>
-//        /// <param name="e">The <see cref="KeyEventArgs"/> instance containing the event data.</param>
-//        private void ProcessInput(KeyEventArgs e)
-//        {
-//            if (keyBindingDictionary.ContainsKey(e.KeyData))
-//            {
-//                Action bindingAction = keyBindingDictionary[e.KeyData];
-//                if (bindingAction != null) bindingAction();
-//            }
-//        }
-//
-//        /// <summary>
-//        /// Initialises the key bindings.
-//        /// </summary>
-//        private void InitialiseKeyBindings()
-//        {
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingMoveLeft, Keys.Left, () => logicInput.DeltaMovement = MovementType.Left, keyBindingDictionary);
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingMoveRight, Keys.Right, () => logicInput.DeltaMovement = MovementType.Right, keyBindingDictionary);
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingMoveDown, Keys.Down, () => logicInput.DeltaMovement = MovementType.Down, keyBindingDictionary);
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingPauseGame, Keys.Control | Keys.P, () => logicInput.PauseGame = true, keyBindingDictionary);
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingRestartGame, Keys.Control | Keys.R, () => logicInput.RestartGame = true, keyBindingDictionary);
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingToggleDebugInfo, Keys.Control | Keys.D, () => view.ToggleDebugInfo(), keyBindingDictionary);
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingQuitGame, Keys.Control | Keys.Q, () => view.Window.Close(), keyBindingDictionary);
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingSwapDeltaJewels, Keys.Space, () => logicInput.DeltaSwapJewels = true, keyBindingDictionary);
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingToggleMusic, Keys.Control | Keys.M, () => ToggleBackgroundMusicLoop(), keyBindingDictionary);
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingToggleSoundEffects, Keys.Control | Keys.S, () => ToggleSoundEffects(), keyBindingDictionary);
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingDifficultyChange, Keys.Control | Keys.U, () => logicInput.ChangeDifficulty = true, keyBindingDictionary);
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingSaveGame, Keys.Control | Keys.Shift | Keys.S, () => logicInput.SaveGame = true, keyBindingDictionary);
-//            PerformSafeKeyBinding(Properties.Settings.Default.KeyBindingLoadGame, Keys.Control | Keys.Shift | Keys.L, () => logicInput.LoadGame = true, keyBindingDictionary);
-//        }
-//
-//        /// <summary>
-//        /// Performs a safe key binding.
-//        /// </summary>
-//        /// <param name="settingsKeyData">The settings key data.</param>
-//        /// <param name="defaultKeyData">The default key data.</param>
-//        /// <param name="bindingAction">The binding action.</param>
-//        /// <param name="keyBindings">The key bindings.</param>
-//        public static void PerformSafeKeyBinding(Keys settingsKeyData, Keys defaultKeyData, Action bindingAction, Dictionary<Keys, Action> keyBindings)
-//        {
-//            if (settingsKeyData == Keys.None)
-//            {
-//                keyBindings.Add(defaultKeyData, bindingAction);
-//            }
-//            else
-//            {
-//                keyBindings.Add(settingsKeyData, bindingAction);
-//            }
-//        }
-
 		/// <summary>
 		/// Called every frame by unity - is used
 		/// as our game loop.
@@ -175,7 +108,6 @@ namespace JewelMine
 			if (Input.GetKey (KeyCode.LeftControl) && Input.GetKeyUp (KeyCode.U))
 				logicInput.ChangeDifficulty = true;
 
-			//gameAudioSystem.PlayBackgroundMusicLoop();
 			if (Time.time >= lastTickTime) {
 				Nullable<MovementType> movementInput = GetDeltaMovementInput ();
 				if (movementInput.HasValue)
@@ -183,18 +115,6 @@ namespace JewelMine
 
 				GameLogicUpdate logicUpdate = gameLogic.PerformGameLogic (logicInput);
 				view.UpdateView (logicUpdate);
-				//gameAudioSystem.PlaySounds(logicUpdate);
-
-				// this is an example of setting the material at runtime
-//				for(int x=0; x < gameLogic.State.Mine.Columns; x++)
-//				{
-//					for(int y=0; y < gameLogic.State.Mine.Depth; y++)
-//					{
-//						Jewel jewel = (Jewel)gameLogic.State.Mine.Grid[x,y];
-//						if(jewel != null && jewel.GameObject != null) jewel.GameObject.GetComponent<MeshRenderer>().material = rubyMaterial;
-//					}
-//				}
-
 
 				// reset user input descriptors
 				logicInput.Clear ();
@@ -251,24 +171,6 @@ namespace JewelMine
 //        private void BuildGameLogicUserSettings(GameLogicUserSettings settings)
 //        {
 //            settings.UserPreferredDifficulty = Properties.Settings.Default.UserPreferenceDifficulty;
-//        }
-//
-//        /// <summary>
-//        /// Toggles the background music loop.
-//        /// </summary>
-//        private void ToggleBackgroundMusicLoop()
-//        {
-//            gameAudioSystem.ToggleBackgroundMusicLoop();
-//            gameAudioSystem.AddBackgroundMusicStateMessage(view.AddGameInformationMessage);
-//        }
-//
-//        /// <summary>
-//        /// Toggles the sound effects.
-//        /// </summary>
-//        private void ToggleSoundEffects()
-//        {
-//            gameAudioSystem.ToggleSoundEffects();
-//            gameAudioSystem.AddSoundEffectsStateMessage(view.AddGameInformationMessage);
 //        }
 
         

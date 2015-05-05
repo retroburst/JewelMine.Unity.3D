@@ -12,9 +12,5 @@ public class BackgroundMusic : MonoBehaviour {
 		audioPlayer.loop = true;
 		audioPlayer.Play();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

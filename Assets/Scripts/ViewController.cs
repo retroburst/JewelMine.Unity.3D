@@ -16,6 +16,7 @@ public class ViewController : IGameView
 	private IGameStateProvider stateProvider = null;
 	private SoundEffects soundEffects = null;
 	public ViewControllerContext context = null;
+	private GameMessageController gameMessageController = null;
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ViewController"/> class.
@@ -28,6 +29,7 @@ public class ViewController : IGameView
 		stateProvider = context.Provider;
 		BuildJewelTypeDictionary (context.JewelPrefabs);
 		soundEffects = GameObject.FindObjectOfType<SoundEffects> ();
+		gameMessageController = new GameMessageController(context.GameMessageSlots);
 		AddInitialJewelsToView ();
 		context.DifficultyText.text = stateProvider.State.Difficulty.DifficultyLevel.ToString ();
 	}
@@ -60,6 +62,16 @@ public class ViewController : IGameView
 		PlaySounds (logicUpdate);
 		ProcessScore (logicUpdate);
 		ProcessLevel (logicUpdate);
+		ProcessMessages(logicUpdate);
+	}
+
+	/// <summary>
+	/// Processes the messages.
+	/// </summary>
+	/// <param name="logicUpdate">Logic update.</param>
+	private void ProcessMessages (GameLogicUpdate logicUpdate)
+	{
+		gameMessageController.DisplayMessages(logicUpdate.Messages);
 	}
 
 	/// <summary>
@@ -119,6 +131,7 @@ public class ViewController : IGameView
 	{
 		foreach (var collision in logicUpdate.FinalisedCollisions) {
 			foreach (var member in collision.Members) {
+				GameObject.Instantiate(context.ExplosionPrefab, member.Jewel.GameObject.transform.position, Quaternion.identity);
 				GameObject.Destroy (member.Jewel.GameObject);
 			}
 		}

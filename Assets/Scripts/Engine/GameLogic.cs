@@ -287,7 +287,7 @@ namespace JewelMine.Engine
 			collisionDetector.FinaliseCollisionGroups (logicUpdate, markedCollisionsForFinalising);
 			if (markedCollisionsForFinalising.Length > 0) {
 				Dictionary<MarkedCollisionGroup, long> scores = CalculateScores (markedCollisionsForFinalising);
-				scores.ForEach (x => logicUpdate.Messages.Add (string.Format (GameConstants.GAME_MESSAGE_POINTS_SCORED_PATTERN, x.Value, x.Key.Direction.ToString ())));
+				scores.ForEach (x => logicUpdate.Messages.Add (string.Format (GameConstants.GAME_MESSAGE_POINTS_SCORED_PATTERN, x.Value)));
 				state.Score += scores.Sum (x => x.Value);
 			}
 			collisionDetector.MarkGroupCollisions (logicUpdate);

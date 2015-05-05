@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
      <Compile Include="Assets\Scripts\Constants.cs" />
+     <Compile Include="Assets\Scripts\DestroyByTime.cs" />
      <Compile Include="Assets\Scripts\Engine\CollisionGroupComparer.cs" />
      <Compile Include="Assets\Scripts\Engine\GameConstants.cs" />
      <Compile Include="Assets\Scripts\Engine\GameGroupCollisionDetector.cs" />
@@ -73,6 +74,8 @@
      <Compile Include="Assets\Scripts\Engine\Models\MineObject.cs" />
      <Compile Include="Assets\Scripts\Engine\Models\SavedGameState.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\GameMessage.cs" />
+     <Compile Include="Assets\Scripts\GameMessageController.cs" />
      <Compile Include="Assets\Scripts\JewelMaterial.cs" />
      <Compile Include="Assets\Scripts\JewelTag.cs" />
      <Compile Include="Assets\Scripts\SoundEffects.cs" />

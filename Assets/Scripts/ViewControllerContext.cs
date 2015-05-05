@@ -54,4 +54,16 @@ public class ViewControllerContext
 	/// <value>The game subtext.</value>
 	public Text GameStateSubtext { get; set; }
 
+	/// <summary>
+	/// Gets or sets the game message slots.
+	/// </summary>
+	/// <value>The game message slots.</value>
+	public List<Text> GameMessageSlots { get; set; }
+
+	/// <summary>
+	/// Gets or sets the explosion prefab.
+	/// </summary>
+	/// <value>The explosion prefab.</value>
+	public GameObject ExplosionPrefab {get; set;}
+
 }
