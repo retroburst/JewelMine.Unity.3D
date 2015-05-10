@@ -42,7 +42,8 @@ namespace JewelMine.Engine.Models
 		/// Gets or sets the game object.
 		/// </summary>
 		/// <value>The game object.</value>
-		public GameObject GameObject { get; set; }
+		[NonSerialized] 
+		public GameObject GameObject;
 
     }
 }

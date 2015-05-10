@@ -25,11 +25,11 @@ public class ViewController : IGameView
 	public ViewController (ViewControllerContext viewControllerContext)
 	{
 		jewelTypeDictionary = new Dictionary<JewelType, GameObject> ();
-		messages = new List<string>();
+		messages = new List<string> ();
 		context = viewControllerContext;
 		stateProvider = context.Provider;
 		BuildJewelTypeDictionary (context.JewelPrefabs);
-		gameMessageController = new GameMessageController(context.GameMessageSlots);
+		gameMessageController = new GameMessageController (context.GameMessageSlots);
 		AddInitialJewelsToView ();
 		context.DifficultyText.text = stateProvider.State.Difficulty.DifficultyLevel.ToString ();
 	}
@@ -52,8 +52,7 @@ public class ViewController : IGameView
 	/// <param name="logicUpdate">The logic update.</param>
 	public void UpdateView (GameLogicUpdate logicUpdate)
 	{
-		ProcessGameState ();
-		ProcessDifficultyChange (logicUpdate);
+		ProcessGameState (logicUpdate);
 		ProcessNewJewels (logicUpdate);
 		ProcessJewelMovements (logicUpdate);
 		ProcessFinalisedGroupCollisions (logicUpdate);
@@ -61,7 +60,7 @@ public class ViewController : IGameView
 		ProcessInvalidGroupCollisions (logicUpdate);
 		ProcessScore (logicUpdate);
 		ProcessLevel (logicUpdate);
-		ProcessMessages(logicUpdate);
+		ProcessMessages (logicUpdate);
 	}
 
 	/// <summary>
@@ -70,9 +69,9 @@ public class ViewController : IGameView
 	/// <param name="logicUpdate">Logic update.</param>
 	private void ProcessMessages (GameLogicUpdate logicUpdate)
 	{
-		messages.AddRange(logicUpdate.Messages);
-		gameMessageController.DisplayMessages(messages);
-		messages.Clear();
+		messages.AddRange (logicUpdate.Messages);
+		gameMessageController.DisplayMessages (messages);
+		messages.Clear ();
 	}
 
 	/// <summary>
@@ -116,7 +115,7 @@ public class ViewController : IGameView
 	{
 		foreach (var collision in logicUpdate.FinalisedCollisions) {
 			foreach (var member in collision.Members) {
-				GameObject.Instantiate(context.ExplosionPrefab, member.Jewel.GameObject.transform.position, Quaternion.identity);
+				GameObject.Instantiate (context.ExplosionPrefab, member.Jewel.GameObject.transform.position, Quaternion.identity);
 				GameObject.Destroy (member.Jewel.GameObject);
 			}
 		}
@@ -147,25 +146,22 @@ public class ViewController : IGameView
 			jewelMovement.Jewel.GameObject = newJewelGameObject;
 		}
 	}
-
+	
 	/// <summary>
-	/// Processes the difficulty change.
+	/// Re-initialises view.
 	/// </summary>
-	/// <param name="logicUpdate">Logic update.</param>
-	private void ProcessDifficultyChange (GameLogicUpdate logicUpdate)
+	private void ReInitialiseView ()
 	{
-		if (logicUpdate.DifficultyChanged) {
-			GameObject[] jewels = GameObject.FindGameObjectsWithTag ("Jewel");
-			jewels.ForEach (x => GameObject.Destroy (x));
-			AddInitialJewelsToView ();
-			context.DifficultyText.text = stateProvider.State.Difficulty.DifficultyLevel.ToString ();
-		}
+		GameObject[] jewels = GameObject.FindGameObjectsWithTag ("Jewel");
+		jewels.ForEach (x => GameObject.Destroy (x));
+		AddInitialJewelsToView ();
+		context.DifficultyText.text = stateProvider.State.Difficulty.DifficultyLevel.ToString ();
 	}
-
+	
 	/// <summary>
 	/// Processes the state of the game.
 	/// </summary>
-	private void ProcessGameState ()
+	private void ProcessGameState (GameLogicUpdate logicUpdate)
 	{
 		if (stateProvider.State.PlayState != GamePlayState.Playing) {
 			string stateText = string.Empty;
@@ -177,6 +173,13 @@ public class ViewController : IGameView
 			context.GameStateText.text = string.Empty;
 			context.GameStateSubtext.text = string.Empty;
 		}
+
+		if (logicUpdate.DifficultyChanged)
+			ReInitialiseView ();
+		if (logicUpdate.GameLoaded)
+			ReInitialiseView ();
+		if (logicUpdate.GameWasRestarted)
+			ReInitialiseView ();
 	}
 
 	/// <summary>
@@ -250,7 +253,7 @@ public class ViewController : IGameView
 	/// <param name="message">The message.</param>
 	public void AddGameInformationMessage (string message)
 	{
-		messages.Add(message);
+		messages.Add (message);
 	}
 	
 }

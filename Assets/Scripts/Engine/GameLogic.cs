@@ -134,12 +134,14 @@ namespace JewelMine.Engine
 			try {
 				SavedGameState saveGame = null;
 				BinaryFormatter formatter = new BinaryFormatter ();
-				using (FileStream fs = File.Open(GameConstants.GAME_DEFAULT_SAVE_GAME_FILENAME, FileMode.Open)) {
+				using (FileStream fs = File.Open(Path.Combine(userSettings.SaveGamePath, GameConstants.GAME_DEFAULT_SAVE_GAME_FILENAME), FileMode.Open)) {
 					saveGame = (SavedGameState)formatter.Deserialize (fs);
 					fs.Close ();
 				}
 				Initialise (saveGame);
 				logicUpdate.GameLoaded = true;
+				logicUpdate.GamePaused = true;
+				state.PlayState = GamePlayState.Paused;
 				logicUpdate.Messages.Add (string.Format (GameConstants.GAME_MESSAGE_LOAD_GAME_PATTERN, saveGame.SavedOn.ToLongDateString ()));
 				immediateReturn = true;
 			} catch (Exception ex) {
@@ -158,7 +160,7 @@ namespace JewelMine.Engine
 				saveGame.SavedOn = DateTime.Now;
 				saveGame.State = state;
 				BinaryFormatter formatter = new BinaryFormatter ();
-				using (FileStream fs = File.Open(GameConstants.GAME_DEFAULT_SAVE_GAME_FILENAME, FileMode.OpenOrCreate)) {
+				using (FileStream fs = File.Open(Path.Combine(userSettings.SaveGamePath, GameConstants.GAME_DEFAULT_SAVE_GAME_FILENAME), FileMode.OpenOrCreate)) {
 					fs.SetLength (0);
 					formatter.Serialize (fs, saveGame);
 					fs.Close ();
@@ -183,8 +185,8 @@ namespace JewelMine.Engine
 				DifficultyLevel currentLevel = state.Difficulty.DifficultyLevel;
 				DifficultyLevel nextLevel = GameDifficulty.FindNextDifficultyLevel (currentLevel);
 				Initialise (nextLevel);
-				logicUpdate.GameStarted = true;
-				state.PlayState = GamePlayState.Playing;
+				logicUpdate.GamePaused = true;
+				state.PlayState = GamePlayState.Paused;
 				logicUpdate.Messages.Add (string.Format (GameConstants.GAME_MESSAGE_CHANGED_DIFFICULTY_PATTERN, nextLevel.ToString (), state.Difficulty.LastLevel));
 				logicUpdate.DifficultyChanged = true;
 			}
@@ -379,8 +381,9 @@ namespace JewelMine.Engine
 		{
 			DifficultyLevel currentLevel = state.Difficulty.DifficultyLevel;
 			Initialise (currentLevel);
-			state.PlayState = GamePlayState.Playing;
-			logicUpdate.GameStarted = true;
+			state.PlayState = GamePlayState.Paused;
+			logicUpdate.GamePaused = true;
+			logicUpdate.GameWasRestarted = true;
 		}
 
 		/// <summary>

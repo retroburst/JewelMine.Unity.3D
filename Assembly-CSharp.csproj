@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Engine\GameGroupCollisionDetector.cs" />
      <Compile Include="Assets\Scripts\Engine\GameHelpers.cs" />
      <Compile Include="Assets\Scripts\Engine\GameLogic.cs" />
+     <Compile Include="Assets\Scripts\Engine\IGameAudioSystem.cs" />
      <Compile Include="Assets\Scripts\Engine\IGameLogic.cs" />
      <Compile Include="Assets\Scripts\Engine\IGameStateProvider.cs" />
      <Compile Include="Assets\Scripts\Engine\IGameView.cs" />
@@ -79,6 +80,7 @@
      <Compile Include="Assets\Scripts\GameMessageController.cs" />
      <Compile Include="Assets\Scripts\JewelMaterial.cs" />
      <Compile Include="Assets\Scripts\JewelTag.cs" />
+     <Compile Include="Assets\Scripts\OptionsController.cs" />
      <Compile Include="Assets\Scripts\SoundEffects.cs" />
      <Compile Include="Assets\Scripts\SwipeInput.cs" />
      <Compile Include="Assets\Scripts\ViewController.cs" />

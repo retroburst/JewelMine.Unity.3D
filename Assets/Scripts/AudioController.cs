@@ -1,8 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using JewelMine.Engine.Models;
+using JewelMine.Engine;
 
-public class AudioSystem {
+/// <summary>
+/// Audio system.
+/// </summary>
+using System;
+
+
+public class AudioController : IGameAudioSystem {
 	private BackgroundMusic backgroundMusic = null;
 	private SoundEffects soundEffects = null;
 
@@ -13,7 +20,7 @@ public class AudioSystem {
 	/// <param name="sound">Sound.</param>
 	/// <param name="soundEffectMuted">If set to <c>true</c> sound effect muted.</param>
 	/// <param name="backgroundMusicMuted">If set to <c>true</c> background music muted.</param>
-	public AudioSystem(BackgroundMusic background, SoundEffects sound, bool soundEffectsMuted, bool backgroundMusicMuted)
+	public AudioController(BackgroundMusic background, SoundEffects sound, bool soundEffectsMuted, bool backgroundMusicMuted)
 	{
 		backgroundMusic = background;
 		soundEffects = sound;
@@ -74,4 +81,24 @@ public class AudioSystem {
 	/// </summary>
 	/// <value><c>true</c> if background music muted; otherwise, <c>false</c>.</value>
 	public bool BackgroundMusicMuted { get; private set; }
+
+	/// <summary>
+	/// Adds the background music state message.
+	/// </summary>
+	/// <param name="addMessage">The add message.</param>
+	public void AddBackgroundMusicStateMessage(Action<string> addMessage)
+	{
+		string message = string.Format(Constants.GAME_MESSAGE_TOGGLE_MUSIC_PATTERN, GameHelpers.EncodeBooleanForDisplay(!BackgroundMusicMuted));
+		addMessage(message);
+	}
+	
+	/// <summary>
+	/// Adds the sound effects state message.
+	/// </summary>
+	/// <param name="addMessage">The add message.</param>
+	public void AddSoundEffectsStateMessage(Action<string> addMessage)
+	{
+		string message = string.Format(Constants.GAME_TOGGLE_SOUND_PATTERN, GameHelpers.EncodeBooleanForDisplay(!SoundEffectsMuted));
+		addMessage(message);
+	}
 }

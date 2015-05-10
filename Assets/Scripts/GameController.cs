@@ -8,9 +8,9 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-//TODO: save and load game - probably use Unity
+//TODO: DONE save and load game - probably use Unity
 //TODO: key bindings - maybe look into using the Unity Axis setup
-//TODO: UI for game settings and persistence of game settings (including difficulty level)
+//TODO: DONE UI for game settings and persistence of game settings (including difficulty level)
 //TODO: DONE game state text (win, loose, paused, etc)
 //TODO: DONE explosion on final collision
 //TODO: DONE game messages
@@ -26,7 +26,7 @@ namespace JewelMine
 	{
 		public List<GameObject> jewelPrefabs = null;
 		public IGameView view = null;
-		public AudioSystem audioSystem = null;
+		public IGameAudioSystem audioSystem = null;
 		private IGameLogic gameLogic = null;
 		private GameLogicInput logicInput = null;
 		private double lastTickTime = 0.0f;
@@ -50,13 +50,13 @@ namespace JewelMine
 		/// </summary>
 		public void Start ()
 		{
-			RestoreUserPreferences();
+			RestoreUserPreferences ();
 			logicInput = new GameLogicInput ();
 			GameLogicUserSettings settings = new GameLogicUserSettings ();
-			BuildGameLogicUserSettings(settings);
+			BuildGameLogicUserSettings (settings);
 			gameLogic = new GameLogic (settings);
 			view = new ViewController (BuildViewControllerContext ());
-			audioSystem = new AudioSystem(backgroundMusic, soundEffects, savedUserPrefSoundEffectsMuted, savedUserPrefBackgroundMusicMuted);
+			audioSystem = new AudioController (backgroundMusic, soundEffects, savedUserPrefSoundEffectsMuted, savedUserPrefBackgroundMusicMuted);
 			swipeInput = GetComponent<SwipeInput> ();
 			swipeInput.LeftSwipeDetected += HandleLeftSwipeDetected;
 			swipeInput.RightSwipeDetected += HandleRightSwipeDetected;
@@ -113,20 +113,6 @@ namespace JewelMine
 			}
 			if (Input.GetKeyUp (KeyCode.Space))
 				logicInput.DeltaSwapJewels = true;
-			if (Input.GetKey (KeyCode.LeftControl) && Input.GetKeyUp (KeyCode.U))
-				logicInput.ChangeDifficulty = true;
-			if (Input.GetKey (KeyCode.LeftControl) && Input.GetKeyUp (KeyCode.S))
-			{
-				audioSystem.ToggleSoundEffects();
-				//TODO;
-				view.AddGameInformationMessage("Sound changee,d.d...");
-			}
-			if (Input.GetKey (KeyCode.LeftControl) && Input.GetKeyUp (KeyCode.M))
-			{
-				audioSystem.ToggleBackgroundMusic();
-				//TODO;
-				view.AddGameInformationMessage("Background music changee,d.d...");
-			}
 
 			if (Time.time >= lastTickTime) {
 				Nullable<MovementType> movementInput = GetDeltaMovementInput ();
@@ -135,7 +121,7 @@ namespace JewelMine
 
 				GameLogicUpdate logicUpdate = gameLogic.PerformGameLogic (logicInput);
 				view.UpdateView (logicUpdate);
-				audioSystem.PlaySounds(logicUpdate);
+				audioSystem.PlaySounds (logicUpdate);
 
 				// reset user input descriptors
 				logicInput.Clear ();
@@ -169,30 +155,31 @@ namespace JewelMine
 		/// </summary>
 		private void SaveUserPreferences ()
 		{
-			PlayerPrefs.SetInt(Constants.GAME_USER_PREF_DIFFICULTY, (int)gameLogic.State.Difficulty.DifficultyLevel);
-			PlayerPrefs.SetInt(Constants.GAME_USER_PREF_SOUND_EFFECTS_MUTED, Convert.ToInt32(audioSystem.SoundEffectsMuted));
-			PlayerPrefs.SetInt(Constants.GAME_USER_PREF_BACKGROUND_MUSIC_MUTED, Convert.ToInt32(audioSystem.BackgroundMusicMuted));
+			PlayerPrefs.SetInt (Constants.GAME_USER_PREF_DIFFICULTY, (int)gameLogic.State.Difficulty.DifficultyLevel);
+			PlayerPrefs.SetInt (Constants.GAME_USER_PREF_SOUND_EFFECTS_MUTED, Convert.ToInt32 (audioSystem.SoundEffectsMuted));
+			PlayerPrefs.SetInt (Constants.GAME_USER_PREF_BACKGROUND_MUSIC_MUTED, Convert.ToInt32 (audioSystem.BackgroundMusicMuted));
 			PlayerPrefs.Save ();
 		}
 
-        /// <summary>
-        /// Restores the user preferences.
-        /// </summary>
-        private void RestoreUserPreferences()
-        {
-			savedUserPrefDifficulty = (DifficultyLevel)PlayerPrefs.GetInt(Constants.GAME_USER_PREF_DIFFICULTY, 0);
-			savedUserPrefSoundEffectsMuted = Convert.ToBoolean(PlayerPrefs.GetInt(Constants.GAME_USER_PREF_SOUND_EFFECTS_MUTED, 0));
-			savedUserPrefBackgroundMusicMuted = Convert.ToBoolean(PlayerPrefs.GetInt(Constants.GAME_USER_PREF_BACKGROUND_MUSIC_MUTED, 0));
-        }
+		/// <summary>
+		/// Restores the user preferences.
+		/// </summary>
+		private void RestoreUserPreferences ()
+		{
+			savedUserPrefDifficulty = (DifficultyLevel)PlayerPrefs.GetInt (Constants.GAME_USER_PREF_DIFFICULTY, 0);
+			savedUserPrefSoundEffectsMuted = Convert.ToBoolean (PlayerPrefs.GetInt (Constants.GAME_USER_PREF_SOUND_EFFECTS_MUTED, 0));
+			savedUserPrefBackgroundMusicMuted = Convert.ToBoolean (PlayerPrefs.GetInt (Constants.GAME_USER_PREF_BACKGROUND_MUSIC_MUTED, 0));
+		}
 
-        /// <summary>
-        /// Builds the game logic user settings.
-        /// </summary>
-        /// <param name="settings">The settings.</param>
-        private void BuildGameLogicUserSettings(GameLogicUserSettings settings)
-        {
-            settings.UserPreferredDifficulty = savedUserPrefDifficulty;
-        }
+		/// <summary>
+		/// Builds the game logic user settings.
+		/// </summary>
+		/// <param name="settings">The settings.</param>
+		private void BuildGameLogicUserSettings (GameLogicUserSettings settings)
+		{
+			settings.UserPreferredDifficulty = savedUserPrefDifficulty;
+			settings.SaveGamePath = Application.persistentDataPath;
+		}
 
 		/// <summary>
 		/// Handles the application quit event.
@@ -213,6 +200,87 @@ namespace JewelMine
 			}
 		}
 
+		/// <summary>
+		/// Changes the difiiculty.
+		/// </summary>
+		public void ChangeDifiiculty ()
+		{
+			logicInput.ChangeDifficulty = true;
+		}
+
+		/// <summary>
+		/// Toggles the sound effects.
+		/// </summary>
+		public void ToggleSoundEffects ()
+		{
+			audioSystem.ToggleSoundEffects ();
+			audioSystem.AddSoundEffectsStateMessage (view.AddGameInformationMessage);
+		}
+
+		/// <summary>
+		/// Toggles the background music.
+		/// </summary>
+		public void ToggleBackgroundMusic ()
+		{
+			audioSystem.ToggleBackgroundMusic ();
+			audioSystem.AddBackgroundMusicStateMessage (view.AddGameInformationMessage);
+		}
+
+		/// <summary>
+		/// Toggles the game pause.
+		/// </summary>
+		public void ToggleGamePause ()
+		{
+			bool pauseState = gameLogic.State.PlayState == GamePlayState.Paused;
+			if (pauseState)
+				logicInput.GameStarted = true;
+			else
+				logicInput.PauseGame = true;
+		}
+
+		/// <summary>
+		/// Pauses the game.
+		/// </summary>
+		public void PauseGame ()
+		{
+			bool pauseState = gameLogic.State.PlayState == GamePlayState.Paused;
+			if (!pauseState)
+				logicInput.PauseGame = true;
+		}
+
+		/// <summary>
+		/// Un-pauses the game.
+		/// </summary>
+		public void UnpauseGame()
+		{
+			bool pauseState = gameLogic.State.PlayState == GamePlayState.Paused;
+			if (pauseState)
+				logicInput.GameStarted = true;
+		}
+
+		/// <summary>
+		/// Saves the game.
+		/// </summary>
+		public void SaveGame()
+		{
+			logicInput.SaveGame = true;
+		}
+
+		/// <summary>
+		/// Loads the game.
+		/// </summary>
+		public void LoadGame()
+		{
+			logicInput.LoadGame = true;
+		}
+
+		/// <summary>
+		/// Restarts the game.
+		/// </summary>
+		public void RestartGame()
+		{
+			logicInput.RestartGame = true;
+		}
         
 	}
 }

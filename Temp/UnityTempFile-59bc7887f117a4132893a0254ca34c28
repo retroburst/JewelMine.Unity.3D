@@ -55,6 +55,7 @@
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
+'Assets/Scripts/AudioController.cs'
 'Assets/Scripts/BackgroundMusic.cs'
 'Assets/Scripts/Constants.cs'
 'Assets/Scripts/DestroyByTime.cs'
@@ -63,6 +64,7 @@
 'Assets/Scripts/Engine/GameGroupCollisionDetector.cs'
 'Assets/Scripts/Engine/GameHelpers.cs'
 'Assets/Scripts/Engine/GameLogic.cs'
+'Assets/Scripts/Engine/IGameAudioSystem.cs'
 'Assets/Scripts/Engine/IGameLogic.cs'
 'Assets/Scripts/Engine/IGameStateProvider.cs'
 'Assets/Scripts/Engine/IGameView.cs'
@@ -87,6 +89,7 @@
 'Assets/Scripts/GameMessageController.cs'
 'Assets/Scripts/JewelMaterial.cs'
 'Assets/Scripts/JewelTag.cs'
+'Assets/Scripts/OptionsController.cs'
 'Assets/Scripts/SoundEffects.cs'
 'Assets/Scripts/SwipeInput.cs'
 'Assets/Scripts/ViewController.cs'

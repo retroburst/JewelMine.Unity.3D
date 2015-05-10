@@ -10,10 +10,10 @@ public class Constants {
 	public const string GAME_PAUSED_SUBTEXT = "Press submit to continue...";
 	
 	public const string GAME_OVER_TEXT = "GAME OVER!";
-	public const string GAME_OVER_SUBTEXT = "Press CTRL+R to restart or CTLR+Q to quit.";
+	public const string GAME_OVER_SUBTEXT = "Press submit to restart.";
 	
 	public const string GAME_WON_TEXT = "GAME WON! CONGRATS!";
-	public const string GAME_WON_SUBTEXT = "Press CTLR+R to restart or CTLR+Q to quit.";
+	public const string GAME_WON_SUBTEXT = "Press submit to restart.";
 	
 	public const string GAME_START_TEXT = "JEWEL MINE";
 	public const string GAME_START_SUBTEXT = "Press submit to continue...";
@@ -23,6 +23,9 @@ public class Constants {
 	public const string GAME_USER_PREF_DIFFICULTY = "JewelMine.User.Difficulty";
 	public const string GAME_USER_PREF_SOUND_EFFECTS_MUTED = "JewelMine.User.SoundEffectsMuted";
 	public const string GAME_USER_PREF_BACKGROUND_MUSIC_MUTED = "JewelMine.User.MusicMuted";
+	
+	public const string GAME_MESSAGE_TOGGLE_MUSIC_PATTERN = "Music {0}";
+	public const string GAME_TOGGLE_SOUND_PATTERN = "Sound {0}";
 }
 
 public enum AudioClipType {
