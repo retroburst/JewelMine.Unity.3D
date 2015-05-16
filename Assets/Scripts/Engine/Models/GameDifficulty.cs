@@ -64,8 +64,8 @@ namespace JewelMine.Engine.Models
         {
             DifficultyLevel = Engine.DifficultyLevel.Easy;
             LevelIncrementScoreThreshold = 5000;
-            TickSpeedMilliseconds = 240.0d;
-            TickSpeedMillisecondsFloor = 120.0d;
+            TickSpeedMilliseconds = 200.0d;
+            TickSpeedMillisecondsFloor = 100.0d;
             CollisionFinaliseTickCount = 30;
             DeltaStationaryTimeSpan = new TimeSpan(0, 0, 0, 0, 1920);
             DeltaDoubleJewelChance = 0.9d;
@@ -85,8 +85,8 @@ namespace JewelMine.Engine.Models
         {
             DifficultyLevel = Engine.DifficultyLevel.Moderate;
             LevelIncrementScoreThreshold = 5000;
-            TickSpeedMilliseconds = 220.0d;
-            TickSpeedMillisecondsFloor = 75.0d;
+            TickSpeedMilliseconds = 180.0d;
+            TickSpeedMillisecondsFloor = 60.0d;
             CollisionFinaliseTickCount = 30;
             DeltaStationaryTimeSpan = new TimeSpan(0, 0, 0, 0, 1760);
             DeltaDoubleJewelChance = 0.75d;
@@ -106,8 +106,8 @@ namespace JewelMine.Engine.Models
         {
             DifficultyLevel = Engine.DifficultyLevel.Hard;
             LevelIncrementScoreThreshold = 5000;
-            TickSpeedMilliseconds = 200.0d;
-            TickSpeedMillisecondsFloor = 60.0d;
+            TickSpeedMilliseconds = 150.0d;
+            TickSpeedMillisecondsFloor = 40.0d;
             CollisionFinaliseTickCount = 30;
             DeltaStationaryTimeSpan = new TimeSpan(0, 0, 0, 0, 1600);
             DeltaDoubleJewelChance = 0.50d;
@@ -128,7 +128,7 @@ namespace JewelMine.Engine.Models
             DifficultyLevel = Engine.DifficultyLevel.Impossible;
             LevelIncrementScoreThreshold = 5000;
             TickSpeedMilliseconds = 100.0d;
-            TickSpeedMillisecondsFloor = 40.0d;
+            TickSpeedMillisecondsFloor = 1.0d;
             CollisionFinaliseTickCount = 30;
             DeltaStationaryTimeSpan = new TimeSpan(0, 0, 0, 0, 800);
             DeltaDoubleJewelChance = 0.20d;

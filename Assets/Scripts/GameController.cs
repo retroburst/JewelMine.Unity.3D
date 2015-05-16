@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //TODO: DONE save and load game - probably use Unity
-//TODO: key bindings - maybe look into using the Unity Axis setup
+//TODO: DONE key bindings - maybe look into using the Unity Axis setup
 //TODO: DONE UI for game settings and persistence of game settings (including difficulty level)
 //TODO: DONE game state text (win, loose, paused, etc)
 //TODO: DONE explosion on final collision
@@ -106,28 +106,66 @@ namespace JewelMine
 		public void Update ()
 		{
 			// get input from traditional controls
-			if (gameLogic.State.PlayState == GamePlayState.NotStarted || gameLogic.State.PlayState == GamePlayState.Paused) {
-				if (Input.GetButton ("Submit"))
-					logicInput.GameStarted = true;
-
-			}
-			if (Input.GetKeyUp (KeyCode.Space))
-				logicInput.DeltaSwapJewels = true;
-
+			ProcessInput ();
 			if (Time.time >= lastTickTime) {
-				Nullable<MovementType> movementInput = GetDeltaMovementInput ();
-				if (movementInput.HasValue)
-					logicInput.DeltaMovement = movementInput.Value;
-
+				ProcessAxisInput ();
 				GameLogicUpdate logicUpdate = gameLogic.PerformGameLogic (logicInput);
 				view.UpdateView (logicUpdate);
 				audioSystem.PlaySounds (logicUpdate);
-
 				// reset user input descriptors
 				logicInput.Clear ();
 				lastTickTime = Time.time + GameHelpers.ConvertMillisecondsToSeconds (gameLogic.State.Difficulty.TickSpeedMilliseconds);
 			}
+		}
 
+		/// <summary>
+		/// Processes the axis input.
+		/// </summary>
+		private void ProcessAxisInput ()
+		{
+			Nullable<MovementType> movementInput = GetDeltaMovementInput ();
+			if (movementInput.HasValue){
+				logicInput.DeltaMovement = movementInput.Value;
+			}
+		}
+
+		/// <summary>
+		/// Processes the input.
+		/// </summary>
+		private void ProcessInput ()
+		{
+			if (gameLogic.State.PlayState == GamePlayState.NotStarted || gameLogic.State.PlayState == GamePlayState.Paused) {
+				if (Input.GetButton ("Submit")) {
+					logicInput.GameStarted = true;
+				}
+			}
+			if (Input.GetButtonUp ("Swap")) {
+				logicInput.DeltaSwapJewels = true;
+			}
+			if (Input.GetButtonUp ("Quit")) {
+				Application.Quit ();
+			}
+			if (Input.GetButtonUp ("ChangeDifficulty")) {
+				logicInput.ChangeDifficulty = true;
+			}
+			if (Input.GetButtonUp ("Restart")) {
+				logicInput.RestartGame = true;
+			}
+			if (Input.GetButtonUp ("ToggleSound")) {
+				ToggleSoundEffects ();
+			}
+			if (Input.GetButtonUp ("ToggleMusic")) {
+				ToggleBackgroundMusic ();
+			}
+			if (Input.GetButtonUp ("SaveGame")) {
+				logicInput.SaveGame = true;
+			}
+			if (Input.GetButtonUp ("LoadGame")) {
+				logicInput.LoadGame = true;
+			}
+			if (Input.GetButtonUp ("Pause")) {
+				logicInput.PauseGame = true;
+			}
 		}
 
 		/// <summary>
@@ -251,7 +289,7 @@ namespace JewelMine
 		/// <summary>
 		/// Un-pauses the game.
 		/// </summary>
-		public void UnpauseGame()
+		public void UnpauseGame ()
 		{
 			bool pauseState = gameLogic.State.PlayState == GamePlayState.Paused;
 			if (pauseState)
@@ -261,7 +299,7 @@ namespace JewelMine
 		/// <summary>
 		/// Saves the game.
 		/// </summary>
-		public void SaveGame()
+		public void SaveGame ()
 		{
 			logicInput.SaveGame = true;
 		}
@@ -269,7 +307,7 @@ namespace JewelMine
 		/// <summary>
 		/// Loads the game.
 		/// </summary>
-		public void LoadGame()
+		public void LoadGame ()
 		{
 			logicInput.LoadGame = true;
 		}
@@ -277,10 +315,19 @@ namespace JewelMine
 		/// <summary>
 		/// Restarts the game.
 		/// </summary>
-		public void RestartGame()
+		public void RestartGame ()
 		{
 			logicInput.RestartGame = true;
 		}
+
+		/// <summary>
+		/// Quit this instance.
+		/// </summary>
+		public void QuitGame ()
+		{
+			Application.Quit ();
+		}
+
         
 	}
 }
