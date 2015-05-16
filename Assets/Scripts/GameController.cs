@@ -44,6 +44,7 @@ namespace JewelMine
 		private DifficultyLevel savedUserPrefDifficulty = DifficultyLevel.Easy;
 		public SoundEffects soundEffects = null;
 		public BackgroundMusic backgroundMusic = null;
+		public OptionsController optionsController = null;
 
 		/// <summary>
 		/// Start this instance.
@@ -124,7 +125,7 @@ namespace JewelMine
 		private void ProcessAxisInput ()
 		{
 			Nullable<MovementType> movementInput = GetDeltaMovementInput ();
-			if (movementInput.HasValue){
+			if (movementInput.HasValue) {
 				logicInput.DeltaMovement = movementInput.Value;
 			}
 		}
@@ -134,9 +135,13 @@ namespace JewelMine
 		/// </summary>
 		private void ProcessInput ()
 		{
+			if (optionsController.OptionsShowing)
+				return;
+
 			if (gameLogic.State.PlayState == GamePlayState.NotStarted || gameLogic.State.PlayState == GamePlayState.Paused) {
-				if (Input.GetButton ("Submit")) {
+				if (Input.GetButtonUp ("Submit")) {
 					logicInput.GameStarted = true;
+					return;
 				}
 			}
 			if (Input.GetButtonUp ("Swap")) {
