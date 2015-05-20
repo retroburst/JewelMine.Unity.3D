@@ -15,6 +15,8 @@ namespace JewelMine.Engine.Models
 		/// </summary>
 		public GameLogicUserSettings ()
 		{
+			MineColumns = GameConstants.GAME_MINE_DEFAULT_COLUMN_SIZE;
+			MineDepth = GameConstants.GAME_MINE_DEFAULT_DEPTH_SIZE;
 		}
 
 		/// <summary>
@@ -30,5 +32,17 @@ namespace JewelMine.Engine.Models
 		/// </summary>
 		/// <value>The save game path.</value>
 		public string SaveGamePath { get; set; }
+
+		/// <summary>
+		/// Gets or sets the mine columns.
+		/// </summary>
+		/// <value>The mine columns.</value>
+		public int MineColumns { get; set; }
+
+		/// <summary>
+		/// Gets or sets the mine depth.
+		/// </summary>
+		/// <value>The mine depth.</value>
+		public int MineDepth { get; set; }
 	}
 }

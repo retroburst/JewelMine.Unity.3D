@@ -8,12 +8,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-//TODO: DONE save and load game - probably use Unity
-//TODO: DONE key bindings - maybe look into using the Unity Axis setup
-//TODO: DONE UI for game settings and persistence of game settings (including difficulty level)
-//TODO: DONE game state text (win, loose, paused, etc)
-//TODO: DONE explosion on final collision
-//TODO: DONE game messages
+//TODO: mobile phone / tablet version of main scene
 //TODO: clean, refactor
 
 namespace JewelMine
@@ -45,6 +40,8 @@ namespace JewelMine
 		public SoundEffects soundEffects = null;
 		public BackgroundMusic backgroundMusic = null;
 		public OptionsController optionsController = null;
+		public int MineColumns = GameConstants.GAME_MINE_DEFAULT_COLUMN_SIZE;
+		public int MineDepth = GameConstants.GAME_MINE_DEFAULT_DEPTH_SIZE;
 
 		/// <summary>
 		/// Start this instance.
@@ -144,6 +141,14 @@ namespace JewelMine
 					return;
 				}
 			}
+
+			if (gameLogic.State.PlayState == GamePlayState.GameOver) {
+				if (Input.GetButtonUp ("Submit")) {
+					logicInput.RestartGame = true;
+					return;
+				}
+			}
+
 			if (Input.GetButtonUp ("Swap")) {
 				logicInput.DeltaSwapJewels = true;
 			}
@@ -222,6 +227,8 @@ namespace JewelMine
 		{
 			settings.UserPreferredDifficulty = savedUserPrefDifficulty;
 			settings.SaveGamePath = Application.persistentDataPath;
+			settings.MineColumns = MineColumns;
+			settings.MineDepth = MineDepth;
 		}
 
 		/// <summary>

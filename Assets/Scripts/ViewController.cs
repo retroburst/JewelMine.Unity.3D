@@ -174,6 +174,10 @@ public class ViewController : IGameView
 			context.GameStateSubtext.text = string.Empty;
 		}
 
+		if (stateProvider.State.PlayState == GamePlayState.GameOver) {
+
+		}
+
 		if (logicUpdate.DifficultyChanged)
 			ReInitialiseView ();
 		if (logicUpdate.GameLoaded)

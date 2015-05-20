@@ -2,13 +2,11 @@
 using System.Collections;
 using JewelMine.Engine.Models;
 using JewelMine.Engine;
-
-/// <summary>
-/// Audio system.
-/// </summary>
 using System;
 
-
+/// <summary>
+/// Audio system controller.
+/// </summary>
 public class AudioController : IGameAudioSystem {
 	private BackgroundMusic backgroundMusic = null;
 	private SoundEffects soundEffects = null;

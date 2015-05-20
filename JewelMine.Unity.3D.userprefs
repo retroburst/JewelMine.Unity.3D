@@ -1,24 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ViewController.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameController.cs" Line="142" Column="26" />
-      <File FileName="Assets/Scripts/Engine/GameGroupCollisionDetector.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/OptionsController.cs" Line="40" Column="26" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="151" Column="4" />
+      <File FileName="Assets/Scripts/Engine/GameLogic.cs" Line="91" Column="26" />
+      <File FileName="Assets/Scripts/Engine/Models/GameState.cs" Line="34" Column="45" />
+      <File FileName="Assets/Scripts/ViewController.cs" Line="55" Column="34" />
+      <File FileName="Assets/Scripts/OptionsController.cs" Line="9" Column="20" />
+      <File FileName="Assets/Scripts/AudioController.cs" Line="10" Column="21" />
       <File FileName="Assets/Scripts/Engine/GameConstants.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Engine/Models/SavedGameState.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Engine/Models/GameDifficulty.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Constants.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ViewController.cs" Line="257" Column="1" />
-      <File FileName="Assets/Scripts/Engine/Models/MarkedCollisionGroup.cs" Line="30" Column="30" />
-      <File FileName="Assets/Scripts/Engine/GameLogic.cs" Line="108" Column="4" />
-      <File FileName="Assets/Scripts/AudioController.cs" Line="103" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="Assets/Scripts/ViewController.cs" line="84" offsetX="70" offsetY="1245" expression="logicUpdate.JewelMovements" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
