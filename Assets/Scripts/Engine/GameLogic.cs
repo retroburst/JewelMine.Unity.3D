@@ -379,11 +379,18 @@ namespace JewelMine.Engine
 		/// <param name="logicUpdate">The logic update.</param>
 		private void RestartGame (GameLogicUpdate logicUpdate)
 		{
+			GamePlayState previousState = state.PlayState;
 			DifficultyLevel currentLevel = state.Difficulty.DifficultyLevel;
 			Initialise (currentLevel);
-			state.PlayState = GamePlayState.Paused;
-			logicUpdate.GamePaused = true;
 			logicUpdate.GameWasRestarted = true;
+			// only pause if this is not a game won or game over situation
+			if (previousState != GamePlayState.GameWon && previousState != GamePlayState.GameOver) {
+				state.PlayState = GamePlayState.Paused;
+				logicUpdate.GamePaused = true;
+			} else {
+				state.PlayState = GamePlayState.Playing;
+				logicUpdate.GameStarted = true;
+			}
 		}
 
 		/// <summary>
@@ -849,8 +856,7 @@ namespace JewelMine.Engine
 				else
 					break;
 			}
-			if (closestY.HasValue)
-			{
+			if (closestY.HasValue) {
 				result = new Coordinates (target.X, closestY.Value);
 			}
 			return (result);
@@ -876,8 +882,7 @@ namespace JewelMine.Engine
 				else
 					break;
 			}
-			if (closestX.HasValue)
-			{
+			if (closestX.HasValue) {
 				result = new Coordinates (closestX.Value, target.Y);
 			}
 			return (result);
@@ -903,8 +908,7 @@ namespace JewelMine.Engine
 				else
 					break;
 			}
-			if (closestX.HasValue)
-			{
+			if (closestX.HasValue) {
 				result = new Coordinates (closestX.Value, target.Y);
 			}
 			return (result);

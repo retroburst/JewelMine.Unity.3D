@@ -65,4 +65,10 @@ public class ViewControllerContext
 	/// </summary>
 	/// <value>The explosion prefab.</value>
 	public GameObject ExplosionPrefab { get; set; }
+
+	/// <summary>
+	/// Gets or sets the view settings.
+	/// </summary>
+	/// <value>The view settings.</value>
+	public ViewSettings ViewSettings { get; set; }
 }

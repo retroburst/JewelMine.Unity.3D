@@ -8,8 +8,13 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-//TODO: mobile phone / tablet version of main scene
+//DONE: do not pause after game restart from game over or game won
+//DONE: pass in constants (such as "Tap to continue" for mobile version)
+//DONE: mobile phone version of main scene
+//TODO: pass in difficulty constants for mobile version
 //TODO: clean, refactor
+//TODO: register as apple developer (go through rigmarole with xcode etc) and get on app store for free
+//TODO: test on android and get on google play for free
 
 namespace JewelMine
 {
@@ -40,6 +45,7 @@ namespace JewelMine
 		public SoundEffects soundEffects = null;
 		public BackgroundMusic backgroundMusic = null;
 		public OptionsController optionsController = null;
+		public ViewSettings viewSettings = null;
 		public int MineColumns = GameConstants.GAME_MINE_DEFAULT_COLUMN_SIZE;
 		public int MineDepth = GameConstants.GAME_MINE_DEFAULT_DEPTH_SIZE;
 
@@ -59,6 +65,7 @@ namespace JewelMine
 			swipeInput.LeftSwipeDetected += HandleLeftSwipeDetected;
 			swipeInput.RightSwipeDetected += HandleRightSwipeDetected;
 			swipeInput.DownSwipeDetected += HandleDownSwipeDetected;
+			swipeInput.TapDetected += HandleTapDetected;
 		}
 
 		/// <summary>
@@ -78,23 +85,52 @@ namespace JewelMine
 			result.GameStateSubtext = gameStateSubtext;
 			result.GameMessageSlots = gameMessageSlots;
 			result.ExplosionPrefab = explosionPrefab;
+			result.ViewSettings = viewSettings;
 			return(result);
 		}
 
-		private void HandleDownSwipeDetected (float obj)
+		/// <summary>
+		/// Handles down swipe detected.
+		/// </summary>
+		private void HandleDownSwipeDetected ()
 		{
-			logicInput.DeltaMovement = MovementType.Down;
+			if (gameLogic.State.PlayState == GamePlayState.Playing)
+				logicInput.DeltaMovement = MovementType.Down;
 		}
 
-		private void HandleRightSwipeDetected (float obj)
+		/// <summary>
+		/// Handles the right swipe detected.
+		/// </summary>
+		private void HandleRightSwipeDetected ()
 		{
-			logicInput.DeltaMovement = MovementType.Right;
+			if (gameLogic.State.PlayState == GamePlayState.Playing)
+				logicInput.DeltaMovement = MovementType.Right;
 		}
 
-		private void HandleLeftSwipeDetected (float obj)
+		/// <summary>
+		/// Handles the left swipe detected.
+		/// </summary>
+		private void HandleLeftSwipeDetected ()
 		{
-			logicInput.DeltaMovement = MovementType.Left;
+			if (gameLogic.State.PlayState == GamePlayState.Playing)
+				logicInput.DeltaMovement = MovementType.Left;
+		}
 
+		/// <summary>
+		/// Handles the tap detected.
+		/// </summary>
+		private void HandleTapDetected ()
+		{
+			if (gameLogic.State.PlayState == GamePlayState.Playing)
+				logicInput.DeltaSwapJewels = true;
+			if ((gameLogic.State.PlayState == GamePlayState.GameOver || gameLogic.State.PlayState == GamePlayState.GameWon)
+				&& !optionsController.OptionsShowing) {
+				logicInput.RestartGame = true;
+			}
+			if ((gameLogic.State.PlayState == GamePlayState.NotStarted || gameLogic.State.PlayState == GamePlayState.Paused)
+				&& !optionsController.OptionsShowing) {
+				logicInput.GameStarted = true;
+			}
 		}
 
 		/// <summary>
@@ -142,7 +178,7 @@ namespace JewelMine
 				}
 			}
 
-			if (gameLogic.State.PlayState == GamePlayState.GameOver) {
+			if (gameLogic.State.PlayState == GamePlayState.GameOver || gameLogic.State.PlayState == GamePlayState.GameWon) {
 				if (Input.GetButtonUp ("Submit")) {
 					logicInput.RestartGame = true;
 					return;

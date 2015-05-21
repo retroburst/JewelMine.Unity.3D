@@ -96,7 +96,7 @@ public class AudioController : IGameAudioSystem {
 	/// <param name="addMessage">The add message.</param>
 	public void AddSoundEffectsStateMessage(Action<string> addMessage)
 	{
-		string message = string.Format(Constants.GAME_TOGGLE_SOUND_PATTERN, GameHelpers.EncodeBooleanForDisplay(!SoundEffectsMuted));
+		string message = string.Format(Constants.GAME_MESSAGE_TOGGLE_SOUND_PATTERN, GameHelpers.EncodeBooleanForDisplay(!SoundEffectsMuted));
 		addMessage(message);
 	}
 }

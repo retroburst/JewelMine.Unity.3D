@@ -11,13 +11,16 @@ public class GameMessageController {
 	private List<Text> gameMessageSlots = null;
 	private List<GameMessage> gameMessages = null;
 	private Queue<GameMessage> waitingGameMessages = null;
+	private float gameMessageVisibleTime = 0.5f;
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="GameMessageController"/> class.
 	/// </summary>
-	/// <param name="gameMessageUISlots">Game message slots.</param>
-	public GameMessageController(List<Text> gameMessageUISlots)
+	/// <param name="gameMessageUISlots">Game message user interface slots.</param>
+	/// <param name="messageVisibleTime">Message visible time.</param>
+	public GameMessageController(List<Text> gameMessageUISlots, float messageVisibleTime)
 	{
+		gameMessageVisibleTime = messageVisibleTime;
 		gameMessageSlots = gameMessageUISlots;
 		gameMessages = new List<GameMessage>();
 		waitingGameMessages = new Queue<GameMessage>();
@@ -69,7 +72,7 @@ public class GameMessageController {
 			while(gameMessages.Count < gameMessageSlots.Count && waitingGameMessages.Count > 0)
 			{
 				GameMessage waitingMessage = waitingGameMessages.Dequeue();
-				waitingMessage.MessageExpiresAt = Time.time + Constants.GAME_MESSAGE_VISIBLE_TIME;
+				waitingMessage.MessageExpiresAt = Time.time + gameMessageVisibleTime;
 				gameMessages.Add(waitingMessage);
 			}
 		}

@@ -65,5 +65,13 @@ public class SoundEffects : MonoBehaviour {
 		audioPlayer.clip = audioClipTypeDictionary[AudioClipType.Swap];
 		audioPlayer.Play();
 	}
-	
+
+	private enum AudioClipType {
+		Collision,
+		LevelUp,
+		Stationary,
+		Swap
+	}
 }
+
+
