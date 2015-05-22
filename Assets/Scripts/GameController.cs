@@ -11,7 +11,9 @@ using UnityEngine.UI;
 //DONE: do not pause after game restart from game over or game won
 //DONE: pass in constants (such as "Tap to continue" for mobile version)
 //DONE: mobile phone version of main scene
-//TODO: pass in difficulty constants for mobile version
+//DONE: pass in difficulty constants for mobile version
+//DONE: bigger buttons and panel for UI on mobile
+//TODO: nicer styling of the options panel and control buttons
 //TODO: clean, refactor
 //TODO: register as apple developer (go through rigmarole with xcode etc) and get on app store for free
 //TODO: test on android and get on google play for free
@@ -45,9 +47,7 @@ namespace JewelMine
 		public SoundEffects soundEffects = null;
 		public BackgroundMusic backgroundMusic = null;
 		public OptionsController optionsController = null;
-		public ViewSettings viewSettings = null;
-		public int MineColumns = GameConstants.GAME_MINE_DEFAULT_COLUMN_SIZE;
-		public int MineDepth = GameConstants.GAME_MINE_DEFAULT_DEPTH_SIZE;
+		public ConfigurableSettings configurableSettings = null;
 
 		/// <summary>
 		/// Start this instance.
@@ -60,7 +60,7 @@ namespace JewelMine
 			BuildGameLogicUserSettings (settings);
 			gameLogic = new GameLogic (settings);
 			view = new ViewController (BuildViewControllerContext ());
-			audioSystem = new AudioController (backgroundMusic, soundEffects, savedUserPrefSoundEffectsMuted, savedUserPrefBackgroundMusicMuted);
+			audioSystem = new AudioController (backgroundMusic, soundEffects, savedUserPrefSoundEffectsMuted, savedUserPrefBackgroundMusicMuted, configurableSettings);
 			swipeInput = GetComponent<SwipeInput> ();
 			swipeInput.LeftSwipeDetected += HandleLeftSwipeDetected;
 			swipeInput.RightSwipeDetected += HandleRightSwipeDetected;
@@ -85,7 +85,7 @@ namespace JewelMine
 			result.GameStateSubtext = gameStateSubtext;
 			result.GameMessageSlots = gameMessageSlots;
 			result.ExplosionPrefab = explosionPrefab;
-			result.ViewSettings = viewSettings;
+			result.ConfigurableSettings = configurableSettings;
 			return(result);
 		}
 
@@ -239,9 +239,9 @@ namespace JewelMine
 		/// </summary>
 		private void SaveUserPreferences ()
 		{
-			PlayerPrefs.SetInt (Constants.GAME_USER_PREF_DIFFICULTY, (int)gameLogic.State.Difficulty.DifficultyLevel);
-			PlayerPrefs.SetInt (Constants.GAME_USER_PREF_SOUND_EFFECTS_MUTED, Convert.ToInt32 (audioSystem.SoundEffectsMuted));
-			PlayerPrefs.SetInt (Constants.GAME_USER_PREF_BACKGROUND_MUSIC_MUTED, Convert.ToInt32 (audioSystem.BackgroundMusicMuted));
+			PlayerPrefs.SetInt (configurableSettings.GameUserPrefKeyDifficulty, (int)gameLogic.State.Difficulty.DifficultyLevel);
+			PlayerPrefs.SetInt (configurableSettings.GameUserPrefKeySoundEffectsMuted, Convert.ToInt32 (audioSystem.SoundEffectsMuted));
+			PlayerPrefs.SetInt (configurableSettings.GameUserPrefKeyBackgroundMusicMuted, Convert.ToInt32 (audioSystem.BackgroundMusicMuted));
 			PlayerPrefs.Save ();
 		}
 
@@ -250,9 +250,9 @@ namespace JewelMine
 		/// </summary>
 		private void RestoreUserPreferences ()
 		{
-			savedUserPrefDifficulty = (DifficultyLevel)PlayerPrefs.GetInt (Constants.GAME_USER_PREF_DIFFICULTY, 0);
-			savedUserPrefSoundEffectsMuted = Convert.ToBoolean (PlayerPrefs.GetInt (Constants.GAME_USER_PREF_SOUND_EFFECTS_MUTED, 0));
-			savedUserPrefBackgroundMusicMuted = Convert.ToBoolean (PlayerPrefs.GetInt (Constants.GAME_USER_PREF_BACKGROUND_MUSIC_MUTED, 0));
+			savedUserPrefDifficulty = (DifficultyLevel)PlayerPrefs.GetInt (configurableSettings.GameUserPrefKeyDifficulty, 0);
+			savedUserPrefSoundEffectsMuted = Convert.ToBoolean (PlayerPrefs.GetInt (configurableSettings.GameUserPrefKeySoundEffectsMuted, 0));
+			savedUserPrefBackgroundMusicMuted = Convert.ToBoolean (PlayerPrefs.GetInt (configurableSettings.GameUserPrefKeyBackgroundMusicMuted, 0));
 		}
 
 		/// <summary>
@@ -263,8 +263,12 @@ namespace JewelMine
 		{
 			settings.UserPreferredDifficulty = savedUserPrefDifficulty;
 			settings.SaveGamePath = Application.persistentDataPath;
-			settings.MineColumns = MineColumns;
-			settings.MineDepth = MineDepth;
+			settings.MineColumns = configurableSettings.MineColumns;
+			settings.MineDepth = configurableSettings.MineDepth;
+			settings.EasyDifficultySettings = configurableSettings.EasyDifficultySettings;
+			settings.ModerateDifficultySettings = configurableSettings.ModerateDifficultySettings;
+			settings.HardDifficultySettings = configurableSettings.HardDifficultySettings;
+			settings.ImpossibleDifficultySettings = configurableSettings.ImpossibleDifficultySettings;
 		}
 
 		/// <summary>

@@ -29,7 +29,7 @@ public class ViewController : IGameView
 		context = viewControllerContext;
 		stateProvider = context.Provider;
 		BuildJewelTypeDictionary (context.JewelPrefabs);
-		gameMessageController = new GameMessageController (context.GameMessageSlots, context.ViewSettings.GAME_MESSAGE_VISIBLE_TIME);
+		gameMessageController = new GameMessageController (context.GameMessageSlots, context.ConfigurableSettings.GameMessageVisibleTime);
 		AddInitialJewelsToView ();
 		context.DifficultyText.text = stateProvider.State.Difficulty.DifficultyLevel.ToString ();
 	}
@@ -81,7 +81,7 @@ public class ViewController : IGameView
 	private void ProcessLevel (GameLogicUpdate logicUpdate)
 	{
 		if (logicUpdate.LevelIncremented || logicUpdate.DifficultyChanged)
-			context.LevelText.text = string.Format (context.ViewSettings.LEVEL_PATTERN, stateProvider.State.Level);
+			context.LevelText.text = string.Format (context.ConfigurableSettings.GameMessageLevelPattern, stateProvider.State.Level);
 	}
 
 	/// <summary>
@@ -91,7 +91,7 @@ public class ViewController : IGameView
 	private void ProcessScore (GameLogicUpdate logicUpdate)
 	{
 		if (logicUpdate.FinalisedCollisions.Count > 0 || logicUpdate.DifficultyChanged)
-			context.ScoreText.text = string.Format (context.ViewSettings.SCORE_PATTERN, stateProvider.State.Score.ToString (context.ViewSettings.SCORE_FORMAT_STRING));
+			context.ScoreText.text = string.Format (context.ConfigurableSettings.GameMessageScorePattern, stateProvider.State.Score.ToString (context.ConfigurableSettings.GameMessageScoreFormatString));
 	}
 
 	/// <summary>
@@ -213,20 +213,20 @@ public class ViewController : IGameView
 		stateSubText = string.Empty;
 		switch (stateProvider.State.PlayState) {
 		case GamePlayState.NotStarted:
-			stateText = context.ViewSettings.GAME_START_TEXT;
-			stateSubText = context.ViewSettings.GAME_START_SUBTEXT;
+			stateText = context.ConfigurableSettings.GameMessageGameStartText;
+			stateSubText = context.ConfigurableSettings.GameMessageGameStartSubtext;
 			break;
 		case GamePlayState.GameOver:
-			stateText = context.ViewSettings.GAME_OVER_TEXT;
-			stateSubText = context.ViewSettings.GAME_OVER_SUBTEXT;
+			stateText = context.ConfigurableSettings.GameMessageGameOverText;
+			stateSubText = context.ConfigurableSettings.GameMessageGameOverSubtext;
 			break;
 		case GamePlayState.GameWon:
-			stateText = context.ViewSettings.GAME_WON_TEXT;
-			stateSubText = context.ViewSettings.GAME_WON_SUBTEXT;
+			stateText = context.ConfigurableSettings.GameMessageGameWonText;
+			stateSubText = context.ConfigurableSettings.GameMessageGameWonSubtext;
 			break;
 		case GamePlayState.Paused:
-			stateText = context.ViewSettings.GAME_PAUSED_TEXT;
-			stateSubText = context.ViewSettings.GAME_PAUSED_SUBTEXT;
+			stateText = context.ConfigurableSettings.GameMessagePausedText;
+			stateSubText = context.ConfigurableSettings.GameMessagePausedSubtext;
 			break;
 		}
 	}

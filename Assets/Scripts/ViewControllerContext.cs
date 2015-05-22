@@ -67,8 +67,8 @@ public class ViewControllerContext
 	public GameObject ExplosionPrefab { get; set; }
 
 	/// <summary>
-	/// Gets or sets the view settings.
+	/// Gets or sets the configurable settings.
 	/// </summary>
-	/// <value>The view settings.</value>
-	public ViewSettings ViewSettings { get; set; }
+	/// <value>The configurable settings.</value>
+	public ConfigurableSettings ConfigurableSettings { get; set; }
 }

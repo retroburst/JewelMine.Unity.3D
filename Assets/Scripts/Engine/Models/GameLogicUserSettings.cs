@@ -44,5 +44,30 @@ namespace JewelMine.Engine.Models
 		/// </summary>
 		/// <value>The mine depth.</value>
 		public int MineDepth { get; set; }
+
+		/// <summary>
+		/// Gets or sets the easy difficulty settings.
+		/// </summary>
+		/// <value>The easy difficulty settings.</value>
+		public IGameDifficultySettingsProvider EasyDifficultySettings { get; set; }
+
+		/// <summary>
+		/// Gets or sets the moderate difficulty settings.
+		/// </summary>
+		/// <value>The moderate difficulty settings.</value>
+		public IGameDifficultySettingsProvider ModerateDifficultySettings { get; set; }
+
+		/// <summary>
+		/// Gets or sets the hard difficulty settings.
+		/// </summary>
+		/// <value>The hard difficulty settings.</value>
+		public IGameDifficultySettingsProvider HardDifficultySettings { get; set; }
+
+		/// <summary>
+		/// Gets or sets the impossible difficulty settings.
+		/// </summary>
+		/// <value>The impossible difficulty settings.</value>
+		public IGameDifficultySettingsProvider ImpossibleDifficultySettings { get; set; }
+
 	}
 }

@@ -10,16 +10,19 @@ using System;
 public class AudioController : IGameAudioSystem {
 	private BackgroundMusic backgroundMusic = null;
 	private SoundEffects soundEffects = null;
+	private ConfigurableSettings configurableSettings = null;
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="AudioSystem"/> class.
+	/// Initializes a new instance of the <see cref="AudioController"/> class.
 	/// </summary>
 	/// <param name="background">Background.</param>
 	/// <param name="sound">Sound.</param>
-	/// <param name="soundEffectMuted">If set to <c>true</c> sound effect muted.</param>
+	/// <param name="soundEffectsMuted">If set to <c>true</c> sound effects muted.</param>
 	/// <param name="backgroundMusicMuted">If set to <c>true</c> background music muted.</param>
-	public AudioController(BackgroundMusic background, SoundEffects sound, bool soundEffectsMuted, bool backgroundMusicMuted)
+	/// <param name="configSettings">Config settings.</param>
+	public AudioController(BackgroundMusic background, SoundEffects sound, bool soundEffectsMuted, bool backgroundMusicMuted, ConfigurableSettings configSettings)
 	{
+		configurableSettings = configSettings;
 		backgroundMusic = background;
 		soundEffects = sound;
 		SoundEffectsMuted = soundEffectsMuted;
@@ -86,7 +89,7 @@ public class AudioController : IGameAudioSystem {
 	/// <param name="addMessage">The add message.</param>
 	public void AddBackgroundMusicStateMessage(Action<string> addMessage)
 	{
-		string message = string.Format(Constants.GAME_MESSAGE_TOGGLE_MUSIC_PATTERN, GameHelpers.EncodeBooleanForDisplay(!BackgroundMusicMuted));
+		string message = string.Format(configurableSettings.GameMessageToggleMusicPattern, GameHelpers.EncodeBooleanForDisplay(!BackgroundMusicMuted));
 		addMessage(message);
 	}
 	
@@ -96,7 +99,7 @@ public class AudioController : IGameAudioSystem {
 	/// <param name="addMessage">The add message.</param>
 	public void AddSoundEffectsStateMessage(Action<string> addMessage)
 	{
-		string message = string.Format(Constants.GAME_MESSAGE_TOGGLE_SOUND_PATTERN, GameHelpers.EncodeBooleanForDisplay(!SoundEffectsMuted));
+		string message = string.Format(configurableSettings.GameMessageToggleSoundPattern, GameHelpers.EncodeBooleanForDisplay(!SoundEffectsMuted));
 		addMessage(message);
 	}
 }

@@ -21,7 +21,7 @@ namespace JewelMine.Engine.Models
         public GameState(GameLogicUserSettings userSettings, DifficultyLevel level)
         {
             Mine = new Mine(userSettings.MineColumns, userSettings.MineDepth);
-            Difficulty = new GameDifficulty(level);
+            Difficulty = new GameDifficulty(level, userSettings);
             PlayState = GamePlayState.NotStarted;
             Level = GameConstants.GAME_DEFAULT_LEVEL;
             TickSpeedMilliseconds = Difficulty.TickSpeedMilliseconds;
