@@ -1,0 +1,11 @@
+﻿#pragma once
+#include <stdint.h>
+#include <assert.h>
+#include <exception>
+#include "codegen/il2cpp-codegen.h"
+
+struct t2577;
+
+ void m12610 (t2577 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ int32_t m12611 (t2577 * __this, uint16_t p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ bool m12612 (t2577 * __this, uint16_t p0, uint16_t p1, MethodInfo* method) IL2CPP_METHOD_ATTR;

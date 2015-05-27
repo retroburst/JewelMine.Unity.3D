@@ -1,0 +1,80 @@
+﻿#pragma once
+#include <stdint.h>
+#include "t5.h"
+#include "t2016.h"
+#include "t2017.h"
+#include "t2018.h"
+#include "t2020.h"
+#include "t2021.h"
+#include "t2022.h"
+#include "t2023.h"
+#include "t2024.h"
+#include "t2025.h"
+#include "t2026.h"
+#include "t2027.h"
+#include "t2028.h"
+#include "t2029.h"
+#include "t2030.h"
+#include "t2031.h"
+#include "t2019.h"
+#include "t2032.h"
+#include "t2033.h"
+#include "t2034.h"
+#include "t2035.h"
+struct t2036  : public t5
+{
+};
+struct t2036_SFs{
+	t2016  f0;
+	t2017  f1;
+	t2017  f2;
+	t2017  f3;
+	t2017  f4;
+	t2018  f5;
+	t2018  f6;
+	t2020  f7;
+	t2021  f8;
+	t2022  f9;
+	t2023  f10;
+	t2024  f11;
+	t2024  f12;
+	t2024  f13;
+	t2024  f14;
+	t2025  f15;
+	t2025  f16;
+	t2025  f17;
+	t2018  f18;
+	t2026  f19;
+	t2027  f20;
+	t2021  f21;
+	t2024  f22;
+	t2028  f23;
+	t2022  f24;
+	t2029  f25;
+	t2030  f26;
+	t2016  f27;
+	t2018  f28;
+	t2023  f29;
+	t2030  f30;
+	t2030  f31;
+	t2031  f32;
+	t2031  f33;
+	t2019  f34;
+	t2031  f35;
+	t2031  f36;
+	t2032  f37;
+	t2032  f38;
+	t2032  f39;
+	t2032  f40;
+	t2032  f41;
+	t2032  f42;
+	t2032  f43;
+	t2032  f44;
+	t2031  f45;
+	t2033  f46;
+	t2025  f47;
+	t2034  f48;
+	t2031  f49;
+	t2035  f50;
+	t2035  f51;
+};

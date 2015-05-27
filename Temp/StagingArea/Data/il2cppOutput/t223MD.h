@@ -1,0 +1,83 @@
+﻿#pragma once
+#include <stdint.h>
+#include <assert.h>
+#include <exception>
+#include "codegen/il2cpp-codegen.h"
+
+struct t223;
+struct t224;
+struct t225;
+struct t226;
+struct t227;
+struct t228;
+struct t229;
+struct t230;
+struct t231;
+struct t232;
+struct t233;
+struct t234;
+struct t235;
+struct t236;
+struct t237;
+struct t238;
+struct t239;
+struct t240;
+struct t244;
+struct t207;
+struct t245;
+struct t246;
+struct t247;
+struct t248;
+struct t249;
+struct t250;
+struct t251;
+struct t252;
+struct t253;
+struct t254;
+struct t255;
+struct t256;
+struct t257;
+struct t258;
+struct t259;
+struct t260;
+struct t69;
+struct t261;
+struct t262;
+
+ void m804 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m805 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m806 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m807 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m808 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m809 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m810 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m811 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m812 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m813 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m814 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m815 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m816 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m817 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m818 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m819 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m820 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m821 (t5 * __this, t5 * p0, t207 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t224 * m822 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t225 * m823 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t226 * m824 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t227 * m825 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t228 * m826 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t229 * m827 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t230 * m828 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t231 * m829 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t232 * m830 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t233 * m831 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t234 * m832 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t235 * m833 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t236 * m834 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t237 * m835 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t238 * m836 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t239 * m837 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t240 * m838 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m839 (t5 * __this, t69 * p0, t5* p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m840 (t5 * __this, t262 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;

@@ -1,0 +1,73 @@
+﻿#pragma once
+#include <stdint.h>
+struct t11;
+struct t585;
+struct t1561;
+struct t1556;
+struct t55;
+struct t585;
+#include "t5.h"
+#include "t1563.h"
+struct t1561  : public t5
+{
+	bool f10;
+	t11* f11;
+	t11* f12;
+	t11* f13;
+	t11* f14;
+	t11* f15;
+	t11* f16;
+	t11* f17;
+	t11* f18;
+	t11* f19;
+	t11* f20;
+	t11* f21;
+	t11* f22;
+	t11* f23;
+	t11* f24;
+	int32_t f25;
+	t1556 * f26;
+	int32_t f27;
+	t585* f28;
+	t585* f29;
+	t585* f30;
+	t585* f31;
+	t585* f32;
+	t585* f33;
+	t585* f34;
+	t585* f35;
+	t585* f36;
+	t585* f37;
+	t585* f38;
+	int32_t f39;
+	bool f40;
+	bool f41;
+	int32_t f42;
+	bool f43;
+	t11* f44;
+	t11* f45;
+	t585* f46;
+	t585* f47;
+	t585* f48;
+	t585* f49;
+	t55* f50;
+	t585* f51;
+	t585* f52;
+	t585* f53;
+	t585* f54;
+	int32_t f55;
+	t11* f56;
+	t585* f57;
+};
+struct t1561_SFs{
+	t11* f0;
+	t11* f1;
+	t11* f2;
+	t11* f3;
+	t585* f4;
+	t585* f5;
+	t585* f6;
+	t585* f7;
+	t585* f8;
+	t1561 * f9;
+};
