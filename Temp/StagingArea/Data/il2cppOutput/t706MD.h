@@ -20,7 +20,7 @@ struct t3767;
 #include "t798.h"
 
 #include "t167MD.h"
-#define m3628(__this, method) (void)m11648_gshared((t167 *)__this, method)
+#define m3629(__this, method) (void)m11648_gshared((t167 *)__this, method)
 #define m21341(__this, p0, method) (void)m11650_gshared((t167 *)__this, (t5*)p0, method)
 #define m21342(__this, p0, method) (void)m11652_gshared((t167 *)__this, (int32_t)p0, method)
 #define m21343(__this, method) (void)m11654_gshared((t5 *)__this, method)
@@ -52,7 +52,7 @@ struct t3767;
 #define m21369(__this, p0, method) (void)m11704_gshared((t5 *)__this, (t2457 *)p0, method)
 #define m21370(__this, p0, p1, p2, method) (int32_t)m11706_gshared((t167 *)__this, (int32_t)p0, (int32_t)p1, (t2457 *)p2, method)
 #define m21371(__this, p0, method) (void)m11707_gshared((t167 *)__this, (t198 *)p0, method)
- t798  m3629 (t706 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t798  m3630 (t706 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
 #define m21372(__this, p0, method) (int32_t)m11709_gshared((t167 *)__this, (t5 *)p0, method)
 #define m21373(__this, p0, p1, method) (void)m11711_gshared((t167 *)__this, (int32_t)p0, (int32_t)p1, method)
 #define m21374(__this, p0, method) (void)m11713_gshared((t167 *)__this, (int32_t)p0, method)

@@ -22,7 +22,7 @@ struct t987;
 #include "t990.h"
 
 #include "t3094MD.h"
-#define m2275(__this, method) (void)m16974_gshared((t3094 *)__this, method)
+#define m2276(__this, method) (void)m16974_gshared((t3094 *)__this, method)
 #define m17707(__this, p0, method) (void)m16976_gshared((t3094 *)__this, (t5*)p0, method)
 #define m17708(__this, p0, method) (void)m16978_gshared((t3094 *)__this, (int32_t)p0, method)
 #define m17709(__this, p0, p1, method) (void)m16980_gshared((t3094 *)__this, (t829 *)p0, (t830 )p1, method)
@@ -51,14 +51,14 @@ struct t987;
 #define m17732(__this, p0, p1, method) (t510 *)m17022_gshared((t5 *)__this, (t5 *)p0, (t5 *)p1, method)
 #define m17733(__this, p0, p1, method) (void)m17024_gshared((t3094 *)__this, (t3095*)p0, (int32_t)p1, method)
 #define m17734(__this, method) (void)m17026_gshared((t3094 *)__this, method)
-#define m2279(__this, p0, p1, method) (void)m17027_gshared((t3094 *)__this, (t5 *)p0, (t5 *)p1, method)
+#define m2280(__this, p0, p1, method) (void)m17027_gshared((t3094 *)__this, (t5 *)p0, (t5 *)p1, method)
 #define m17735(__this, method) (void)m17029_gshared((t3094 *)__this, method)
 #define m17736(__this, p0, method) (bool)m17031_gshared((t3094 *)__this, (t5 *)p0, method)
 #define m17737(__this, p0, method) (bool)m17033_gshared((t3094 *)__this, (t5 *)p0, method)
 #define m17738(__this, p0, p1, method) (void)m17035_gshared((t3094 *)__this, (t829 *)p0, (t830 )p1, method)
 #define m17739(__this, p0, method) (void)m17037_gshared((t3094 *)__this, (t5 *)p0, method)
 #define m17740(__this, p0, method) (bool)m17039_gshared((t3094 *)__this, (t5 *)p0, method)
-#define m2276(__this, p0, p1, method) (bool)m17040_gshared((t3094 *)__this, (t5 *)p0, (t5 **)p1, method)
+#define m2277(__this, p0, p1, method) (bool)m17040_gshared((t3094 *)__this, (t5 *)p0, (t5 **)p1, method)
 #define m17741(__this, method) (t3176 *)m17042_gshared((t3094 *)__this, method)
 #define m17742(__this, p0, method) (t317 *)m17044_gshared((t3094 *)__this, (t5 *)p0, method)
 #define m17743(__this, p0, method) (t510 *)m17046_gshared((t3094 *)__this, (t5 *)p0, method)

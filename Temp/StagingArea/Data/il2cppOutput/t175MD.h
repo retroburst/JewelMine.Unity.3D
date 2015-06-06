@@ -6,7 +6,7 @@
 
 struct t175;
 
- float m660 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- float m3221 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- float m2092 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- float m2162 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ float m661 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ float m3222 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ float m2093 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ float m2163 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;

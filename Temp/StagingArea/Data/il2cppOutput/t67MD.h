@@ -20,7 +20,7 @@ struct t2616;
 #include "t179.h"
 
 #include "t167MD.h"
-#define m653(__this, method) (void)m11648_gshared((t167 *)__this, method)
+#define m654(__this, method) (void)m11648_gshared((t167 *)__this, method)
 #define m12968(__this, p0, method) (void)m11650_gshared((t167 *)__this, (t5*)p0, method)
 #define m12969(__this, p0, method) (void)m11652_gshared((t167 *)__this, (int32_t)p0, method)
 #define m12970(__this, method) (void)m11654_gshared((t5 *)__this, method)
@@ -43,16 +43,16 @@ struct t2616;
 #define m12986(__this, p0, method) (void)m11688_gshared((t167 *)__this, (int32_t)p0, method)
 #define m12987(__this, p0, method) (void)m11690_gshared((t167 *)__this, (t5*)p0, method)
 #define m12988(__this, p0, method) (void)m11692_gshared((t167 *)__this, (t5*)p0, method)
-#define m726(__this, p0, method) (void)m11693_gshared((t167 *)__this, (t5*)p0, method)
+#define m727(__this, p0, method) (void)m11693_gshared((t167 *)__this, (t5*)p0, method)
 #define m12989(__this, method) (t2614 *)m11695_gshared((t167 *)__this, method)
-#define m727(__this, method) (void)m11696_gshared((t167 *)__this, method)
+#define m728(__this, method) (void)m11696_gshared((t167 *)__this, method)
 #define m12990(__this, p0, method) (bool)m11698_gshared((t167 *)__this, (t5 *)p0, method)
 #define m12991(__this, p0, p1, method) (void)m11700_gshared((t167 *)__this, (t168*)p0, (int32_t)p1, method)
 #define m12992(__this, p0, method) (t11*)m11702_gshared((t167 *)__this, (t2457 *)p0, method)
 #define m12993(__this, p0, method) (void)m11704_gshared((t5 *)__this, (t2457 *)p0, method)
 #define m12994(__this, p0, p1, p2, method) (int32_t)m11706_gshared((t167 *)__this, (int32_t)p0, (int32_t)p1, (t2457 *)p2, method)
 #define m12995(__this, p0, method) (void)m11707_gshared((t167 *)__this, (t198 *)p0, method)
- t179  m679 (t67 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t179  m680 (t67 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
 #define m12996(__this, p0, method) (int32_t)m11709_gshared((t167 *)__this, (t5 *)p0, method)
 #define m12997(__this, p0, p1, method) (void)m11711_gshared((t167 *)__this, (int32_t)p0, (int32_t)p1, method)
 #define m12998(__this, p0, method) (void)m11713_gshared((t167 *)__this, (int32_t)p0, method)

@@ -45,17 +45,17 @@ extern TypeInfo t109_TI;
 #include "t160MD.h"
 #include "t2518MD.h"
 extern Il2CppType t2518_0_0_0;
-extern MethodInfo m3437_MI;
-extern MethodInfo m532_MI;
-extern MethodInfo m3602_MI;
-extern MethodInfo m706_MI;
-extern MethodInfo m3436_MI;
-extern MethodInfo m2581_MI;
-extern MethodInfo m23958_MI;
 extern MethodInfo m3438_MI;
+extern MethodInfo m532_MI;
+extern MethodInfo m3603_MI;
+extern MethodInfo m707_MI;
+extern MethodInfo m3437_MI;
+extern MethodInfo m2582_MI;
+extern MethodInfo m23958_MI;
+extern MethodInfo m3439_MI;
 extern MethodInfo m12136_MI;
-extern MethodInfo m3598_MI;
-extern MethodInfo m3596_MI;
+extern MethodInfo m3599_MI;
+extern MethodInfo m3597_MI;
 struct t694;
 #include "t694.h"
 struct t694;
@@ -239,27 +239,27 @@ static MethodInfo* t2518_MIs[] =
 	&m12138_MI,
 	NULL
 };
-extern MethodInfo m2341_MI;
 extern MethodInfo m2342_MI;
 extern MethodInfo m2343_MI;
 extern MethodInfo m2344_MI;
 extern MethodInfo m2345_MI;
 extern MethodInfo m2346_MI;
 extern MethodInfo m2347_MI;
+extern MethodInfo m2348_MI;
 extern MethodInfo m12137_MI;
 extern MethodInfo m12138_MI;
 static MethodInfo* t2518_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
+	&m2348_MI,
 	&m12136_MI,
 	&m12137_MI,
 	&m12138_MI,
@@ -363,9 +363,9 @@ extern TypeInfo t2530_TI;
 #include "t2530MD.h"
 extern MethodInfo m12181_MI;
 extern MethodInfo m12182_MI;
-extern MethodInfo m4991_MI;
+extern MethodInfo m4992_MI;
 extern MethodInfo m23971_MI;
-extern MethodInfo m4767_MI;
+extern MethodInfo m4768_MI;
 extern MethodInfo m12169_MI;
 extern MethodInfo m460_MI;
 extern MethodInfo m12171_MI;
@@ -373,7 +373,7 @@ extern MethodInfo m12159_MI;
 extern MethodInfo m24080_MI;
 extern MethodInfo m12158_MI;
 extern MethodInfo m512_MI;
-extern MethodInfo m6741_MI;
+extern MethodInfo m6742_MI;
 extern MethodInfo m528_MI;
 extern MethodInfo m12162_MI;
 extern MethodInfo m12167_MI;
@@ -381,29 +381,29 @@ extern MethodInfo m12170_MI;
 extern MethodInfo m12172_MI;
 extern MethodInfo m12157_MI;
 extern MethodInfo m12179_MI;
-extern MethodInfo m5931_MI;
+extern MethodInfo m5932_MI;
 extern MethodInfo m12180_MI;
 extern MethodInfo m24081_MI;
 extern MethodInfo m24084_MI;
 extern MethodInfo m24085_MI;
-extern MethodInfo m746_MI;
+extern MethodInfo m747_MI;
 extern MethodInfo m516_MI;
 extern MethodInfo m12192_MI;
-extern MethodInfo m5904_MI;
+extern MethodInfo m5905_MI;
 extern MethodInfo m23973_MI;
 extern MethodInfo m12165_MI;
 extern MethodInfo m12166_MI;
-extern MethodInfo m3595_MI;
+extern MethodInfo m3596_MI;
 extern MethodInfo m12267_MI;
 extern MethodInfo m12270_MI;
 extern MethodInfo m12188_MI;
 extern MethodInfo m12168_MI;
 extern MethodInfo m12174_MI;
-extern MethodInfo m5963_MI;
+extern MethodInfo m5964_MI;
 extern MethodInfo m12276_MI;
 extern MethodInfo m23975_MI;
 extern MethodInfo m23983_MI;
-extern MethodInfo m6740_MI;
+extern MethodInfo m6741_MI;
 struct t107;
 struct t107;
  void m23607_gshared (t5 * __this, t168** p0, int32_t p1, MethodInfo* method);
@@ -1388,8 +1388,8 @@ extern TypeInfo t2525_TI;
 extern TypeInfo t133_TI;
 #include "t133MD.h"
 extern MethodInfo m12187_MI;
-extern MethodInfo m4758_MI;
-extern MethodInfo m4763_MI;
+extern MethodInfo m4759_MI;
+extern MethodInfo m4764_MI;
 extern MethodInfo m23960_MI;
 struct t107;
 struct t107;
@@ -1470,17 +1470,17 @@ static MethodInfo* t2525_MIs[] =
 	&m12187_MI,
 	NULL
 };
-extern MethodInfo m2041_MI;
 extern MethodInfo m2042_MI;
-extern MethodInfo m2147_MI;
+extern MethodInfo m2043_MI;
+extern MethodInfo m2148_MI;
 extern MethodInfo m12186_MI;
 extern MethodInfo m12185_MI;
 static MethodInfo* t2525_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 	&m12184_MI,
 	&m12186_MI,
 	&m12185_MI,
@@ -1623,10 +1623,10 @@ extern TypeInfo t11_TI;
 extern TypeInfo t1363_TI;
 #include "t1363MD.h"
 extern MethodInfo m12191_MI;
-extern MethodInfo m4766_MI;
+extern MethodInfo m4767_MI;
 extern MethodInfo m531_MI;
-extern MethodInfo m3643_MI;
-extern MethodInfo m5942_MI;
+extern MethodInfo m3644_MI;
+extern MethodInfo m5943_MI;
 
 
 // Metadata Definition System.Collections.Generic.List`1/Enumerator<JewelMine.Engine.Models.CollisionGroupMember>
@@ -1723,10 +1723,10 @@ extern MethodInfo m515_MI;
 extern MethodInfo m12190_MI;
 static MethodInfo* t127_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 	&m12189_MI,
 	&m515_MI,
 	&m12190_MI,
@@ -1769,9 +1769,9 @@ extern TypeInfo t491_TI;
 #include "t491MD.h"
 #include "t2527MD.h"
 extern MethodInfo m12221_MI;
-extern MethodInfo m2163_MI;
-extern MethodInfo m4754_MI;
-extern MethodInfo m4947_MI;
+extern MethodInfo m2164_MI;
+extern MethodInfo m4755_MI;
+extern MethodInfo m4948_MI;
 extern MethodInfo m12253_MI;
 extern MethodInfo m31631_MI;
 extern MethodInfo m31634_MI;
@@ -2278,7 +2278,7 @@ extern MethodInfo m12239_MI;
 extern MethodInfo m31630_MI;
 extern MethodInfo m31635_MI;
 extern MethodInfo m31636_MI;
-extern MethodInfo m6793_MI;
+extern MethodInfo m6794_MI;
 extern MethodInfo m11150_MI;
 extern MethodInfo m11152_MI;
 
@@ -2869,8 +2869,8 @@ extern TypeInfo t2529_TI;
 #include "t2529MD.h"
 extern Il2CppType t7550_0_0_0;
 extern Il2CppType t1520_0_0_0;
-extern MethodInfo m3626_MI;
-extern MethodInfo m3624_MI;
+extern MethodInfo m3627_MI;
+extern MethodInfo m3625_MI;
 extern MethodInfo m10126_MI;
 extern MethodInfo m12263_MI;
 extern MethodInfo m31637_MI;
@@ -3261,16 +3261,16 @@ extern MethodInfo m12268_MI;
 extern MethodInfo m12269_MI;
 static MethodInfo* t2523_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
+	&m2348_MI,
 	&m12267_MI,
 	&m12268_MI,
 	&m12269_MI,
@@ -3356,16 +3356,16 @@ extern MethodInfo m12271_MI;
 extern MethodInfo m12272_MI;
 static MethodInfo* t123_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
+	&m2348_MI,
 	&m12270_MI,
 	&m12271_MI,
 	&m12272_MI,
@@ -3737,16 +3737,16 @@ extern MethodInfo m12281_MI;
 extern MethodInfo m12282_MI;
 static MethodInfo* t2524_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
+	&m2348_MI,
 	&m12280_MI,
 	&m12281_MI,
 	&m12282_MI,
@@ -3856,7 +3856,7 @@ extern MethodInfo m12286_MI;
 	}
 	{
 		t107 * L_1 = (__this->f0);
-		int32_t L_2 = m4763(L_1, &m4763_MI);
+		int32_t L_2 = m4764(L_1, &m4764_MI);
 		__this->f1 = L_2;
 	}
 
@@ -3897,7 +3897,7 @@ IL_003e:
 	}
 	{
 		t133 * L_1 = (t133 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t133_TI));
-		m4758(L_1, (t11*) &_stringLiteral1078, &m4758_MI);
+		m4759(L_1, (t11*) &_stringLiteral1079, &m4759_MI);
 		il2cpp_codegen_raise_exception(L_1);
 	}
 
@@ -3911,7 +3911,7 @@ IL_0015:
 	}
 	{
 		t133 * L_3 = (t133 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t133_TI));
-		m4758(L_3, (t11*) &_stringLiteral1079, &m4758_MI);
+		m4759(L_3, (t11*) &_stringLiteral1080, &m4759_MI);
 		il2cpp_codegen_raise_exception(L_3);
 	}
 
@@ -3919,7 +3919,7 @@ IL_0029:
 	{
 		t107 * L_4 = (__this->f0);
 		t107 * L_5 = (__this->f0);
-		int32_t L_6 = m4763(L_5, &m4763_MI);
+		int32_t L_6 = m4764(L_5, &m4764_MI);
 		int32_t L_7 = (__this->f1);
 		int32_t L_8 = m23986(L_4, ((int32_t)(((int32_t)(L_6-1))-L_7)), &m23986_MI);
 		return L_8;
@@ -3998,10 +3998,10 @@ static MethodInfo* t2532_MIs[] =
 };
 static MethodInfo* t2532_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 	&m12284_MI,
 	&m12286_MI,
 	&m12285_MI,
@@ -4545,10 +4545,10 @@ extern MethodInfo m12291_MI;
 extern MethodInfo m12290_MI;
 static MethodInfo* t2533_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 	&m12289_MI,
 	&m12291_MI,
 	&m12290_MI,
@@ -4774,7 +4774,7 @@ extern MethodInfo m12296_MI;
 	}
 	{
 		t107 * L_1 = (__this->f0);
-		int32_t L_2 = m4763(L_1, &m4763_MI);
+		int32_t L_2 = m4764(L_1, &m4764_MI);
 		__this->f1 = L_2;
 	}
 
@@ -4815,7 +4815,7 @@ IL_003e:
 	}
 	{
 		t133 * L_1 = (t133 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t133_TI));
-		m4758(L_1, (t11*) &_stringLiteral1078, &m4758_MI);
+		m4759(L_1, (t11*) &_stringLiteral1079, &m4759_MI);
 		il2cpp_codegen_raise_exception(L_1);
 	}
 
@@ -4829,7 +4829,7 @@ IL_0015:
 	}
 	{
 		t133 * L_3 = (t133 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t133_TI));
-		m4758(L_3, (t11*) &_stringLiteral1079, &m4758_MI);
+		m4759(L_3, (t11*) &_stringLiteral1080, &m4759_MI);
 		il2cpp_codegen_raise_exception(L_3);
 	}
 
@@ -4837,7 +4837,7 @@ IL_0029:
 	{
 		t107 * L_4 = (__this->f0);
 		t107 * L_5 = (__this->f0);
-		int32_t L_6 = m4763(L_5, &m4763_MI);
+		int32_t L_6 = m4764(L_5, &m4764_MI);
 		int32_t L_7 = (__this->f1);
 		int32_t L_8 = m24008(L_4, ((int32_t)(((int32_t)(L_6-1))-L_7)), &m24008_MI);
 		return L_8;
@@ -4916,10 +4916,10 @@ static MethodInfo* t2534_MIs[] =
 };
 static MethodInfo* t2534_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 	&m12294_MI,
 	&m12296_MI,
 	&m12295_MI,
@@ -5281,7 +5281,7 @@ extern MethodInfo m12301_MI;
 	}
 	{
 		t107 * L_1 = (__this->f0);
-		int32_t L_2 = m4763(L_1, &m4763_MI);
+		int32_t L_2 = m4764(L_1, &m4764_MI);
 		__this->f1 = L_2;
 	}
 
@@ -5322,7 +5322,7 @@ IL_003e:
 	}
 	{
 		t133 * L_1 = (t133 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t133_TI));
-		m4758(L_1, (t11*) &_stringLiteral1078, &m4758_MI);
+		m4759(L_1, (t11*) &_stringLiteral1079, &m4759_MI);
 		il2cpp_codegen_raise_exception(L_1);
 	}
 
@@ -5336,7 +5336,7 @@ IL_0015:
 	}
 	{
 		t133 * L_3 = (t133 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t133_TI));
-		m4758(L_3, (t11*) &_stringLiteral1079, &m4758_MI);
+		m4759(L_3, (t11*) &_stringLiteral1080, &m4759_MI);
 		il2cpp_codegen_raise_exception(L_3);
 	}
 
@@ -5344,7 +5344,7 @@ IL_0029:
 	{
 		t107 * L_4 = (__this->f0);
 		t107 * L_5 = (__this->f0);
-		int32_t L_6 = m4763(L_5, &m4763_MI);
+		int32_t L_6 = m4764(L_5, &m4764_MI);
 		int32_t L_7 = (__this->f1);
 		int32_t L_8 = m24019(L_4, ((int32_t)(((int32_t)(L_6-1))-L_7)), &m24019_MI);
 		return L_8;
@@ -5423,10 +5423,10 @@ static MethodInfo* t2535_MIs[] =
 };
 static MethodInfo* t2535_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 	&m12299_MI,
 	&m12301_MI,
 	&m12300_MI,
@@ -5788,7 +5788,7 @@ extern MethodInfo m12306_MI;
 	}
 	{
 		t107 * L_1 = (__this->f0);
-		int32_t L_2 = m4763(L_1, &m4763_MI);
+		int32_t L_2 = m4764(L_1, &m4764_MI);
 		__this->f1 = L_2;
 	}
 
@@ -5829,7 +5829,7 @@ IL_003e:
 	}
 	{
 		t133 * L_1 = (t133 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t133_TI));
-		m4758(L_1, (t11*) &_stringLiteral1078, &m4758_MI);
+		m4759(L_1, (t11*) &_stringLiteral1079, &m4759_MI);
 		il2cpp_codegen_raise_exception(L_1);
 	}
 
@@ -5843,7 +5843,7 @@ IL_0015:
 	}
 	{
 		t133 * L_3 = (t133 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t133_TI));
-		m4758(L_3, (t11*) &_stringLiteral1079, &m4758_MI);
+		m4759(L_3, (t11*) &_stringLiteral1080, &m4759_MI);
 		il2cpp_codegen_raise_exception(L_3);
 	}
 
@@ -5851,7 +5851,7 @@ IL_0029:
 	{
 		t107 * L_4 = (__this->f0);
 		t107 * L_5 = (__this->f0);
-		int32_t L_6 = m4763(L_5, &m4763_MI);
+		int32_t L_6 = m4764(L_5, &m4764_MI);
 		int32_t L_7 = (__this->f1);
 		int32_t L_8 = m24030(L_4, ((int32_t)(((int32_t)(L_6-1))-L_7)), &m24030_MI);
 		return L_8;
@@ -5930,10 +5930,10 @@ static MethodInfo* t2536_MIs[] =
 };
 static MethodInfo* t2536_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 	&m12304_MI,
 	&m12306_MI,
 	&m12305_MI,
@@ -6295,7 +6295,7 @@ extern MethodInfo m12311_MI;
 	}
 	{
 		t107 * L_1 = (__this->f0);
-		int32_t L_2 = m4763(L_1, &m4763_MI);
+		int32_t L_2 = m4764(L_1, &m4764_MI);
 		__this->f1 = L_2;
 	}
 
@@ -6336,7 +6336,7 @@ IL_003e:
 	}
 	{
 		t133 * L_1 = (t133 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t133_TI));
-		m4758(L_1, (t11*) &_stringLiteral1078, &m4758_MI);
+		m4759(L_1, (t11*) &_stringLiteral1079, &m4759_MI);
 		il2cpp_codegen_raise_exception(L_1);
 	}
 
@@ -6350,7 +6350,7 @@ IL_0015:
 	}
 	{
 		t133 * L_3 = (t133 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t133_TI));
-		m4758(L_3, (t11*) &_stringLiteral1079, &m4758_MI);
+		m4759(L_3, (t11*) &_stringLiteral1080, &m4759_MI);
 		il2cpp_codegen_raise_exception(L_3);
 	}
 
@@ -6358,7 +6358,7 @@ IL_0029:
 	{
 		t107 * L_4 = (__this->f0);
 		t107 * L_5 = (__this->f0);
-		int32_t L_6 = m4763(L_5, &m4763_MI);
+		int32_t L_6 = m4764(L_5, &m4764_MI);
 		int32_t L_7 = (__this->f1);
 		int32_t L_8 = m24041(L_4, ((int32_t)(((int32_t)(L_6-1))-L_7)), &m24041_MI);
 		return L_8;
@@ -6437,10 +6437,10 @@ static MethodInfo* t2537_MIs[] =
 };
 static MethodInfo* t2537_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 	&m12309_MI,
 	&m12311_MI,
 	&m12310_MI,
@@ -6819,16 +6819,16 @@ static MethodInfo* t33_MIs[] =
 };
 static MethodInfo* t33_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
+	&m2348_MI,
 	&m12313_MI,
 	&m12314_MI,
 	&m12315_MI,
@@ -6921,16 +6921,16 @@ extern MethodInfo m12318_MI;
 extern MethodInfo m12320_MI;
 static MethodInfo* t34_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
+	&m2348_MI,
 	&m527_MI,
 	&m12318_MI,
 	&m12320_MI,
@@ -7062,16 +7062,16 @@ static MethodInfo* t136_MIs[] =
 };
 static MethodInfo* t136_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
+	&m2348_MI,
 	&m12317_MI,
 	&m12319_MI,
 	&m12321_MI,
@@ -7162,16 +7162,16 @@ extern MethodInfo m12323_MI;
 extern MethodInfo m12324_MI;
 static MethodInfo* t35_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
+	&m2348_MI,
 	&m12322_MI,
 	&m12323_MI,
 	&m12324_MI,
@@ -7297,10 +7297,10 @@ extern MethodInfo m517_MI;
 extern MethodInfo m12327_MI;
 static MethodInfo* t126_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 	&m12326_MI,
 	&m517_MI,
 	&m12327_MI,
@@ -7835,16 +7835,16 @@ MethodInfo m12354_MI =
 	"GetIndex", (methodPointerType)&m11706_gshared, &t65_TI, &t110_0_0_0, RuntimeInvoker_t110_t110_t110_t5, t65_m12354_ParameterInfos, &EmptyCustomAttributesCache, 129, 0, 255, 3, false, true, 0, NULL, (methodPointerType)NULL, &m12354_GM};
 extern Il2CppType t49_0_0_0;
 extern Il2CppType t49_0_0_0;
-static ParameterInfo t65_m594_ParameterInfos[] = 
+static ParameterInfo t65_m595_ParameterInfos[] = 
 {
 	{"action", 0, 134217728, &EmptyCustomAttributesCache, &t49_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5 (MethodInfo* method, void* obj, void** args);
-extern Il2CppGenericMethod m594_GM;
-MethodInfo m594_MI = 
+extern Il2CppGenericMethod m595_GM;
+MethodInfo m595_MI = 
 {
-	"ForEach", (methodPointerType)&m11707_gshared, &t65_TI, &t109_0_0_0, RuntimeInvoker_t109_t5, t65_m594_ParameterInfos, &EmptyCustomAttributesCache, 134, 0, 255, 1, false, true, 0, NULL, (methodPointerType)NULL, &m594_GM};
+	"ForEach", (methodPointerType)&m11707_gshared, &t65_TI, &t109_0_0_0, RuntimeInvoker_t109_t5, t65_m595_ParameterInfos, &EmptyCustomAttributesCache, 134, 0, 255, 1, false, true, 0, NULL, (methodPointerType)NULL, &m595_GM};
 extern Il2CppType t126_0_0_0;
 extern void* RuntimeInvoker_t126 (MethodInfo* method, void* obj, void** args);
 extern Il2CppGenericMethod m510_GM;
@@ -8059,7 +8059,7 @@ static MethodInfo* t65_MIs[] =
 	&m12352_MI,
 	&m12353_MI,
 	&m12354_MI,
-	&m594_MI,
+	&m595_MI,
 	&m510_MI,
 	&m12355_MI,
 	&m12356_MI,
@@ -8426,10 +8426,10 @@ extern MethodInfo m12374_MI;
 extern MethodInfo m12373_MI;
 static MethodInfo* t2543_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 	&m12372_MI,
 	&m12374_MI,
 	&m12373_MI,
@@ -10042,16 +10042,16 @@ extern MethodInfo m12451_MI;
 extern MethodInfo m12452_MI;
 static MethodInfo* t128_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
+	&m2348_MI,
 	&m12450_MI,
 	&m12451_MI,
 	&m12452_MI,
@@ -10077,17 +10077,17 @@ TypeInfo t128_TI =
 // Metadata Definition System.Action`1<JewelMine.Engine.Models.MarkedCollisionGroup>
 extern Il2CppType t5_0_0_0;
 extern Il2CppType t124_0_0_0;
-static ParameterInfo t49_m593_ParameterInfos[] = 
+static ParameterInfo t49_m594_ParameterInfos[] = 
 {
 	{"object", 0, 134217728, &EmptyCustomAttributesCache, &t5_0_0_0},
 	{"method", 1, 134217728, &EmptyCustomAttributesCache, &t124_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5_t124 (MethodInfo* method, void* obj, void** args);
-extern Il2CppGenericMethod m593_GM;
-MethodInfo m593_MI = 
+extern Il2CppGenericMethod m594_GM;
+MethodInfo m594_MI = 
 {
-	".ctor", (methodPointerType)&m11863_gshared, &t49_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t124, t49_m593_ParameterInfos, &EmptyCustomAttributesCache, 6278, 3, 255, 2, false, true, 0, NULL, (methodPointerType)NULL, &m593_GM};
+	".ctor", (methodPointerType)&m11863_gshared, &t49_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t124, t49_m594_ParameterInfos, &EmptyCustomAttributesCache, 6278, 3, 255, 2, false, true, 0, NULL, (methodPointerType)NULL, &m594_GM};
 extern Il2CppType t15_0_0_0;
 static ParameterInfo t49_m12453_ParameterInfos[] = 
 {
@@ -10127,7 +10127,7 @@ MethodInfo m12455_MI =
 	"EndInvoke", (methodPointerType)&m11866_gshared, &t49_TI, &t109_0_0_0, RuntimeInvoker_t109_t5, t49_m12455_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 12, 1, false, true, 0, NULL, (methodPointerType)NULL, &m12455_GM};
 static MethodInfo* t49_MIs[] =
 {
-	&m593_MI,
+	&m594_MI,
 	&m12453_MI,
 	&m12454_MI,
 	&m12455_MI,
@@ -10137,16 +10137,16 @@ extern MethodInfo m12454_MI;
 extern MethodInfo m12455_MI;
 static MethodInfo* t49_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
+	&m2348_MI,
 	&m12453_MI,
 	&m12454_MI,
 	&m12455_MI,
@@ -10476,16 +10476,16 @@ extern MethodInfo m12464_MI;
 extern MethodInfo m12465_MI;
 static MethodInfo* t2542_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
+	&m2348_MI,
 	&m12463_MI,
 	&m12464_MI,
 	&m12465_MI,
@@ -11508,7 +11508,7 @@ IL_003e:
 IL_0062:
 	{
 		t160 * L_18 = (t160 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t160_TI));
-		m2581(L_18, (t11*) &_stringLiteral1208, &m2581_MI);
+		m2582(L_18, (t11*) &_stringLiteral1209, &m2582_MI);
 		il2cpp_codegen_raise_exception(L_18);
 	}
 }
@@ -11808,9 +11808,9 @@ struct t125;
 #include "t125.h"
 struct t125;
 #include "t167.h"
- t168* m620_gshared (t5 * __this, t5* p0, MethodInfo* method);
-#define m620(__this, p0, method) (t168*)m620_gshared((t5 *)__this, (t5*)p0, method)
-#define m24082(__this, p0, method) (t38*)m620_gshared((t5 *)__this, (t5*)p0, method)
+ t168* m621_gshared (t5 * __this, t5* p0, MethodInfo* method);
+#define m621(__this, p0, method) (t168*)m621_gshared((t5 *)__this, (t5*)p0, method)
+#define m24082(__this, p0, method) (t38*)m621_gshared((t5 *)__this, (t5*)p0, method)
 
 
 // Metadata Definition System.Linq.QuickSort`1<JewelMine.Engine.Models.CollisionGroupMember>
@@ -11937,11 +11937,11 @@ static ParameterInfo t2558_m12502_ParameterInfos[] =
 };
 extern Il2CppType t2519_0_0_0;
 extern void* RuntimeInvoker_t5_t5_t5 (MethodInfo* method, void* obj, void** args);
-extern CustomAttributesCache t838__CustomAttributeCache_m3824;
+extern CustomAttributesCache t838__CustomAttributeCache_m3825;
 extern Il2CppGenericMethod m12502_GM;
 MethodInfo m12502_MI = 
 {
-	"Sort", (methodPointerType)&m12503_gshared, &t2558_TI, &t2519_0_0_0, RuntimeInvoker_t5_t5_t5, t2558_m12502_ParameterInfos, &t838__CustomAttributeCache_m3824, 150, 0, 255, 2, false, true, 0, NULL, (methodPointerType)NULL, &m12502_GM};
+	"Sort", (methodPointerType)&m12503_gshared, &t2558_TI, &t2519_0_0_0, RuntimeInvoker_t5_t5_t5, t2558_m12502_ParameterInfos, &t838__CustomAttributeCache_m3825, 150, 0, 255, 2, false, true, 0, NULL, (methodPointerType)NULL, &m12502_GM};
 static MethodInfo* t2558_MIs[] =
 {
 	&m12486_MI,
@@ -11982,7 +11982,7 @@ extern Il2CppType t2558_0_0_0;
 extern Il2CppType t2558_1_0_0;
 struct t2558;
 extern Il2CppGenericClass t2558_GC;
-extern CustomAttributesCache t838__CustomAttributeCache_m3824;
+extern CustomAttributesCache t838__CustomAttributeCache_m3825;
 TypeInfo t2558_TI = 
 {
 	&g_System_Core_dll_Image, NULL, "QuickSort`1", "System.Linq", t2558_MIs, NULL, t2558_FIs, NULL, &t5_TI, NULL, NULL, &t2558_TI, NULL, t2558_VT, &EmptyCustomAttributesCache, &t2558_TI, &t2558_0_0_0, &t2558_1_0_0, NULL, &t2558_GC, NULL, NULL, NULL, t2558_RGCTXData, (methodPointerType)NULL, (methodPointerType)NULL, (methodPointerType)NULL, (methodPointerType)NULL, sizeof (t2558), 0, -1, 0, 0, -1, 1048576, 0, false, false, false, false, true, false, false, false, false, false, false, false, 9, 0, 3, 0, 0, 4, 0, 0};
@@ -11997,7 +11997,7 @@ extern TypeInfo t2559_TI;
 extern TypeInfo t168_TI;
 extern TypeInfo t2560_TI;
 #include "t2560MD.h"
-extern MethodInfo m620_MI;
+extern MethodInfo m621_MI;
 extern MethodInfo m12489_MI;
 extern MethodInfo m31738_MI;
 extern MethodInfo m12497_MI;
@@ -12451,11 +12451,11 @@ static ParameterInfo t2559_m12503_ParameterInfos[] =
 };
 extern Il2CppType t2459_0_0_0;
 extern void* RuntimeInvoker_t5_t5_t5 (MethodInfo* method, void* obj, void** args);
-extern CustomAttributesCache t838__CustomAttributeCache_m3824;
+extern CustomAttributesCache t838__CustomAttributeCache_m3825;
 extern Il2CppGenericMethod m12503_GM;
 MethodInfo m12503_MI = 
 {
-	"Sort", (methodPointerType)&m12503_gshared, &t2559_TI, &t2459_0_0_0, RuntimeInvoker_t5_t5_t5, t2559_m12503_ParameterInfos, &t838__CustomAttributeCache_m3824, 150, 0, 255, 2, false, true, 0, NULL, (methodPointerType)NULL, &m12503_GM};
+	"Sort", (methodPointerType)&m12503_gshared, &t2559_TI, &t2459_0_0_0, RuntimeInvoker_t5_t5_t5, t2559_m12503_ParameterInfos, &t838__CustomAttributeCache_m3825, 150, 0, 255, 2, false, true, 0, NULL, (methodPointerType)NULL, &m12503_GM};
 static MethodInfo* t2559_MIs[] =
 {
 	&m12487_MI,
@@ -12479,7 +12479,7 @@ static MethodInfo* t2559_VT[] =
 extern TypeInfo t2560_TI;
 static Il2CppRGCTXData t2559_RGCTXData[11] = 
 {
-	&m620_MI/* Method Usage */,
+	&m621_MI/* Method Usage */,
 	&m12489_MI/* Method Usage */,
 	&m31738_MI/* Method Usage */,
 	&m12497_MI/* Method Usage */,
@@ -12496,7 +12496,7 @@ extern Il2CppType t2559_0_0_0;
 extern Il2CppType t2559_1_0_0;
 struct t2559;
 extern Il2CppGenericClass t2559_GC;
-extern CustomAttributesCache t838__CustomAttributeCache_m3824;
+extern CustomAttributesCache t838__CustomAttributeCache_m3825;
 TypeInfo t2559_TI = 
 {
 	&g_System_Core_dll_Image, NULL, "QuickSort`1", "System.Linq", t2559_MIs, NULL, t2559_FIs, NULL, &t5_TI, NULL, NULL, &t2559_TI, NULL, t2559_VT, &EmptyCustomAttributesCache, &t2559_TI, &t2559_0_0_0, &t2559_1_0_0, NULL, &t2559_GC, NULL, NULL, NULL, t2559_RGCTXData, (methodPointerType)NULL, (methodPointerType)NULL, (methodPointerType)NULL, (methodPointerType)NULL, sizeof (t2559), 0, -1, 0, 0, -1, 1048576, 0, false, false, false, false, true, false, false, false, false, false, false, false, 9, 0, 3, 0, 0, 4, 0, 0};
@@ -12722,32 +12722,32 @@ MethodInfo m12504_MI =
 	".ctor", (methodPointerType)&m12504_gshared, &t2560_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 6278, 0, 255, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12504_GM};
 extern Il2CppType t5_0_0_0;
 extern void* RuntimeInvoker_t5 (MethodInfo* method, void* obj, void** args);
-extern CustomAttributesCache t837__CustomAttributeCache_m3810;
+extern CustomAttributesCache t837__CustomAttributeCache_m3811;
 extern Il2CppGenericMethod m12505_GM;
 MethodInfo m12505_MI = 
 {
-	"System.Collections.Generic.IEnumerator<TElement>.get_Current", (methodPointerType)&m12505_gshared, &t2560_TI, &t5_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3810, 2529, 0, 9, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12505_GM};
+	"System.Collections.Generic.IEnumerator<TElement>.get_Current", (methodPointerType)&m12505_gshared, &t2560_TI, &t5_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3811, 2529, 0, 9, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12505_GM};
 extern Il2CppType t5_0_0_0;
 extern void* RuntimeInvoker_t5 (MethodInfo* method, void* obj, void** args);
-extern CustomAttributesCache t837__CustomAttributeCache_m3811;
+extern CustomAttributesCache t837__CustomAttributeCache_m3812;
 extern Il2CppGenericMethod m12506_GM;
 MethodInfo m12506_MI = 
 {
-	"System.Collections.IEnumerator.get_Current", (methodPointerType)&m12506_gshared, &t2560_TI, &t5_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3811, 2529, 0, 4, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12506_GM};
+	"System.Collections.IEnumerator.get_Current", (methodPointerType)&m12506_gshared, &t2560_TI, &t5_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3812, 2529, 0, 4, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12506_GM};
 extern Il2CppType t196_0_0_0;
 extern void* RuntimeInvoker_t5 (MethodInfo* method, void* obj, void** args);
-extern CustomAttributesCache t837__CustomAttributeCache_m3812;
+extern CustomAttributesCache t837__CustomAttributeCache_m3813;
 extern Il2CppGenericMethod m12507_GM;
 MethodInfo m12507_MI = 
 {
-	"System.Collections.IEnumerable.GetEnumerator", (methodPointerType)&m12507_gshared, &t2560_TI, &t196_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3812, 481, 0, 7, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12507_GM};
+	"System.Collections.IEnumerable.GetEnumerator", (methodPointerType)&m12507_gshared, &t2560_TI, &t196_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3813, 481, 0, 7, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12507_GM};
 extern Il2CppType t492_0_0_0;
 extern void* RuntimeInvoker_t5 (MethodInfo* method, void* obj, void** args);
-extern CustomAttributesCache t837__CustomAttributeCache_m3813;
+extern CustomAttributesCache t837__CustomAttributeCache_m3814;
 extern Il2CppGenericMethod m12508_GM;
 MethodInfo m12508_MI = 
 {
-	"System.Collections.Generic.IEnumerable<TElement>.GetEnumerator", (methodPointerType)&m12508_gshared, &t2560_TI, &t492_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3813, 481, 0, 8, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12508_GM};
+	"System.Collections.Generic.IEnumerable<TElement>.GetEnumerator", (methodPointerType)&m12508_gshared, &t2560_TI, &t492_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3814, 481, 0, 8, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12508_GM};
 extern Il2CppType t108_0_0_0;
 extern void* RuntimeInvoker_t108 (MethodInfo* method, void* obj, void** args);
 extern Il2CppGenericMethod m12509_GM;
@@ -12756,11 +12756,11 @@ MethodInfo m12509_MI =
 	"MoveNext", (methodPointerType)&m12509_gshared, &t2560_TI, &t108_0_0_0, RuntimeInvoker_t108, NULL, &EmptyCustomAttributesCache, 486, 0, 5, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12509_GM};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
-extern CustomAttributesCache t837__CustomAttributeCache_m3815;
+extern CustomAttributesCache t837__CustomAttributeCache_m3816;
 extern Il2CppGenericMethod m12510_GM;
 MethodInfo m12510_MI = 
 {
-	"Dispose", (methodPointerType)&m12510_gshared, &t2560_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &t837__CustomAttributeCache_m3815, 486, 0, 6, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12510_GM};
+	"Dispose", (methodPointerType)&m12510_gshared, &t2560_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &t837__CustomAttributeCache_m3816, 486, 0, 6, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12510_GM};
 static MethodInfo* t2560_MIs[] =
 {
 	&m12504_MI,
@@ -12821,11 +12821,11 @@ struct t2560;
 extern Il2CppGenericClass t2560_GC;
 extern TypeInfo t838_TI;
 extern CustomAttributesCache t837__CustomAttributeCache;
-extern CustomAttributesCache t837__CustomAttributeCache_m3810;
 extern CustomAttributesCache t837__CustomAttributeCache_m3811;
 extern CustomAttributesCache t837__CustomAttributeCache_m3812;
 extern CustomAttributesCache t837__CustomAttributeCache_m3813;
-extern CustomAttributesCache t837__CustomAttributeCache_m3815;
+extern CustomAttributesCache t837__CustomAttributeCache_m3814;
+extern CustomAttributesCache t837__CustomAttributeCache_m3816;
 TypeInfo t2560_TI = 
 {
 	&g_System_Core_dll_Image, NULL, "<Sort>c__Iterator21", "", t2560_MIs, t2560_PIs, t2560_FIs, NULL, &t5_TI, NULL, &t838_TI, &t2560_TI, t2560_ITIs, t2560_VT, &t837__CustomAttributeCache, &t2560_TI, &t2560_0_0_0, &t2560_1_0_0, t2560_IOs, &t2560_GC, NULL, NULL, NULL, t2560_RGCTXData, (methodPointerType)NULL, (methodPointerType)NULL, (methodPointerType)NULL, (methodPointerType)NULL, sizeof (t2560), 0, -1, 0, 0, -1, 1048835, 0, false, false, false, false, true, false, false, false, false, false, false, false, 7, 2, 8, 0, 0, 10, 5, 5};
@@ -12905,32 +12905,32 @@ MethodInfo m12511_MI =
 	".ctor", (methodPointerType)&m12504_gshared, &t2561_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 6278, 0, 255, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12511_GM};
 extern Il2CppType t26_0_0_0;
 extern void* RuntimeInvoker_t5 (MethodInfo* method, void* obj, void** args);
-extern CustomAttributesCache t837__CustomAttributeCache_m3810;
+extern CustomAttributesCache t837__CustomAttributeCache_m3811;
 extern Il2CppGenericMethod m12512_GM;
 MethodInfo m12512_MI = 
 {
-	"System.Collections.Generic.IEnumerator<TElement>.get_Current", (methodPointerType)&m12505_gshared, &t2561_TI, &t26_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3810, 2529, 0, 9, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12512_GM};
+	"System.Collections.Generic.IEnumerator<TElement>.get_Current", (methodPointerType)&m12505_gshared, &t2561_TI, &t26_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3811, 2529, 0, 9, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12512_GM};
 extern Il2CppType t5_0_0_0;
 extern void* RuntimeInvoker_t5 (MethodInfo* method, void* obj, void** args);
-extern CustomAttributesCache t837__CustomAttributeCache_m3811;
+extern CustomAttributesCache t837__CustomAttributeCache_m3812;
 extern Il2CppGenericMethod m12513_GM;
 MethodInfo m12513_MI = 
 {
-	"System.Collections.IEnumerator.get_Current", (methodPointerType)&m12506_gshared, &t2561_TI, &t5_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3811, 2529, 0, 4, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12513_GM};
+	"System.Collections.IEnumerator.get_Current", (methodPointerType)&m12506_gshared, &t2561_TI, &t5_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3812, 2529, 0, 4, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12513_GM};
 extern Il2CppType t196_0_0_0;
 extern void* RuntimeInvoker_t5 (MethodInfo* method, void* obj, void** args);
-extern CustomAttributesCache t837__CustomAttributeCache_m3812;
+extern CustomAttributesCache t837__CustomAttributeCache_m3813;
 extern Il2CppGenericMethod m12514_GM;
 MethodInfo m12514_MI = 
 {
-	"System.Collections.IEnumerable.GetEnumerator", (methodPointerType)&m12507_gshared, &t2561_TI, &t196_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3812, 481, 0, 7, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12514_GM};
+	"System.Collections.IEnumerable.GetEnumerator", (methodPointerType)&m12507_gshared, &t2561_TI, &t196_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3813, 481, 0, 7, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12514_GM};
 extern Il2CppType t2520_0_0_0;
 extern void* RuntimeInvoker_t5 (MethodInfo* method, void* obj, void** args);
-extern CustomAttributesCache t837__CustomAttributeCache_m3813;
+extern CustomAttributesCache t837__CustomAttributeCache_m3814;
 extern Il2CppGenericMethod m12515_GM;
 MethodInfo m12515_MI = 
 {
-	"System.Collections.Generic.IEnumerable<TElement>.GetEnumerator", (methodPointerType)&m12508_gshared, &t2561_TI, &t2520_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3813, 481, 0, 8, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12515_GM};
+	"System.Collections.Generic.IEnumerable<TElement>.GetEnumerator", (methodPointerType)&m12508_gshared, &t2561_TI, &t2520_0_0_0, RuntimeInvoker_t5, NULL, &t837__CustomAttributeCache_m3814, 481, 0, 8, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12515_GM};
 extern Il2CppType t108_0_0_0;
 extern void* RuntimeInvoker_t108 (MethodInfo* method, void* obj, void** args);
 extern Il2CppGenericMethod m12516_GM;
@@ -12939,11 +12939,11 @@ MethodInfo m12516_MI =
 	"MoveNext", (methodPointerType)&m12509_gshared, &t2561_TI, &t108_0_0_0, RuntimeInvoker_t108, NULL, &EmptyCustomAttributesCache, 486, 0, 5, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12516_GM};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
-extern CustomAttributesCache t837__CustomAttributeCache_m3815;
+extern CustomAttributesCache t837__CustomAttributeCache_m3816;
 extern Il2CppGenericMethod m12517_GM;
 MethodInfo m12517_MI = 
 {
-	"Dispose", (methodPointerType)&m12510_gshared, &t2561_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &t837__CustomAttributeCache_m3815, 486, 0, 6, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12517_GM};
+	"Dispose", (methodPointerType)&m12510_gshared, &t2561_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &t837__CustomAttributeCache_m3816, 486, 0, 6, 0, false, true, 0, NULL, (methodPointerType)NULL, &m12517_GM};
 static MethodInfo* t2561_MIs[] =
 {
 	&m12511_MI,
@@ -13006,11 +13006,11 @@ extern Il2CppType t2561_1_0_0;
 struct t2561;
 extern Il2CppGenericClass t2561_GC;
 extern CustomAttributesCache t837__CustomAttributeCache;
-extern CustomAttributesCache t837__CustomAttributeCache_m3810;
 extern CustomAttributesCache t837__CustomAttributeCache_m3811;
 extern CustomAttributesCache t837__CustomAttributeCache_m3812;
 extern CustomAttributesCache t837__CustomAttributeCache_m3813;
-extern CustomAttributesCache t837__CustomAttributeCache_m3815;
+extern CustomAttributesCache t837__CustomAttributeCache_m3814;
+extern CustomAttributesCache t837__CustomAttributeCache_m3816;
 TypeInfo t2561_TI = 
 {
 	&g_System_Core_dll_Image, NULL, "<Sort>c__Iterator21", "", t2561_MIs, t2561_PIs, t2561_FIs, NULL, &t5_TI, NULL, &t838_TI, &t2561_TI, t2561_ITIs, t2561_VT, &t837__CustomAttributeCache, &t2561_TI, &t2561_0_0_0, &t2561_1_0_0, t2561_IOs, &t2561_GC, NULL, NULL, NULL, t2561_RGCTXData, (methodPointerType)NULL, (methodPointerType)NULL, (methodPointerType)NULL, (methodPointerType)NULL, sizeof (t2561), 0, -1, 0, 0, -1, 1048835, 0, false, false, false, false, true, false, false, false, false, false, false, false, 7, 2, 8, 0, 0, 10, 5, 5};
@@ -13146,10 +13146,10 @@ extern MethodInfo m12521_MI;
 extern MethodInfo m12520_MI;
 static MethodInfo* t2562_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 	&m12519_MI,
 	&m12521_MI,
 	&m12520_MI,

@@ -10,5 +10,5 @@ struct t829;
 #include "t830.h"
 
  void m9334 (t1183 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- void m4778 (t1183 * __this, t11* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m4779 (t1183 * __this, t11* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m9335 (t1183 * __this, t829 * p0, t830  p1, MethodInfo* method) IL2CPP_METHOD_ATTR;

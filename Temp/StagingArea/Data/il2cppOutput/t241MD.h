@@ -9,7 +9,7 @@ struct t243;
 struct t262;
 
 #include "t2864MD.h"
-#define m2013(__this, p0, p1, method) (void)m15190_gshared((t2864 *)__this, (t2504 *)p0, (t2504 *)p1, method)
+#define m2014(__this, p0, p1, method) (void)m15190_gshared((t2864 *)__this, (t2504 *)p0, (t2504 *)p1, method)
 #define m15191(__this, method) (int32_t)m15192_gshared((t2864 *)__this, method)
 #define m15193(__this, p0, method) (void)m15194_gshared((t2864 *)__this, (int32_t)p0, method)
 #define m15195(__this, method) (int32_t)m15196_gshared((t2864 *)__this, method)

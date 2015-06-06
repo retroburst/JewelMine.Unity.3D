@@ -68,6 +68,6 @@ struct t2946;
 #define m15837(__this, method) (void)m11733_gshared((t167 *)__this, method)
 #define m15838(__this, method) (int32_t)m11735_gshared((t167 *)__this, method)
 #define m15839(__this, p0, method) (void)m11737_gshared((t167 *)__this, (int32_t)p0, method)
-#define m1988(__this, method) (int32_t)m11738_gshared((t167 *)__this, method)
-#define m1989(__this, p0, method) (t215 *)m11740_gshared((t167 *)__this, (int32_t)p0, method)
+#define m1989(__this, method) (int32_t)m11738_gshared((t167 *)__this, method)
+#define m1990(__this, p0, method) (t215 *)m11740_gshared((t167 *)__this, (int32_t)p0, method)
 #define m15840(__this, p0, p1, method) (void)m11742_gshared((t167 *)__this, (int32_t)p0, (t5 *)p1, method)

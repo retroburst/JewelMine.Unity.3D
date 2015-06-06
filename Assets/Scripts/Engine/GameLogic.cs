@@ -132,6 +132,11 @@ namespace JewelMine.Engine
 		{
 			immediateReturn = false;
 			try {
+				if(!File.Exists(Path.Combine(userSettings.SaveGamePath, GameConstants.GAME_DEFAULT_SAVE_GAME_FILENAME))){
+					logicUpdate.Messages.Add (GameConstants.GAME_MESSAGE_LOAD_GAME_NO_FILE);
+					immediateReturn = false;
+					return;
+				}
 				SavedGameState saveGame = null;
 				BinaryFormatter formatter = new BinaryFormatter ();
 				using (FileStream fs = File.Open(Path.Combine(userSettings.SaveGamePath, GameConstants.GAME_DEFAULT_SAVE_GAME_FILENAME), FileMode.Open)) {

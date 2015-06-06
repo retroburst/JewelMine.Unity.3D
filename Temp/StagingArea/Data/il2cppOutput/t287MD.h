@@ -12,10 +12,10 @@ struct t5;
 struct t694;
 #include "t289.h"
 
- void m2141 (t287 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- void m2146 (t287 * __this, t290 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m2142 (t287 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m2147 (t287 * __this, t290 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m16556 (t287 * __this, t290 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t695 * m2142 (t287 * __this, t11* p0, t5 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t694 * m2143 (t287 * __this, t5 * p0, t695 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t695 * m2143 (t287 * __this, t11* p0, t5 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t694 * m2144 (t287 * __this, t5 * p0, t695 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
  t694 * m16557 (t5 * __this, t290 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
- void m2145 (t287 * __this, t289  p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m2146 (t287 * __this, t289  p0, MethodInfo* method) IL2CPP_METHOD_ATTR;

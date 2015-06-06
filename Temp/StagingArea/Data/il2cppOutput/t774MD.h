@@ -26,7 +26,7 @@ struct t675;
  t5 * m8558 (t774 * __this, t5 * p0, t168* p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
  int32_t m8559 (t774 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  bool m8560 (t774 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- bool m3597 (t774 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ bool m3598 (t774 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  bool m8561 (t774 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  int32_t m8562 (t774 * __this, t5 * p0, int32_t p1, bool p2, MethodInfo* method) IL2CPP_METHOD_ATTR;
  t675* m8563 (t774 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;

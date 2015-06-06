@@ -26,5 +26,5 @@ struct t2985;
  bool m16275 (t471 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  t5 * m16276 (t471 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m16277 (t471 * __this, t2985* p0, int32_t p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t470  m2074 (t471 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t470  m2075 (t471 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  int32_t m16278 (t471 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;

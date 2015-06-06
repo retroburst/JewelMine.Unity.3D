@@ -6,4 +6,4 @@
 
 struct t663;
 
- void m3317 (t663 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m3318 (t663 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;

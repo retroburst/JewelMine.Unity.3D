@@ -10,7 +10,7 @@ struct t221;
 struct t222;
 #include "t124.h"
 
- void m2171 (t493 * __this, t5 * p0, t124 p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
- void m3360 (t493 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t5 * m3361 (t493 * __this, t222 * p0, t5 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
- void m3362 (t493 * __this, t5 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m2172 (t493 * __this, t5 * p0, t124 p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m3361 (t493 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t5 * m3362 (t493 * __this, t222 * p0, t5 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m3363 (t493 * __this, t5 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;

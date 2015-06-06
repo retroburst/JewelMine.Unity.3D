@@ -16,6 +16,7 @@ namespace JewelMine.Engine
         public const int GAME_NUM_JEWELS_FOR_GROUP_COLLISION = 3;
         public const string GAME_MESSAGE_SAVE_GAME_PATTERN = "Saved {0}";
         public const string GAME_MESSAGE_LOAD_GAME_PATTERN = "Loaded from {0}";
+		public const string GAME_MESSAGE_LOAD_GAME_NO_FILE = "Could not load game - no saved game exists";
         public const string GAME_MESSAGE_SAVE_GAME_FAILED_PATTERN = "Save failed [{0}]";
         public const string GAME_MESSAGE_LOAD_GAME_FAILED_PATTERN = "Loaded failed [{0}]";
         public const string GAME_MESSAGE_CHANGED_DIFFICULTY_PATTERN = "Difficulty set to {0} [{1:N0} Levels]";

@@ -21,7 +21,7 @@ struct t987;
 #include "t990.h"
 
  void m21830 (t1033 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- void m4822 (t1033 * __this, t5* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m4823 (t1033 * __this, t5* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m21831 (t1033 * __this, int32_t p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m21832 (t1033 * __this, t829 * p0, t830  p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
  t5 * m21833 (t1033 * __this, t5 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
@@ -49,7 +49,7 @@ struct t987;
  bool m21855 (t5 * __this, t11* p0, bool p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m21856 (t1033 * __this, t3831* p0, int32_t p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m21857 (t1033 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- void m4823 (t1033 * __this, t11* p0, bool p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m4824 (t1033 * __this, t11* p0, bool p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m21858 (t1033 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  bool m21859 (t1033 * __this, t11* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  bool m21860 (t1033 * __this, bool p0, MethodInfo* method) IL2CPP_METHOD_ATTR;

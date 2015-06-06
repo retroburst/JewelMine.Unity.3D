@@ -27,5 +27,5 @@ struct t620;
 #define m19869(__this, method) (bool)m17077_gshared((t3097 *)__this, method)
 #define m19870(__this, method) (t5 *)m17078_gshared((t3097 *)__this, method)
 #define m19871(__this, p0, p1, method) (void)m17079_gshared((t3097 *)__this, (t168*)p0, (int32_t)p1, method)
- t731  m3511 (t730 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t731  m3512 (t730 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
 #define m19872(__this, method) (int32_t)m17081_gshared((t3097 *)__this, method)

@@ -14,5 +14,5 @@ struct t613;
 #define m19638(__this, method) (t5 *)m11750_gshared((t2462 *)__this, method)
 #define m19639(__this, method) (void)m11751_gshared((t2462 *)__this, method)
 #define m19640(__this, method) (void)m11752_gshared((t2462 *)__this, method)
-#define m3496(__this, method) (bool)m11753_gshared((t2462 *)__this, method)
-#define m3495(__this, method) (t612 *)m11754_gshared((t2462 *)__this, method)
+#define m3497(__this, method) (bool)m11753_gshared((t2462 *)__this, method)
+#define m3496(__this, method) (t612 *)m11754_gshared((t2462 *)__this, method)

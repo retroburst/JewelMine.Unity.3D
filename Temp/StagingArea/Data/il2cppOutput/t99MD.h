@@ -52,7 +52,7 @@ struct t2784;
 #define m14492(__this, p0, method) (void)m11704_gshared((t5 *)__this, (t2457 *)p0, method)
 #define m14493(__this, p0, p1, p2, method) (int32_t)m11706_gshared((t167 *)__this, (int32_t)p0, (int32_t)p1, (t2457 *)p2, method)
 #define m14494(__this, p0, method) (void)m11707_gshared((t167 *)__this, (t198 *)p0, method)
- t182  m698 (t99 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t182  m699 (t99 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
 #define m14495(__this, p0, method) (int32_t)m11709_gshared((t167 *)__this, (t5 *)p0, method)
 #define m14496(__this, p0, p1, method) (void)m11711_gshared((t167 *)__this, (int32_t)p0, (int32_t)p1, method)
 #define m14497(__this, p0, method) (void)m11713_gshared((t167 *)__this, (int32_t)p0, method)

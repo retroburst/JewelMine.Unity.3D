@@ -22,7 +22,7 @@ struct t2964;
 #include "t167MD.h"
 #define m16009(__this, method) (void)m11648_gshared((t167 *)__this, method)
 #define m16010(__this, p0, method) (void)m11650_gshared((t167 *)__this, (t5*)p0, method)
-#define m2014(__this, p0, method) (void)m11652_gshared((t167 *)__this, (int32_t)p0, method)
+#define m2015(__this, p0, method) (void)m11652_gshared((t167 *)__this, (int32_t)p0, method)
 #define m16011(__this, method) (void)m11654_gshared((t5 *)__this, method)
 #define m16012(__this, method) (t5*)m11656_gshared((t167 *)__this, method)
 #define m16013(__this, p0, p1, method) (void)m11658_gshared((t167 *)__this, (t107 *)p0, (int32_t)p1, method)

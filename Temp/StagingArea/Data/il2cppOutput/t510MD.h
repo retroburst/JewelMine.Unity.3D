@@ -13,10 +13,10 @@ struct t3164;
 struct t327;
 
 #include "t3048MD.h"
-#define m2278(__this, method) (void)m16595_gshared((t3048 *)__this, method)
+#define m2279(__this, method) (void)m16595_gshared((t3048 *)__this, method)
 #define m17753(__this, method) (t5 *)m16597_gshared((t3048 *)__this, method)
-#define m2277(__this, p0, method) (void)m16598_gshared((t3048 *)__this, (t5 *)p0, method)
-#define m2280(__this, p0, method) (bool)m16599_gshared((t3048 *)__this, (t5 *)p0, method)
+#define m2278(__this, p0, method) (void)m16598_gshared((t3048 *)__this, (t5 *)p0, method)
+#define m2281(__this, p0, method) (bool)m16599_gshared((t3048 *)__this, (t5 *)p0, method)
 #define m17754(__this, method) (t5*)m16601_gshared((t3048 *)__this, method)
 #define m17755(__this, method) (void)m16602_gshared((t3048 *)__this, method)
 #define m17756(__this, p0, method) (bool)m16604_gshared((t3048 *)__this, (t5 *)p0, method)

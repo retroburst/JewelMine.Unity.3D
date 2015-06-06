@@ -9,7 +9,7 @@ struct t1458;
 struct t1459;
 #include "t1460.h"
 
- void m6993 (t1457 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- int32_t m6994 (t1457 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t1458 * m6995 (t1457 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- int32_t m6996 (t1457 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m6994 (t1457 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ int32_t m6995 (t1457 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t1458 * m6996 (t1457 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ int32_t m6997 (t1457 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;

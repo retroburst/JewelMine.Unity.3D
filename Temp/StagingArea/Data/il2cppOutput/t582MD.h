@@ -9,6 +9,6 @@ struct t117;
 struct t117_marshaled;
 struct t583;
 
- void m2703 (t582 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t117 * m2704 (t582 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t583* m2705 (t582 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m2704 (t582 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t117 * m2705 (t582 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t583* m2706 (t582 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;

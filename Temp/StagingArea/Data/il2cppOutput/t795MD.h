@@ -12,5 +12,5 @@ struct t11;
 struct t168;
 
 #include "t2502MD.h"
-#define m3621(__this, p0, p1, p2, method) (void)m12070_gshared((t2502 *)__this, (t117 *)p0, (t695 *)p1, (t5 *)p2, method)
+#define m3622(__this, p0, p1, p2, method) (void)m12070_gshared((t2502 *)__this, (t117 *)p0, (t695 *)p1, (t5 *)p2, method)
 #define m21339(__this, p0, method) (void)m12072_gshared((t2502 *)__this, (t168*)p0, method)

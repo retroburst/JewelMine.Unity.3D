@@ -15,4 +15,4 @@ struct t771;
  void m8522 (t797 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m8523 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  int32_t m8524 (t797 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t5 * m3627 (t797 * __this, t168* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t5 * m3628 (t797 * __this, t168* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;

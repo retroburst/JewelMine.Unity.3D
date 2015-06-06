@@ -12,6 +12,6 @@ struct t829;
 
  void m7940 (t1382 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m7941 (t1382 * __this, t11* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
- void m6036 (t1382 * __this, t11* p0, t142 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m6037 (t1382 * __this, t11* p0, t142 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m7942 (t1382 * __this, t829 * p0, t830  p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m7943 (t1382 * __this, t11* p0, int32_t p1, MethodInfo* method) IL2CPP_METHOD_ATTR;

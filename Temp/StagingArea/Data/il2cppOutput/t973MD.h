@@ -6,4 +6,4 @@
 
 struct t973;
 
- void m3841 (t973 * __this, bool p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m3842 (t973 * __this, bool p0, MethodInfo* method) IL2CPP_METHOD_ATTR;

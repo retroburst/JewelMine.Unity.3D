@@ -8,4 +8,4 @@ struct t992;
 struct t11;
 struct t5;
 
- void m3888 (t992 * __this, t11* p0, t5 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m3889 (t992 * __this, t11* p0, t5 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;

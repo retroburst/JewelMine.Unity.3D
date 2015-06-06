@@ -6,4 +6,4 @@
 
 struct t1228;
 
- bool m5080 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ bool m5081 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;

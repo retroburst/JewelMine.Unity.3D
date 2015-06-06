@@ -45,7 +45,7 @@ struct t2855;
 #define m15059(__this, p0, method) (void)m11692_gshared((t167 *)__this, (t5*)p0, method)
 #define m15060(__this, p0, method) (void)m11693_gshared((t167 *)__this, (t5*)p0, method)
 #define m15061(__this, method) (t2852 *)m11695_gshared((t167 *)__this, method)
-#define m2020(__this, method) (void)m11696_gshared((t167 *)__this, method)
+#define m2021(__this, method) (void)m11696_gshared((t167 *)__this, method)
 #define m15062(__this, p0, method) (bool)m11698_gshared((t167 *)__this, (t5 *)p0, method)
 #define m15063(__this, p0, p1, method) (void)m11700_gshared((t167 *)__this, (t168*)p0, (int32_t)p1, method)
 #define m15064(__this, p0, method) (t5 *)m11702_gshared((t167 *)__this, (t2457 *)p0, method)

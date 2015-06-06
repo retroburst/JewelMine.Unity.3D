@@ -7,4 +7,4 @@
 struct t972;
 struct t11;
 
- void m3840 (t972 * __this, t11* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m3841 (t972 * __this, t11* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;

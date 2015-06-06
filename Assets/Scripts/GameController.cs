@@ -239,10 +239,19 @@ namespace JewelMine
 		/// </summary>
 		private void SaveUserPreferences ()
 		{
-			PlayerPrefs.SetInt (configurableSettings.GameUserPrefKeyDifficulty, (int)gameLogic.State.Difficulty.DifficultyLevel);
-			PlayerPrefs.SetInt (configurableSettings.GameUserPrefKeySoundEffectsMuted, Convert.ToInt32 (audioSystem.SoundEffectsMuted));
-			PlayerPrefs.SetInt (configurableSettings.GameUserPrefKeyBackgroundMusicMuted, Convert.ToInt32 (audioSystem.BackgroundMusicMuted));
-			PlayerPrefs.Save ();
+			bool changedSettings = false;
+			if (configurableSettings != null && gameLogic != null && gameLogic.State != null && gameLogic.State.Difficulty != null)
+			{
+				PlayerPrefs.SetInt (configurableSettings.GameUserPrefKeyDifficulty, (int)gameLogic.State.Difficulty.DifficultyLevel);
+				changedSettings = true;
+			}
+			if (audioSystem != null)
+			{
+				PlayerPrefs.SetInt (configurableSettings.GameUserPrefKeySoundEffectsMuted, Convert.ToInt32 (audioSystem.SoundEffectsMuted));
+				PlayerPrefs.SetInt (configurableSettings.GameUserPrefKeyBackgroundMusicMuted, Convert.ToInt32 (audioSystem.BackgroundMusicMuted));
+				changedSettings = true;
+			}
+			if(changedSettings) PlayerPrefs.Save ();
 		}
 
 		/// <summary>

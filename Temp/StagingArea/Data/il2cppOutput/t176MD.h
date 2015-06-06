@@ -9,9 +9,9 @@ struct t11;
 #include "t519.h"
 #include "t586.h"
 
- void m662 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- bool m2464 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- bool m2467 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- int32_t m2352 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t11* m669 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- void m3120 (t5 * __this, t11* p0, t11* p1, int32_t p2, bool p3, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m663 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ bool m2465 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ bool m2468 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ int32_t m2353 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t11* m670 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m3121 (t5 * __this, t11* p0, t11* p1, int32_t p2, bool p3, MethodInfo* method) IL2CPP_METHOD_ATTR;

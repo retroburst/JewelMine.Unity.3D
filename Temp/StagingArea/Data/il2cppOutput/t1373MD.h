@@ -10,7 +10,7 @@ struct t11;
 
  void m9385 (t1373 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m9386 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t1373 * m5990 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t1373 * m5991 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  t1373 * m9387 (t5 * __this, t11* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  bool m9388 (t5 * __this, t1044* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  bool m9389 (t5 * __this, t1044* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;

@@ -47,8 +47,8 @@ extern TypeInfo t1228_TI;
 #include "t108.h"
 
 
-extern MethodInfo m5080_MI;
- bool m5080 (t5 * __this, MethodInfo* method){
+extern MethodInfo m5081_MI;
+ bool m5081 (t5 * __this, MethodInfo* method){
 	{
 		return 0;
 	}
@@ -56,7 +56,7 @@ extern MethodInfo m5080_MI;
 // Metadata Definition Replacements.MSCompatUnicodeTable
 static PropertyInfo t1228____IsReady_PropertyInfo = 
 {
-	&t1228_TI, "IsReady", &m5080_MI, NULL, 0, &EmptyCustomAttributesCache};
+	&t1228_TI, "IsReady", &m5081_MI, NULL, 0, &EmptyCustomAttributesCache};
 static PropertyInfo* t1228_PIs[] =
 {
 	&t1228____IsReady_PropertyInfo,
@@ -64,12 +64,12 @@ static PropertyInfo* t1228_PIs[] =
 };
 extern Il2CppType t108_0_0_0;
 extern void* RuntimeInvoker_t108 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5080_MI = 
+MethodInfo m5081_MI = 
 {
-	"get_IsReady", (methodPointerType)&m5080, &t1228_TI, &t108_0_0_0, RuntimeInvoker_t108, NULL, &EmptyCustomAttributesCache, 2198, 0, 255, 0, false, false, 1, NULL, (methodPointerType)NULL, NULL};
+	"get_IsReady", (methodPointerType)&m5081, &t1228_TI, &t108_0_0_0, RuntimeInvoker_t108, NULL, &EmptyCustomAttributesCache, 2198, 0, 255, 0, false, false, 1, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1228_MIs[] =
 {
-	&m5080_MI,
+	&m5081_MI,
 	NULL
 };
 extern MethodInfo m464_MI;
@@ -105,32 +105,32 @@ extern TypeInfo t1229_TI;
 #include "t109.h"
 extern TypeInfo t491_TI;
 #include "t491MD.h"
-extern MethodInfo m4780_MI;
+extern MethodInfo m4781_MI;
 
 
-extern MethodInfo m5081_MI;
- t114 * m5081 (t5 * __this, t5 * p0, MethodInfo* method){
+extern MethodInfo m5082_MI;
+ t114 * m5082 (t5 * __this, t5 * p0, MethodInfo* method){
 	{
 		t491 * L_0 = (t491 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t491_TI));
-		m4780(L_0, (t11*) &_stringLiteral596, &m4780_MI);
+		m4781(L_0, (t11*) &_stringLiteral597, &m4781_MI);
 		il2cpp_codegen_raise_exception(L_0);
 	}
 }
 // Metadata Definition Replacements.TypeBuilder
 extern Il2CppType t5_0_0_0;
 extern Il2CppType t5_0_0_0;
-static ParameterInfo t1229_m5081_ParameterInfos[] = 
+static ParameterInfo t1229_m5082_ParameterInfos[] = 
 {
 	{"__this", 0, 134217729, &EmptyCustomAttributesCache, &t5_0_0_0},
 };
 extern Il2CppType t114_0_0_0;
 extern void* RuntimeInvoker_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5081_MI = 
+MethodInfo m5082_MI = 
 {
-	"CreateType", (methodPointerType)&m5081, &t1229_TI, &t114_0_0_0, RuntimeInvoker_t5_t5, t1229_m5081_ParameterInfos, &EmptyCustomAttributesCache, 150, 0, 255, 1, false, false, 2, NULL, (methodPointerType)NULL, NULL};
+	"CreateType", (methodPointerType)&m5082, &t1229_TI, &t114_0_0_0, RuntimeInvoker_t5_t5, t1229_m5082_ParameterInfos, &EmptyCustomAttributesCache, 150, 0, 255, 1, false, false, 2, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1229_MIs[] =
 {
-	&m5081_MI,
+	&m5082_MI,
 	NULL
 };
 static MethodInfo* t1229_VT[] =
@@ -156,28 +156,28 @@ extern TypeInfo t1230_TI;
 
 
 
-extern MethodInfo m5082_MI;
- t11* m5082 (t5 * __this, t5 * p0, MethodInfo* method){
+extern MethodInfo m5083_MI;
+ t11* m5083 (t5 * __this, t5 * p0, MethodInfo* method){
 	{
 		t491 * L_0 = (t491 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t491_TI));
-		m4780(L_0, (t11*) &_stringLiteral597, &m4780_MI);
+		m4781(L_0, (t11*) &_stringLiteral598, &m4781_MI);
 		il2cpp_codegen_raise_exception(L_0);
 	}
 }
 // Metadata Definition Replacements.SecurityElement
 extern Il2CppType t5_0_0_0;
-static ParameterInfo t1230_m5082_ParameterInfos[] = 
+static ParameterInfo t1230_m5083_ParameterInfos[] = 
 {
 	{"__this", 0, 134217730, &EmptyCustomAttributesCache, &t5_0_0_0},
 };
 extern Il2CppType t11_0_0_0;
 extern void* RuntimeInvoker_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5082_MI = 
+MethodInfo m5083_MI = 
 {
-	"ToString", (methodPointerType)&m5082, &t1230_TI, &t11_0_0_0, RuntimeInvoker_t5_t5, t1230_m5082_ParameterInfos, &EmptyCustomAttributesCache, 150, 0, 255, 1, false, false, 3, NULL, (methodPointerType)NULL, NULL};
+	"ToString", (methodPointerType)&m5083, &t1230_TI, &t11_0_0_0, RuntimeInvoker_t5_t5, t1230_m5083_ParameterInfos, &EmptyCustomAttributesCache, 150, 0, 255, 1, false, false, 3, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1230_MIs[] =
 {
-	&m5082_MI,
+	&m5083_MI,
 	NULL
 };
 static MethodInfo* t1230_VT[] =
@@ -204,19 +204,19 @@ extern TypeInfo t1231_TI;
 #include "mscorlib_ArrayTypes.h"
 
 
-extern MethodInfo m5083_MI;
- t5 * m5083 (t5 * __this, t11* p0, t5 * p1, t11** p2, MethodInfo* method){
+extern MethodInfo m5084_MI;
+ t5 * m5084 (t5 * __this, t11* p0, t5 * p1, t11** p2, MethodInfo* method){
 	{
 		t491 * L_0 = (t491 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t491_TI));
-		m4780(L_0, (t11*) &_stringLiteral598, &m4780_MI);
+		m4781(L_0, (t11*) &_stringLiteral599, &m4781_MI);
 		il2cpp_codegen_raise_exception(L_0);
 	}
 }
-extern MethodInfo m5084_MI;
- t5 * m5084 (t5 * __this, t114 * p0, t11* p1, t168* p2, MethodInfo* method){
+extern MethodInfo m5085_MI;
+ t5 * m5085 (t5 * __this, t114 * p0, t11* p1, t168* p2, MethodInfo* method){
 	{
 		t491 * L_0 = (t491 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t491_TI));
-		m4780(L_0, (t11*) &_stringLiteral599, &m4780_MI);
+		m4781(L_0, (t11*) &_stringLiteral600, &m4781_MI);
 		il2cpp_codegen_raise_exception(L_0);
 	}
 }
@@ -226,7 +226,7 @@ extern Il2CppType t11_0_0_0;
 extern Il2CppType t5_0_0_0;
 extern Il2CppType t11_1_0_2;
 extern Il2CppType t11_1_0_0;
-static ParameterInfo t1231_m5083_ParameterInfos[] = 
+static ParameterInfo t1231_m5084_ParameterInfos[] = 
 {
 	{"url", 0, 134217731, &EmptyCustomAttributesCache, &t11_0_0_0},
 	{"channelData", 1, 134217732, &EmptyCustomAttributesCache, &t5_0_0_0},
@@ -234,15 +234,15 @@ static ParameterInfo t1231_m5083_ParameterInfos[] =
 };
 extern Il2CppType t1232_0_0_0;
 extern void* RuntimeInvoker_t5_t5_t5_t200 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5083_MI = 
+MethodInfo m5084_MI = 
 {
-	"GetClientChannelSinkChain", (methodPointerType)&m5083, &t1231_TI, &t1232_0_0_0, RuntimeInvoker_t5_t5_t5_t200, t1231_m5083_ParameterInfos, &EmptyCustomAttributesCache, 150, 0, 255, 3, false, false, 4, NULL, (methodPointerType)NULL, NULL};
+	"GetClientChannelSinkChain", (methodPointerType)&m5084, &t1231_TI, &t1232_0_0_0, RuntimeInvoker_t5_t5_t5_t200, t1231_m5084_ParameterInfos, &EmptyCustomAttributesCache, 150, 0, 255, 3, false, false, 4, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t114_0_0_0;
 extern Il2CppType t114_0_0_0;
 extern Il2CppType t11_0_0_0;
 extern Il2CppType t168_0_0_0;
 extern Il2CppType t168_0_0_0;
-static ParameterInfo t1231_m5084_ParameterInfos[] = 
+static ParameterInfo t1231_m5085_ParameterInfos[] = 
 {
 	{"objectType", 0, 134217734, &EmptyCustomAttributesCache, &t114_0_0_0},
 	{"url", 1, 134217735, &EmptyCustomAttributesCache, &t11_0_0_0},
@@ -250,13 +250,13 @@ static ParameterInfo t1231_m5084_ParameterInfos[] =
 };
 extern Il2CppType t5_0_0_0;
 extern void* RuntimeInvoker_t5_t5_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5084_MI = 
+MethodInfo m5085_MI = 
 {
-	"CreateClientProxy", (methodPointerType)&m5084, &t1231_TI, &t5_0_0_0, RuntimeInvoker_t5_t5_t5_t5, t1231_m5084_ParameterInfos, &EmptyCustomAttributesCache, 150, 0, 255, 3, false, false, 5, NULL, (methodPointerType)NULL, NULL};
+	"CreateClientProxy", (methodPointerType)&m5085, &t1231_TI, &t5_0_0_0, RuntimeInvoker_t5_t5_t5_t5, t1231_m5085_ParameterInfos, &EmptyCustomAttributesCache, 150, 0, 255, 3, false, false, 5, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1231_MIs[] =
 {
-	&m5083_MI,
 	&m5084_MI,
+	&m5085_MI,
 	NULL
 };
 static MethodInfo* t1231_VT[] =

@@ -11,5 +11,5 @@ struct t1402;
 struct t168;
 #include "t1410.h"
 
- void m6843 (t450 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t1402 * m6844 (t450 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m6844 (t450 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t1402 * m6845 (t450 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;

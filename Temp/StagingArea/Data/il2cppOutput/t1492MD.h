@@ -9,6 +9,6 @@ struct t1482;
 struct t11;
 #include "t76.h"
 
- int32_t m7304 (t5 * __this, t1482 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t11* m7305 (t5 * __this, t1482 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t76  m7306 (t5 * __this, t1482 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ int32_t m7305 (t5 * __this, t1482 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t11* m7306 (t5 * __this, t1482 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t76  m7307 (t5 * __this, t1482 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;

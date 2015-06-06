@@ -11,7 +11,7 @@ struct t222;
 #include "t124.h"
 #include "t1127.h"
 
- void m4481 (t1130 * __this, t5 * p0, t124 p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
- double m4482 (t1130 * __this, t1127  p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t5 * m4483 (t1130 * __this, t1127  p0, t222 * p1, t5 * p2, MethodInfo* method) IL2CPP_METHOD_ATTR;
- double m4484 (t1130 * __this, t5 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m4482 (t1130 * __this, t5 * p0, t124 p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ double m4483 (t1130 * __this, t1127  p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t5 * m4484 (t1130 * __this, t1127  p0, t222 * p1, t5 * p2, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ double m4485 (t1130 * __this, t5 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;

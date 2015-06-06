@@ -10,7 +10,7 @@ struct t1214;
 struct t1056;
 #include "t76.h"
 
- void m5323 (t1073 * __this, t1056 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t1044* m5324 (t1073 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t76  m4961 (t1073 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t1214 * m4967 (t1073 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m5324 (t1073 * __this, t1056 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t1044* m5325 (t1073 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t76  m4962 (t1073 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t1214 * m4968 (t1073 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;

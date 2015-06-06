@@ -16,5 +16,5 @@ struct t11;
  t1044* m10174 (t5 * __this, double p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m10175 (t5 * __this, uint8_t* p0, t1044* p1, int32_t p2, int32_t p3, MethodInfo* method) IL2CPP_METHOD_ATTR;
  int64_t m10176 (t5 * __this, t1044* p0, int32_t p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t11* m6010 (t5 * __this, t1044* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t11* m6011 (t5 * __this, t1044* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  t11* m10177 (t5 * __this, t1044* p0, int32_t p1, int32_t p2, MethodInfo* method) IL2CPP_METHOD_ATTR;

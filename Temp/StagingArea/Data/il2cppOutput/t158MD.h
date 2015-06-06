@@ -19,7 +19,7 @@ struct t2603;
 #include "t19.h"
 #include "t2604.h"
 
- void m604 (t158 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m605 (t158 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m12818 (t158 * __this, t5* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m12819 (t158 * __this, int32_t p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m12820 (t5 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
@@ -38,7 +38,7 @@ struct t2603;
  bool m12833 (t158 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  t5 * m12834 (t158 * __this, int32_t p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m12835 (t158 * __this, int32_t p0, t5 * p1, MethodInfo* method) IL2CPP_METHOD_ATTR;
- void m605 (t158 * __this, int32_t p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m606 (t158 * __this, int32_t p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m12836 (t158 * __this, int32_t p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m12837 (t158 * __this, t5* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m12838 (t158 * __this, t5* p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
@@ -63,7 +63,7 @@ struct t2603;
  void m12857 (t158 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m12858 (t158 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m12859 (t158 * __this, t2603 * p0, MethodInfo* method) IL2CPP_METHOD_ATTR;
- t46* m606 (t158 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ t46* m607 (t158 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m12860 (t158 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  int32_t m12861 (t158 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
  void m12862 (t158 * __this, int32_t p0, MethodInfo* method) IL2CPP_METHOD_ATTR;

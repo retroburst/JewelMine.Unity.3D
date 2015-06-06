@@ -10,5 +10,5 @@ struct t117_marshaled;
 struct t315;
 #include "t535.h"
 
- void m2480 (t375 * __this, t117 * p0, t315 * p1, int32_t p2, MethodInfo* method) IL2CPP_METHOD_ATTR;
- void m2478 (t375 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m2481 (t375 * __this, t117 * p0, t315 * p1, int32_t p2, MethodInfo* method) IL2CPP_METHOD_ATTR;
+ void m2479 (t375 * __this, MethodInfo* method) IL2CPP_METHOD_ATTR;

@@ -9,10 +9,10 @@ struct t320;
 struct t322;
 
 #include "t2864MD.h"
-#define m2207(__this, p0, p1, method) (void)m15190_gshared((t2864 *)__this, (t2504 *)p0, (t2504 *)p1, method)
+#define m2208(__this, p0, p1, method) (void)m15190_gshared((t2864 *)__this, (t2504 *)p0, (t2504 *)p1, method)
 #define m17215(__this, method) (int32_t)m15192_gshared((t2864 *)__this, method)
 #define m17216(__this, p0, method) (void)m15194_gshared((t2864 *)__this, (int32_t)p0, method)
 #define m17217(__this, method) (int32_t)m15196_gshared((t2864 *)__this, method)
 #define m17218(__this, method) (int32_t)m15198_gshared((t2864 *)__this, method)
-#define m2215(__this, method) (t322 *)m15200_gshared((t2864 *)__this, method)
-#define m2221(__this, p0, method) (void)m15202_gshared((t2864 *)__this, (t5 *)p0, method)
+#define m2216(__this, method) (t322 *)m15200_gshared((t2864 *)__this, method)
+#define m2222(__this, p0, method) (void)m15202_gshared((t2864 *)__this, (t5 *)p0, method)

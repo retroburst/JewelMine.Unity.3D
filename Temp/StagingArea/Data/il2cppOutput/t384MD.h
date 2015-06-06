@@ -20,7 +20,7 @@ struct t3276;
 #include "t3277.h"
 
 #include "t167MD.h"
-#define m2519(__this, method) (void)m11648_gshared((t167 *)__this, method)
+#define m2520(__this, method) (void)m11648_gshared((t167 *)__this, method)
 #define m18313(__this, p0, method) (void)m11650_gshared((t167 *)__this, (t5*)p0, method)
 #define m18314(__this, p0, method) (void)m11652_gshared((t167 *)__this, (int32_t)p0, method)
 #define m18315(__this, method) (void)m11654_gshared((t5 *)__this, method)
@@ -68,6 +68,6 @@ struct t3276;
 #define m18357(__this, method) (void)m11733_gshared((t167 *)__this, method)
 #define m18358(__this, method) (int32_t)m11735_gshared((t167 *)__this, method)
 #define m18359(__this, p0, method) (void)m11737_gshared((t167 *)__this, (int32_t)p0, method)
-#define m2525(__this, method) (int32_t)m11738_gshared((t167 *)__this, method)
-#define m2523(__this, p0, method) (t497 *)m11740_gshared((t167 *)__this, (int32_t)p0, method)
+#define m2526(__this, method) (int32_t)m11738_gshared((t167 *)__this, method)
+#define m2524(__this, p0, method) (t497 *)m11740_gshared((t167 *)__this, (int32_t)p0, method)
 #define m18360(__this, p0, p1, method) (void)m11742_gshared((t167 *)__this, (int32_t)p0, (t5 *)p1, method)

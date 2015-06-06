@@ -129,113 +129,113 @@ extern TypeInfo t771_TI;
 #include "t1092MD.h"
 #include "t771MD.h"
 extern Il2CppType t110_0_0_0;
-extern MethodInfo m5806_MI;
-extern MethodInfo m5811_MI;
 extern MethodInfo m5807_MI;
-extern MethodInfo m5509_MI;
-extern MethodInfo m5768_MI;
-extern MethodInfo m5777_MI;
-extern MethodInfo m5844_MI;
-extern MethodInfo m5303_MI;
-extern MethodInfo m5790_MI;
-extern MethodInfo m5791_MI;
-extern MethodInfo m4896_MI;
-extern MethodInfo m5306_MI;
-extern MethodInfo m5846_MI;
-extern MethodInfo m4881_MI;
-extern MethodInfo m5553_MI;
-extern MethodInfo m5623_MI;
-extern MethodInfo m5416_MI;
-extern MethodInfo m4954_MI;
-extern MethodInfo m4955_MI;
-extern MethodInfo m5371_MI;
-extern MethodInfo m5362_MI;
-extern MethodInfo m5374_MI;
-extern MethodInfo m5365_MI;
-extern MethodInfo m6000_MI;
-extern MethodInfo m5376_MI;
-extern MethodInfo m5378_MI;
-extern MethodInfo m5469_MI;
-extern MethodInfo m5660_MI;
-extern MethodInfo m5664_MI;
-extern MethodInfo m5630_MI;
-extern MethodInfo m5631_MI;
-extern MethodInfo m462_MI;
-extern MethodInfo m2409_MI;
-extern MethodInfo m5762_MI;
-extern MethodInfo m4891_MI;
-extern MethodInfo m4984_MI;
-extern MethodInfo m6037_MI;
-extern MethodInfo m4772_MI;
-extern MethodInfo m5845_MI;
-extern MethodInfo m4783_MI;
-extern MethodInfo m5847_MI;
-extern MethodInfo m5304_MI;
-extern MethodInfo m5311_MI;
-extern MethodInfo m5314_MI;
-extern MethodInfo m5317_MI;
-extern MethodInfo m5315_MI;
-extern MethodInfo m532_MI;
-extern MethodInfo m4951_MI;
-extern MethodInfo m5663_MI;
+extern MethodInfo m5812_MI;
+extern MethodInfo m5808_MI;
 extern MethodInfo m5510_MI;
-extern MethodInfo m5750_MI;
-extern MethodInfo m5380_MI;
-extern MethodInfo m5382_MI;
-extern MethodInfo m5849_MI;
-extern MethodInfo m5383_MI;
-extern MethodInfo m2355_MI;
-extern MethodInfo m5292_MI;
+extern MethodInfo m5769_MI;
+extern MethodInfo m5778_MI;
+extern MethodInfo m5845_MI;
+extern MethodInfo m5304_MI;
+extern MethodInfo m5791_MI;
+extern MethodInfo m5792_MI;
+extern MethodInfo m4897_MI;
+extern MethodInfo m5307_MI;
+extern MethodInfo m5847_MI;
+extern MethodInfo m4882_MI;
+extern MethodInfo m5554_MI;
+extern MethodInfo m5624_MI;
+extern MethodInfo m5417_MI;
+extern MethodInfo m4955_MI;
+extern MethodInfo m4956_MI;
+extern MethodInfo m5372_MI;
+extern MethodInfo m5363_MI;
+extern MethodInfo m5375_MI;
+extern MethodInfo m5366_MI;
+extern MethodInfo m6001_MI;
+extern MethodInfo m5377_MI;
+extern MethodInfo m5379_MI;
+extern MethodInfo m5470_MI;
+extern MethodInfo m5661_MI;
+extern MethodInfo m5665_MI;
+extern MethodInfo m5631_MI;
+extern MethodInfo m5632_MI;
+extern MethodInfo m462_MI;
+extern MethodInfo m2410_MI;
+extern MethodInfo m5763_MI;
+extern MethodInfo m4892_MI;
+extern MethodInfo m4985_MI;
+extern MethodInfo m6038_MI;
+extern MethodInfo m4773_MI;
+extern MethodInfo m5846_MI;
+extern MethodInfo m4784_MI;
 extern MethodInfo m5848_MI;
-extern MethodInfo m4328_MI;
-extern MethodInfo m4344_MI;
-extern MethodInfo m4319_MI;
-extern MethodInfo m4321_MI;
-extern MethodInfo m4298_MI;
-extern MethodInfo m4312_MI;
-extern MethodInfo m4302_MI;
-extern MethodInfo m4283_MI;
-extern MethodInfo m3567_MI;
-extern MethodInfo m2457_MI;
-extern MethodInfo m4803_MI;
-extern MethodInfo m4826_MI;
-extern MethodInfo m2357_MI;
-extern MethodInfo m2384_MI;
-extern MethodInfo m5073_MI;
-extern MethodInfo m2414_MI;
-extern MethodInfo m6072_MI;
+extern MethodInfo m5305_MI;
+extern MethodInfo m5312_MI;
+extern MethodInfo m5315_MI;
+extern MethodInfo m5318_MI;
+extern MethodInfo m5316_MI;
+extern MethodInfo m532_MI;
+extern MethodInfo m4952_MI;
+extern MethodInfo m5664_MI;
+extern MethodInfo m5511_MI;
+extern MethodInfo m5751_MI;
+extern MethodInfo m5381_MI;
+extern MethodInfo m5383_MI;
+extern MethodInfo m5850_MI;
+extern MethodInfo m5384_MI;
+extern MethodInfo m2356_MI;
+extern MethodInfo m5293_MI;
+extern MethodInfo m5849_MI;
+extern MethodInfo m4329_MI;
+extern MethodInfo m4345_MI;
+extern MethodInfo m4320_MI;
+extern MethodInfo m4322_MI;
+extern MethodInfo m4299_MI;
+extern MethodInfo m4313_MI;
+extern MethodInfo m4303_MI;
+extern MethodInfo m4284_MI;
+extern MethodInfo m3568_MI;
+extern MethodInfo m2458_MI;
+extern MethodInfo m4804_MI;
+extern MethodInfo m4827_MI;
+extern MethodInfo m2358_MI;
 extern MethodInfo m2385_MI;
+extern MethodInfo m5074_MI;
+extern MethodInfo m2415_MI;
+extern MethodInfo m6073_MI;
+extern MethodInfo m2386_MI;
 
 
-extern MethodInfo m5841_MI;
- void m5841 (t1337 * __this, t1285 * p0, t1044* p1, MethodInfo* method){
-	{
-		m5806(__this, p0, ((int32_t)11), p1, &m5806_MI);
-		return;
-	}
-}
 extern MethodInfo m5842_MI;
- void m5842 (t1337 * __this, MethodInfo* method){
+ void m5842 (t1337 * __this, t1285 * p0, t1044* p1, MethodInfo* method){
 	{
-		m5811(__this, &m5811_MI);
-		t1285 * L_0 = m5807(__this, &m5807_MI);
-		t1304 * L_1 = m5509(L_0, &m5509_MI);
-		t1210 * L_2 = (__this->f9);
-		m5768(L_1, L_2, &m5768_MI);
-		t1285 * L_3 = m5807(__this, &m5807_MI);
-		t1304 * L_4 = m5509(L_3, &m5509_MI);
-		m5777(L_4, &m5777_MI);
+		m5807(__this, p0, ((int32_t)11), p1, &m5807_MI);
 		return;
 	}
 }
 extern MethodInfo m5843_MI;
  void m5843 (t1337 * __this, MethodInfo* method){
 	{
-		VirtActionInvoker0::Invoke(&m5844_MI, __this);
+		m5812(__this, &m5812_MI);
+		t1285 * L_0 = m5808(__this, &m5808_MI);
+		t1304 * L_1 = m5510(L_0, &m5510_MI);
+		t1210 * L_2 = (__this->f9);
+		m5769(L_1, L_2, &m5769_MI);
+		t1285 * L_3 = m5808(__this, &m5808_MI);
+		t1304 * L_4 = m5510(L_3, &m5510_MI);
+		m5778(L_4, &m5778_MI);
 		return;
 	}
 }
+extern MethodInfo m5844_MI;
  void m5844 (t1337 * __this, MethodInfo* method){
+	{
+		VirtActionInvoker0::Invoke(&m5845_MI, __this);
+		return;
+	}
+}
+ void m5845 (t1337 * __this, MethodInfo* method){
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
@@ -243,17 +243,17 @@ extern MethodInfo m5843_MI;
 	t1043 * V_4 = {0};
 	{
 		t1210 * L_0 = (t1210 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1210_TI));
-		m5303(L_0, &m5303_MI);
+		m5304(L_0, &m5304_MI);
 		__this->f9 = L_0;
 		V_0 = 0;
-		int32_t L_1 = m5790(__this, &m5790_MI);
+		int32_t L_1 = m5791(__this, &m5791_MI);
 		V_1 = L_1;
 		goto IL_004d;
 	}
 
 IL_0019:
 	{
-		int32_t L_2 = m5790(__this, &m5790_MI);
+		int32_t L_2 = m5791(__this, &m5791_MI);
 		V_2 = L_2;
 		V_0 = ((int32_t)(V_0+3));
 		if ((((int32_t)V_2) <= ((int32_t)0)))
@@ -262,14 +262,14 @@ IL_0019:
 		}
 	}
 	{
-		t1044* L_3 = m5791(__this, V_2, &m5791_MI);
+		t1044* L_3 = m5792(__this, V_2, &m5792_MI);
 		V_3 = L_3;
 		IL2CPP_RUNTIME_CLASS_INIT(InitializedTypeInfo(&t1043_TI));
 		t1043 * L_4 = (t1043 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1043_TI));
-		m4896(L_4, V_3, &m4896_MI);
+		m4897(L_4, V_3, &m4897_MI);
 		V_4 = L_4;
 		t1210 * L_5 = (__this->f9);
-		m5306(L_5, V_4, &m5306_MI);
+		m5307(L_5, V_4, &m5307_MI);
 		V_0 = ((int32_t)(V_0+V_2));
 	}
 
@@ -282,11 +282,11 @@ IL_004d:
 	}
 	{
 		t1210 * L_6 = (__this->f9);
-		m5846(__this, L_6, &m5846_MI);
+		m5847(__this, L_6, &m5847_MI);
 		return;
 	}
 }
- bool m5845 (t1337 * __this, t1043 * p0, MethodInfo* method){
+ bool m5846 (t1337 * __this, t1043 * p0, MethodInfo* method){
 	t1295 * V_0 = {0};
 	int32_t V_1 = {0};
 	t1273 * V_2 = {0};
@@ -297,9 +297,9 @@ IL_004d:
 	int32_t G_B19_0 = 0;
 	int32_t G_B26_0 = 0;
 	{
-		t1285 * L_0 = m5807(__this, &m5807_MI);
+		t1285 * L_0 = m5808(__this, &m5808_MI);
 		V_0 = ((t1295 *)Castclass(L_0, InitializedTypeInfo(&t1295_TI)));
-		int32_t L_1 = m4881(p0, &m4881_MI);
+		int32_t L_1 = m4882(p0, &m4882_MI);
 		if ((((int32_t)L_1) >= ((int32_t)3)))
 		{
 			goto IL_001a;
@@ -312,9 +312,9 @@ IL_004d:
 IL_001a:
 	{
 		V_1 = 0;
-		t1306 * L_2 = m5553(V_0, &m5553_MI);
-		t1284 * L_3 = m5623(L_2, &m5623_MI);
-		int32_t L_4 = m5416(L_3, &m5416_MI);
+		t1306 * L_2 = m5554(V_0, &m5554_MI);
+		t1284 * L_3 = m5624(L_2, &m5624_MI);
+		int32_t L_4 = m5417(L_3, &m5417_MI);
 		V_6 = L_4;
 		if (V_6 == 0)
 		{
@@ -368,8 +368,8 @@ IL_006a:
 	{
 		V_2 = (t1273 *)NULL;
 		V_3 = (t1270 *)NULL;
-		t1214 * L_5 = m4954(p0, &m4954_MI);
-		t1072 * L_6 = m4955(L_5, (t11*) &_stringLiteral441, &m4955_MI);
+		t1214 * L_5 = m4955(p0, &m4955_MI);
+		t1072 * L_6 = m4956(L_5, (t11*) &_stringLiteral442, &m4956_MI);
 		V_4 = L_6;
 		if (!V_4)
 		{
@@ -378,14 +378,14 @@ IL_006a:
 	}
 	{
 		t1273 * L_7 = (t1273 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1273_TI));
-		m5371(L_7, V_4, &m5371_MI);
+		m5372(L_7, V_4, &m5372_MI);
 		V_2 = L_7;
 	}
 
 IL_008f:
 	{
-		t1214 * L_8 = m4954(p0, &m4954_MI);
-		t1072 * L_9 = m4955(L_8, (t11*) &_stringLiteral448, &m4955_MI);
+		t1214 * L_8 = m4955(p0, &m4955_MI);
+		t1072 * L_9 = m4956(L_8, (t11*) &_stringLiteral449, &m4956_MI);
 		V_4 = L_9;
 		if (!V_4)
 		{
@@ -394,7 +394,7 @@ IL_008f:
 	}
 	{
 		t1270 * L_10 = (t1270 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1270_TI));
-		m5362(L_10, V_4, &m5362_MI);
+		m5363(L_10, V_4, &m5363_MI);
 		V_3 = L_10;
 	}
 
@@ -412,7 +412,7 @@ IL_00b0:
 		}
 	}
 	{
-		bool L_11 = m5374(V_2, V_1, &m5374_MI);
+		bool L_11 = m5375(V_2, V_1, &m5375_MI);
 		if (L_11)
 		{
 			goto IL_00ca;
@@ -424,16 +424,16 @@ IL_00b0:
 
 IL_00ca:
 	{
-		t996 * L_12 = m5365(V_3, &m5365_MI);
-		bool L_13 = (bool)VirtFuncInvoker1< bool, t5 * >::Invoke(&m6000_MI, L_12, (t11*) &_stringLiteral452);
+		t996 * L_12 = m5366(V_3, &m5366_MI);
+		bool L_13 = (bool)VirtFuncInvoker1< bool, t5 * >::Invoke(&m6001_MI, L_12, (t11*) &_stringLiteral453);
 		if (L_13)
 		{
 			goto IL_00f1;
 		}
 	}
 	{
-		t996 * L_14 = m5365(V_3, &m5365_MI);
-		bool L_15 = (bool)VirtFuncInvoker1< bool, t5 * >::Invoke(&m6000_MI, L_14, (t11*) &_stringLiteral895);
+		t996 * L_14 = m5366(V_3, &m5366_MI);
+		bool L_15 = (bool)VirtFuncInvoker1< bool, t5 * >::Invoke(&m6001_MI, L_14, (t11*) &_stringLiteral896);
 		G_B19_0 = ((int32_t)(L_15));
 		goto IL_00f2;
 	}
@@ -456,7 +456,7 @@ IL_00f3:
 		}
 	}
 	{
-		bool L_16 = m5374(V_2, V_1, &m5374_MI);
+		bool L_16 = m5375(V_2, V_1, &m5375_MI);
 		return L_16;
 	}
 
@@ -468,16 +468,16 @@ IL_0101:
 		}
 	}
 	{
-		t996 * L_17 = m5365(V_3, &m5365_MI);
-		bool L_18 = (bool)VirtFuncInvoker1< bool, t5 * >::Invoke(&m6000_MI, L_17, (t11*) &_stringLiteral452);
+		t996 * L_17 = m5366(V_3, &m5366_MI);
+		bool L_18 = (bool)VirtFuncInvoker1< bool, t5 * >::Invoke(&m6001_MI, L_17, (t11*) &_stringLiteral453);
 		if (L_18)
 		{
 			goto IL_012e;
 		}
 	}
 	{
-		t996 * L_19 = m5365(V_3, &m5365_MI);
-		bool L_20 = (bool)VirtFuncInvoker1< bool, t5 * >::Invoke(&m6000_MI, L_19, (t11*) &_stringLiteral895);
+		t996 * L_19 = m5366(V_3, &m5366_MI);
+		bool L_20 = (bool)VirtFuncInvoker1< bool, t5 * >::Invoke(&m6001_MI, L_19, (t11*) &_stringLiteral896);
 		G_B26_0 = ((int32_t)(L_20));
 		goto IL_012f;
 	}
@@ -494,8 +494,8 @@ IL_012f:
 
 IL_0130:
 	{
-		t1214 * L_21 = m4954(p0, &m4954_MI);
-		t1072 * L_22 = m4955(L_21, (t11*) &_stringLiteral479, &m4955_MI);
+		t1214 * L_21 = m4955(p0, &m4955_MI);
+		t1072 * L_22 = m4956(L_21, (t11*) &_stringLiteral480, &m4956_MI);
 		V_4 = L_22;
 		if (!V_4)
 		{
@@ -504,9 +504,9 @@ IL_0130:
 	}
 	{
 		t1275 * L_23 = (t1275 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1275_TI));
-		m5376(L_23, V_4, &m5376_MI);
+		m5377(L_23, V_4, &m5377_MI);
 		V_5 = L_23;
-		bool L_24 = m5378(V_5, ((int32_t)64), &m5378_MI);
+		bool L_24 = m5379(V_5, ((int32_t)64), &m5379_MI);
 		return L_24;
 	}
 
@@ -515,7 +515,7 @@ IL_015c:
 		return 1;
 	}
 }
- void m5846 (t1337 * __this, t1210 * p0, MethodInfo* method){
+ void m5847 (t1337 * __this, t1210 * p0, MethodInfo* method){
 	t1295 * V_0 = {0};
 	uint8_t V_1 = {0};
 	t1321 * V_2 = {0};
@@ -535,21 +535,21 @@ IL_015c:
 	t142 * __exception_local = 0;
 	NO_UNUSED_WARNING (__exception_local);
 	{
-		t1285 * L_0 = m5807(__this, &m5807_MI);
+		t1285 * L_0 = m5808(__this, &m5808_MI);
 		V_0 = ((t1295 *)Castclass(L_0, InitializedTypeInfo(&t1295_TI)));
 		V_1 = ((int32_t)42);
-		t1296 * L_1 = m5469(V_0, &m5469_MI);
-		bool L_2 = (bool)VirtFuncInvoker0< bool >::Invoke(&m5660_MI, L_1);
+		t1296 * L_1 = m5470(V_0, &m5470_MI);
+		bool L_2 = (bool)VirtFuncInvoker0< bool >::Invoke(&m5661_MI, L_1);
 		if (!L_2)
 		{
 			goto IL_00b4;
 		}
 	}
 	{
-		t1296 * L_3 = m5469(V_0, &m5469_MI);
-		t1321 * L_4 = (t1321 *)VirtFuncInvoker1< t1321 *, t1210 * >::Invoke(&m5664_MI, L_3, p0);
+		t1296 * L_3 = m5470(V_0, &m5470_MI);
+		t1321 * L_4 = (t1321 *)VirtFuncInvoker1< t1321 *, t1210 * >::Invoke(&m5665_MI, L_3, p0);
 		V_2 = L_4;
-		bool L_5 = m5630(V_2, &m5630_MI);
+		bool L_5 = m5631(V_2, &m5631_MI);
 		if (!L_5)
 		{
 			goto IL_0038;
@@ -561,7 +561,7 @@ IL_015c:
 
 IL_0038:
 	{
-		int32_t L_6 = m5631(V_2, &m5631_MI);
+		int32_t L_6 = m5632(V_2, &m5632_MI);
 		V_3 = (((int64_t)L_6));
 		V_12 = V_3;
 		if ((((int64_t)V_12) == ((int64_t)(((uint64_t)(((uint32_t)((int32_t)-2146762487))))))))
@@ -614,27 +614,27 @@ IL_008f:
 		int64_t L_7 = V_3;
 		t5 * L_8 = Box(InitializedTypeInfo(&t152_TI), &L_7);
 		IL2CPP_RUNTIME_CLASS_INIT((&t11_TI));
-		t11* L_9 = m462(NULL, (t11*) &_stringLiteral896, L_8, &m462_MI);
+		t11* L_9 = m462(NULL, (t11*) &_stringLiteral897, L_8, &m462_MI);
 		V_4 = L_9;
-		t11* L_10 = m2409(NULL, (t11*) &_stringLiteral897, V_4, &m2409_MI);
+		t11* L_10 = m2410(NULL, (t11*) &_stringLiteral898, V_4, &m2410_MI);
 		t1329 * L_11 = (t1329 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1329_TI));
-		m5762(L_11, V_1, L_10, &m5762_MI);
+		m5763(L_11, V_1, L_10, &m5763_MI);
 		il2cpp_codegen_raise_exception(L_11);
 	}
 
 IL_00b4:
 	{
-		t1043 * L_12 = m4891(p0, 0, &m4891_MI);
+		t1043 * L_12 = m4892(p0, 0, &m4892_MI);
 		V_5 = L_12;
-		t1044* L_13 = (t1044*)VirtFuncInvoker0< t1044* >::Invoke(&m4984_MI, V_5);
+		t1044* L_13 = (t1044*)VirtFuncInvoker0< t1044* >::Invoke(&m4985_MI, V_5);
 		t1008 * L_14 = (t1008 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1008_TI));
-		m6037(L_14, L_13, &m6037_MI);
+		m6038(L_14, L_13, &m6038_MI);
 		V_6 = L_14;
 		IL2CPP_RUNTIME_CLASS_INIT(InitializedTypeInfo(&t996_TI));
 		t996 * L_15 = (t996 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t996_TI));
-		m4772(L_15, &m4772_MI);
+		m4773(L_15, &m4773_MI);
 		V_7 = L_15;
-		bool L_16 = m5845(__this, V_5, &m5845_MI);
+		bool L_16 = m5846(__this, V_5, &m5846_MI);
 		if (L_16)
 		{
 			goto IL_00f1;
@@ -643,12 +643,12 @@ IL_00b4:
 	{
 		int32_t L_17 = ((int32_t)-2146762490);
 		t5 * L_18 = Box(InitializedTypeInfo(&t110_TI), &L_17);
-		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4783_MI, V_7, L_18);
+		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4784_MI, V_7, L_18);
 	}
 
 IL_00f1:
 	{
-		bool L_19 = m5847(__this, V_5, &m5847_MI);
+		bool L_19 = m5848(__this, V_5, &m5848_MI);
 		if (L_19)
 		{
 			goto IL_0110;
@@ -657,17 +657,17 @@ IL_00f1:
 	{
 		int32_t L_20 = ((int32_t)-2146762481);
 		t5 * L_21 = Box(InitializedTypeInfo(&t110_TI), &L_20);
-		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4783_MI, V_7, L_21);
+		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4784_MI, V_7, L_21);
 	}
 
 IL_0110:
 	{
 		t1210 * L_22 = (t1210 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1210_TI));
-		m5304(L_22, p0, &m5304_MI);
+		m5305(L_22, p0, &m5305_MI);
 		V_8 = L_22;
-		m5311(V_8, V_5, &m5311_MI);
+		m5312(V_8, V_5, &m5312_MI);
 		t1267 * L_23 = (t1267 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1267_TI));
-		m5314(L_23, V_8, &m5314_MI);
+		m5315(L_23, V_8, &m5315_MI);
 		V_9 = L_23;
 		V_10 = 0;
 	}
@@ -675,7 +675,7 @@ IL_0110:
 IL_012d:
 	try
 	{ // begin try (depth: 1)
-		bool L_24 = m5317(V_9, V_5, &m5317_MI);
+		bool L_24 = m5318(V_9, V_5, &m5318_MI);
 		V_10 = L_24;
 		// IL_0138: leave IL_0146
 		goto IL_0146;
@@ -703,7 +703,7 @@ IL_0146:
 		}
 	}
 	{
-		int32_t L_25 = m5315(V_9, &m5315_MI);
+		int32_t L_25 = m5316(V_9, &m5316_MI);
 		V_13 = L_25;
 		if ((((int32_t)V_13) == ((int32_t)1)))
 		{
@@ -748,7 +748,7 @@ IL_0194:
 	{
 		int32_t L_26 = ((int32_t)-2146869223);
 		t5 * L_27 = Box(InitializedTypeInfo(&t110_TI), &L_26);
-		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4783_MI, V_7, L_27);
+		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4784_MI, V_7, L_27);
 		goto IL_0243;
 	}
 
@@ -756,7 +756,7 @@ IL_01ab:
 	{
 		int32_t L_28 = ((int32_t)-2146869232);
 		t5 * L_29 = Box(InitializedTypeInfo(&t110_TI), &L_28);
-		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4783_MI, V_7, L_29);
+		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4784_MI, V_7, L_29);
 		goto IL_0243;
 	}
 
@@ -764,7 +764,7 @@ IL_01c2:
 	{
 		int32_t L_30 = ((int32_t)-2146762494);
 		t5 * L_31 = Box(InitializedTypeInfo(&t110_TI), &L_30);
-		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4783_MI, V_7, L_31);
+		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4784_MI, V_7, L_31);
 		goto IL_0243;
 	}
 
@@ -773,7 +773,7 @@ IL_01d9:
 		V_1 = ((int32_t)45);
 		int32_t L_32 = ((int32_t)-2146762495);
 		t5 * L_33 = Box(InitializedTypeInfo(&t110_TI), &L_32);
-		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4783_MI, V_7, L_33);
+		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4784_MI, V_7, L_33);
 		goto IL_0243;
 	}
 
@@ -782,7 +782,7 @@ IL_01f3:
 		V_1 = ((int32_t)48);
 		int32_t L_34 = ((int32_t)-2146762486);
 		t5 * L_35 = Box(InitializedTypeInfo(&t110_TI), &L_34);
-		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4783_MI, V_7, L_35);
+		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4784_MI, V_7, L_35);
 		goto IL_0243;
 	}
 
@@ -791,17 +791,17 @@ IL_020d:
 		V_1 = ((int32_t)48);
 		int32_t L_36 = ((int32_t)-2146762487);
 		t5 * L_37 = Box(InitializedTypeInfo(&t110_TI), &L_36);
-		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4783_MI, V_7, L_37);
+		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4784_MI, V_7, L_37);
 		goto IL_0243;
 	}
 
 IL_0227:
 	{
 		V_1 = ((int32_t)46);
-		int32_t L_38 = m5315(V_9, &m5315_MI);
+		int32_t L_38 = m5316(V_9, &m5316_MI);
 		int32_t L_39 = L_38;
 		t5 * L_40 = Box(InitializedTypeInfo(&t110_TI), &L_39);
-		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4783_MI, V_7, L_40);
+		VirtFuncInvoker1< int32_t, t5 * >::Invoke(&m4784_MI, V_7, L_40);
 		goto IL_0243;
 	}
 
@@ -809,10 +809,10 @@ IL_0243:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(InitializedTypeInfo(&t114_TI));
 		t114 * L_41 = m532(NULL, LoadTypeToken(&t110_0_0_0), &m532_MI);
-		t107 * L_42 = (t107 *)VirtFuncInvoker1< t107 *, t114 * >::Invoke(&m4951_MI, V_7, L_41);
+		t107 * L_42 = (t107 *)VirtFuncInvoker1< t107 *, t114 * >::Invoke(&m4952_MI, V_7, L_41);
 		V_11 = ((t55*)Castclass(L_42, InitializedTypeInfo(&t55_TI)));
-		t1296 * L_43 = m5469(V_0, &m5469_MI);
-		bool L_44 = (bool)VirtFuncInvoker2< bool, t1008 *, t55* >::Invoke(&m5663_MI, L_43, V_6, V_11);
+		t1296 * L_43 = m5470(V_0, &m5470_MI);
+		bool L_44 = (bool)VirtFuncInvoker2< bool, t1008 *, t55* >::Invoke(&m5664_MI, L_43, V_6, V_11);
 		if (L_44)
 		{
 			goto IL_027b;
@@ -820,7 +820,7 @@ IL_0243:
 	}
 	{
 		t1329 * L_45 = (t1329 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1329_TI));
-		m5762(L_45, V_1, (t11*) &_stringLiteral898, &m5762_MI);
+		m5763(L_45, V_1, (t11*) &_stringLiteral899, &m5763_MI);
 		il2cpp_codegen_raise_exception(L_45);
 	}
 
@@ -829,7 +829,7 @@ IL_027b:
 		return;
 	}
 }
- bool m5847 (t1337 * __this, t1043 * p0, MethodInfo* method){
+ bool m5848 (t1337 * __this, t1043 * p0, MethodInfo* method){
 	t1295 * V_0 = {0};
 	t11* V_1 = {0};
 	t1072 * V_2 = {0};
@@ -841,13 +841,13 @@ IL_027b:
 	t585* V_8 = {0};
 	int32_t V_9 = 0;
 	{
-		t1285 * L_0 = m5807(__this, &m5807_MI);
+		t1285 * L_0 = m5808(__this, &m5808_MI);
 		V_0 = ((t1295 *)Castclass(L_0, InitializedTypeInfo(&t1295_TI)));
-		t1305 * L_1 = m5510(V_0, &m5510_MI);
-		t11* L_2 = m5750(L_1, &m5750_MI);
+		t1305 * L_1 = m5511(V_0, &m5511_MI);
+		t11* L_2 = m5751(L_1, &m5751_MI);
 		V_1 = L_2;
-		t1214 * L_3 = m4954(p0, &m4954_MI);
-		t1072 * L_4 = m4955(L_3, (t11*) &_stringLiteral478, &m4955_MI);
+		t1214 * L_3 = m4955(p0, &m4955_MI);
+		t1072 * L_4 = m4956(L_3, (t11*) &_stringLiteral479, &m4956_MI);
 		V_2 = L_4;
 		if (!V_2)
 		{
@@ -856,9 +856,9 @@ IL_027b:
 	}
 	{
 		t1276 * L_5 = (t1276 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1276_TI));
-		m5380(L_5, V_2, &m5380_MI);
+		m5381(L_5, V_2, &m5381_MI);
 		V_3 = L_5;
-		t585* L_6 = m5382(V_3, &m5382_MI);
+		t585* L_6 = m5383(V_3, &m5383_MI);
 		V_5 = L_6;
 		V_6 = 0;
 		goto IL_0062;
@@ -868,7 +868,7 @@ IL_0046:
 	{
 		int32_t L_7 = V_6;
 		V_4 = (*(t11**)(t11**)SZArrayLdElema(V_5, L_7));
-		bool L_8 = m5849(NULL, V_1, V_4, &m5849_MI);
+		bool L_8 = m5850(NULL, V_1, V_4, &m5850_MI);
 		if (!L_8)
 		{
 			goto IL_005c;
@@ -891,7 +891,7 @@ IL_0062:
 		}
 	}
 	{
-		t585* L_9 = m5383(V_3, &m5383_MI);
+		t585* L_9 = m5384(V_3, &m5384_MI);
 		V_8 = L_9;
 		V_9 = 0;
 		goto IL_0099;
@@ -902,7 +902,7 @@ IL_007d:
 		int32_t L_10 = V_9;
 		V_7 = (*(t11**)(t11**)SZArrayLdElema(V_8, L_10));
 		IL2CPP_RUNTIME_CLASS_INIT((&t11_TI));
-		bool L_11 = m2355(NULL, V_7, V_1, &m2355_MI);
+		bool L_11 = m2356(NULL, V_7, V_1, &m2356_MI);
 		if (!L_11)
 		{
 			goto IL_0093;
@@ -927,59 +927,59 @@ IL_0099:
 
 IL_00a4:
 	{
-		t11* L_12 = (t11*)VirtFuncInvoker0< t11* >::Invoke(&m5292_MI, p0);
-		bool L_13 = m5848(__this, L_12, &m5848_MI);
+		t11* L_12 = (t11*)VirtFuncInvoker0< t11* >::Invoke(&m5293_MI, p0);
+		bool L_13 = m5849(__this, L_12, &m5849_MI);
 		return L_13;
 	}
 }
- bool m5848 (t1337 * __this, t11* p0, MethodInfo* method){
+ bool m5849 (t1337 * __this, t11* p0, MethodInfo* method){
 	t1295 * V_0 = {0};
 	t11* V_1 = {0};
 	t1091 * V_2 = {0};
 	t1100 * V_3 = {0};
 	{
-		t1285 * L_0 = m5807(__this, &m5807_MI);
+		t1285 * L_0 = m5808(__this, &m5808_MI);
 		V_0 = ((t1295 *)Castclass(L_0, InitializedTypeInfo(&t1295_TI)));
 		IL2CPP_RUNTIME_CLASS_INIT((&t11_TI));
 		V_1 = (((t11_SFs*)(&t11_TI)->static_fields)->f2);
 		IL2CPP_RUNTIME_CLASS_INIT(InitializedTypeInfo(&t1091_TI));
 		t1091 * L_1 = (t1091 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1091_TI));
-		m4328(L_1, (t11*) &_stringLiteral899, &m4328_MI);
+		m4329(L_1, (t11*) &_stringLiteral900, &m4329_MI);
 		V_2 = L_1;
-		t1100 * L_2 = m4344(V_2, p0, &m4344_MI);
+		t1100 * L_2 = m4345(V_2, p0, &m4345_MI);
 		V_3 = L_2;
-		int32_t L_3 = (int32_t)VirtFuncInvoker0< int32_t >::Invoke(&m4319_MI, V_3);
+		int32_t L_3 = (int32_t)VirtFuncInvoker0< int32_t >::Invoke(&m4320_MI, V_3);
 		if ((((uint32_t)L_3) != ((uint32_t)1)))
 		{
 			goto IL_005f;
 		}
 	}
 	{
-		t1090 * L_4 = (t1090 *)VirtFuncInvoker1< t1090 *, int32_t >::Invoke(&m4321_MI, V_3, 0);
-		bool L_5 = m4298(L_4, &m4298_MI);
+		t1090 * L_4 = (t1090 *)VirtFuncInvoker1< t1090 *, int32_t >::Invoke(&m4322_MI, V_3, 0);
+		bool L_5 = m4299(L_4, &m4299_MI);
 		if (!L_5)
 		{
 			goto IL_005f;
 		}
 	}
 	{
-		t1090 * L_6 = (t1090 *)VirtFuncInvoker1< t1090 *, int32_t >::Invoke(&m4321_MI, V_3, 0);
-		t1096 * L_7 = (t1096 *)VirtFuncInvoker0< t1096 * >::Invoke(&m4312_MI, L_6);
-		t1095 * L_8 = m4302(L_7, 1, &m4302_MI);
-		t11* L_9 = m4283(L_8, &m4283_MI);
-		t11* L_10 = (t11*)VirtFuncInvoker0< t11* >::Invoke(&m3567_MI, L_9);
+		t1090 * L_6 = (t1090 *)VirtFuncInvoker1< t1090 *, int32_t >::Invoke(&m4322_MI, V_3, 0);
+		t1096 * L_7 = (t1096 *)VirtFuncInvoker0< t1096 * >::Invoke(&m4313_MI, L_6);
+		t1095 * L_8 = m4303(L_7, 1, &m4303_MI);
+		t11* L_9 = m4284(L_8, &m4284_MI);
+		t11* L_10 = (t11*)VirtFuncInvoker0< t11* >::Invoke(&m3568_MI, L_9);
 		V_1 = L_10;
 	}
 
 IL_005f:
 	{
-		t1305 * L_11 = m5510(V_0, &m5510_MI);
-		t11* L_12 = m5750(L_11, &m5750_MI);
-		bool L_13 = m5849(NULL, L_12, V_1, &m5849_MI);
+		t1305 * L_11 = m5511(V_0, &m5511_MI);
+		t11* L_12 = m5751(L_11, &m5751_MI);
+		bool L_13 = m5850(NULL, L_12, V_1, &m5850_MI);
 		return L_13;
 	}
 }
- bool m5849 (t5 * __this, t11* p0, t11* p1, MethodInfo* method){
+ bool m5850 (t5 * __this, t11* p0, t11* p1, MethodInfo* method){
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	t11* V_2 = {0};
@@ -988,7 +988,7 @@ IL_005f:
 	t11* V_5 = {0};
 	int32_t G_B15_0 = 0;
 	{
-		int32_t L_0 = m2457(p1, ((int32_t)42), &m2457_MI);
+		int32_t L_0 = m2458(p1, ((int32_t)42), &m2458_MI);
 		V_0 = L_0;
 		if ((((uint32_t)V_0) != ((uint32_t)(-1))))
 		{
@@ -997,22 +997,22 @@ IL_005f:
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(InitializedTypeInfo(&t771_TI));
-		t771 * L_1 = m4803(NULL, &m4803_MI);
+		t771 * L_1 = m4804(NULL, &m4804_MI);
 		IL2CPP_RUNTIME_CLASS_INIT((&t11_TI));
-		int32_t L_2 = m4826(NULL, p0, p1, 1, L_1, &m4826_MI);
+		int32_t L_2 = m4827(NULL, p0, p1, 1, L_1, &m4827_MI);
 		return ((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
 	}
 
 IL_0021:
 	{
-		int32_t L_3 = m2357(p1, &m2357_MI);
+		int32_t L_3 = m2358(p1, &m2358_MI);
 		if ((((int32_t)V_0) == ((int32_t)((int32_t)(L_3-1)))))
 		{
 			goto IL_0041;
 		}
 	}
 	{
-		uint16_t L_4 = m2384(p1, ((int32_t)(V_0+1)), &m2384_MI);
+		uint16_t L_4 = m2385(p1, ((int32_t)(V_0+1)), &m2385_MI);
 		if ((((int32_t)L_4) == ((int32_t)((int32_t)46))))
 		{
 			goto IL_0041;
@@ -1024,7 +1024,7 @@ IL_0021:
 
 IL_0041:
 	{
-		int32_t L_5 = m5073(p1, ((int32_t)42), ((int32_t)(V_0+1)), &m5073_MI);
+		int32_t L_5 = m5074(p1, ((int32_t)42), ((int32_t)(V_0+1)), &m5074_MI);
 		V_1 = L_5;
 		if ((((int32_t)V_1) == ((int32_t)(-1))))
 		{
@@ -1037,10 +1037,10 @@ IL_0041:
 
 IL_0056:
 	{
-		t11* L_6 = m2414(p1, ((int32_t)(V_0+1)), &m2414_MI);
+		t11* L_6 = m2415(p1, ((int32_t)(V_0+1)), &m2415_MI);
 		V_2 = L_6;
-		int32_t L_7 = m2357(p0, &m2357_MI);
-		int32_t L_8 = m2357(V_2, &m2357_MI);
+		int32_t L_7 = m2358(p0, &m2358_MI);
+		int32_t L_8 = m2358(V_2, &m2358_MI);
 		V_3 = ((int32_t)(L_7-L_8));
 		if ((((int32_t)V_3) > ((int32_t)0)))
 		{
@@ -1053,11 +1053,11 @@ IL_0056:
 
 IL_0077:
 	{
-		int32_t L_9 = m2357(V_2, &m2357_MI);
+		int32_t L_9 = m2358(V_2, &m2358_MI);
 		IL2CPP_RUNTIME_CLASS_INIT(InitializedTypeInfo(&t771_TI));
-		t771 * L_10 = m4803(NULL, &m4803_MI);
+		t771 * L_10 = m4804(NULL, &m4804_MI);
 		IL2CPP_RUNTIME_CLASS_INIT((&t11_TI));
-		int32_t L_11 = m6072(NULL, p0, V_3, V_2, 0, L_9, 1, L_10, &m6072_MI);
+		int32_t L_11 = m6073(NULL, p0, V_3, V_2, 0, L_9, 1, L_10, &m6073_MI);
 		if (!L_11)
 		{
 			goto IL_0093;
@@ -1075,7 +1075,7 @@ IL_0093:
 		}
 	}
 	{
-		int32_t L_12 = m2457(p0, ((int32_t)46), &m2457_MI);
+		int32_t L_12 = m2458(p0, ((int32_t)46), &m2458_MI);
 		V_4 = L_12;
 		if ((((int32_t)V_4) == ((int32_t)(-1))))
 		{
@@ -1083,8 +1083,8 @@ IL_0093:
 		}
 	}
 	{
-		int32_t L_13 = m2357(p0, &m2357_MI);
-		int32_t L_14 = m2357(V_2, &m2357_MI);
+		int32_t L_13 = m2358(p0, &m2358_MI);
+		int32_t L_14 = m2358(V_2, &m2358_MI);
 		G_B15_0 = ((((int32_t)((((int32_t)V_4) < ((int32_t)((int32_t)(L_13-L_14))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		goto IL_00c2;
 	}
@@ -1101,13 +1101,13 @@ IL_00c2:
 
 IL_00c3:
 	{
-		t11* L_15 = m2385(p1, 0, V_0, &m2385_MI);
+		t11* L_15 = m2386(p1, 0, V_0, &m2386_MI);
 		V_5 = L_15;
-		int32_t L_16 = m2357(V_5, &m2357_MI);
+		int32_t L_16 = m2358(V_5, &m2358_MI);
 		IL2CPP_RUNTIME_CLASS_INIT(InitializedTypeInfo(&t771_TI));
-		t771 * L_17 = m4803(NULL, &m4803_MI);
+		t771 * L_17 = m4804(NULL, &m4804_MI);
 		IL2CPP_RUNTIME_CLASS_INIT((&t11_TI));
-		int32_t L_18 = m6072(NULL, p0, 0, V_5, 0, L_16, 1, L_17, &m6072_MI);
+		int32_t L_18 = m6073(NULL, p0, 0, V_5, 0, L_16, 1, L_17, &m6073_MI);
 		return ((((int32_t)L_18) == ((int32_t)0))? 1 : 0);
 	}
 }
@@ -1125,89 +1125,88 @@ extern Il2CppType t1285_0_0_0;
 extern Il2CppType t1285_0_0_0;
 extern Il2CppType t1044_0_0_0;
 extern Il2CppType t1044_0_0_0;
-static ParameterInfo t1337_m5841_ParameterInfos[] = 
+static ParameterInfo t1337_m5842_ParameterInfos[] = 
 {
 	{"context", 0, 134218531, &EmptyCustomAttributesCache, &t1285_0_0_0},
 	{"buffer", 1, 134218532, &EmptyCustomAttributesCache, &t1044_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5841_MI = 
-{
-	".ctor", (methodPointerType)&m5841, &t1337_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t5, t1337_m5841_ParameterInfos, &EmptyCustomAttributesCache, 6278, 0, 255, 2, false, false, 834, NULL, (methodPointerType)NULL, NULL};
-extern Il2CppType t109_0_0_0;
-extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5842_MI = 
 {
-	"Update", (methodPointerType)&m5842, &t1337_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 198, 0, 26, 0, false, false, 835, NULL, (methodPointerType)NULL, NULL};
+	".ctor", (methodPointerType)&m5842, &t1337_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t5, t1337_m5842_ParameterInfos, &EmptyCustomAttributesCache, 6278, 0, 255, 2, false, false, 834, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5843_MI = 
 {
-	"ProcessAsSsl3", (methodPointerType)&m5843, &t1337_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 25, 0, false, false, 836, NULL, (methodPointerType)NULL, NULL};
+	"Update", (methodPointerType)&m5843, &t1337_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 198, 0, 26, 0, false, false, 835, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5844_MI = 
 {
-	"ProcessAsTls1", (methodPointerType)&m5844, &t1337_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 24, 0, false, false, 837, NULL, (methodPointerType)NULL, NULL};
+	"ProcessAsSsl3", (methodPointerType)&m5844, &t1337_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 25, 0, false, false, 836, NULL, (methodPointerType)NULL, NULL};
+extern Il2CppType t109_0_0_0;
+extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
+MethodInfo m5845_MI = 
+{
+	"ProcessAsTls1", (methodPointerType)&m5845, &t1337_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 24, 0, false, false, 837, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1043_0_0_0;
 extern Il2CppType t1043_0_0_0;
-static ParameterInfo t1337_m5845_ParameterInfos[] = 
+static ParameterInfo t1337_m5846_ParameterInfos[] = 
 {
 	{"cert", 0, 134218533, &EmptyCustomAttributesCache, &t1043_0_0_0},
 };
 extern Il2CppType t108_0_0_0;
 extern void* RuntimeInvoker_t108_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5845_MI = 
+MethodInfo m5846_MI = 
 {
-	"checkCertificateUsage", (methodPointerType)&m5845, &t1337_TI, &t108_0_0_0, RuntimeInvoker_t108_t5, t1337_m5845_ParameterInfos, &EmptyCustomAttributesCache, 129, 0, 255, 1, false, false, 838, NULL, (methodPointerType)NULL, NULL};
+	"checkCertificateUsage", (methodPointerType)&m5846, &t1337_TI, &t108_0_0_0, RuntimeInvoker_t108_t5, t1337_m5846_ParameterInfos, &EmptyCustomAttributesCache, 129, 0, 255, 1, false, false, 838, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1210_0_0_0;
 extern Il2CppType t1210_0_0_0;
-static ParameterInfo t1337_m5846_ParameterInfos[] = 
+static ParameterInfo t1337_m5847_ParameterInfos[] = 
 {
 	{"certificates", 0, 134218534, &EmptyCustomAttributesCache, &t1210_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5846_MI = 
+MethodInfo m5847_MI = 
 {
-	"validateCertificates", (methodPointerType)&m5846, &t1337_TI, &t109_0_0_0, RuntimeInvoker_t109_t5, t1337_m5846_ParameterInfos, &EmptyCustomAttributesCache, 129, 0, 255, 1, false, false, 839, NULL, (methodPointerType)NULL, NULL};
+	"validateCertificates", (methodPointerType)&m5847, &t1337_TI, &t109_0_0_0, RuntimeInvoker_t109_t5, t1337_m5847_ParameterInfos, &EmptyCustomAttributesCache, 129, 0, 255, 1, false, false, 839, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1043_0_0_0;
-static ParameterInfo t1337_m5847_ParameterInfos[] = 
+static ParameterInfo t1337_m5848_ParameterInfos[] = 
 {
 	{"cert", 0, 134218535, &EmptyCustomAttributesCache, &t1043_0_0_0},
 };
 extern Il2CppType t108_0_0_0;
 extern void* RuntimeInvoker_t108_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5847_MI = 
+MethodInfo m5848_MI = 
 {
-	"checkServerIdentity", (methodPointerType)&m5847, &t1337_TI, &t108_0_0_0, RuntimeInvoker_t108_t5, t1337_m5847_ParameterInfos, &EmptyCustomAttributesCache, 129, 0, 255, 1, false, false, 840, NULL, (methodPointerType)NULL, NULL};
+	"checkServerIdentity", (methodPointerType)&m5848, &t1337_TI, &t108_0_0_0, RuntimeInvoker_t108_t5, t1337_m5848_ParameterInfos, &EmptyCustomAttributesCache, 129, 0, 255, 1, false, false, 840, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t11_0_0_0;
 extern Il2CppType t11_0_0_0;
-static ParameterInfo t1337_m5848_ParameterInfos[] = 
+static ParameterInfo t1337_m5849_ParameterInfos[] = 
 {
 	{"subjectName", 0, 134218536, &EmptyCustomAttributesCache, &t11_0_0_0},
 };
 extern Il2CppType t108_0_0_0;
 extern void* RuntimeInvoker_t108_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5848_MI = 
+MethodInfo m5849_MI = 
 {
-	"checkDomainName", (methodPointerType)&m5848, &t1337_TI, &t108_0_0_0, RuntimeInvoker_t108_t5, t1337_m5848_ParameterInfos, &EmptyCustomAttributesCache, 129, 0, 255, 1, false, false, 841, NULL, (methodPointerType)NULL, NULL};
+	"checkDomainName", (methodPointerType)&m5849, &t1337_TI, &t108_0_0_0, RuntimeInvoker_t108_t5, t1337_m5849_ParameterInfos, &EmptyCustomAttributesCache, 129, 0, 255, 1, false, false, 841, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t11_0_0_0;
 extern Il2CppType t11_0_0_0;
-static ParameterInfo t1337_m5849_ParameterInfos[] = 
+static ParameterInfo t1337_m5850_ParameterInfos[] = 
 {
 	{"hostname", 0, 134218537, &EmptyCustomAttributesCache, &t11_0_0_0},
 	{"pattern", 1, 134218538, &EmptyCustomAttributesCache, &t11_0_0_0},
 };
 extern Il2CppType t108_0_0_0;
 extern void* RuntimeInvoker_t108_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5849_MI = 
+MethodInfo m5850_MI = 
 {
-	"Match", (methodPointerType)&m5849, &t1337_TI, &t108_0_0_0, RuntimeInvoker_t108_t5_t5, t1337_m5849_ParameterInfos, &EmptyCustomAttributesCache, 145, 0, 255, 2, false, false, 842, NULL, (methodPointerType)NULL, NULL};
+	"Match", (methodPointerType)&m5850, &t1337_TI, &t108_0_0_0, RuntimeInvoker_t108_t5_t5, t1337_m5850_ParameterInfos, &EmptyCustomAttributesCache, 145, 0, 255, 2, false, false, 842, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1337_MIs[] =
 {
-	&m5841_MI,
 	&m5842_MI,
 	&m5843_MI,
 	&m5844_MI,
@@ -1216,63 +1215,64 @@ static MethodInfo* t1337_MIs[] =
 	&m5847_MI,
 	&m5848_MI,
 	&m5849_MI,
+	&m5850_MI,
 	NULL
 };
 extern MethodInfo m464_MI;
 extern MethodInfo m465_MI;
 extern MethodInfo m466_MI;
 extern MethodInfo m467_MI;
-extern MethodInfo m6015_MI;
-extern MethodInfo m5782_MI;
-extern MethodInfo m5783_MI;
-extern MethodInfo m5781_MI;
-extern MethodInfo m5786_MI;
-extern MethodInfo m5784_MI;
-extern MethodInfo m5785_MI;
-extern MethodInfo m6059_MI;
-extern MethodInfo m581_MI;
-extern MethodInfo m5799_MI;
-extern MethodInfo m5802_MI;
 extern MethodInfo m6016_MI;
-extern MethodInfo m5801_MI;
+extern MethodInfo m5783_MI;
+extern MethodInfo m5784_MI;
+extern MethodInfo m5782_MI;
+extern MethodInfo m5787_MI;
+extern MethodInfo m5785_MI;
+extern MethodInfo m5786_MI;
+extern MethodInfo m6060_MI;
+extern MethodInfo m582_MI;
 extern MethodInfo m5800_MI;
 extern MethodInfo m5803_MI;
-extern MethodInfo m6005_MI;
-extern MethodInfo m6022_MI;
-extern MethodInfo m6032_MI;
-extern MethodInfo m6024_MI;
+extern MethodInfo m6017_MI;
+extern MethodInfo m5802_MI;
+extern MethodInfo m5801_MI;
+extern MethodInfo m5804_MI;
+extern MethodInfo m6006_MI;
+extern MethodInfo m6023_MI;
 extern MethodInfo m6033_MI;
-extern MethodInfo m5812_MI;
+extern MethodInfo m6025_MI;
+extern MethodInfo m6034_MI;
+extern MethodInfo m5813_MI;
 static MethodInfo* t1337_VT[] =
 {
 	&m464_MI,
 	&m465_MI,
 	&m466_MI,
 	&m467_MI,
-	&m6015_MI,
-	&m5782_MI,
-	&m5783_MI,
-	&m5781_MI,
-	&m5786_MI,
-	&m5784_MI,
-	&m5785_MI,
-	&m6059_MI,
-	&m581_MI,
-	&m5799_MI,
-	&m5802_MI,
 	&m6016_MI,
-	&m5801_MI,
+	&m5783_MI,
+	&m5784_MI,
+	&m5782_MI,
+	&m5787_MI,
+	&m5785_MI,
+	&m5786_MI,
+	&m6060_MI,
+	&m582_MI,
 	&m5800_MI,
 	&m5803_MI,
-	&m6005_MI,
-	&m6022_MI,
-	&m6032_MI,
-	&m6024_MI,
+	&m6017_MI,
+	&m5802_MI,
+	&m5801_MI,
+	&m5804_MI,
+	&m6006_MI,
+	&m6023_MI,
 	&m6033_MI,
+	&m6025_MI,
+	&m6034_MI,
+	&m5845_MI,
 	&m5844_MI,
 	&m5843_MI,
-	&m5842_MI,
-	&m5812_MI,
+	&m5813_MI,
 };
 extern TypeInfo t132_TI;
 static Il2CppInterfaceOffsetPair t1337_IOs[] = 
@@ -1305,60 +1305,60 @@ extern TypeInfo t585_TI;
 extern TypeInfo t1208_TI;
 #include "t1056MD.h"
 #include "t1208MD.h"
-extern MethodInfo m5775_MI;
 extern MethodInfo m5776_MI;
-extern MethodInfo m5774_MI;
-extern MethodInfo m5853_MI;
-extern MethodInfo m5788_MI;
+extern MethodInfo m5777_MI;
+extern MethodInfo m5775_MI;
+extern MethodInfo m5854_MI;
 extern MethodInfo m5789_MI;
-extern MethodInfo m4850_MI;
-extern MethodInfo m4854_MI;
+extern MethodInfo m5790_MI;
+extern MethodInfo m4851_MI;
 extern MethodInfo m4855_MI;
-extern MethodInfo m4853_MI;
-extern MethodInfo m4885_MI;
+extern MethodInfo m4856_MI;
+extern MethodInfo m4854_MI;
 extern MethodInfo m4886_MI;
+extern MethodInfo m4887_MI;
 
 
-extern MethodInfo m5850_MI;
- void m5850 (t1338 * __this, t1285 * p0, t1044* p1, MethodInfo* method){
-	{
-		m5806(__this, p0, ((int32_t)13), p1, &m5806_MI);
-		return;
-	}
-}
 extern MethodInfo m5851_MI;
- void m5851 (t1338 * __this, MethodInfo* method){
+ void m5851 (t1338 * __this, t1285 * p0, t1044* p1, MethodInfo* method){
 	{
-		m5811(__this, &m5811_MI);
-		t1285 * L_0 = m5807(__this, &m5807_MI);
-		t1304 * L_1 = m5509(L_0, &m5509_MI);
-		t1330* L_2 = (__this->f9);
-		m5775(L_1, L_2, &m5775_MI);
-		t1285 * L_3 = m5807(__this, &m5807_MI);
-		t1304 * L_4 = m5509(L_3, &m5509_MI);
-		t585* L_5 = (__this->f10);
-		m5776(L_4, L_5, &m5776_MI);
-		t1285 * L_6 = m5807(__this, &m5807_MI);
-		t1304 * L_7 = m5509(L_6, &m5509_MI);
-		m5774(L_7, 1, &m5774_MI);
+		m5807(__this, p0, ((int32_t)13), p1, &m5807_MI);
 		return;
 	}
 }
 extern MethodInfo m5852_MI;
  void m5852 (t1338 * __this, MethodInfo* method){
 	{
-		VirtActionInvoker0::Invoke(&m5853_MI, __this);
+		m5812(__this, &m5812_MI);
+		t1285 * L_0 = m5808(__this, &m5808_MI);
+		t1304 * L_1 = m5510(L_0, &m5510_MI);
+		t1330* L_2 = (__this->f9);
+		m5776(L_1, L_2, &m5776_MI);
+		t1285 * L_3 = m5808(__this, &m5808_MI);
+		t1304 * L_4 = m5510(L_3, &m5510_MI);
+		t585* L_5 = (__this->f10);
+		m5777(L_4, L_5, &m5777_MI);
+		t1285 * L_6 = m5808(__this, &m5808_MI);
+		t1304 * L_7 = m5510(L_6, &m5510_MI);
+		m5775(L_7, 1, &m5775_MI);
 		return;
 	}
 }
+extern MethodInfo m5853_MI;
  void m5853 (t1338 * __this, MethodInfo* method){
+	{
+		VirtActionInvoker0::Invoke(&m5854_MI, __this);
+		return;
+	}
+}
+ void m5854 (t1338 * __this, MethodInfo* method){
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	t1056 * V_2 = {0};
 	int32_t V_3 = 0;
 	t1056 * V_4 = {0};
 	{
-		uint8_t L_0 = m5788(__this, &m5788_MI);
+		uint8_t L_0 = m5789(__this, &m5789_MI);
 		V_0 = L_0;
 		__this->f9 = ((t1330*)SZArrayNew(InitializedTypeInfo(&t1330_TI), V_0));
 		V_1 = 0;
@@ -1368,7 +1368,7 @@ extern MethodInfo m5852_MI;
 IL_001a:
 	{
 		t1330* L_1 = (__this->f9);
-		uint8_t L_2 = m5788(__this, &m5788_MI);
+		uint8_t L_2 = m5789(__this, &m5789_MI);
 		*((int32_t*)(int32_t*)SZArrayLdElema(L_1, V_1)) = (int32_t)L_2;
 		V_1 = ((int32_t)(V_1+1));
 	}
@@ -1381,19 +1381,19 @@ IL_002c:
 		}
 	}
 	{
-		int16_t L_3 = m5789(__this, &m5789_MI);
+		int16_t L_3 = m5790(__this, &m5790_MI);
 		if (!L_3)
 		{
 			goto IL_00aa;
 		}
 	}
 	{
-		int16_t L_4 = m5789(__this, &m5789_MI);
-		t1044* L_5 = m5791(__this, L_4, &m5791_MI);
+		int16_t L_4 = m5790(__this, &m5790_MI);
+		t1044* L_5 = m5792(__this, L_4, &m5792_MI);
 		t1056 * L_6 = (t1056 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1056_TI));
-		m4850(L_6, L_5, &m4850_MI);
+		m4851(L_6, L_5, &m4851_MI);
 		V_2 = L_6;
-		int32_t L_7 = m4854(V_2, &m4854_MI);
+		int32_t L_7 = m4855(V_2, &m4855_MI);
 		__this->f10 = ((t585*)SZArrayNew(InitializedTypeInfo(&t585_TI), L_7));
 		V_3 = 0;
 		goto IL_009e;
@@ -1401,17 +1401,17 @@ IL_002c:
 
 IL_0068:
 	{
-		t1056 * L_8 = m4855(V_2, V_3, &m4855_MI);
-		t1044* L_9 = m4853(L_8, &m4853_MI);
+		t1056 * L_8 = m4856(V_2, V_3, &m4856_MI);
+		t1044* L_9 = m4854(L_8, &m4854_MI);
 		t1056 * L_10 = (t1056 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1056_TI));
-		m4850(L_10, L_9, &m4850_MI);
+		m4851(L_10, L_9, &m4851_MI);
 		V_4 = L_10;
 		t585* L_11 = (__this->f10);
 		IL2CPP_RUNTIME_CLASS_INIT(InitializedTypeInfo(&t1208_TI));
-		t1208 * L_12 = m4885(NULL, &m4885_MI);
-		t1056 * L_13 = m4855(V_4, 1, &m4855_MI);
-		t1044* L_14 = m4853(L_13, &m4853_MI);
-		t11* L_15 = (t11*)VirtFuncInvoker1< t11*, t1044* >::Invoke(&m4886_MI, L_12, L_14);
+		t1208 * L_12 = m4886(NULL, &m4886_MI);
+		t1056 * L_13 = m4856(V_4, 1, &m4856_MI);
+		t1044* L_14 = m4854(L_13, &m4854_MI);
+		t11* L_15 = (t11*)VirtFuncInvoker1< t11*, t1044* >::Invoke(&m4887_MI, L_12, L_14);
 		ArrayElementTypeCheck (L_11, L_15);
 		*((t11**)(t11**)SZArrayLdElema(L_11, V_3)) = (t11*)L_15;
 		V_3 = ((int32_t)(V_3+1));
@@ -1419,7 +1419,7 @@ IL_0068:
 
 IL_009e:
 	{
-		int32_t L_16 = m4854(V_2, &m4854_MI);
+		int32_t L_16 = m4855(V_2, &m4855_MI);
 		if ((((int32_t)V_3) < ((int32_t)L_16)))
 		{
 			goto IL_0068;
@@ -1448,37 +1448,37 @@ static FieldInfo* t1338_FIs[] =
 };
 extern Il2CppType t1285_0_0_0;
 extern Il2CppType t1044_0_0_0;
-static ParameterInfo t1338_m5850_ParameterInfos[] = 
+static ParameterInfo t1338_m5851_ParameterInfos[] = 
 {
 	{"context", 0, 134218539, &EmptyCustomAttributesCache, &t1285_0_0_0},
 	{"buffer", 1, 134218540, &EmptyCustomAttributesCache, &t1044_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5850_MI = 
-{
-	".ctor", (methodPointerType)&m5850, &t1338_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t5, t1338_m5850_ParameterInfos, &EmptyCustomAttributesCache, 6278, 0, 255, 2, false, false, 843, NULL, (methodPointerType)NULL, NULL};
-extern Il2CppType t109_0_0_0;
-extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5851_MI = 
 {
-	"Update", (methodPointerType)&m5851, &t1338_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 198, 0, 26, 0, false, false, 844, NULL, (methodPointerType)NULL, NULL};
+	".ctor", (methodPointerType)&m5851, &t1338_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t5, t1338_m5851_ParameterInfos, &EmptyCustomAttributesCache, 6278, 0, 255, 2, false, false, 843, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5852_MI = 
 {
-	"ProcessAsSsl3", (methodPointerType)&m5852, &t1338_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 25, 0, false, false, 845, NULL, (methodPointerType)NULL, NULL};
+	"Update", (methodPointerType)&m5852, &t1338_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 198, 0, 26, 0, false, false, 844, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5853_MI = 
 {
-	"ProcessAsTls1", (methodPointerType)&m5853, &t1338_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 24, 0, false, false, 846, NULL, (methodPointerType)NULL, NULL};
+	"ProcessAsSsl3", (methodPointerType)&m5853, &t1338_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 25, 0, false, false, 845, NULL, (methodPointerType)NULL, NULL};
+extern Il2CppType t109_0_0_0;
+extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
+MethodInfo m5854_MI = 
+{
+	"ProcessAsTls1", (methodPointerType)&m5854, &t1338_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 24, 0, false, false, 846, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1338_MIs[] =
 {
-	&m5850_MI,
 	&m5851_MI,
 	&m5852_MI,
 	&m5853_MI,
+	&m5854_MI,
 	NULL
 };
 static MethodInfo* t1338_VT[] =
@@ -1487,30 +1487,30 @@ static MethodInfo* t1338_VT[] =
 	&m465_MI,
 	&m466_MI,
 	&m467_MI,
-	&m6015_MI,
-	&m5782_MI,
-	&m5783_MI,
-	&m5781_MI,
-	&m5786_MI,
-	&m5784_MI,
-	&m5785_MI,
-	&m6059_MI,
-	&m581_MI,
-	&m5799_MI,
-	&m5802_MI,
 	&m6016_MI,
-	&m5801_MI,
+	&m5783_MI,
+	&m5784_MI,
+	&m5782_MI,
+	&m5787_MI,
+	&m5785_MI,
+	&m5786_MI,
+	&m6060_MI,
+	&m582_MI,
 	&m5800_MI,
 	&m5803_MI,
-	&m6005_MI,
-	&m6022_MI,
-	&m6032_MI,
-	&m6024_MI,
+	&m6017_MI,
+	&m5802_MI,
+	&m5801_MI,
+	&m5804_MI,
+	&m6006_MI,
+	&m6023_MI,
 	&m6033_MI,
+	&m6025_MI,
+	&m6034_MI,
+	&m5854_MI,
 	&m5853_MI,
 	&m5852_MI,
-	&m5851_MI,
-	&m5812_MI,
+	&m5813_MI,
 };
 static Il2CppInterfaceOffsetPair t1338_IOs[] = 
 {
@@ -1549,76 +1549,76 @@ extern TypeInfo t1279_TI;
 #include "t1325MD.h"
 #include "t1220MD.h"
 #include "t1279MD.h"
-extern MethodInfo m4819_MI;
-extern MethodInfo m5514_MI;
-extern MethodInfo m5534_MI;
-extern MethodInfo m5674_MI;
-extern MethodInfo m5521_MI;
-extern MethodInfo m5798_MI;
-extern MethodInfo m5923_MI;
+extern MethodInfo m4820_MI;
+extern MethodInfo m5515_MI;
+extern MethodInfo m5535_MI;
+extern MethodInfo m5675_MI;
+extern MethodInfo m5522_MI;
+extern MethodInfo m5799_MI;
 extern MethodInfo m5924_MI;
 extern MethodInfo m5925_MI;
-extern MethodInfo m5813_MI;
-extern MethodInfo m5392_MI;
-extern MethodInfo m5948_MI;
-extern MethodInfo m5552_MI;
-extern MethodInfo m5434_MI;
-extern MethodInfo m5757_MI;
+extern MethodInfo m5926_MI;
+extern MethodInfo m5814_MI;
+extern MethodInfo m5393_MI;
+extern MethodInfo m5949_MI;
+extern MethodInfo m5553_MI;
+extern MethodInfo m5435_MI;
+extern MethodInfo m5758_MI;
 extern FieldInfo t1352_f14_FieldInfo;
 
 
-extern MethodInfo m5854_MI;
- void m5854 (t1339 * __this, t1285 * p0, t1044* p1, MethodInfo* method){
-	{
-		m5806(__this, p0, ((int32_t)20), p1, &m5806_MI);
-		return;
-	}
-}
 extern MethodInfo m5855_MI;
- void m5855 (t5 * __this, MethodInfo* method){
+ void m5855 (t1339 * __this, t1285 * p0, t1044* p1, MethodInfo* method){
 	{
-		t1044* L_0 = ((t1044*)SZArrayNew(InitializedTypeInfo(&t1044_TI), 4));
-		m4819(NULL, (t107 *)(t107 *)L_0, LoadFieldToken(&t1352_f14_FieldInfo), &m4819_MI);
-		((t1339_SFs*)InitializedTypeInfo(&t1339_TI)->static_fields)->f9 = L_0;
+		m5807(__this, p0, ((int32_t)20), p1, &m5807_MI);
 		return;
 	}
 }
 extern MethodInfo m5856_MI;
- void m5856 (t1339 * __this, MethodInfo* method){
+ void m5856 (t5 * __this, MethodInfo* method){
 	{
-		m5811(__this, &m5811_MI);
-		t1285 * L_0 = m5807(__this, &m5807_MI);
-		m5514(L_0, 2, &m5514_MI);
+		t1044* L_0 = ((t1044*)SZArrayNew(InitializedTypeInfo(&t1044_TI), 4));
+		m4820(NULL, (t107 *)(t107 *)L_0, LoadFieldToken(&t1352_f14_FieldInfo), &m4820_MI);
+		((t1339_SFs*)InitializedTypeInfo(&t1339_TI)->static_fields)->f9 = L_0;
 		return;
 	}
 }
 extern MethodInfo m5857_MI;
  void m5857 (t1339 * __this, MethodInfo* method){
+	{
+		m5812(__this, &m5812_MI);
+		t1285 * L_0 = m5808(__this, &m5808_MI);
+		m5515(L_0, 2, &m5515_MI);
+		return;
+	}
+}
+extern MethodInfo m5858_MI;
+ void m5858 (t1339 * __this, MethodInfo* method){
 	t1220 * V_0 = {0};
 	t1044* V_1 = {0};
 	t1044* V_2 = {0};
 	t1044* V_3 = {0};
 	{
-		t1285 * L_0 = m5807(__this, &m5807_MI);
-		t1044* L_1 = m5534(L_0, &m5534_MI);
+		t1285 * L_0 = m5808(__this, &m5808_MI);
+		t1044* L_1 = m5535(L_0, &m5535_MI);
 		t1325 * L_2 = (t1325 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1325_TI));
-		m5674(L_2, L_1, &m5674_MI);
+		m5675(L_2, L_1, &m5675_MI);
 		V_0 = L_2;
-		t1285 * L_3 = m5807(__this, &m5807_MI);
-		t1300 * L_4 = m5521(L_3, &m5521_MI);
-		t1044* L_5 = m5798(L_4, &m5798_MI);
+		t1285 * L_3 = m5808(__this, &m5808_MI);
+		t1300 * L_4 = m5522(L_3, &m5522_MI);
+		t1044* L_5 = m5799(L_4, &m5799_MI);
 		V_1 = L_5;
-		VirtFuncInvoker5< int32_t, t1044*, int32_t, int32_t, t1044*, int32_t >::Invoke(&m5923_MI, V_0, V_1, 0, (((int32_t)(((t107 *)V_1)->max_length))), V_1, 0);
+		VirtFuncInvoker5< int32_t, t1044*, int32_t, int32_t, t1044*, int32_t >::Invoke(&m5924_MI, V_0, V_1, 0, (((int32_t)(((t107 *)V_1)->max_length))), V_1, 0);
 		IL2CPP_RUNTIME_CLASS_INIT(InitializedTypeInfo(&t1339_TI));
-		VirtFuncInvoker5< int32_t, t1044*, int32_t, int32_t, t1044*, int32_t >::Invoke(&m5923_MI, V_0, (((t1339_SFs*)InitializedTypeInfo(&t1339_TI)->static_fields)->f9), 0, (((int32_t)(((t107 *)(((t1339_SFs*)InitializedTypeInfo(&t1339_TI)->static_fields)->f9))->max_length))), (((t1339_SFs*)InitializedTypeInfo(&t1339_TI)->static_fields)->f9), 0);
+		VirtFuncInvoker5< int32_t, t1044*, int32_t, int32_t, t1044*, int32_t >::Invoke(&m5924_MI, V_0, (((t1339_SFs*)InitializedTypeInfo(&t1339_TI)->static_fields)->f9), 0, (((int32_t)(((t107 *)(((t1339_SFs*)InitializedTypeInfo(&t1339_TI)->static_fields)->f9))->max_length))), (((t1339_SFs*)InitializedTypeInfo(&t1339_TI)->static_fields)->f9), 0);
 		IL2CPP_RUNTIME_CLASS_INIT(InitializedTypeInfo(&t1284_TI));
-		VirtFuncInvoker3< t1044*, t1044*, int32_t, int32_t >::Invoke(&m5924_MI, V_0, (((t1284_SFs*)InitializedTypeInfo(&t1284_TI)->static_fields)->f0), 0, 0);
-		int64_t L_6 = (int64_t)VirtFuncInvoker0< int64_t >::Invoke(&m5786_MI, __this);
-		t1044* L_7 = m5791(__this, (((int32_t)L_6)), &m5791_MI);
+		VirtFuncInvoker3< t1044*, t1044*, int32_t, int32_t >::Invoke(&m5925_MI, V_0, (((t1284_SFs*)InitializedTypeInfo(&t1284_TI)->static_fields)->f0), 0, 0);
+		int64_t L_6 = (int64_t)VirtFuncInvoker0< int64_t >::Invoke(&m5787_MI, __this);
+		t1044* L_7 = m5792(__this, (((int32_t)L_6)), &m5792_MI);
 		V_2 = L_7;
-		t1044* L_8 = (t1044*)VirtFuncInvoker0< t1044* >::Invoke(&m5925_MI, V_0);
+		t1044* L_8 = (t1044*)VirtFuncInvoker0< t1044* >::Invoke(&m5926_MI, V_0);
 		V_3 = L_8;
-		bool L_9 = m5813(NULL, V_3, V_2, &m5813_MI);
+		bool L_9 = m5814(NULL, V_3, V_2, &m5814_MI);
 		if (L_9)
 		{
 			goto IL_0086;
@@ -1626,7 +1626,7 @@ extern MethodInfo m5857_MI;
 	}
 	{
 		t1329 * L_10 = (t1329 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1329_TI));
-		m5762(L_10, ((int32_t)71), (t11*) &_stringLiteral900, &m5762_MI);
+		m5763(L_10, ((int32_t)71), (t11*) &_stringLiteral901, &m5763_MI);
 		il2cpp_codegen_raise_exception(L_10);
 	}
 
@@ -1635,34 +1635,34 @@ IL_0086:
 		return;
 	}
 }
-extern MethodInfo m5858_MI;
- void m5858 (t1339 * __this, MethodInfo* method){
+extern MethodInfo m5859_MI;
+ void m5859 (t1339 * __this, MethodInfo* method){
 	t1044* V_0 = {0};
 	t1220 * V_1 = {0};
 	t1044* V_2 = {0};
 	t1044* V_3 = {0};
 	t1044* V_4 = {0};
 	{
-		int64_t L_0 = (int64_t)VirtFuncInvoker0< int64_t >::Invoke(&m5786_MI, __this);
-		t1044* L_1 = m5791(__this, (((int32_t)L_0)), &m5791_MI);
+		int64_t L_0 = (int64_t)VirtFuncInvoker0< int64_t >::Invoke(&m5787_MI, __this);
+		t1044* L_1 = m5792(__this, (((int32_t)L_0)), &m5792_MI);
 		V_0 = L_1;
 		t1279 * L_2 = (t1279 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1279_TI));
-		m5392(L_2, &m5392_MI);
+		m5393(L_2, &m5393_MI);
 		V_1 = L_2;
-		t1285 * L_3 = m5807(__this, &m5807_MI);
-		t1300 * L_4 = m5521(L_3, &m5521_MI);
-		t1044* L_5 = m5798(L_4, &m5798_MI);
+		t1285 * L_3 = m5808(__this, &m5808_MI);
+		t1300 * L_4 = m5522(L_3, &m5522_MI);
+		t1044* L_5 = m5799(L_4, &m5799_MI);
 		V_2 = L_5;
-		t1044* L_6 = m5948(V_1, V_2, 0, (((int32_t)(((t107 *)V_2)->max_length))), &m5948_MI);
+		t1044* L_6 = m5949(V_1, V_2, 0, (((int32_t)(((t107 *)V_2)->max_length))), &m5949_MI);
 		V_3 = L_6;
-		t1285 * L_7 = m5807(__this, &m5807_MI);
-		t1306 * L_8 = m5552(L_7, &m5552_MI);
-		t1284 * L_9 = m5623(L_8, &m5623_MI);
-		t1285 * L_10 = m5807(__this, &m5807_MI);
-		t1044* L_11 = m5534(L_10, &m5534_MI);
-		t1044* L_12 = m5434(L_9, L_11, (t11*) &_stringLiteral901, V_3, ((int32_t)12), &m5434_MI);
+		t1285 * L_7 = m5808(__this, &m5808_MI);
+		t1306 * L_8 = m5553(L_7, &m5553_MI);
+		t1284 * L_9 = m5624(L_8, &m5624_MI);
+		t1285 * L_10 = m5808(__this, &m5808_MI);
+		t1044* L_11 = m5535(L_10, &m5535_MI);
+		t1044* L_12 = m5435(L_9, L_11, (t11*) &_stringLiteral902, V_3, ((int32_t)12), &m5435_MI);
 		V_4 = L_12;
-		bool L_13 = m5813(NULL, V_4, V_0, &m5813_MI);
+		bool L_13 = m5814(NULL, V_4, V_0, &m5814_MI);
 		if (L_13)
 		{
 			goto IL_0073;
@@ -1670,7 +1670,7 @@ extern MethodInfo m5858_MI;
 	}
 	{
 		t1329 * L_14 = (t1329 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1329_TI));
-		m5757(L_14, (t11*) &_stringLiteral900, &m5757_MI);
+		m5758(L_14, (t11*) &_stringLiteral901, &m5758_MI);
 		il2cpp_codegen_raise_exception(L_14);
 	}
 
@@ -1691,43 +1691,43 @@ static FieldInfo* t1339_FIs[] =
 };
 extern Il2CppType t1285_0_0_0;
 extern Il2CppType t1044_0_0_0;
-static ParameterInfo t1339_m5854_ParameterInfos[] = 
+static ParameterInfo t1339_m5855_ParameterInfos[] = 
 {
 	{"context", 0, 134218541, &EmptyCustomAttributesCache, &t1285_0_0_0},
 	{"buffer", 1, 134218542, &EmptyCustomAttributesCache, &t1044_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5854_MI = 
-{
-	".ctor", (methodPointerType)&m5854, &t1339_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t5, t1339_m5854_ParameterInfos, &EmptyCustomAttributesCache, 6278, 0, 255, 2, false, false, 847, NULL, (methodPointerType)NULL, NULL};
-extern Il2CppType t109_0_0_0;
-extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5855_MI = 
 {
-	".cctor", (methodPointerType)&m5855, &t1339_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 6161, 0, 255, 0, false, false, 848, NULL, (methodPointerType)NULL, NULL};
+	".ctor", (methodPointerType)&m5855, &t1339_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t5, t1339_m5855_ParameterInfos, &EmptyCustomAttributesCache, 6278, 0, 255, 2, false, false, 847, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5856_MI = 
 {
-	"Update", (methodPointerType)&m5856, &t1339_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 198, 0, 26, 0, false, false, 849, NULL, (methodPointerType)NULL, NULL};
+	".cctor", (methodPointerType)&m5856, &t1339_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 6161, 0, 255, 0, false, false, 848, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5857_MI = 
 {
-	"ProcessAsSsl3", (methodPointerType)&m5857, &t1339_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 25, 0, false, false, 850, NULL, (methodPointerType)NULL, NULL};
+	"Update", (methodPointerType)&m5857, &t1339_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 198, 0, 26, 0, false, false, 849, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5858_MI = 
 {
-	"ProcessAsTls1", (methodPointerType)&m5858, &t1339_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 24, 0, false, false, 851, NULL, (methodPointerType)NULL, NULL};
+	"ProcessAsSsl3", (methodPointerType)&m5858, &t1339_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 25, 0, false, false, 850, NULL, (methodPointerType)NULL, NULL};
+extern Il2CppType t109_0_0_0;
+extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
+MethodInfo m5859_MI = 
+{
+	"ProcessAsTls1", (methodPointerType)&m5859, &t1339_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 24, 0, false, false, 851, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1339_MIs[] =
 {
-	&m5854_MI,
 	&m5855_MI,
 	&m5856_MI,
 	&m5857_MI,
 	&m5858_MI,
+	&m5859_MI,
 	NULL
 };
 static MethodInfo* t1339_VT[] =
@@ -1736,30 +1736,30 @@ static MethodInfo* t1339_VT[] =
 	&m465_MI,
 	&m466_MI,
 	&m467_MI,
-	&m6015_MI,
-	&m5782_MI,
-	&m5783_MI,
-	&m5781_MI,
-	&m5786_MI,
-	&m5784_MI,
-	&m5785_MI,
-	&m6059_MI,
-	&m581_MI,
-	&m5799_MI,
-	&m5802_MI,
 	&m6016_MI,
-	&m5801_MI,
+	&m5783_MI,
+	&m5784_MI,
+	&m5782_MI,
+	&m5787_MI,
+	&m5785_MI,
+	&m5786_MI,
+	&m6060_MI,
+	&m582_MI,
 	&m5800_MI,
 	&m5803_MI,
-	&m6005_MI,
-	&m6022_MI,
-	&m6032_MI,
-	&m6024_MI,
+	&m6017_MI,
+	&m5802_MI,
+	&m5801_MI,
+	&m5804_MI,
+	&m6006_MI,
+	&m6023_MI,
 	&m6033_MI,
+	&m6025_MI,
+	&m6034_MI,
+	&m5859_MI,
 	&m5858_MI,
 	&m5857_MI,
-	&m5856_MI,
-	&m5812_MI,
+	&m5813_MI,
 };
 static Il2CppInterfaceOffsetPair t1339_IOs[] = 
 {
@@ -1788,107 +1788,107 @@ extern TypeInfo t1290_TI;
 #include "t1303MD.h"
 #include "t1290MD.h"
 #include "t1294MD.h"
-extern MethodInfo m5506_MI;
+extern MethodInfo m5507_MI;
+extern MethodInfo m5530_MI;
+extern MethodInfo m5625_MI;
+extern MethodInfo m5509_MI;
+extern MethodInfo m5501_MI;
+extern MethodInfo m5527_MI;
 extern MethodInfo m5529_MI;
-extern MethodInfo m5624_MI;
-extern MethodInfo m5508_MI;
-extern MethodInfo m5500_MI;
-extern MethodInfo m5526_MI;
-extern MethodInfo m5528_MI;
-extern MethodInfo m4849_MI;
-extern MethodInfo m5531_MI;
-extern MethodInfo m5533_MI;
-extern MethodInfo m5862_MI;
+extern MethodInfo m4850_MI;
+extern MethodInfo m5532_MI;
+extern MethodInfo m5534_MI;
 extern MethodInfo m5863_MI;
-extern MethodInfo m5491_MI;
-extern MethodInfo m5505_MI;
-extern MethodInfo m5498_MI;
-extern MethodInfo m5519_MI;
-extern MethodInfo m5460_MI;
-extern MethodInfo m5453_MI;
-extern MethodInfo m5550_MI;
-extern MethodInfo m5503_MI;
-extern MethodInfo m5502_MI;
-extern MethodInfo m5458_MI;
+extern MethodInfo m5864_MI;
+extern MethodInfo m5492_MI;
+extern MethodInfo m5506_MI;
+extern MethodInfo m5499_MI;
 extern MethodInfo m5520_MI;
-extern MethodInfo m5465_MI;
+extern MethodInfo m5461_MI;
+extern MethodInfo m5454_MI;
+extern MethodInfo m5551_MI;
+extern MethodInfo m5504_MI;
+extern MethodInfo m5503_MI;
+extern MethodInfo m5459_MI;
+extern MethodInfo m5521_MI;
+extern MethodInfo m5466_MI;
 
 
-extern MethodInfo m5859_MI;
- void m5859 (t1340 * __this, t1285 * p0, t1044* p1, MethodInfo* method){
+extern MethodInfo m5860_MI;
+ void m5860 (t1340 * __this, t1285 * p0, t1044* p1, MethodInfo* method){
 	{
-		m5806(__this, p0, 2, p1, &m5806_MI);
+		m5807(__this, p0, 2, p1, &m5807_MI);
 		return;
 	}
 }
-extern MethodInfo m5860_MI;
- void m5860 (t1340 * __this, MethodInfo* method){
+extern MethodInfo m5861_MI;
+ void m5861 (t1340 * __this, MethodInfo* method){
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
 	t1044* V_3 = {0};
 	t1044* V_4 = {0};
 	{
-		m5811(__this, &m5811_MI);
-		t1285 * L_0 = m5807(__this, &m5807_MI);
+		m5812(__this, &m5812_MI);
+		t1285 * L_0 = m5808(__this, &m5808_MI);
 		t1044* L_1 = (__this->f11);
-		m5506(L_0, L_1, &m5506_MI);
-		t1285 * L_2 = m5807(__this, &m5807_MI);
+		m5507(L_0, L_1, &m5507_MI);
+		t1285 * L_2 = m5808(__this, &m5808_MI);
 		t1044* L_3 = (__this->f10);
-		m5529(L_2, L_3, &m5529_MI);
-		t1285 * L_4 = m5807(__this, &m5807_MI);
-		t1306 * L_5 = m5553(L_4, &m5553_MI);
+		m5530(L_2, L_3, &m5530_MI);
+		t1285 * L_4 = m5808(__this, &m5808_MI);
+		t1306 * L_5 = m5554(L_4, &m5554_MI);
 		t1284 * L_6 = (__this->f12);
-		m5624(L_5, L_6, &m5624_MI);
-		t1285 * L_7 = m5807(__this, &m5807_MI);
+		m5625(L_5, L_6, &m5625_MI);
+		t1285 * L_7 = m5808(__this, &m5808_MI);
 		int32_t L_8 = (__this->f9);
-		m5508(L_7, L_8, &m5508_MI);
-		t1285 * L_9 = m5807(__this, &m5807_MI);
-		m5500(L_9, 1, &m5500_MI);
-		t1285 * L_10 = m5807(__this, &m5807_MI);
-		t1044* L_11 = m5526(L_10, &m5526_MI);
+		m5509(L_7, L_8, &m5509_MI);
+		t1285 * L_9 = m5808(__this, &m5808_MI);
+		m5501(L_9, 1, &m5501_MI);
+		t1285 * L_10 = m5808(__this, &m5808_MI);
+		t1044* L_11 = m5527(L_10, &m5527_MI);
 		V_0 = (((int32_t)(((t107 *)L_11)->max_length)));
-		t1285 * L_12 = m5807(__this, &m5807_MI);
-		t1044* L_13 = m5528(L_12, &m5528_MI);
+		t1285 * L_12 = m5808(__this, &m5808_MI);
+		t1044* L_13 = m5529(L_12, &m5529_MI);
 		V_1 = (((int32_t)(((t107 *)L_13)->max_length)));
 		V_2 = ((int32_t)(V_0+V_1));
 		V_3 = ((t1044*)SZArrayNew(InitializedTypeInfo(&t1044_TI), V_2));
-		t1285 * L_14 = m5807(__this, &m5807_MI);
-		t1044* L_15 = m5526(L_14, &m5526_MI);
-		m4849(NULL, (t107 *)(t107 *)L_15, 0, (t107 *)(t107 *)V_3, 0, V_0, &m4849_MI);
-		t1285 * L_16 = m5807(__this, &m5807_MI);
-		t1044* L_17 = m5528(L_16, &m5528_MI);
-		m4849(NULL, (t107 *)(t107 *)L_17, 0, (t107 *)(t107 *)V_3, V_0, V_1, &m4849_MI);
-		t1285 * L_18 = m5807(__this, &m5807_MI);
-		m5531(L_18, V_3, &m5531_MI);
+		t1285 * L_14 = m5808(__this, &m5808_MI);
+		t1044* L_15 = m5527(L_14, &m5527_MI);
+		m4850(NULL, (t107 *)(t107 *)L_15, 0, (t107 *)(t107 *)V_3, 0, V_0, &m4850_MI);
+		t1285 * L_16 = m5808(__this, &m5808_MI);
+		t1044* L_17 = m5529(L_16, &m5529_MI);
+		m4850(NULL, (t107 *)(t107 *)L_17, 0, (t107 *)(t107 *)V_3, V_0, V_1, &m4850_MI);
+		t1285 * L_18 = m5808(__this, &m5808_MI);
+		m5532(L_18, V_3, &m5532_MI);
 		V_4 = ((t1044*)SZArrayNew(InitializedTypeInfo(&t1044_TI), V_2));
-		t1285 * L_19 = m5807(__this, &m5807_MI);
-		t1044* L_20 = m5528(L_19, &m5528_MI);
-		m4849(NULL, (t107 *)(t107 *)L_20, 0, (t107 *)(t107 *)V_4, 0, V_1, &m4849_MI);
-		t1285 * L_21 = m5807(__this, &m5807_MI);
-		t1044* L_22 = m5526(L_21, &m5526_MI);
-		m4849(NULL, (t107 *)(t107 *)L_22, 0, (t107 *)(t107 *)V_4, V_1, V_0, &m4849_MI);
-		t1285 * L_23 = m5807(__this, &m5807_MI);
-		m5533(L_23, V_4, &m5533_MI);
+		t1285 * L_19 = m5808(__this, &m5808_MI);
+		t1044* L_20 = m5529(L_19, &m5529_MI);
+		m4850(NULL, (t107 *)(t107 *)L_20, 0, (t107 *)(t107 *)V_4, 0, V_1, &m4850_MI);
+		t1285 * L_21 = m5808(__this, &m5808_MI);
+		t1044* L_22 = m5527(L_21, &m5527_MI);
+		m4850(NULL, (t107 *)(t107 *)L_22, 0, (t107 *)(t107 *)V_4, V_1, V_0, &m4850_MI);
+		t1285 * L_23 = m5808(__this, &m5808_MI);
+		m5534(L_23, V_4, &m5534_MI);
 		return;
 	}
 }
-extern MethodInfo m5861_MI;
- void m5861 (t1340 * __this, MethodInfo* method){
-	{
-		VirtActionInvoker0::Invoke(&m5862_MI, __this);
-		return;
-	}
-}
+extern MethodInfo m5862_MI;
  void m5862 (t1340 * __this, MethodInfo* method){
+	{
+		VirtActionInvoker0::Invoke(&m5863_MI, __this);
+		return;
+	}
+}
+ void m5863 (t1340 * __this, MethodInfo* method){
 	int32_t V_0 = 0;
 	int16_t V_1 = 0;
 	{
-		int16_t L_0 = m5789(__this, &m5789_MI);
-		m5863(__this, L_0, &m5863_MI);
-		t1044* L_1 = m5791(__this, ((int32_t)32), &m5791_MI);
+		int16_t L_0 = m5790(__this, &m5790_MI);
+		m5864(__this, L_0, &m5864_MI);
+		t1044* L_1 = m5792(__this, ((int32_t)32), &m5792_MI);
 		__this->f10 = L_1;
-		uint8_t L_2 = m5788(__this, &m5788_MI);
+		uint8_t L_2 = m5789(__this, &m5789_MI);
 		V_0 = L_2;
 		if ((((int32_t)V_0) <= ((int32_t)0)))
 		{
@@ -1896,36 +1896,36 @@ extern MethodInfo m5861_MI;
 		}
 	}
 	{
-		t1044* L_3 = m5791(__this, V_0, &m5791_MI);
+		t1044* L_3 = m5792(__this, V_0, &m5792_MI);
 		__this->f11 = L_3;
-		t1285 * L_4 = m5807(__this, &m5807_MI);
-		t1305 * L_5 = m5510(L_4, &m5510_MI);
-		t11* L_6 = m5750(L_5, &m5750_MI);
+		t1285 * L_4 = m5808(__this, &m5808_MI);
+		t1305 * L_5 = m5511(L_4, &m5511_MI);
+		t11* L_6 = m5751(L_5, &m5751_MI);
 		t1044* L_7 = (__this->f11);
 		IL2CPP_RUNTIME_CLASS_INIT(InitializedTypeInfo(&t1303_TI));
-		m5491(NULL, L_6, L_7, &m5491_MI);
-		t1285 * L_8 = m5807(__this, &m5807_MI);
+		m5492(NULL, L_6, L_7, &m5492_MI);
+		t1285 * L_8 = m5808(__this, &m5808_MI);
 		t1044* L_9 = (__this->f11);
-		t1285 * L_10 = m5807(__this, &m5807_MI);
-		t1044* L_11 = m5505(L_10, &m5505_MI);
-		bool L_12 = m5813(NULL, L_9, L_11, &m5813_MI);
-		m5498(L_8, L_12, &m5498_MI);
+		t1285 * L_10 = m5808(__this, &m5808_MI);
+		t1044* L_11 = m5506(L_10, &m5506_MI);
+		bool L_12 = m5814(NULL, L_9, L_11, &m5814_MI);
+		m5499(L_8, L_12, &m5499_MI);
 		goto IL_0082;
 	}
 
 IL_0076:
 	{
-		t1285 * L_13 = m5807(__this, &m5807_MI);
-		m5498(L_13, 0, &m5498_MI);
+		t1285 * L_13 = m5808(__this, &m5808_MI);
+		m5499(L_13, 0, &m5499_MI);
 	}
 
 IL_0082:
 	{
-		int16_t L_14 = m5789(__this, &m5789_MI);
+		int16_t L_14 = m5790(__this, &m5790_MI);
 		V_1 = L_14;
-		t1285 * L_15 = m5807(__this, &m5807_MI);
-		t1290 * L_16 = m5519(L_15, &m5519_MI);
-		int32_t L_17 = m5460(L_16, V_1, &m5460_MI);
+		t1285 * L_15 = m5808(__this, &m5808_MI);
+		t1290 * L_16 = m5520(L_15, &m5520_MI);
+		int32_t L_17 = m5461(L_16, V_1, &m5461_MI);
 		if ((((uint32_t)L_17) != ((uint32_t)(-1))))
 		{
 			goto IL_00ad;
@@ -1933,37 +1933,37 @@ IL_0082:
 	}
 	{
 		t1329 * L_18 = (t1329 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1329_TI));
-		m5762(L_18, ((int32_t)71), (t11*) &_stringLiteral902, &m5762_MI);
+		m5763(L_18, ((int32_t)71), (t11*) &_stringLiteral903, &m5763_MI);
 		il2cpp_codegen_raise_exception(L_18);
 	}
 
 IL_00ad:
 	{
-		t1285 * L_19 = m5807(__this, &m5807_MI);
-		t1290 * L_20 = m5519(L_19, &m5519_MI);
-		t1284 * L_21 = m5453(L_20, V_1, &m5453_MI);
+		t1285 * L_19 = m5808(__this, &m5808_MI);
+		t1290 * L_20 = m5520(L_19, &m5520_MI);
+		t1284 * L_21 = m5454(L_20, V_1, &m5454_MI);
 		__this->f12 = L_21;
-		uint8_t L_22 = m5788(__this, &m5788_MI);
+		uint8_t L_22 = m5789(__this, &m5789_MI);
 		__this->f9 = L_22;
 		return;
 	}
 }
- void m5863 (t1340 * __this, int16_t p0, MethodInfo* method){
+ void m5864 (t1340 * __this, int16_t p0, MethodInfo* method){
 	int32_t V_0 = {0};
 	{
-		t1285 * L_0 = m5807(__this, &m5807_MI);
-		int32_t L_1 = m5550(L_0, p0, &m5550_MI);
+		t1285 * L_0 = m5808(__this, &m5808_MI);
+		int32_t L_1 = m5551(L_0, p0, &m5551_MI);
 		V_0 = L_1;
-		t1285 * L_2 = m5807(__this, &m5807_MI);
-		int32_t L_3 = m5503(L_2, &m5503_MI);
+		t1285 * L_2 = m5808(__this, &m5808_MI);
+		int32_t L_3 = m5504(L_2, &m5504_MI);
 		if ((((int32_t)((int32_t)((int32_t)V_0&(int32_t)L_3))) == ((int32_t)V_0)))
 		{
 			goto IL_003b;
 		}
 	}
 	{
-		t1285 * L_4 = m5807(__this, &m5807_MI);
-		int32_t L_5 = m5503(L_4, &m5503_MI);
+		t1285 * L_4 = m5808(__this, &m5808_MI);
+		int32_t L_5 = m5504(L_4, &m5504_MI);
 		if ((((uint32_t)((int32_t)((int32_t)L_5&(int32_t)((int32_t)-1073741824)))) != ((uint32_t)((int32_t)-1073741824))))
 		{
 			goto IL_0079;
@@ -1972,23 +1972,23 @@ IL_00ad:
 
 IL_003b:
 	{
-		t1285 * L_6 = m5807(__this, &m5807_MI);
-		m5502(L_6, V_0, &m5502_MI);
-		t1285 * L_7 = m5807(__this, &m5807_MI);
-		t1290 * L_8 = m5519(L_7, &m5519_MI);
-		VirtActionInvoker0::Invoke(&m5458_MI, L_8);
-		t1285 * L_9 = m5807(__this, &m5807_MI);
-		m5520(L_9, (t1290 *)NULL, &m5520_MI);
-		t1285 * L_10 = m5807(__this, &m5807_MI);
-		t1290 * L_11 = m5465(NULL, V_0, &m5465_MI);
-		m5520(L_10, L_11, &m5520_MI);
+		t1285 * L_6 = m5808(__this, &m5808_MI);
+		m5503(L_6, V_0, &m5503_MI);
+		t1285 * L_7 = m5808(__this, &m5808_MI);
+		t1290 * L_8 = m5520(L_7, &m5520_MI);
+		VirtActionInvoker0::Invoke(&m5459_MI, L_8);
+		t1285 * L_9 = m5808(__this, &m5808_MI);
+		m5521(L_9, (t1290 *)NULL, &m5521_MI);
+		t1285 * L_10 = m5808(__this, &m5808_MI);
+		t1290 * L_11 = m5466(NULL, V_0, &m5466_MI);
+		m5521(L_10, L_11, &m5521_MI);
 		goto IL_0086;
 	}
 
 IL_0079:
 	{
 		t1329 * L_12 = (t1329 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1329_TI));
-		m5762(L_12, ((int32_t)70), (t11*) &_stringLiteral847, &m5762_MI);
+		m5763(L_12, ((int32_t)70), (t11*) &_stringLiteral848, &m5763_MI);
 		il2cpp_codegen_raise_exception(L_12);
 	}
 
@@ -2024,49 +2024,49 @@ static FieldInfo* t1340_FIs[] =
 };
 extern Il2CppType t1285_0_0_0;
 extern Il2CppType t1044_0_0_0;
-static ParameterInfo t1340_m5859_ParameterInfos[] = 
+static ParameterInfo t1340_m5860_ParameterInfos[] = 
 {
 	{"context", 0, 134218543, &EmptyCustomAttributesCache, &t1285_0_0_0},
 	{"buffer", 1, 134218544, &EmptyCustomAttributesCache, &t1044_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5859_MI = 
-{
-	".ctor", (methodPointerType)&m5859, &t1340_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t5, t1340_m5859_ParameterInfos, &EmptyCustomAttributesCache, 6278, 0, 255, 2, false, false, 852, NULL, (methodPointerType)NULL, NULL};
-extern Il2CppType t109_0_0_0;
-extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5860_MI = 
 {
-	"Update", (methodPointerType)&m5860, &t1340_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 198, 0, 26, 0, false, false, 853, NULL, (methodPointerType)NULL, NULL};
+	".ctor", (methodPointerType)&m5860, &t1340_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t5, t1340_m5860_ParameterInfos, &EmptyCustomAttributesCache, 6278, 0, 255, 2, false, false, 852, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5861_MI = 
 {
-	"ProcessAsSsl3", (methodPointerType)&m5861, &t1340_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 25, 0, false, false, 854, NULL, (methodPointerType)NULL, NULL};
+	"Update", (methodPointerType)&m5861, &t1340_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 198, 0, 26, 0, false, false, 853, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5862_MI = 
 {
-	"ProcessAsTls1", (methodPointerType)&m5862, &t1340_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 24, 0, false, false, 855, NULL, (methodPointerType)NULL, NULL};
+	"ProcessAsSsl3", (methodPointerType)&m5862, &t1340_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 25, 0, false, false, 854, NULL, (methodPointerType)NULL, NULL};
+extern Il2CppType t109_0_0_0;
+extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
+MethodInfo m5863_MI = 
+{
+	"ProcessAsTls1", (methodPointerType)&m5863, &t1340_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 24, 0, false, false, 855, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t150_0_0_0;
 extern Il2CppType t150_0_0_0;
-static ParameterInfo t1340_m5863_ParameterInfos[] = 
+static ParameterInfo t1340_m5864_ParameterInfos[] = 
 {
 	{"protocol", 0, 134218545, &EmptyCustomAttributesCache, &t150_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t150 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5863_MI = 
+MethodInfo m5864_MI = 
 {
-	"processProtocol", (methodPointerType)&m5863, &t1340_TI, &t109_0_0_0, RuntimeInvoker_t109_t150, t1340_m5863_ParameterInfos, &EmptyCustomAttributesCache, 129, 0, 255, 1, false, false, 856, NULL, (methodPointerType)NULL, NULL};
+	"processProtocol", (methodPointerType)&m5864, &t1340_TI, &t109_0_0_0, RuntimeInvoker_t109_t150, t1340_m5864_ParameterInfos, &EmptyCustomAttributesCache, 129, 0, 255, 1, false, false, 856, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1340_MIs[] =
 {
-	&m5859_MI,
 	&m5860_MI,
 	&m5861_MI,
 	&m5862_MI,
 	&m5863_MI,
+	&m5864_MI,
 	NULL
 };
 static MethodInfo* t1340_VT[] =
@@ -2075,30 +2075,30 @@ static MethodInfo* t1340_VT[] =
 	&m465_MI,
 	&m466_MI,
 	&m467_MI,
-	&m6015_MI,
-	&m5782_MI,
-	&m5783_MI,
-	&m5781_MI,
-	&m5786_MI,
-	&m5784_MI,
-	&m5785_MI,
-	&m6059_MI,
-	&m581_MI,
-	&m5799_MI,
-	&m5802_MI,
 	&m6016_MI,
-	&m5801_MI,
+	&m5783_MI,
+	&m5784_MI,
+	&m5782_MI,
+	&m5787_MI,
+	&m5785_MI,
+	&m5786_MI,
+	&m6060_MI,
+	&m582_MI,
 	&m5800_MI,
 	&m5803_MI,
-	&m6005_MI,
-	&m6022_MI,
-	&m6032_MI,
-	&m6024_MI,
+	&m6017_MI,
+	&m5802_MI,
+	&m5801_MI,
+	&m5804_MI,
+	&m6006_MI,
+	&m6023_MI,
 	&m6033_MI,
+	&m6025_MI,
+	&m6034_MI,
+	&m5863_MI,
 	&m5862_MI,
 	&m5861_MI,
-	&m5860_MI,
-	&m5812_MI,
+	&m5813_MI,
 };
 static Il2CppInterfaceOffsetPair t1340_IOs[] = 
 {
@@ -2120,16 +2120,10 @@ extern TypeInfo t1341_TI;
 
 
 
-extern MethodInfo m5864_MI;
- void m5864 (t1341 * __this, t1285 * p0, t1044* p1, MethodInfo* method){
-	{
-		m5806(__this, p0, ((int32_t)14), p1, &m5806_MI);
-		return;
-	}
-}
 extern MethodInfo m5865_MI;
- void m5865 (t1341 * __this, MethodInfo* method){
+ void m5865 (t1341 * __this, t1285 * p0, t1044* p1, MethodInfo* method){
 	{
+		m5807(__this, p0, ((int32_t)14), p1, &m5807_MI);
 		return;
 	}
 }
@@ -2139,34 +2133,40 @@ extern MethodInfo m5866_MI;
 		return;
 	}
 }
+extern MethodInfo m5867_MI;
+ void m5867 (t1341 * __this, MethodInfo* method){
+	{
+		return;
+	}
+}
 // Metadata Definition Mono.Security.Protocol.Tls.Handshake.Client.TlsServerHelloDone
 extern Il2CppType t1285_0_0_0;
 extern Il2CppType t1044_0_0_0;
-static ParameterInfo t1341_m5864_ParameterInfos[] = 
+static ParameterInfo t1341_m5865_ParameterInfos[] = 
 {
 	{"context", 0, 134218546, &EmptyCustomAttributesCache, &t1285_0_0_0},
 	{"buffer", 1, 134218547, &EmptyCustomAttributesCache, &t1044_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5864_MI = 
-{
-	".ctor", (methodPointerType)&m5864, &t1341_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t5, t1341_m5864_ParameterInfos, &EmptyCustomAttributesCache, 6278, 0, 255, 2, false, false, 857, NULL, (methodPointerType)NULL, NULL};
-extern Il2CppType t109_0_0_0;
-extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5865_MI = 
 {
-	"ProcessAsSsl3", (methodPointerType)&m5865, &t1341_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 25, 0, false, false, 858, NULL, (methodPointerType)NULL, NULL};
+	".ctor", (methodPointerType)&m5865, &t1341_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t5, t1341_m5865_ParameterInfos, &EmptyCustomAttributesCache, 6278, 0, 255, 2, false, false, 857, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5866_MI = 
 {
-	"ProcessAsTls1", (methodPointerType)&m5866, &t1341_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 24, 0, false, false, 859, NULL, (methodPointerType)NULL, NULL};
+	"ProcessAsSsl3", (methodPointerType)&m5866, &t1341_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 25, 0, false, false, 858, NULL, (methodPointerType)NULL, NULL};
+extern Il2CppType t109_0_0_0;
+extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
+MethodInfo m5867_MI = 
+{
+	"ProcessAsTls1", (methodPointerType)&m5867, &t1341_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 24, 0, false, false, 859, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1341_MIs[] =
 {
-	&m5864_MI,
 	&m5865_MI,
 	&m5866_MI,
+	&m5867_MI,
 	NULL
 };
 static MethodInfo* t1341_VT[] =
@@ -2175,30 +2175,30 @@ static MethodInfo* t1341_VT[] =
 	&m465_MI,
 	&m466_MI,
 	&m467_MI,
-	&m6015_MI,
-	&m5782_MI,
-	&m5783_MI,
-	&m5781_MI,
-	&m5786_MI,
-	&m5784_MI,
-	&m5785_MI,
-	&m6059_MI,
-	&m581_MI,
-	&m5799_MI,
-	&m5802_MI,
 	&m6016_MI,
-	&m5801_MI,
+	&m5783_MI,
+	&m5784_MI,
+	&m5782_MI,
+	&m5787_MI,
+	&m5785_MI,
+	&m5786_MI,
+	&m6060_MI,
+	&m582_MI,
 	&m5800_MI,
 	&m5803_MI,
-	&m6005_MI,
-	&m6022_MI,
-	&m6032_MI,
-	&m6024_MI,
+	&m6017_MI,
+	&m5802_MI,
+	&m5801_MI,
+	&m5804_MI,
+	&m6006_MI,
+	&m6023_MI,
 	&m6033_MI,
+	&m6025_MI,
+	&m6034_MI,
+	&m5867_MI,
 	&m5866_MI,
-	&m5865_MI,
-	&m5811_MI,
 	&m5812_MI,
+	&m5813_MI,
 };
 static Il2CppInterfaceOffsetPair t1341_IOs[] = 
 {
@@ -2221,80 +2221,80 @@ extern TypeInfo t1342_TI;
 #include "t1199.h"
 #include "t1046.h"
 extern TypeInfo t1199_TI;
-extern MethodInfo m5871_MI;
-extern MethodInfo m5766_MI;
-extern MethodInfo m5771_MI;
+extern MethodInfo m5872_MI;
+extern MethodInfo m5767_MI;
 extern MethodInfo m5772_MI;
-extern MethodInfo m5870_MI;
-extern MethodInfo m5778_MI;
-extern MethodInfo m5530_MI;
-extern MethodInfo m5796_MI;
-extern MethodInfo m4988_MI;
+extern MethodInfo m5773_MI;
+extern MethodInfo m5871_MI;
+extern MethodInfo m5779_MI;
+extern MethodInfo m5531_MI;
 extern MethodInfo m5797_MI;
-extern MethodInfo m5769_MI;
-extern MethodInfo m5397_MI;
+extern MethodInfo m4989_MI;
+extern MethodInfo m5798_MI;
+extern MethodInfo m5770_MI;
+extern MethodInfo m5398_MI;
 
 
-extern MethodInfo m5867_MI;
- void m5867 (t1342 * __this, t1285 * p0, t1044* p1, MethodInfo* method){
-	{
-		m5806(__this, p0, ((int32_t)12), p1, &m5806_MI);
-		m5871(__this, &m5871_MI);
-		return;
-	}
-}
 extern MethodInfo m5868_MI;
- void m5868 (t1342 * __this, MethodInfo* method){
+ void m5868 (t1342 * __this, t1285 * p0, t1044* p1, MethodInfo* method){
 	{
-		m5811(__this, &m5811_MI);
-		t1285 * L_0 = m5807(__this, &m5807_MI);
-		t1304 * L_1 = m5509(L_0, &m5509_MI);
-		m5766(L_1, 1, &m5766_MI);
-		t1285 * L_2 = m5807(__this, &m5807_MI);
-		t1304 * L_3 = m5509(L_2, &m5509_MI);
-		t1199  L_4 = (__this->f9);
-		m5771(L_3, L_4, &m5771_MI);
-		t1285 * L_5 = m5807(__this, &m5807_MI);
-		t1304 * L_6 = m5509(L_5, &m5509_MI);
-		t1044* L_7 = (__this->f10);
-		m5772(L_6, L_7, &m5772_MI);
+		m5807(__this, p0, ((int32_t)12), p1, &m5807_MI);
+		m5872(__this, &m5872_MI);
 		return;
 	}
 }
 extern MethodInfo m5869_MI;
  void m5869 (t1342 * __this, MethodInfo* method){
 	{
-		VirtActionInvoker0::Invoke(&m5870_MI, __this);
+		m5812(__this, &m5812_MI);
+		t1285 * L_0 = m5808(__this, &m5808_MI);
+		t1304 * L_1 = m5510(L_0, &m5510_MI);
+		m5767(L_1, 1, &m5767_MI);
+		t1285 * L_2 = m5808(__this, &m5808_MI);
+		t1304 * L_3 = m5510(L_2, &m5510_MI);
+		t1199  L_4 = (__this->f9);
+		m5772(L_3, L_4, &m5772_MI);
+		t1285 * L_5 = m5808(__this, &m5808_MI);
+		t1304 * L_6 = m5510(L_5, &m5510_MI);
+		t1044* L_7 = (__this->f10);
+		m5773(L_6, L_7, &m5773_MI);
 		return;
 	}
 }
+extern MethodInfo m5870_MI;
  void m5870 (t1342 * __this, MethodInfo* method){
+	{
+		VirtActionInvoker0::Invoke(&m5871_MI, __this);
+		return;
+	}
+}
+ void m5871 (t1342 * __this, MethodInfo* method){
 	t1199  V_0 = {0};
 	{
 		Initobj (&t1199_TI, (&V_0));
 		__this->f9 = V_0;
 		t1199 * L_0 = &(__this->f9);
-		int16_t L_1 = m5789(__this, &m5789_MI);
-		t1044* L_2 = m5791(__this, L_1, &m5791_MI);
+		int16_t L_1 = m5790(__this, &m5790_MI);
+		t1044* L_2 = m5792(__this, L_1, &m5792_MI);
 		L_0->f6 = L_2;
 		t1199 * L_3 = &(__this->f9);
-		int16_t L_4 = m5789(__this, &m5789_MI);
-		t1044* L_5 = m5791(__this, L_4, &m5791_MI);
+		int16_t L_4 = m5790(__this, &m5790_MI);
+		t1044* L_5 = m5792(__this, L_4, &m5792_MI);
 		L_3->f7 = L_5;
-		int16_t L_6 = m5789(__this, &m5789_MI);
-		t1044* L_7 = m5791(__this, L_6, &m5791_MI);
+		int16_t L_6 = m5790(__this, &m5790_MI);
+		t1044* L_7 = m5792(__this, L_6, &m5792_MI);
 		__this->f10 = L_7;
 		return;
 	}
 }
- void m5871 (t1342 * __this, MethodInfo* method){
+ void m5872 (t1342 * __this, MethodInfo* method){
 	t1279 * V_0 = {0};
 	int32_t V_1 = 0;
 	t1300 * V_2 = {0};
 	bool V_3 = false;
 	{
 		t1279 * L_0 = (t1279 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1279_TI));
-		m5392(L_0, &m5392_MI);
+		m5393(L_0, &m5393_MI);
 		V_0 = L_0;
 		t1199 * L_1 = &(__this->f9);
 		t1044* L_2 = (L_1->f6);
@@ -2302,21 +2302,21 @@ extern MethodInfo m5869_MI;
 		t1044* L_4 = (L_3->f7);
 		V_1 = ((int32_t)(((int32_t)((((int32_t)(((t107 *)L_2)->max_length)))+(((int32_t)(((t107 *)L_4)->max_length)))))+4));
 		t1300 * L_5 = (t1300 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1300_TI));
-		m5778(L_5, &m5778_MI);
+		m5779(L_5, &m5779_MI);
 		V_2 = L_5;
-		t1285 * L_6 = m5807(__this, &m5807_MI);
-		t1044* L_7 = m5530(L_6, &m5530_MI);
-		m5796(V_2, L_7, &m5796_MI);
-		t1044* L_8 = m5798(__this, &m5798_MI);
-		VirtActionInvoker3< t1044*, int32_t, int32_t >::Invoke(&m5803_MI, V_2, L_8, 0, V_1);
-		t1044* L_9 = m5798(V_2, &m5798_MI);
-		m4988(V_0, L_9, &m4988_MI);
-		m5797(V_2, &m5797_MI);
-		t1285 * L_10 = m5807(__this, &m5807_MI);
-		t1304 * L_11 = m5509(L_10, &m5509_MI);
-		t1046 * L_12 = m5769(L_11, &m5769_MI);
+		t1285 * L_6 = m5808(__this, &m5808_MI);
+		t1044* L_7 = m5531(L_6, &m5531_MI);
+		m5797(V_2, L_7, &m5797_MI);
+		t1044* L_8 = m5799(__this, &m5799_MI);
+		VirtActionInvoker3< t1044*, int32_t, int32_t >::Invoke(&m5804_MI, V_2, L_8, 0, V_1);
+		t1044* L_9 = m5799(V_2, &m5799_MI);
+		m4989(V_0, L_9, &m4989_MI);
+		m5798(V_2, &m5798_MI);
+		t1285 * L_10 = m5808(__this, &m5808_MI);
+		t1304 * L_11 = m5510(L_10, &m5510_MI);
+		t1046 * L_12 = m5770(L_11, &m5770_MI);
 		t1044* L_13 = (__this->f10);
-		bool L_14 = m5397(V_0, L_12, L_13, &m5397_MI);
+		bool L_14 = m5398(V_0, L_12, L_13, &m5398_MI);
 		V_3 = L_14;
 		if (V_3)
 		{
@@ -2325,7 +2325,7 @@ extern MethodInfo m5869_MI;
 	}
 	{
 		t1329 * L_15 = (t1329 *)il2cpp_codegen_object_new (InitializedTypeInfo(&t1329_TI));
-		m5762(L_15, ((int32_t)50), (t11*) &_stringLiteral903, &m5762_MI);
+		m5763(L_15, ((int32_t)50), (t11*) &_stringLiteral904, &m5763_MI);
 		il2cpp_codegen_raise_exception(L_15);
 	}
 
@@ -2351,43 +2351,43 @@ static FieldInfo* t1342_FIs[] =
 };
 extern Il2CppType t1285_0_0_0;
 extern Il2CppType t1044_0_0_0;
-static ParameterInfo t1342_m5867_ParameterInfos[] = 
+static ParameterInfo t1342_m5868_ParameterInfos[] = 
 {
 	{"context", 0, 134218548, &EmptyCustomAttributesCache, &t1285_0_0_0},
 	{"buffer", 1, 134218549, &EmptyCustomAttributesCache, &t1044_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5867_MI = 
-{
-	".ctor", (methodPointerType)&m5867, &t1342_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t5, t1342_m5867_ParameterInfos, &EmptyCustomAttributesCache, 6278, 0, 255, 2, false, false, 860, NULL, (methodPointerType)NULL, NULL};
-extern Il2CppType t109_0_0_0;
-extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5868_MI = 
 {
-	"Update", (methodPointerType)&m5868, &t1342_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 198, 0, 26, 0, false, false, 861, NULL, (methodPointerType)NULL, NULL};
+	".ctor", (methodPointerType)&m5868, &t1342_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t5, t1342_m5868_ParameterInfos, &EmptyCustomAttributesCache, 6278, 0, 255, 2, false, false, 860, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5869_MI = 
 {
-	"ProcessAsSsl3", (methodPointerType)&m5869, &t1342_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 25, 0, false, false, 862, NULL, (methodPointerType)NULL, NULL};
+	"Update", (methodPointerType)&m5869, &t1342_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 198, 0, 26, 0, false, false, 861, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5870_MI = 
 {
-	"ProcessAsTls1", (methodPointerType)&m5870, &t1342_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 24, 0, false, false, 863, NULL, (methodPointerType)NULL, NULL};
+	"ProcessAsSsl3", (methodPointerType)&m5870, &t1342_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 25, 0, false, false, 862, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
 MethodInfo m5871_MI = 
 {
-	"verifySignature", (methodPointerType)&m5871, &t1342_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 129, 0, 255, 0, false, false, 864, NULL, (methodPointerType)NULL, NULL};
+	"ProcessAsTls1", (methodPointerType)&m5871, &t1342_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 196, 0, 24, 0, false, false, 863, NULL, (methodPointerType)NULL, NULL};
+extern Il2CppType t109_0_0_0;
+extern void* RuntimeInvoker_t109 (MethodInfo* method, void* obj, void** args);
+MethodInfo m5872_MI = 
+{
+	"verifySignature", (methodPointerType)&m5872, &t1342_TI, &t109_0_0_0, RuntimeInvoker_t109, NULL, &EmptyCustomAttributesCache, 129, 0, 255, 0, false, false, 864, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1342_MIs[] =
 {
-	&m5867_MI,
 	&m5868_MI,
 	&m5869_MI,
 	&m5870_MI,
 	&m5871_MI,
+	&m5872_MI,
 	NULL
 };
 static MethodInfo* t1342_VT[] =
@@ -2396,30 +2396,30 @@ static MethodInfo* t1342_VT[] =
 	&m465_MI,
 	&m466_MI,
 	&m467_MI,
-	&m6015_MI,
-	&m5782_MI,
-	&m5783_MI,
-	&m5781_MI,
-	&m5786_MI,
-	&m5784_MI,
-	&m5785_MI,
-	&m6059_MI,
-	&m581_MI,
-	&m5799_MI,
-	&m5802_MI,
 	&m6016_MI,
-	&m5801_MI,
+	&m5783_MI,
+	&m5784_MI,
+	&m5782_MI,
+	&m5787_MI,
+	&m5785_MI,
+	&m5786_MI,
+	&m6060_MI,
+	&m582_MI,
 	&m5800_MI,
 	&m5803_MI,
-	&m6005_MI,
-	&m6022_MI,
-	&m6032_MI,
-	&m6024_MI,
+	&m6017_MI,
+	&m5802_MI,
+	&m5801_MI,
+	&m5804_MI,
+	&m6006_MI,
+	&m6023_MI,
 	&m6033_MI,
+	&m6025_MI,
+	&m6034_MI,
+	&m5871_MI,
 	&m5870_MI,
 	&m5869_MI,
-	&m5868_MI,
-	&m5812_MI,
+	&m5813_MI,
 };
 static Il2CppInterfaceOffsetPair t1342_IOs[] = 
 {
@@ -2445,17 +2445,17 @@ extern TypeInfo t1245_TI;
 #include "t222.h"
 
 
-extern MethodInfo m5872_MI;
- void m5872 (t1245 * __this, t5 * p0, t124 p1, MethodInfo* method){
+extern MethodInfo m5873_MI;
+ void m5873 (t1245 * __this, t5 * p0, t124 p1, MethodInfo* method){
 	__this->f0 = (methodPointerType)((MethodInfo*)p1.f0)->method;
 	__this->f3 = p1;
 	__this->f2 = p0;
 }
-extern MethodInfo m5873_MI;
- bool m5873 (t1245 * __this, t1237 * p0, int32_t p1, MethodInfo* method){
+extern MethodInfo m5874_MI;
+ bool m5874 (t1245 * __this, t1237 * p0, int32_t p1, MethodInfo* method){
 	if(__this->f9 != NULL)
 	{
-		m5873((t1245 *)__this->f9,p0, p1, method);
+		m5874((t1245 *)__this->f9,p0, p1, method);
 	}
 	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->f3.f0));
 	if (__this->f2 != NULL && ___methodIsStatic)
@@ -2493,15 +2493,15 @@ bool pinvoke_delegate_wrapper_t1245(Il2CppObject* delegate, t1237 * p0, int32_t 
 
 	return _return_value;
 }
-extern MethodInfo m5874_MI;
- t5 * m5874 (t1245 * __this, t1237 * p0, int32_t p1, t222 * p2, t5 * p3, MethodInfo* method){
+extern MethodInfo m5875_MI;
+ t5 * m5875 (t1245 * __this, t1237 * p0, int32_t p1, t222 * p2, t5 * p3, MethodInfo* method){
 	void *__d_args[3] = {0};
 	__d_args[0] = p0;
 	__d_args[1] = Box(InitializedTypeInfo(&t1242_TI), &p1);
 	return (t5 *)il2cpp_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)p2, (Il2CppObject*)p3);
 }
-extern MethodInfo m5875_MI;
- bool m5875 (t1245 * __this, t5 * p0, MethodInfo* method){
+extern MethodInfo m5876_MI;
+ bool m5876 (t1245 * __this, t5 * p0, MethodInfo* method){
 	Il2CppObject *__result = il2cpp_delegate_end_invoke((Il2CppAsyncResult*) p0, 0);
 	return *(bool*)UnBox ((Il2CppCodeGenObject*)__result);
 }
@@ -2510,36 +2510,36 @@ extern Il2CppType t5_0_0_0;
 extern Il2CppType t5_0_0_0;
 extern Il2CppType t124_0_0_0;
 extern Il2CppType t124_0_0_0;
-static ParameterInfo t1245_m5872_ParameterInfos[] = 
+static ParameterInfo t1245_m5873_ParameterInfos[] = 
 {
 	{"object", 0, 134218550, &EmptyCustomAttributesCache, &t5_0_0_0},
 	{"method", 1, 134218551, &EmptyCustomAttributesCache, &t124_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5_t124 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5872_MI = 
+MethodInfo m5873_MI = 
 {
-	".ctor", (methodPointerType)&m5872, &t1245_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t124, t1245_m5872_ParameterInfos, &EmptyCustomAttributesCache, 6278, 3, 255, 2, false, false, 865, NULL, (methodPointerType)NULL, NULL};
+	".ctor", (methodPointerType)&m5873, &t1245_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t124, t1245_m5873_ParameterInfos, &EmptyCustomAttributesCache, 6278, 3, 255, 2, false, false, 865, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1237_0_0_0;
 extern Il2CppType t1237_0_0_0;
 extern Il2CppType t1242_0_0_0;
 extern Il2CppType t1242_0_0_0;
-static ParameterInfo t1245_m5873_ParameterInfos[] = 
+static ParameterInfo t1245_m5874_ParameterInfos[] = 
 {
 	{"bi", 0, 134218552, &EmptyCustomAttributesCache, &t1237_0_0_0},
 	{"confidence", 1, 134218553, &EmptyCustomAttributesCache, &t1242_0_0_0},
 };
 extern Il2CppType t108_0_0_0;
 extern void* RuntimeInvoker_t108_t5_t110 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5873_MI = 
+MethodInfo m5874_MI = 
 {
-	"Invoke", (methodPointerType)&m5873, &t1245_TI, &t108_0_0_0, RuntimeInvoker_t108_t5_t110, t1245_m5873_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 10, 2, false, false, 866, NULL, (methodPointerType)NULL, NULL};
+	"Invoke", (methodPointerType)&m5874, &t1245_TI, &t108_0_0_0, RuntimeInvoker_t108_t5_t110, t1245_m5874_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 10, 2, false, false, 866, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1237_0_0_0;
 extern Il2CppType t1242_0_0_0;
 extern Il2CppType t222_0_0_0;
 extern Il2CppType t222_0_0_0;
 extern Il2CppType t5_0_0_0;
-static ParameterInfo t1245_m5874_ParameterInfos[] = 
+static ParameterInfo t1245_m5875_ParameterInfos[] = 
 {
 	{"bi", 0, 134218554, &EmptyCustomAttributesCache, &t1237_0_0_0},
 	{"confidence", 1, 134218555, &EmptyCustomAttributesCache, &t1242_0_0_0},
@@ -2548,50 +2548,50 @@ static ParameterInfo t1245_m5874_ParameterInfos[] =
 };
 extern Il2CppType t221_0_0_0;
 extern void* RuntimeInvoker_t5_t5_t110_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5874_MI = 
+MethodInfo m5875_MI = 
 {
-	"BeginInvoke", (methodPointerType)&m5874, &t1245_TI, &t221_0_0_0, RuntimeInvoker_t5_t5_t110_t5_t5, t1245_m5874_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 11, 4, false, false, 867, NULL, (methodPointerType)NULL, NULL};
+	"BeginInvoke", (methodPointerType)&m5875, &t1245_TI, &t221_0_0_0, RuntimeInvoker_t5_t5_t110_t5_t5, t1245_m5875_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 11, 4, false, false, 867, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t221_0_0_0;
 extern Il2CppType t221_0_0_0;
-static ParameterInfo t1245_m5875_ParameterInfos[] = 
+static ParameterInfo t1245_m5876_ParameterInfos[] = 
 {
 	{"result", 0, 134218558, &EmptyCustomAttributesCache, &t221_0_0_0},
 };
 extern Il2CppType t108_0_0_0;
 extern void* RuntimeInvoker_t108_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5875_MI = 
+MethodInfo m5876_MI = 
 {
-	"EndInvoke", (methodPointerType)&m5875, &t1245_TI, &t108_0_0_0, RuntimeInvoker_t108_t5, t1245_m5875_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 12, 1, false, false, 868, NULL, (methodPointerType)NULL, NULL};
+	"EndInvoke", (methodPointerType)&m5876, &t1245_TI, &t108_0_0_0, RuntimeInvoker_t108_t5, t1245_m5876_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 12, 1, false, false, 868, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1245_MIs[] =
 {
-	&m5872_MI,
 	&m5873_MI,
 	&m5874_MI,
 	&m5875_MI,
+	&m5876_MI,
 	NULL
 };
-extern MethodInfo m2341_MI;
 extern MethodInfo m2342_MI;
 extern MethodInfo m2343_MI;
 extern MethodInfo m2344_MI;
 extern MethodInfo m2345_MI;
 extern MethodInfo m2346_MI;
 extern MethodInfo m2347_MI;
+extern MethodInfo m2348_MI;
 static MethodInfo* t1245_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
-	&m5873_MI,
+	&m2348_MI,
 	&m5874_MI,
 	&m5875_MI,
+	&m5876_MI,
 };
 extern TypeInfo t516_TI;
 extern TypeInfo t517_TI;
@@ -2617,17 +2617,17 @@ extern TypeInfo t1322_TI;
 
 
 
-extern MethodInfo m5876_MI;
- void m5876 (t1322 * __this, t5 * p0, t124 p1, MethodInfo* method){
+extern MethodInfo m5877_MI;
+ void m5877 (t1322 * __this, t5 * p0, t124 p1, MethodInfo* method){
 	__this->f0 = (methodPointerType)((MethodInfo*)p1.f0)->method;
 	__this->f3 = p1;
 	__this->f2 = p0;
 }
-extern MethodInfo m5877_MI;
- bool m5877 (t1322 * __this, t1008 * p0, t55* p1, MethodInfo* method){
+extern MethodInfo m5878_MI;
+ bool m5878 (t1322 * __this, t1008 * p0, t55* p1, MethodInfo* method){
 	if(__this->f9 != NULL)
 	{
-		m5877((t1322 *)__this->f9,p0, p1, method);
+		m5878((t1322 *)__this->f9,p0, p1, method);
 	}
 	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->f3.f0));
 	if (__this->f2 != NULL && ___methodIsStatic)
@@ -2667,50 +2667,50 @@ bool pinvoke_delegate_wrapper_t1322(Il2CppObject* delegate, t1008 * p0, t55* p1)
 
 	return _return_value;
 }
-extern MethodInfo m5878_MI;
- t5 * m5878 (t1322 * __this, t1008 * p0, t55* p1, t222 * p2, t5 * p3, MethodInfo* method){
+extern MethodInfo m5879_MI;
+ t5 * m5879 (t1322 * __this, t1008 * p0, t55* p1, t222 * p2, t5 * p3, MethodInfo* method){
 	void *__d_args[3] = {0};
 	__d_args[0] = p0;
 	__d_args[1] = p1;
 	return (t5 *)il2cpp_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)p2, (Il2CppObject*)p3);
 }
-extern MethodInfo m5879_MI;
- bool m5879 (t1322 * __this, t5 * p0, MethodInfo* method){
+extern MethodInfo m5880_MI;
+ bool m5880 (t1322 * __this, t5 * p0, MethodInfo* method){
 	Il2CppObject *__result = il2cpp_delegate_end_invoke((Il2CppAsyncResult*) p0, 0);
 	return *(bool*)UnBox ((Il2CppCodeGenObject*)__result);
 }
 // Metadata Definition Mono.Security.Protocol.Tls.CertificateValidationCallback
 extern Il2CppType t5_0_0_0;
 extern Il2CppType t124_0_0_0;
-static ParameterInfo t1322_m5876_ParameterInfos[] = 
+static ParameterInfo t1322_m5877_ParameterInfos[] = 
 {
 	{"object", 0, 134218559, &EmptyCustomAttributesCache, &t5_0_0_0},
 	{"method", 1, 134218560, &EmptyCustomAttributesCache, &t124_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5_t124 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5876_MI = 
+MethodInfo m5877_MI = 
 {
-	".ctor", (methodPointerType)&m5876, &t1322_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t124, t1322_m5876_ParameterInfos, &EmptyCustomAttributesCache, 6278, 3, 255, 2, false, false, 869, NULL, (methodPointerType)NULL, NULL};
+	".ctor", (methodPointerType)&m5877, &t1322_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t124, t1322_m5877_ParameterInfos, &EmptyCustomAttributesCache, 6278, 3, 255, 2, false, false, 869, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1008_0_0_0;
 extern Il2CppType t1008_0_0_0;
 extern Il2CppType t55_0_0_0;
 extern Il2CppType t55_0_0_0;
-static ParameterInfo t1322_m5877_ParameterInfos[] = 
+static ParameterInfo t1322_m5878_ParameterInfos[] = 
 {
 	{"certificate", 0, 134218561, &EmptyCustomAttributesCache, &t1008_0_0_0},
 	{"certificateErrors", 1, 134218562, &EmptyCustomAttributesCache, &t55_0_0_0},
 };
 extern Il2CppType t108_0_0_0;
 extern void* RuntimeInvoker_t108_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5877_MI = 
+MethodInfo m5878_MI = 
 {
-	"Invoke", (methodPointerType)&m5877, &t1322_TI, &t108_0_0_0, RuntimeInvoker_t108_t5_t5, t1322_m5877_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 10, 2, false, false, 870, NULL, (methodPointerType)NULL, NULL};
+	"Invoke", (methodPointerType)&m5878, &t1322_TI, &t108_0_0_0, RuntimeInvoker_t108_t5_t5, t1322_m5878_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 10, 2, false, false, 870, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1008_0_0_0;
 extern Il2CppType t55_0_0_0;
 extern Il2CppType t222_0_0_0;
 extern Il2CppType t5_0_0_0;
-static ParameterInfo t1322_m5878_ParameterInfos[] = 
+static ParameterInfo t1322_m5879_ParameterInfos[] = 
 {
 	{"certificate", 0, 134218563, &EmptyCustomAttributesCache, &t1008_0_0_0},
 	{"certificateErrors", 1, 134218564, &EmptyCustomAttributesCache, &t55_0_0_0},
@@ -2719,42 +2719,42 @@ static ParameterInfo t1322_m5878_ParameterInfos[] =
 };
 extern Il2CppType t221_0_0_0;
 extern void* RuntimeInvoker_t5_t5_t5_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5878_MI = 
+MethodInfo m5879_MI = 
 {
-	"BeginInvoke", (methodPointerType)&m5878, &t1322_TI, &t221_0_0_0, RuntimeInvoker_t5_t5_t5_t5_t5, t1322_m5878_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 11, 4, false, false, 871, NULL, (methodPointerType)NULL, NULL};
+	"BeginInvoke", (methodPointerType)&m5879, &t1322_TI, &t221_0_0_0, RuntimeInvoker_t5_t5_t5_t5_t5, t1322_m5879_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 11, 4, false, false, 871, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t221_0_0_0;
-static ParameterInfo t1322_m5879_ParameterInfos[] = 
+static ParameterInfo t1322_m5880_ParameterInfos[] = 
 {
 	{"result", 0, 134218567, &EmptyCustomAttributesCache, &t221_0_0_0},
 };
 extern Il2CppType t108_0_0_0;
 extern void* RuntimeInvoker_t108_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5879_MI = 
+MethodInfo m5880_MI = 
 {
-	"EndInvoke", (methodPointerType)&m5879, &t1322_TI, &t108_0_0_0, RuntimeInvoker_t108_t5, t1322_m5879_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 12, 1, false, false, 872, NULL, (methodPointerType)NULL, NULL};
+	"EndInvoke", (methodPointerType)&m5880, &t1322_TI, &t108_0_0_0, RuntimeInvoker_t108_t5, t1322_m5880_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 12, 1, false, false, 872, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1322_MIs[] =
 {
-	&m5876_MI,
 	&m5877_MI,
 	&m5878_MI,
 	&m5879_MI,
+	&m5880_MI,
 	NULL
 };
 static MethodInfo* t1322_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
-	&m5877_MI,
+	&m2348_MI,
 	&m5878_MI,
 	&m5879_MI,
+	&m5880_MI,
 };
 static Il2CppInterfaceOffsetPair t1322_IOs[] = 
 {
@@ -2777,17 +2777,17 @@ extern TypeInfo t1323_TI;
 
 
 
-extern MethodInfo m5880_MI;
- void m5880 (t1323 * __this, t5 * p0, t124 p1, MethodInfo* method){
+extern MethodInfo m5881_MI;
+ void m5881 (t1323 * __this, t5 * p0, t124 p1, MethodInfo* method){
 	__this->f0 = (methodPointerType)((MethodInfo*)p1.f0)->method;
 	__this->f3 = p1;
 	__this->f2 = p0;
 }
-extern MethodInfo m5881_MI;
- t1321 * m5881 (t1323 * __this, t1210 * p0, MethodInfo* method){
+extern MethodInfo m5882_MI;
+ t1321 * m5882 (t1323 * __this, t1210 * p0, MethodInfo* method){
 	if(__this->f9 != NULL)
 	{
-		m5881((t1323 *)__this->f9,p0, method);
+		m5882((t1323 *)__this->f9,p0, method);
 	}
 	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->f3.f0));
 	if (__this->f2 != NULL && ___methodIsStatic)
@@ -2823,44 +2823,44 @@ t1321 * pinvoke_delegate_wrapper_t1323(Il2CppObject* delegate, t1210 * p0)
 
 	return __return_value_unmarshaled;
 }
-extern MethodInfo m5882_MI;
- t5 * m5882 (t1323 * __this, t1210 * p0, t222 * p1, t5 * p2, MethodInfo* method){
+extern MethodInfo m5883_MI;
+ t5 * m5883 (t1323 * __this, t1210 * p0, t222 * p1, t5 * p2, MethodInfo* method){
 	void *__d_args[2] = {0};
 	__d_args[0] = p0;
 	return (t5 *)il2cpp_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)p1, (Il2CppObject*)p2);
 }
-extern MethodInfo m5883_MI;
- t1321 * m5883 (t1323 * __this, t5 * p0, MethodInfo* method){
+extern MethodInfo m5884_MI;
+ t1321 * m5884 (t1323 * __this, t5 * p0, MethodInfo* method){
 	Il2CppObject *__result = il2cpp_delegate_end_invoke((Il2CppAsyncResult*) p0, 0);
 	return (t1321 *)__result;
 }
 // Metadata Definition Mono.Security.Protocol.Tls.CertificateValidationCallback2
 extern Il2CppType t5_0_0_0;
 extern Il2CppType t124_0_0_0;
-static ParameterInfo t1323_m5880_ParameterInfos[] = 
+static ParameterInfo t1323_m5881_ParameterInfos[] = 
 {
 	{"object", 0, 134218568, &EmptyCustomAttributesCache, &t5_0_0_0},
 	{"method", 1, 134218569, &EmptyCustomAttributesCache, &t124_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5_t124 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5880_MI = 
+MethodInfo m5881_MI = 
 {
-	".ctor", (methodPointerType)&m5880, &t1323_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t124, t1323_m5880_ParameterInfos, &EmptyCustomAttributesCache, 6278, 3, 255, 2, false, false, 873, NULL, (methodPointerType)NULL, NULL};
+	".ctor", (methodPointerType)&m5881, &t1323_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t124, t1323_m5881_ParameterInfos, &EmptyCustomAttributesCache, 6278, 3, 255, 2, false, false, 873, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1210_0_0_0;
-static ParameterInfo t1323_m5881_ParameterInfos[] = 
+static ParameterInfo t1323_m5882_ParameterInfos[] = 
 {
 	{"collection", 0, 134218570, &EmptyCustomAttributesCache, &t1210_0_0_0},
 };
 extern Il2CppType t1321_0_0_0;
 extern void* RuntimeInvoker_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5881_MI = 
+MethodInfo m5882_MI = 
 {
-	"Invoke", (methodPointerType)&m5881, &t1323_TI, &t1321_0_0_0, RuntimeInvoker_t5_t5, t1323_m5881_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 10, 1, false, false, 874, NULL, (methodPointerType)NULL, NULL};
+	"Invoke", (methodPointerType)&m5882, &t1323_TI, &t1321_0_0_0, RuntimeInvoker_t5_t5, t1323_m5882_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 10, 1, false, false, 874, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1210_0_0_0;
 extern Il2CppType t222_0_0_0;
 extern Il2CppType t5_0_0_0;
-static ParameterInfo t1323_m5882_ParameterInfos[] = 
+static ParameterInfo t1323_m5883_ParameterInfos[] = 
 {
 	{"collection", 0, 134218571, &EmptyCustomAttributesCache, &t1210_0_0_0},
 	{"callback", 1, 134218572, &EmptyCustomAttributesCache, &t222_0_0_0},
@@ -2868,42 +2868,42 @@ static ParameterInfo t1323_m5882_ParameterInfos[] =
 };
 extern Il2CppType t221_0_0_0;
 extern void* RuntimeInvoker_t5_t5_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5882_MI = 
+MethodInfo m5883_MI = 
 {
-	"BeginInvoke", (methodPointerType)&m5882, &t1323_TI, &t221_0_0_0, RuntimeInvoker_t5_t5_t5_t5, t1323_m5882_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 11, 3, false, false, 875, NULL, (methodPointerType)NULL, NULL};
+	"BeginInvoke", (methodPointerType)&m5883, &t1323_TI, &t221_0_0_0, RuntimeInvoker_t5_t5_t5_t5, t1323_m5883_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 11, 3, false, false, 875, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t221_0_0_0;
-static ParameterInfo t1323_m5883_ParameterInfos[] = 
+static ParameterInfo t1323_m5884_ParameterInfos[] = 
 {
 	{"result", 0, 134218574, &EmptyCustomAttributesCache, &t221_0_0_0},
 };
 extern Il2CppType t1321_0_0_0;
 extern void* RuntimeInvoker_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5883_MI = 
+MethodInfo m5884_MI = 
 {
-	"EndInvoke", (methodPointerType)&m5883, &t1323_TI, &t1321_0_0_0, RuntimeInvoker_t5_t5, t1323_m5883_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 12, 1, false, false, 876, NULL, (methodPointerType)NULL, NULL};
+	"EndInvoke", (methodPointerType)&m5884, &t1323_TI, &t1321_0_0_0, RuntimeInvoker_t5_t5, t1323_m5884_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 12, 1, false, false, 876, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1323_MIs[] =
 {
-	&m5880_MI,
 	&m5881_MI,
 	&m5882_MI,
 	&m5883_MI,
+	&m5884_MI,
 	NULL
 };
 static MethodInfo* t1323_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
-	&m5881_MI,
+	&m2348_MI,
 	&m5882_MI,
 	&m5883_MI,
+	&m5884_MI,
 };
 static Il2CppInterfaceOffsetPair t1323_IOs[] = 
 {
@@ -2927,17 +2927,17 @@ extern TypeInfo t1310_TI;
 #include "t1025.h"
 
 
-extern MethodInfo m5884_MI;
- void m5884 (t1310 * __this, t5 * p0, t124 p1, MethodInfo* method){
+extern MethodInfo m5885_MI;
+ void m5885 (t1310 * __this, t5 * p0, t124 p1, MethodInfo* method){
 	__this->f0 = (methodPointerType)((MethodInfo*)p1.f0)->method;
 	__this->f3 = p1;
 	__this->f2 = p0;
 }
-extern MethodInfo m5885_MI;
- t1008 * m5885 (t1310 * __this, t1025 * p0, t1008 * p1, t11* p2, t1025 * p3, MethodInfo* method){
+extern MethodInfo m5886_MI;
+ t1008 * m5886 (t1310 * __this, t1025 * p0, t1008 * p1, t11* p2, t1025 * p3, MethodInfo* method){
 	if(__this->f9 != NULL)
 	{
-		m5885((t1310 *)__this->f9,p0, p1, p2, p3, method);
+		m5886((t1310 *)__this->f9,p0, p1, p2, p3, method);
 	}
 	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->f3.f0));
 	if (__this->f2 != NULL && ___methodIsStatic)
@@ -2993,8 +2993,8 @@ t1008 * pinvoke_delegate_wrapper_t1310(Il2CppObject* delegate, t1025 * p0, t1008
 
 	return __return_value_unmarshaled;
 }
-extern MethodInfo m5886_MI;
- t5 * m5886 (t1310 * __this, t1025 * p0, t1008 * p1, t11* p2, t1025 * p3, t222 * p4, t5 * p5, MethodInfo* method){
+extern MethodInfo m5887_MI;
+ t5 * m5887 (t1310 * __this, t1025 * p0, t1008 * p1, t11* p2, t1025 * p3, t222 * p4, t5 * p5, MethodInfo* method){
 	void *__d_args[5] = {0};
 	__d_args[0] = p0;
 	__d_args[1] = p1;
@@ -3002,30 +3002,30 @@ extern MethodInfo m5886_MI;
 	__d_args[3] = p3;
 	return (t5 *)il2cpp_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)p4, (Il2CppObject*)p5);
 }
-extern MethodInfo m5887_MI;
- t1008 * m5887 (t1310 * __this, t5 * p0, MethodInfo* method){
+extern MethodInfo m5888_MI;
+ t1008 * m5888 (t1310 * __this, t5 * p0, MethodInfo* method){
 	Il2CppObject *__result = il2cpp_delegate_end_invoke((Il2CppAsyncResult*) p0, 0);
 	return (t1008 *)__result;
 }
 // Metadata Definition Mono.Security.Protocol.Tls.CertificateSelectionCallback
 extern Il2CppType t5_0_0_0;
 extern Il2CppType t124_0_0_0;
-static ParameterInfo t1310_m5884_ParameterInfos[] = 
+static ParameterInfo t1310_m5885_ParameterInfos[] = 
 {
 	{"object", 0, 134218575, &EmptyCustomAttributesCache, &t5_0_0_0},
 	{"method", 1, 134218576, &EmptyCustomAttributesCache, &t124_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5_t124 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5884_MI = 
+MethodInfo m5885_MI = 
 {
-	".ctor", (methodPointerType)&m5884, &t1310_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t124, t1310_m5884_ParameterInfos, &EmptyCustomAttributesCache, 6278, 3, 255, 2, false, false, 877, NULL, (methodPointerType)NULL, NULL};
+	".ctor", (methodPointerType)&m5885, &t1310_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t124, t1310_m5885_ParameterInfos, &EmptyCustomAttributesCache, 6278, 3, 255, 2, false, false, 877, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1025_0_0_0;
 extern Il2CppType t1025_0_0_0;
 extern Il2CppType t1008_0_0_0;
 extern Il2CppType t11_0_0_0;
 extern Il2CppType t1025_0_0_0;
-static ParameterInfo t1310_m5885_ParameterInfos[] = 
+static ParameterInfo t1310_m5886_ParameterInfos[] = 
 {
 	{"clientCertificates", 0, 134218577, &EmptyCustomAttributesCache, &t1025_0_0_0},
 	{"serverCertificate", 1, 134218578, &EmptyCustomAttributesCache, &t1008_0_0_0},
@@ -3034,16 +3034,16 @@ static ParameterInfo t1310_m5885_ParameterInfos[] =
 };
 extern Il2CppType t1008_0_0_0;
 extern void* RuntimeInvoker_t5_t5_t5_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5885_MI = 
+MethodInfo m5886_MI = 
 {
-	"Invoke", (methodPointerType)&m5885, &t1310_TI, &t1008_0_0_0, RuntimeInvoker_t5_t5_t5_t5_t5, t1310_m5885_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 10, 4, false, false, 878, NULL, (methodPointerType)NULL, NULL};
+	"Invoke", (methodPointerType)&m5886, &t1310_TI, &t1008_0_0_0, RuntimeInvoker_t5_t5_t5_t5_t5, t1310_m5886_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 10, 4, false, false, 878, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1025_0_0_0;
 extern Il2CppType t1008_0_0_0;
 extern Il2CppType t11_0_0_0;
 extern Il2CppType t1025_0_0_0;
 extern Il2CppType t222_0_0_0;
 extern Il2CppType t5_0_0_0;
-static ParameterInfo t1310_m5886_ParameterInfos[] = 
+static ParameterInfo t1310_m5887_ParameterInfos[] = 
 {
 	{"clientCertificates", 0, 134218581, &EmptyCustomAttributesCache, &t1025_0_0_0},
 	{"serverCertificate", 1, 134218582, &EmptyCustomAttributesCache, &t1008_0_0_0},
@@ -3054,42 +3054,42 @@ static ParameterInfo t1310_m5886_ParameterInfos[] =
 };
 extern Il2CppType t221_0_0_0;
 extern void* RuntimeInvoker_t5_t5_t5_t5_t5_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5886_MI = 
+MethodInfo m5887_MI = 
 {
-	"BeginInvoke", (methodPointerType)&m5886, &t1310_TI, &t221_0_0_0, RuntimeInvoker_t5_t5_t5_t5_t5_t5_t5, t1310_m5886_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 11, 6, false, false, 879, NULL, (methodPointerType)NULL, NULL};
+	"BeginInvoke", (methodPointerType)&m5887, &t1310_TI, &t221_0_0_0, RuntimeInvoker_t5_t5_t5_t5_t5_t5_t5, t1310_m5887_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 11, 6, false, false, 879, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t221_0_0_0;
-static ParameterInfo t1310_m5887_ParameterInfos[] = 
+static ParameterInfo t1310_m5888_ParameterInfos[] = 
 {
 	{"result", 0, 134218587, &EmptyCustomAttributesCache, &t221_0_0_0},
 };
 extern Il2CppType t1008_0_0_0;
 extern void* RuntimeInvoker_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5887_MI = 
+MethodInfo m5888_MI = 
 {
-	"EndInvoke", (methodPointerType)&m5887, &t1310_TI, &t1008_0_0_0, RuntimeInvoker_t5_t5, t1310_m5887_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 12, 1, false, false, 880, NULL, (methodPointerType)NULL, NULL};
+	"EndInvoke", (methodPointerType)&m5888, &t1310_TI, &t1008_0_0_0, RuntimeInvoker_t5_t5, t1310_m5888_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 12, 1, false, false, 880, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1310_MIs[] =
 {
-	&m5884_MI,
 	&m5885_MI,
 	&m5886_MI,
 	&m5887_MI,
+	&m5888_MI,
 	NULL
 };
 static MethodInfo* t1310_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
-	&m5885_MI,
+	&m2348_MI,
 	&m5886_MI,
 	&m5887_MI,
+	&m5888_MI,
 };
 static Il2CppInterfaceOffsetPair t1310_IOs[] = 
 {
@@ -3113,17 +3113,17 @@ extern TypeInfo t1311_TI;
 #include "t1040.h"
 
 
-extern MethodInfo m5888_MI;
- void m5888 (t1311 * __this, t5 * p0, t124 p1, MethodInfo* method){
+extern MethodInfo m5889_MI;
+ void m5889 (t1311 * __this, t5 * p0, t124 p1, MethodInfo* method){
 	__this->f0 = (methodPointerType)((MethodInfo*)p1.f0)->method;
 	__this->f3 = p1;
 	__this->f2 = p0;
 }
-extern MethodInfo m5889_MI;
- t1040 * m5889 (t1311 * __this, t1008 * p0, t11* p1, MethodInfo* method){
+extern MethodInfo m5890_MI;
+ t1040 * m5890 (t1311 * __this, t1008 * p0, t11* p1, MethodInfo* method){
 	if(__this->f9 != NULL)
 	{
-		m5889((t1311 *)__this->f9,p0, p1, method);
+		m5890((t1311 *)__this->f9,p0, p1, method);
 	}
 	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->f3.f0));
 	if (__this->f2 != NULL && ___methodIsStatic)
@@ -3167,48 +3167,48 @@ t1040 * pinvoke_delegate_wrapper_t1311(Il2CppObject* delegate, t1008 * p0, t11* 
 
 	return __return_value_unmarshaled;
 }
-extern MethodInfo m5890_MI;
- t5 * m5890 (t1311 * __this, t1008 * p0, t11* p1, t222 * p2, t5 * p3, MethodInfo* method){
+extern MethodInfo m5891_MI;
+ t5 * m5891 (t1311 * __this, t1008 * p0, t11* p1, t222 * p2, t5 * p3, MethodInfo* method){
 	void *__d_args[3] = {0};
 	__d_args[0] = p0;
 	__d_args[1] = p1;
 	return (t5 *)il2cpp_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)p2, (Il2CppObject*)p3);
 }
-extern MethodInfo m5891_MI;
- t1040 * m5891 (t1311 * __this, t5 * p0, MethodInfo* method){
+extern MethodInfo m5892_MI;
+ t1040 * m5892 (t1311 * __this, t5 * p0, MethodInfo* method){
 	Il2CppObject *__result = il2cpp_delegate_end_invoke((Il2CppAsyncResult*) p0, 0);
 	return (t1040 *)__result;
 }
 // Metadata Definition Mono.Security.Protocol.Tls.PrivateKeySelectionCallback
 extern Il2CppType t5_0_0_0;
 extern Il2CppType t124_0_0_0;
-static ParameterInfo t1311_m5888_ParameterInfos[] = 
+static ParameterInfo t1311_m5889_ParameterInfos[] = 
 {
 	{"object", 0, 134218588, &EmptyCustomAttributesCache, &t5_0_0_0},
 	{"method", 1, 134218589, &EmptyCustomAttributesCache, &t124_0_0_0},
 };
 extern Il2CppType t109_0_0_0;
 extern void* RuntimeInvoker_t109_t5_t124 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5888_MI = 
+MethodInfo m5889_MI = 
 {
-	".ctor", (methodPointerType)&m5888, &t1311_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t124, t1311_m5888_ParameterInfos, &EmptyCustomAttributesCache, 6278, 3, 255, 2, false, false, 881, NULL, (methodPointerType)NULL, NULL};
+	".ctor", (methodPointerType)&m5889, &t1311_TI, &t109_0_0_0, RuntimeInvoker_t109_t5_t124, t1311_m5889_ParameterInfos, &EmptyCustomAttributesCache, 6278, 3, 255, 2, false, false, 881, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1008_0_0_0;
 extern Il2CppType t11_0_0_0;
-static ParameterInfo t1311_m5889_ParameterInfos[] = 
+static ParameterInfo t1311_m5890_ParameterInfos[] = 
 {
 	{"certificate", 0, 134218590, &EmptyCustomAttributesCache, &t1008_0_0_0},
 	{"targetHost", 1, 134218591, &EmptyCustomAttributesCache, &t11_0_0_0},
 };
 extern Il2CppType t1040_0_0_0;
 extern void* RuntimeInvoker_t5_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5889_MI = 
+MethodInfo m5890_MI = 
 {
-	"Invoke", (methodPointerType)&m5889, &t1311_TI, &t1040_0_0_0, RuntimeInvoker_t5_t5_t5, t1311_m5889_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 10, 2, false, false, 882, NULL, (methodPointerType)NULL, NULL};
+	"Invoke", (methodPointerType)&m5890, &t1311_TI, &t1040_0_0_0, RuntimeInvoker_t5_t5_t5, t1311_m5890_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 10, 2, false, false, 882, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t1008_0_0_0;
 extern Il2CppType t11_0_0_0;
 extern Il2CppType t222_0_0_0;
 extern Il2CppType t5_0_0_0;
-static ParameterInfo t1311_m5890_ParameterInfos[] = 
+static ParameterInfo t1311_m5891_ParameterInfos[] = 
 {
 	{"certificate", 0, 134218592, &EmptyCustomAttributesCache, &t1008_0_0_0},
 	{"targetHost", 1, 134218593, &EmptyCustomAttributesCache, &t11_0_0_0},
@@ -3217,42 +3217,42 @@ static ParameterInfo t1311_m5890_ParameterInfos[] =
 };
 extern Il2CppType t221_0_0_0;
 extern void* RuntimeInvoker_t5_t5_t5_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5890_MI = 
+MethodInfo m5891_MI = 
 {
-	"BeginInvoke", (methodPointerType)&m5890, &t1311_TI, &t221_0_0_0, RuntimeInvoker_t5_t5_t5_t5_t5, t1311_m5890_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 11, 4, false, false, 883, NULL, (methodPointerType)NULL, NULL};
+	"BeginInvoke", (methodPointerType)&m5891, &t1311_TI, &t221_0_0_0, RuntimeInvoker_t5_t5_t5_t5_t5, t1311_m5891_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 11, 4, false, false, 883, NULL, (methodPointerType)NULL, NULL};
 extern Il2CppType t221_0_0_0;
-static ParameterInfo t1311_m5891_ParameterInfos[] = 
+static ParameterInfo t1311_m5892_ParameterInfos[] = 
 {
 	{"result", 0, 134218596, &EmptyCustomAttributesCache, &t221_0_0_0},
 };
 extern Il2CppType t1040_0_0_0;
 extern void* RuntimeInvoker_t5_t5 (MethodInfo* method, void* obj, void** args);
-MethodInfo m5891_MI = 
+MethodInfo m5892_MI = 
 {
-	"EndInvoke", (methodPointerType)&m5891, &t1311_TI, &t1040_0_0_0, RuntimeInvoker_t5_t5, t1311_m5891_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 12, 1, false, false, 884, NULL, (methodPointerType)NULL, NULL};
+	"EndInvoke", (methodPointerType)&m5892, &t1311_TI, &t1040_0_0_0, RuntimeInvoker_t5_t5, t1311_m5892_ParameterInfos, &EmptyCustomAttributesCache, 454, 3, 12, 1, false, false, 884, NULL, (methodPointerType)NULL, NULL};
 static MethodInfo* t1311_MIs[] =
 {
-	&m5888_MI,
 	&m5889_MI,
 	&m5890_MI,
 	&m5891_MI,
+	&m5892_MI,
 	NULL
 };
 static MethodInfo* t1311_VT[] =
 {
-	&m2341_MI,
-	&m465_MI,
 	&m2342_MI,
+	&m465_MI,
+	&m2343_MI,
 	&m467_MI,
-	&m2343_MI,
 	&m2344_MI,
-	&m2343_MI,
 	&m2345_MI,
+	&m2344_MI,
 	&m2346_MI,
 	&m2347_MI,
-	&m5889_MI,
+	&m2348_MI,
 	&m5890_MI,
 	&m5891_MI,
+	&m5892_MI,
 };
 static Il2CppInterfaceOffsetPair t1311_IOs[] = 
 {
@@ -3291,15 +3291,15 @@ static MethodInfo* t1343_MIs[] =
 {
 	NULL
 };
-extern MethodInfo m2041_MI;
 extern MethodInfo m2042_MI;
-extern MethodInfo m2147_MI;
+extern MethodInfo m2043_MI;
+extern MethodInfo m2148_MI;
 static MethodInfo* t1343_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern Il2CppType t1343_0_0_0;
@@ -3335,10 +3335,10 @@ static MethodInfo* t1344_MIs[] =
 };
 static MethodInfo* t1344_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern Il2CppType t1344_0_0_0;
@@ -3373,10 +3373,10 @@ static MethodInfo* t1345_MIs[] =
 };
 static MethodInfo* t1345_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern Il2CppType t1345_0_0_0;
@@ -3411,10 +3411,10 @@ static MethodInfo* t1346_MIs[] =
 };
 static MethodInfo* t1346_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern Il2CppType t1346_0_0_0;
@@ -3449,10 +3449,10 @@ static MethodInfo* t1347_MIs[] =
 };
 static MethodInfo* t1347_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern Il2CppType t1347_0_0_0;
@@ -3487,10 +3487,10 @@ static MethodInfo* t1348_MIs[] =
 };
 static MethodInfo* t1348_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern Il2CppType t1348_0_0_0;
@@ -3525,10 +3525,10 @@ static MethodInfo* t1349_MIs[] =
 };
 static MethodInfo* t1349_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern Il2CppType t1349_0_0_0;
@@ -3563,10 +3563,10 @@ static MethodInfo* t1350_MIs[] =
 };
 static MethodInfo* t1350_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern Il2CppType t1350_0_0_0;
@@ -3600,10 +3600,10 @@ static MethodInfo* t1351_MIs[] =
 };
 static MethodInfo* t1351_VT[] =
 {
-	&m2041_MI,
-	&m465_MI,
 	&m2042_MI,
-	&m2147_MI,
+	&m465_MI,
+	&m2043_MI,
+	&m2148_MI,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern Il2CppType t1351_0_0_0;
