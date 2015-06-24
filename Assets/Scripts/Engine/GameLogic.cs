@@ -69,8 +69,9 @@ namespace JewelMine.Engine
 		public GameLogicUpdate PerformGameLogic (GameLogicInput logicInput)
 		{
 			GameLogicUpdate logicUpdate = new GameLogicUpdate ();
-
 			bool immediateReturn = false;
+			// process any show splash screen event
+			ProcessShowSplashEvent(logicInput, logicUpdate);
 			// process any game save or game load events
 			ProcessGamePersistence (logicInput, logicUpdate, out immediateReturn);
 			if (immediateReturn) {
@@ -105,6 +106,20 @@ namespace JewelMine.Engine
 			// add a delta if required
 			ProcessAddDelta (logicUpdate);
 			return (logicUpdate);
+		}
+
+		/// <summary>
+		/// Processes the show splash event.
+		/// </summary>
+		/// <param name="logicInput">Logic input.</param>
+		/// <param name="logicUpdate">Logic update.</param>
+		private void ProcessShowSplashEvent (GameLogicInput logicInput, GameLogicUpdate logicUpdate)
+		{
+			if(logicInput.ShowSplash)
+			{
+				PauseGame(logicUpdate);
+			}
+			logicUpdate.ShowSplash = logicInput.ShowSplash;
 		}
 
 		/// <summary>

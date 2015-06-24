@@ -61,6 +61,19 @@ public class ViewController : IGameView
 		ProcessScore (logicUpdate);
 		ProcessLevel (logicUpdate);
 		ProcessMessages (logicUpdate);
+		ProcessShowSplashEvent(logicUpdate);
+	}
+
+	/// <summary>
+	/// Processes the show splash event.
+	/// </summary>
+	/// <param name="logicUpdate">Logic update.</param>
+	private void ProcessShowSplashEvent (GameLogicUpdate logicUpdate)
+	{
+		if(logicUpdate.ShowSplash)
+		{
+			context.SplashController.ShowSplashPanel(stateProvider.State.PlayState);
+		}
 	}
 
 	/// <summary>
@@ -164,6 +177,9 @@ public class ViewController : IGameView
 	private void ProcessGameState (GameLogicUpdate logicUpdate)
 	{
 		if (stateProvider.State.PlayState != GamePlayState.Playing) {
+			if(stateProvider.State.PlayState == GamePlayState.NotStarted){
+				context.SplashController.ShowSplashPanel(stateProvider.State.PlayState);
+			}
 			string stateText = string.Empty;
 			string stateSubtext = string.Empty;
 			GetGameStateText (out stateText, out stateSubtext);
@@ -212,10 +228,6 @@ public class ViewController : IGameView
 		stateText = string.Empty;
 		stateSubText = string.Empty;
 		switch (stateProvider.State.PlayState) {
-		case GamePlayState.NotStarted:
-			stateText = context.ConfigurableSettings.GameMessageGameStartText;
-			stateSubText = context.ConfigurableSettings.GameMessageGameStartSubtext;
-			break;
 		case GamePlayState.GameOver:
 			stateText = context.ConfigurableSettings.GameMessageGameOverText;
 			stateSubText = context.ConfigurableSettings.GameMessageGameOverSubtext;

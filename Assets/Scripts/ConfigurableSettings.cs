@@ -17,9 +17,6 @@ public class ConfigurableSettings : MonoBehaviour {
 	public string GameMessageGameWonText = "GAME WON! CONGRATS!";
 	public string GameMessageGameWonSubtext = "Press submit to restart.";
 	
-	public string GameMessageGameStartText = "JEWEL MINE";
-	public string GameMessageGameStartSubtext = "Press submit to continue...";
-	
 	public float GameMessageVisibleTime = 2.0f;
 
 	public string GameUserPrefKeyDifficulty = "JewelMine.User.Difficulty";

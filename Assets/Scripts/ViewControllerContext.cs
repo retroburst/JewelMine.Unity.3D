@@ -71,4 +71,10 @@ public class ViewControllerContext
 	/// </summary>
 	/// <value>The configurable settings.</value>
 	public ConfigurableSettings ConfigurableSettings { get; set; }
+
+	/// <summary>
+	/// Gets or sets the splash controller.
+	/// </summary>
+	/// <value>The splash controller.</value>
+	public SplashController SplashController { get; set; }
 }
