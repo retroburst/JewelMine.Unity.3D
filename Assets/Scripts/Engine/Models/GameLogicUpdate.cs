@@ -146,5 +146,10 @@ namespace JewelMine.Engine.Models
 		/// <value><c>true</c> if show splash; otherwise, <c>false</c>.</value>
 		public bool ShowSplash { get; set; }
 
+		/// <summary>
+		/// Gets or sets a value indicating whether this <see cref="JewelMine.Engine.Models.GameLogicUpdate"/> show options.
+		/// </summary>
+		/// <value><c>true</c> if show options; otherwise, <c>false</c>.</value>
+		public bool ShowOptions {get; set;}
 	}
 }

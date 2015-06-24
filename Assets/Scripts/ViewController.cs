@@ -61,18 +61,22 @@ public class ViewController : IGameView
 		ProcessScore (logicUpdate);
 		ProcessLevel (logicUpdate);
 		ProcessMessages (logicUpdate);
-		ProcessShowSplashEvent(logicUpdate);
+		ProcessUIEvents(logicUpdate);
 	}
 
 	/// <summary>
 	/// Processes the show splash event.
 	/// </summary>
 	/// <param name="logicUpdate">Logic update.</param>
-	private void ProcessShowSplashEvent (GameLogicUpdate logicUpdate)
+	private void ProcessUIEvents (GameLogicUpdate logicUpdate)
 	{
 		if(logicUpdate.ShowSplash)
 		{
 			context.SplashController.ShowSplashPanel(stateProvider.State.PlayState);
+		}
+		if(logicUpdate.ShowOptions)
+		{
+			context.OptionsController.ShowOptionsPanel();
 		}
 	}
 

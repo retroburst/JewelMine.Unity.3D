@@ -17,8 +17,6 @@ public class SplashController : MonoBehaviour
 
 	public List<GameObject> disableWhenDisplayed = null;
 
-	public GameController gameController = null;
-
 	/// <summary>
 	/// Start this instance.
 	/// </summary>
@@ -44,7 +42,6 @@ public class SplashController : MonoBehaviour
 		splashPanelGameObject.SetActive (true);
 		disableWhenDisplayed.ForEach (x => x.GetComponent<Button> ().interactable = false);
 		SplashShowing = true;
-		gameController.PauseGame();
 	}
 	
 	/// <summary>

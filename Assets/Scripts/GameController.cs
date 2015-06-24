@@ -86,6 +86,7 @@ public class GameController : MonoBehaviour
 		result.ExplosionPrefab = explosionPrefab;
 		result.ConfigurableSettings = configurableSettings;
 		result.SplashController = splashController;
+		result.OptionsController = optionsController;
 		return(result);
 	}
 
@@ -214,8 +215,11 @@ public class GameController : MonoBehaviour
 		if (Input.GetButtonUp ("Pause")) {
 			logicInput.PauseGame = true;
 		}
-		if(Input.GetKeyUp(KeyCode.Escape)){
+		if (Input.GetKeyUp (KeyCode.Escape)) {
 			logicInput.ShowSplash = true;
+		}
+		if (Input.GetKeyUp (KeyCode.Menu)) {
+			logicInput.ShowOptions = true;
 		}
 	}
 
@@ -299,6 +303,7 @@ public class GameController : MonoBehaviour
 	private void OnApplicationPause (bool pauseStatus)
 	{
 		if (pauseStatus) {
+			logicInput.PauseGame = true;
 			SaveUserPreferences ();
 		}
 	}

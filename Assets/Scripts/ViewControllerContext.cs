@@ -77,4 +77,10 @@ public class ViewControllerContext
 	/// </summary>
 	/// <value>The splash controller.</value>
 	public SplashController SplashController { get; set; }
+
+	/// <summary>
+	/// Gets or sets the options controller.
+	/// </summary>
+	/// <value>The options controller.</value>
+	public OptionsController OptionsController { get; set; }
 }
