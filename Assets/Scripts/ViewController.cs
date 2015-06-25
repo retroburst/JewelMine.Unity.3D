@@ -47,11 +47,13 @@ public class ViewController : IGameView
 	}
 
 	/// <summary>
-	/// Updates the view based on game logic.
+	/// Updates the view.
 	/// </summary>
-	/// <param name="logicUpdate">The logic update.</param>
-	public void UpdateView (GameLogicUpdate logicUpdate)
+	/// <param name="logicUpdate">Logic update.</param>
+	/// <param name="uiEventUpdate">User interface event update.</param>
+	public void UpdateView (GameLogicUpdate logicUpdate, GameUIEventUpdate uiEventUpdate)
 	{
+		ProcessUIEvents(uiEventUpdate);
 		ProcessGameState (logicUpdate);
 		ProcessNewJewels (logicUpdate);
 		ProcessJewelMovements (logicUpdate);
@@ -61,22 +63,38 @@ public class ViewController : IGameView
 		ProcessScore (logicUpdate);
 		ProcessLevel (logicUpdate);
 		ProcessMessages (logicUpdate);
-		ProcessUIEvents(logicUpdate);
+		context.AudioSystem.PlaySounds(logicUpdate);
 	}
-
+	
 	/// <summary>
-	/// Processes the show splash event.
+	/// Processes the user interface events.
 	/// </summary>
-	/// <param name="logicUpdate">Logic update.</param>
-	private void ProcessUIEvents (GameLogicUpdate logicUpdate)
+	/// <param name="uiEventUpdate">User interface event update.</param>
+	private void ProcessUIEvents (GameUIEventUpdate uiEventUpdate)
 	{
-		if(logicUpdate.ShowSplash)
+		if(uiEventUpdate.ShowSplash)
 		{
 			context.SplashController.ShowSplashPanel(stateProvider.State.PlayState);
 		}
-		if(logicUpdate.ShowOptions)
+		if(uiEventUpdate.HideSplash)
+		{
+			context.SplashController.HideSplashPanel();
+		}
+		if(uiEventUpdate.ShowOptions)
 		{
 			context.OptionsController.ShowOptionsPanel();
+		}
+		if(uiEventUpdate.HideOptions)
+		{
+			context.OptionsController.HideOptionsPanel();
+		}
+		if(uiEventUpdate.ToggleBackgroundMusic)
+		{
+			ToggleBackgroundMusic();
+		}
+		if(uiEventUpdate.ToggleSoundEffects)
+		{
+			ToggleSoundEffects();
 		}
 	}
 
@@ -271,9 +289,27 @@ public class ViewController : IGameView
 	/// on the game view.
 	/// </summary>
 	/// <param name="message">The message.</param>
-	public void AddGameInformationMessage (string message)
+	private void AddGameInformationMessage (string message)
 	{
 		messages.Add (message);
+	}
+
+	/// <summary>
+	/// Toggles the sound effects.
+	/// </summary>
+	private void ToggleSoundEffects ()
+	{
+		context.AudioSystem.ToggleSoundEffects ();
+		context.AudioSystem.AddSoundEffectsStateMessage (AddGameInformationMessage);
+	}
+	
+	/// <summary>
+	/// Toggles the background music.
+	/// </summary>
+	private void ToggleBackgroundMusic ()
+	{
+		context.AudioSystem.ToggleBackgroundMusic ();
+		context.AudioSystem.AddBackgroundMusicStateMessage (AddGameInformationMessage);
 	}
 	
 }

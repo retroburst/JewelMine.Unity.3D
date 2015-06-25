@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
 	public IGameAudioSystem audioSystem = null;
 	private IGameLogic gameLogic = null;
 	private GameLogicInput logicInput = null;
+	private GameUIEventUpdate uiEventUpdate = null;
 	private double lastTickTime = 0.0f;
 	private SwipeInput swipeInput = null;
 	public Material collisionGroupMaterial = null;
@@ -55,11 +56,12 @@ public class GameController : MonoBehaviour
 	{
 		RestoreUserPreferences ();
 		logicInput = new GameLogicInput ();
+		uiEventUpdate = new GameUIEventUpdate ();
 		GameLogicUserSettings settings = new GameLogicUserSettings ();
 		BuildGameLogicUserSettings (settings);
+		audioSystem = new AudioController (backgroundMusic, soundEffects, savedUserPrefSoundEffectsMuted, savedUserPrefBackgroundMusicMuted, configurableSettings);
 		gameLogic = new GameLogic (settings);
 		view = new ViewController (BuildViewControllerContext ());
-		audioSystem = new AudioController (backgroundMusic, soundEffects, savedUserPrefSoundEffectsMuted, savedUserPrefBackgroundMusicMuted, configurableSettings);
 		swipeInput = GetComponent<SwipeInput> ();
 		swipeInput.LeftSwipeDetected += HandleLeftSwipeDetected;
 		swipeInput.RightSwipeDetected += HandleRightSwipeDetected;
@@ -87,6 +89,7 @@ public class GameController : MonoBehaviour
 		result.ConfigurableSettings = configurableSettings;
 		result.SplashController = splashController;
 		result.OptionsController = optionsController;
+		result.AudioSystem = audioSystem;
 		return(result);
 	}
 
@@ -147,10 +150,10 @@ public class GameController : MonoBehaviour
 		if (Time.time >= lastTickTime) {
 			ProcessAxisInput ();
 			GameLogicUpdate logicUpdate = gameLogic.PerformGameLogic (logicInput);
-			view.UpdateView (logicUpdate);
-			audioSystem.PlaySounds (logicUpdate);
+			view.UpdateView (logicUpdate, uiEventUpdate);
 			// reset user input descriptors
 			logicInput.Clear ();
+			uiEventUpdate.Clear ();
 			lastTickTime = Time.time + GameHelpers.ConvertMillisecondsToSeconds (gameLogic.State.Difficulty.TickSpeedMilliseconds);
 		}
 	}
@@ -172,7 +175,17 @@ public class GameController : MonoBehaviour
 	private void ProcessInput ()
 	{
 		if (optionsController.OptionsShowing || splashController.SplashShowing)
+		{
+			if(Input.GetKeyUp(KeyCode.Escape) && splashController.SplashShowing)
+			{
+				HideSplash();
+			}
+			else if(Input.GetKeyUp(KeyCode.Escape) && optionsController.OptionsShowing)
+			{
+				HideOptions();
+			}
 			return;
+		}
 
 		if (gameLogic.State.PlayState == GamePlayState.NotStarted || gameLogic.State.PlayState == GamePlayState.Paused) {
 			if (Input.GetButtonUp ("Submit")) {
@@ -215,11 +228,11 @@ public class GameController : MonoBehaviour
 		if (Input.GetButtonUp ("Pause")) {
 			logicInput.PauseGame = true;
 		}
-		if (Input.GetKeyUp (KeyCode.Escape)) {
-			logicInput.ShowSplash = true;
+		if (Input.GetKeyUp (KeyCode.Escape) && !splashController.SplashShowing) {
+			ShowSplash();
 		}
-		if (Input.GetKeyUp (KeyCode.Menu)) {
-			logicInput.ShowOptions = true;
+		if (Input.GetKeyUp (KeyCode.Menu) && !optionsController.OptionsShowing) {
+			ShowOptions();
 		}
 	}
 
@@ -303,7 +316,8 @@ public class GameController : MonoBehaviour
 	private void OnApplicationPause (bool pauseStatus)
 	{
 		if (pauseStatus) {
-			logicInput.PauseGame = true;
+			if (logicInput != null)
+				logicInput.PauseGame = true;
 			SaveUserPreferences ();
 		}
 	}
@@ -321,8 +335,7 @@ public class GameController : MonoBehaviour
 	/// </summary>
 	public void ToggleSoundEffects ()
 	{
-		audioSystem.ToggleSoundEffects ();
-		audioSystem.AddSoundEffectsStateMessage (view.AddGameInformationMessage);
+		uiEventUpdate.ToggleSoundEffects = true;
 	}
 
 	/// <summary>
@@ -330,8 +343,7 @@ public class GameController : MonoBehaviour
 	/// </summary>
 	public void ToggleBackgroundMusic ()
 	{
-		audioSystem.ToggleBackgroundMusic ();
-		audioSystem.AddBackgroundMusicStateMessage (view.AddGameInformationMessage);
+		uiEventUpdate.ToggleBackgroundMusic = true;
 	}
 
 	/// <summary>
@@ -407,6 +419,41 @@ public class GameController : MonoBehaviour
 	{
 		Application.Quit ();
 	}
+
+	/// <summary>
+	/// Shows the options.
+	/// </summary>
+	public void ShowOptions()
+	{
+		uiEventUpdate.ShowOptions = true;
+		logicInput.PauseGame = true;
+	}
+
+	/// <summary>
+	/// Hides the options.
+	/// </summary>
+	public void HideOptions()
+	{
+		uiEventUpdate.HideOptions = true;
+		logicInput.GameStarted = true;
+	}
         
+	/// <summary>
+	/// Shows the splash.
+	/// </summary>
+	public void ShowSplash()
+	{
+		uiEventUpdate.ShowSplash = true;
+		logicInput.PauseGame = true;
+	}
+
+	/// <summary>
+	/// Hides the splash.
+	/// </summary>
+	public void HideSplash()
+	{
+		uiEventUpdate.HideSplash = true;
+		logicInput.GameStarted = true;
+	}
 }
 

@@ -25,8 +25,6 @@ namespace JewelMine.Engine.Models
 			ChangeDifficulty = false;
 			SaveGame = false;
 			LoadGame = false;
-			ShowSplash = false;
-			ShowOptions = false;
 		}
 
 		/// <summary>
@@ -89,17 +87,5 @@ namespace JewelMine.Engine.Models
 		///   <c>true</c> if [load game]; otherwise, <c>false</c>.
 		/// </value>
 		public bool LoadGame { get; set; }
-
-		/// <summary>
-		/// Gets or sets a value indicating whether this <see cref="JewelMine.Engine.Models.GameLogicInput"/> show splash.
-		/// </summary>
-		/// <value><c>true</c> if show splash; otherwise, <c>false</c>.</value>
-		public bool ShowSplash { get; set; }
-
-		/// <summary>
-		/// Gets or sets a value indicating whether this <see cref="JewelMine.Engine.Models.GameLogicInput"/> show options.
-		/// </summary>
-		/// <value><c>true</c> if show options; otherwise, <c>false</c>.</value>
-		public bool ShowOptions {get; set;}
 	}
 }

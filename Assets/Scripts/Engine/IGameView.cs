@@ -11,17 +11,11 @@ namespace JewelMine.Engine
     /// </summary>
     public interface IGameView
     {		
-        /// <summary>
-        /// Updates the view based on game logic.
-        /// </summary>
-        /// <param name="logicUpdate">The logic update.</param>
-        void UpdateView(GameLogicUpdate logicUpdate);
-
-        /// <summary>
-        /// Adds a game information message for display
-        /// on the game view.
-        /// </summary>
-        /// <param name="message">The message.</param>
-        void AddGameInformationMessage(string message);
+		/// <summary>
+		/// Updates the view.
+		/// </summary>
+		/// <param name="logicUpdate">Logic update.</param>
+		/// <param name="uiEventUpdate">User interface event update.</param>
+		void UpdateView(GameLogicUpdate logicUpdate, GameUIEventUpdate uiEventUpdate);
     }
 }

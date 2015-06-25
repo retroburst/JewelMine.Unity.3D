@@ -83,4 +83,10 @@ public class ViewControllerContext
 	/// </summary>
 	/// <value>The options controller.</value>
 	public OptionsController OptionsController { get; set; }
+
+	/// <summary>
+	/// Gets or sets the audio system.
+	/// </summary>
+	/// <value>The audio system.</value>
+	public IGameAudioSystem AudioSystem { get; set; }
 }
