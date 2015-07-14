@@ -76,7 +76,7 @@ namespace JewelMine.Engine.Models
         /// <value>
         /// The game tick speed milliseconds.
         /// </value>
-        public double TickSpeedMilliseconds { get; internal set; }
+		public float TickSpeedMilliseconds { get; internal set; }
 
         /// <summary>
         /// Gets the collision finalise tick count.

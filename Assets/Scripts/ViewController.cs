@@ -45,7 +45,7 @@ public class ViewController : IGameView
 			jewelTypeDictionary.Add (tag.jewelType, jewelPrefab);
 		}
 	}
-
+	
 	/// <summary>
 	/// Updates the view.
 	/// </summary>
@@ -53,18 +53,19 @@ public class ViewController : IGameView
 	/// <param name="uiEventUpdate">User interface event update.</param>
 	public void UpdateView (GameLogicUpdate logicUpdate, GameUIEventUpdate uiEventUpdate)
 	{
-		ProcessUIEvents(uiEventUpdate);
+		ProcessUIEvents (uiEventUpdate);
 		ProcessGameState (logicUpdate);
 		ProcessNewJewels (logicUpdate);
-		ProcessJewelSwaps(logicUpdate);
+		ProcessJewelSwaps (logicUpdate);
 		ProcessJewelMovements (logicUpdate);
+		ProcessDeltaGroupJewelMovements (logicUpdate);
 		ProcessFinalisedGroupCollisions (logicUpdate);
 		ProcessGroupCollisions ();
 		ProcessInvalidGroupCollisions (logicUpdate);
 		ProcessScore (logicUpdate);
 		ProcessLevel (logicUpdate);
 		ProcessMessages (logicUpdate);
-		context.AudioSystem.PlaySounds(logicUpdate);
+		context.AudioSystem.PlaySounds (logicUpdate);
 	}
 	
 	/// <summary>
@@ -73,29 +74,23 @@ public class ViewController : IGameView
 	/// <param name="uiEventUpdate">User interface event update.</param>
 	private void ProcessUIEvents (GameUIEventUpdate uiEventUpdate)
 	{
-		if(uiEventUpdate.ShowSplash)
-		{
-			context.SplashController.ShowSplashPanel(stateProvider.State.PlayState);
+		if (uiEventUpdate.ShowSplash) {
+			context.SplashController.ShowSplashPanel (stateProvider.State.PlayState);
 		}
-		if(uiEventUpdate.HideSplash)
-		{
-			context.SplashController.HideSplashPanel();
+		if (uiEventUpdate.HideSplash) {
+			context.SplashController.HideSplashPanel ();
 		}
-		if(uiEventUpdate.ShowOptions)
-		{
-			context.OptionsController.ShowOptionsPanel();
+		if (uiEventUpdate.ShowOptions) {
+			context.OptionsController.ShowOptionsPanel ();
 		}
-		if(uiEventUpdate.HideOptions)
-		{
-			context.OptionsController.HideOptionsPanel();
+		if (uiEventUpdate.HideOptions) {
+			context.OptionsController.HideOptionsPanel ();
 		}
-		if(uiEventUpdate.ToggleBackgroundMusic)
-		{
-			ToggleBackgroundMusic();
+		if (uiEventUpdate.ToggleBackgroundMusic) {
+			ToggleBackgroundMusic ();
 		}
-		if(uiEventUpdate.ToggleSoundEffects)
-		{
-			ToggleSoundEffects();
+		if (uiEventUpdate.ToggleSoundEffects) {
+			ToggleSoundEffects ();
 		}
 	}
 
@@ -168,17 +163,28 @@ public class ViewController : IGameView
 			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
 		}
 	}
-
+	
 	/// <summary>
 	/// Processes the jewel movements.
 	/// </summary>
 	/// <param name="logicUpdate">Logic update.</param>
 	private void ProcessJewelMovements (GameLogicUpdate logicUpdate)
 	{
-		var normalMovements = logicUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null && !x.IsDeltaJewelSwap);
+		var normalMovements = logicUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null && !x.IsDeltaJewelSwap && !x.IsDeltaGroupMovement);
 		foreach (var jewelMovement in normalMovements) {
-			//jewelMovement.Jewel.GameObject.GetComponent<JewelMover>().MoveJewel();
-			//jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+		}
+	}
+	
+	/// <summary>
+	/// Processes the delta group jewel movements.
+	/// </summary>
+	/// <param name="logicUpdate">Logic update.</param>
+	private void ProcessDeltaGroupJewelMovements (GameLogicUpdate logicUpdate)
+	{
+		var deltaMovement = logicUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null && !x.IsDeltaJewelSwap && x.IsDeltaGroupMovement);
+		foreach (var jewelMovement in deltaMovement) {
+			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
 		}
 	}
 
@@ -213,8 +219,8 @@ public class ViewController : IGameView
 	private void ProcessGameState (GameLogicUpdate logicUpdate)
 	{
 		if (stateProvider.State.PlayState != GamePlayState.Playing) {
-			if(stateProvider.State.PlayState == GamePlayState.NotStarted){
-				context.SplashController.ShowSplashPanel(stateProvider.State.PlayState);
+			if (stateProvider.State.PlayState == GamePlayState.NotStarted) {
+				context.SplashController.ShowSplashPanel (stateProvider.State.PlayState);
 			}
 			string stateText = string.Empty;
 			string stateSubtext = string.Empty;

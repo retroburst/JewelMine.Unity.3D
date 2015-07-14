@@ -27,19 +27,19 @@ namespace JewelMine.Engine.Models
 		/// Gets the level increment speed change.
 		/// </summary>
 		/// <value>The level increment speed change.</value>
-		public double LevelIncrementSpeedChange { get; private set; }
+		public float LevelIncrementSpeedChange { get; private set; }
 
 		/// <summary>
 		/// Gets the tick speed milliseconds.
 		/// </summary>
 		/// <value>The tick speed milliseconds.</value>
-		public double TickSpeedMilliseconds { get; private set; }
+		public float TickSpeedMilliseconds { get; private set; }
 
 		/// <summary>
 		/// Gets the tick speed milliseconds floor.
 		/// </summary>
 		/// <value>The tick speed milliseconds floor.</value>
-		public double TickSpeedMillisecondsFloor { get; private set; }
+		public float TickSpeedMillisecondsFloor { get; private set; }
 
 		/// <summary>
 		/// Gets the collision finalise tick count.
@@ -166,7 +166,7 @@ namespace JewelMine.Engine.Models
 		/// Calculates the level increment speed change.
 		/// </summary>
 		/// <returns></returns>
-		private double CalculateLevelIncrementSpeedChange ()
+		private float CalculateLevelIncrementSpeedChange ()
 		{
 			return ((TickSpeedMilliseconds - TickSpeedMillisecondsFloor) / LastLevel);
 		}

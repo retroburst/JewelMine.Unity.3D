@@ -624,7 +624,7 @@ namespace JewelMine.Engine
 			delta.Bottom.Coordinates.X = targetCoorindinate;
 			delta.Bottom.Coordinates.Y = state.Mine.DepthUpperBound;
 			delta.Bottom.HasEnteredBounds = true;
-			logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Bottom.Jewel, Original = Coordinates.CreateInvalidatedCoordinates(), New = new Coordinates(targetCoorindinate, state.Mine.DepthUpperBound) });
+			logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Bottom.Jewel, Original = Coordinates.CreateInvalidatedCoordinates(), New = new Coordinates(targetCoorindinate, state.Mine.DepthUpperBound), IsDeltaGroupMovement = true });
 			return (true);
 		}
 
@@ -712,19 +712,19 @@ namespace JewelMine.Engine
 				if (!delta.Top.HasEnteredBounds)
 					delta.Top.HasEnteredBounds = true;
 				state.Mine [delta.Top.Coordinates] = delta.Top.Jewel;
-				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Top.Jewel, Original = originalTop, New = delta.Top.Coordinates });
+				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Top.Jewel, Original = originalTop, New = delta.Top.Coordinates, IsDeltaGroupMovement = true });
 			}
 			if (state.Mine.CoordinatesInBounds (delta.Middle.Coordinates)) {
 				if (!delta.Middle.HasEnteredBounds)
 					delta.Middle.HasEnteredBounds = true;
 				state.Mine [delta.Middle.Coordinates] = delta.Middle.Jewel;
-				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Middle.Jewel, Original = originalMiddle, New = delta.Middle.Coordinates });
+				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Middle.Jewel, Original = originalMiddle, New = delta.Middle.Coordinates, IsDeltaGroupMovement = true });
 			}
 			if (state.Mine.CoordinatesInBounds (delta.Bottom.Coordinates)) {
 				if (!delta.Bottom.HasEnteredBounds)
 					delta.Bottom.HasEnteredBounds = true;
 				state.Mine [delta.Bottom.Coordinates] = delta.Bottom.Jewel;
-				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Bottom.Jewel, Original = originalBottom, New = delta.Bottom.Coordinates });
+				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Bottom.Jewel, Original = originalBottom, New = delta.Bottom.Coordinates, IsDeltaGroupMovement = true });
 			}
 			return (true);
 		}

@@ -5,8 +5,8 @@ using System;
 public class DifficultySettings : MonoBehaviour, IGameDifficultySettingsProvider
 {
 	public int levelIncrementScoreThreshold;
-	public double tickSpeedMilliseconds;
-	public double tickSpeedMillisecondsFloor;
+	public float tickSpeedMilliseconds;
+	public float tickSpeedMillisecondsFloor;
 	public int collisionFinaliseTickCount;
 	public int deltaStationaryInMilliseconds;
 	public double deltaDoubleJewelChance;
@@ -19,9 +19,9 @@ public class DifficultySettings : MonoBehaviour, IGameDifficultySettingsProvider
 
 	public int LevelIncrementScoreThreshold { get { return(levelIncrementScoreThreshold); } }
 	
-	public double TickSpeedMilliseconds { get { return(tickSpeedMilliseconds); } }
+	public float TickSpeedMilliseconds { get { return(tickSpeedMilliseconds); } }
 	
-	public double TickSpeedMillisecondsFloor{ get { return(tickSpeedMillisecondsFloor); } }
+	public float TickSpeedMillisecondsFloor{ get { return(tickSpeedMillisecondsFloor); } }
 	
 	public int CollisionFinaliseTickCount { get { return(collisionFinaliseTickCount); } }
 	

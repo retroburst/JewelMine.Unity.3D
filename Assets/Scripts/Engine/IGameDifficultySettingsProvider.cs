@@ -5,9 +5,9 @@ public interface IGameDifficultySettingsProvider
 {
 	int LevelIncrementScoreThreshold { get; }
 
-	double TickSpeedMilliseconds { get; }
+	float TickSpeedMilliseconds { get; }
 
-	double TickSpeedMillisecondsFloor{ get; }
+	float TickSpeedMillisecondsFloor{ get; }
 
 	int CollisionFinaliseTickCount{ get; }
 

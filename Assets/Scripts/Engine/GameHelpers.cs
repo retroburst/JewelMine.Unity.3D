@@ -60,5 +60,15 @@ namespace JewelMine.Engine
 			return (TimeSpan.FromMilliseconds(source).TotalSeconds);
 		}
 
+		/// <summary>
+		/// Converts the milliseconds to seconds.
+		/// </summary>
+		/// <returns>The milliseconds to seconds.</returns>
+		/// <param name="source">Source.</param>
+		public static float ConvertMillisecondsToSeconds(float source)
+		{
+			return ((float)TimeSpan.FromMilliseconds(source).TotalSeconds);
+		}
+
     }
 }

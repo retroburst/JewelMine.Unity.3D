@@ -89,4 +89,5 @@ public class ViewControllerContext
 	/// </summary>
 	/// <value>The audio system.</value>
 	public IGameAudioSystem AudioSystem { get; set; }
+	
 }
