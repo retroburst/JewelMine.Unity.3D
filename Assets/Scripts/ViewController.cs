@@ -56,6 +56,7 @@ public class ViewController : IGameView
 		ProcessUIEvents(uiEventUpdate);
 		ProcessGameState (logicUpdate);
 		ProcessNewJewels (logicUpdate);
+		ProcessJewelSwaps(logicUpdate);
 		ProcessJewelMovements (logicUpdate);
 		ProcessFinalisedGroupCollisions (logicUpdate);
 		ProcessGroupCollisions ();
@@ -157,14 +158,27 @@ public class ViewController : IGameView
 	}
 
 	/// <summary>
+	/// Processes the jewel swaps.
+	/// </summary>
+	/// <param name="logicUpdate">Logic update.</param>
+	private void ProcessJewelSwaps (GameLogicUpdate logicUpdate)
+	{
+		var normalMovements = logicUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null && x.IsDeltaJewelSwap);
+		foreach (var jewelMovement in normalMovements) {
+			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+		}
+	}
+
+	/// <summary>
 	/// Processes the jewel movements.
 	/// </summary>
 	/// <param name="logicUpdate">Logic update.</param>
 	private void ProcessJewelMovements (GameLogicUpdate logicUpdate)
 	{
-		var normalMovements = logicUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null);
+		var normalMovements = logicUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null && !x.IsDeltaJewelSwap);
 		foreach (var jewelMovement in normalMovements) {
-			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+			//jewelMovement.Jewel.GameObject.GetComponent<JewelMover>().MoveJewel();
+			//jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
 		}
 	}
 

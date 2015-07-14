@@ -24,6 +24,12 @@ namespace JewelMine.Engine.Models
 		/// </summary>
 		/// <value><c>true</c> if this instance is new jewel; otherwise, <c>false</c>.</value>
 		public bool IsNewJewel { get; set; }
+		
+		/// <summary>
+		/// Gets or sets a value indicating whether this instance is delta jewel swap.
+		/// </summary>
+		/// <value><c>true</c> if this instance is delta jewel swap; otherwise, <c>false</c>.</value>
+		public bool IsDeltaJewelSwap {get; set; }
 
         /// <summary>
         /// Gets or sets the original coordinates.

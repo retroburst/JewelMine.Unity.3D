@@ -457,9 +457,9 @@ namespace JewelMine.Engine
 		{
 			JewelGroup delta = state.Mine.Delta;
 			Jewel top = delta.Top.Jewel;
-			JewelMovement topJewelMovement = new JewelMovement (){ Jewel = delta.Top.Jewel, Original = delta.Top.Coordinates, New = delta.Middle.Coordinates };
-			JewelMovement middleJewelMovement = new JewelMovement (){ Jewel = delta.Middle.Jewel, Original = delta.Middle.Coordinates, New = delta.Bottom.Coordinates };
-			JewelMovement bottomJewelMovement = new JewelMovement (){ Jewel = delta.Bottom.Jewel, Original = delta.Bottom.Coordinates, New = delta.Top.Coordinates };
+			JewelMovement topJewelMovement = new JewelMovement (){ Jewel = delta.Top.Jewel, Original = delta.Top.Coordinates, New = delta.Middle.Coordinates, IsDeltaJewelSwap = true };
+			JewelMovement middleJewelMovement = new JewelMovement (){ Jewel = delta.Middle.Jewel, Original = delta.Middle.Coordinates, New = delta.Bottom.Coordinates, IsDeltaJewelSwap = true };
+			JewelMovement bottomJewelMovement = new JewelMovement (){ Jewel = delta.Bottom.Jewel, Original = delta.Bottom.Coordinates, New = delta.Top.Coordinates, IsDeltaJewelSwap = true };
 			
 			delta.Top.Jewel = delta.Bottom.Jewel;
 			delta.Bottom.Jewel = delta.Middle.Jewel;
