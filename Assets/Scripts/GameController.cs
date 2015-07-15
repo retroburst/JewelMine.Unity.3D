@@ -30,7 +30,8 @@ public class GameController : MonoBehaviour
 	private IGameLogic gameLogic = null;
 	private GameLogicInput logicInput = null;
 	private GameUIEventUpdate uiEventUpdate = null;
-	private double lastTickTime = 0.0f;
+	private float nextTickTime = 0.0f;
+	private float lastTickTime = 0.0f;
 	private SwipeInput swipeInput = null;
 	public Material collisionGroupMaterial = null;
 	public Text difficultyText = null;
@@ -147,15 +148,18 @@ public class GameController : MonoBehaviour
 	{
 		// get input from traditional controls
 		ProcessInput ();
-		if (Time.time >= lastTickTime) {
+		if (Time.time >= nextTickTime) {
 			ProcessAxisInput ();
 			GameLogicUpdate logicUpdate = gameLogic.PerformGameLogic (logicInput);
 			view.UpdateView (logicUpdate, uiEventUpdate);
 			// reset user input descriptors
 			logicInput.Clear ();
 			uiEventUpdate.Clear ();
-			lastTickTime = Time.time + GameHelpers.ConvertMillisecondsToSeconds (gameLogic.State.Difficulty.TickSpeedMilliseconds);
+			nextTickTime = Time.time + GameHelpers.ConvertMillisecondsToSeconds (gameLogic.State.Difficulty.TickSpeedMilliseconds);
+			lastTickTime = Time.time;
 		}
+		GameMovementLogicUpdate movementUpdate = gameLogic.PerformGameMovementLogic(nextTickTime, lastTickTime);
+		view.UpdateViewForInterpolarMovement(movementUpdate);
 	}
 
 	/// <summary>

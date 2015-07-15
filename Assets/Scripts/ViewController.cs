@@ -47,6 +47,15 @@ public class ViewController : IGameView
 	}
 	
 	/// <summary>
+	/// Updates the view for interpolar movement.
+	/// </summary>
+	/// <param name="movementUpdate">Movement update.</param>
+	public void UpdateViewForInterpolarMovement (GameMovementLogicUpdate movementUpdate)
+	{
+		ProcessInterpolarJewelMovements (movementUpdate);
+	}
+	
+	/// <summary>
 	/// Updates the view.
 	/// </summary>
 	/// <param name="logicUpdate">Logic update.</param>
@@ -57,8 +66,8 @@ public class ViewController : IGameView
 		ProcessGameState (logicUpdate);
 		ProcessNewJewels (logicUpdate);
 		ProcessJewelSwaps (logicUpdate);
-		ProcessJewelMovements (logicUpdate);
-		ProcessDeltaGroupJewelMovements (logicUpdate);
+		//ProcessJewelMovements (logicUpdate);
+		//ProcessDeltaGroupJewelMovements (logicUpdate);
 		ProcessFinalisedGroupCollisions (logicUpdate);
 		ProcessGroupCollisions ();
 		ProcessInvalidGroupCollisions (logicUpdate);
@@ -177,6 +186,23 @@ public class ViewController : IGameView
 	}
 	
 	/// <summary>
+	/// Processes the interpolar jewel movements.
+	/// </summary>
+	/// <param name="movementUpdate">Movement update.</param>
+	private void ProcessInterpolarJewelMovements (GameMovementLogicUpdate movementUpdate)
+	{
+		var normalMovements = movementUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null && !x.IsDeltaJewelSwap && !x.IsDeltaGroupMovement);
+		foreach (var jewelMovement in normalMovements) {
+			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.NewInterpolar.X, jewelMovement.NewInterpolar.Y, 0);
+		}
+		
+		var deltaMovement = movementUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null && !x.IsDeltaJewelSwap && x.IsDeltaGroupMovement);
+		foreach (var jewelMovement in deltaMovement) {
+			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.NewInterpolar.X, jewelMovement.NewInterpolar.Y, 0);
+		}
+	}
+	
+	/// <summary>
 	/// Processes the delta group jewel movements.
 	/// </summary>
 	/// <param name="logicUpdate">Logic update.</param>
@@ -252,9 +278,9 @@ public class ViewController : IGameView
 		foreach (MarkedCollisionGroup mcg in stateProvider.State.Mine.MarkedCollisions) {
 			foreach (CollisionGroupMember m in mcg.Members) {
 				if (mcg.CollisionTickCount % 2 != 0) {
-					m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = context.CollisionGroupMaterial;
+					if(m.Jewel.GameObject != null) m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = context.CollisionGroupMaterial;
 				} else {
-					m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = m.Jewel.GameObject.GetComponent<JewelMaterial> ().rendererMaterial;
+					if(m.Jewel.GameObject != null) m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = m.Jewel.GameObject.GetComponent<JewelMaterial> ().rendererMaterial;
 				}
 			}
 		}

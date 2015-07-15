@@ -17,5 +17,11 @@ namespace JewelMine.Engine
 		/// <param name="logicUpdate">Logic update.</param>
 		/// <param name="uiEventUpdate">User interface event update.</param>
 		void UpdateView(GameLogicUpdate logicUpdate, GameUIEventUpdate uiEventUpdate);
+		
+		/// <summary>
+		/// Updates the view for interpolar movement.
+		/// </summary>
+		/// <param name="movementUpdate">Movement update.</param>
+		void UpdateViewForInterpolarMovement (GameMovementLogicUpdate movementUpdate);
     }
 }

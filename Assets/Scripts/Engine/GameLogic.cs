@@ -69,6 +69,8 @@ namespace JewelMine.Engine
 		public GameLogicUpdate PerformGameLogic (GameLogicInput logicInput)
 		{
 			GameLogicUpdate logicUpdate = new GameLogicUpdate ();
+			// finalises all the previous turns moves as finalised now
+			FinaliseMarkedMovements ();
 			bool immediateReturn = false;
 			// process any game save or game load events
 			ProcessGamePersistence (logicInput, logicUpdate, out immediateReturn);
@@ -103,9 +105,26 @@ namespace JewelMine.Engine
 			ProcessCollisions (logicUpdate);
 			// add a delta if required
 			ProcessAddDelta (logicUpdate);
+			// store the movements for this turn
+			state.Mine.MarkedJewelMovements.Clear ();
+			state.Mine.MarkedJewelMovements.AddRange (logicUpdate.JewelMovements);
+			// return the logic result
 			return (logicUpdate);
 		}
 
+		/// <summary>
+		/// Performs the game movement logic.
+		/// </summary>
+		/// <returns>The game movement logic.</returns>
+		/// <param name="nextTickTime">Next tick time.</param>
+		public GameMovementLogicUpdate PerformGameMovementLogic (float nextTickTime, float lastTickTime)
+		{
+			GameMovementLogicUpdate result = new GameMovementLogicUpdate ();
+			ProcessInterpolarForMarkedMovements (nextTickTime, lastTickTime);
+			result.JewelMovements.AddRange (state.Mine.MarkedJewelMovements);
+			return(result);
+		}
+		
 		/// <summary>
 		/// Processes the game persistence.
 		/// </summary>
@@ -131,7 +150,7 @@ namespace JewelMine.Engine
 		{
 			immediateReturn = false;
 			try {
-				if(!File.Exists(Path.Combine(userSettings.SaveGamePath, GameConstants.GAME_DEFAULT_SAVE_GAME_FILENAME))){
+				if (!File.Exists (Path.Combine (userSettings.SaveGamePath, GameConstants.GAME_DEFAULT_SAVE_GAME_FILENAME))) {
 					logicUpdate.Messages.Add (GameConstants.GAME_MESSAGE_LOAD_GAME_NO_FILE);
 					immediateReturn = false;
 					return;
@@ -336,6 +355,80 @@ namespace JewelMine.Engine
 				}
 			}
 		}
+		
+		
+		/// <summary>
+		/// Processes the interpolar for marked movements.
+		/// </summary>
+		/// <param name="nextTickTime">Next tick time.</param>
+		public void ProcessInterpolarForMarkedMovements (float nextTickTime, float lastTickTime)
+		{
+			float percentageOfJourney = 0.0f;
+			//percentageOfJourney = 0.0;
+			//float rate = 1.0f/nextTickTime;
+			//percentageOfJourney += Time.deltaTime * rate;
+			percentageOfJourney = ((Time.time - lastTickTime) / (nextTickTime - lastTickTime));
+			Debug.Log(string.Format("Precentage of journey: {0}", percentageOfJourney));
+			// round the percentage up
+			if (percentageOfJourney < 0.1f)
+				percentageOfJourney = 0.1f;
+			if (percentageOfJourney > 0.9f)
+				percentageOfJourney = 1.0f;
+			var movements = state.Mine.MarkedJewelMovements.Where (x => !x.IsDeltaJewelSwap);
+			foreach (JewelMovement jm in movements) {
+				Vector3 lerpPosition = Vector3.Lerp (new Vector3 (jm.Original.X, jm.Original.Y, 0), new Vector3 (jm.New.X, jm.New.Y, 0), percentageOfJourney);
+				jm.OriginalInterpolar = new CoordinatesF (jm.Original);
+				jm.NewInterpolar = new CoordinatesF (lerpPosition.x, lerpPosition.y);
+			}
+		}
+
+		/// <summary>
+		/// Finalises the marked movements.
+		/// </summary>
+		private void FinaliseMarkedMovements ()
+		{			
+			var swapMovements = state.Mine.MarkedJewelMovements.Where (x => x.IsDeltaJewelSwap);
+			foreach (JewelMovement swapMovement in swapMovements) {
+				//if (state.Mine.CoordinatesInBounds (swapMovement.New))
+				//	continue;
+				swapMovement.JewelGroupMember.Coordinates = swapMovement.New;
+				if (state.Mine.CoordinatesInBounds (swapMovement.Original) && state.Mine [swapMovement.Original] == swapMovement.Jewel) {
+					ClearGridPosition (swapMovement.Original);
+				}
+				if (state.Mine.CoordinatesInBounds (swapMovement.New)) {
+					state.Mine [swapMovement.New] = swapMovement.Jewel;
+				}
+			}
+			
+			var deltaGroupMovements = state.Mine.MarkedJewelMovements.Where (x => x.IsDeltaGroupMovement);
+			foreach (JewelMovement deltaGroupMovement in deltaGroupMovements) {	
+				//if (state.Mine.CoordinatesInBounds (deltaGroupMovement.New))
+				//	continue;			
+				if (deltaGroupMovement.JewelGroupMember != null) {
+					if (state.Mine.CoordinatesInBounds (deltaGroupMovement.Original) && state.Mine [deltaGroupMovement.Original] == deltaGroupMovement.Jewel) {
+						ClearGridPosition (deltaGroupMovement.Original);
+					}
+					if (!deltaGroupMovement.JewelGroupMember.HasEnteredBounds) {
+						deltaGroupMovement.JewelGroupMember.HasEnteredBounds = true;
+					}
+					
+					deltaGroupMovement.JewelGroupMember.Coordinates = deltaGroupMovement.New;
+					if (state.Mine.CoordinatesInBounds (deltaGroupMovement.New)) {
+						state.Mine [deltaGroupMovement.New] = deltaGroupMovement.Jewel;
+					}
+				}
+			}
+			
+			var normalJewelMovements = state.Mine.MarkedJewelMovements.Where (x => !x.IsDeltaJewelSwap && !x.IsDeltaGroupMovement);
+			foreach (JewelMovement normalJewelMovement in normalJewelMovements) {
+				//if (state.Mine.CoordinatesInBounds (normalJewelMovement.New))
+				//	continue;
+				if (state.Mine.CoordinatesInBounds (normalJewelMovement.Original) && state.Mine [normalJewelMovement.Original] == normalJewelMovement.Jewel) {
+					ClearGridPosition (normalJewelMovement.Original);
+				}
+				state.Mine [normalJewelMovement.New] = normalJewelMovement.Jewel;
+			}
+		}
 
 		/// <summary>
 		/// Starts the game.
@@ -457,24 +550,24 @@ namespace JewelMine.Engine
 		{
 			JewelGroup delta = state.Mine.Delta;
 			Jewel top = delta.Top.Jewel;
-			JewelMovement topJewelMovement = new JewelMovement (){ Jewel = delta.Top.Jewel, Original = delta.Top.Coordinates, New = delta.Middle.Coordinates, IsDeltaJewelSwap = true };
-			JewelMovement middleJewelMovement = new JewelMovement (){ Jewel = delta.Middle.Jewel, Original = delta.Middle.Coordinates, New = delta.Bottom.Coordinates, IsDeltaJewelSwap = true };
-			JewelMovement bottomJewelMovement = new JewelMovement (){ Jewel = delta.Bottom.Jewel, Original = delta.Bottom.Coordinates, New = delta.Top.Coordinates, IsDeltaJewelSwap = true };
+			JewelMovement topJewelMovement = new JewelMovement (){ Jewel = delta.Top.Jewel, Original = delta.Top.Coordinates, New = delta.Middle.Coordinates, JewelGroupMember = delta.Top, IsDeltaJewelSwap = true };
+			JewelMovement middleJewelMovement = new JewelMovement (){ Jewel = delta.Middle.Jewel, Original = delta.Middle.Coordinates, New = delta.Bottom.Coordinates, JewelGroupMember = delta.Middle, IsDeltaJewelSwap = true };
+			JewelMovement bottomJewelMovement = new JewelMovement (){ Jewel = delta.Bottom.Jewel, Original = delta.Bottom.Coordinates, New = delta.Top.Coordinates, JewelGroupMember = delta.Bottom, IsDeltaJewelSwap = true };
 			
 			delta.Top.Jewel = delta.Bottom.Jewel;
 			delta.Bottom.Jewel = delta.Middle.Jewel;
 			delta.Middle.Jewel = top;
 
 			if (state.Mine.CoordinatesInBounds (delta.Top.Coordinates)) {
-				state.Mine [delta.Top.Coordinates] = delta.Top.Jewel;
+				//state.Mine [delta.Top.Coordinates] = delta.Top.Jewel;
 				logicUpdate.JewelMovements.Add (topJewelMovement);
 			}
 			if (state.Mine.CoordinatesInBounds (delta.Middle.Coordinates)) {
-				state.Mine [delta.Middle.Coordinates] = delta.Middle.Jewel;
+				//state.Mine [delta.Middle.Coordinates] = delta.Middle.Jewel;
 				logicUpdate.JewelMovements.Add (middleJewelMovement);
 			}
 			if (state.Mine.CoordinatesInBounds (delta.Bottom.Coordinates)) {
-				state.Mine [delta.Bottom.Coordinates] = delta.Bottom.Jewel;
+				//state.Mine [delta.Bottom.Coordinates] = delta.Bottom.Jewel;
 				logicUpdate.JewelMovements.Add (bottomJewelMovement);
 			}
 			logicUpdate.DeltaJewelsSwapped = true;
@@ -521,6 +614,9 @@ namespace JewelMine.Engine
 		private bool IsDeltaStationary ()
 		{
 			JewelGroup delta = state.Mine.Delta;
+			if (delta.Bottom.Coordinates.HasInvalidatedCoordinates) {
+				return(false);
+			}
 			return (delta.Bottom.Coordinates.Y == 0
 				|| state.Mine.Grid [delta.Bottom.Coordinates.X, delta.Bottom.Coordinates.Y - 1] != null);
 		}
@@ -620,11 +716,11 @@ namespace JewelMine.Engine
 			int targetCoorindinate = free [randomIndex];
 			JewelGroup delta = GenerateRandomDeltaJewelGroup ();
 			state.Mine.Delta = delta;
-			state.Mine.Grid [targetCoorindinate, state.Mine.DepthUpperBound] = delta.Bottom.Jewel;
-			delta.Bottom.Coordinates.X = targetCoorindinate;
-			delta.Bottom.Coordinates.Y = state.Mine.DepthUpperBound;
-			delta.Bottom.HasEnteredBounds = true;
-			logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Bottom.Jewel, Original = Coordinates.CreateInvalidatedCoordinates(), New = new Coordinates(targetCoorindinate, state.Mine.DepthUpperBound), IsDeltaGroupMovement = true });
+			//state.Mine.Grid [targetCoorindinate, state.Mine.DepthUpperBound] = delta.Bottom.Jewel;
+			//delta.Bottom.Coordinates.X = targetCoorindinate;
+			//delta.Bottom.Coordinates.Y = state.Mine.DepthUpperBound;
+			//delta.Bottom.HasEnteredBounds = true;
+			logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Bottom.Jewel, Original = Coordinates.CreateInvalidatedCoordinates(), New = new Coordinates(targetCoorindinate, state.Mine.DepthUpperBound), JewelGroupMember = delta.Bottom, IsDeltaGroupMovement = true });
 			return (true);
 		}
 
@@ -701,30 +797,31 @@ namespace JewelMine.Engine
 			Coordinates originalMiddle = delta.Middle.Coordinates;
 			Coordinates originalBottom = delta.Bottom.Coordinates;
 			// clear grid
-			ClearGridPosition (delta.Top.Coordinates);
-			ClearGridPosition (delta.Middle.Coordinates);
-			ClearGridPosition (delta.Bottom.Coordinates);
+//			ClearGridPosition (delta.Top.Coordinates);
+//			ClearGridPosition (delta.Middle.Coordinates);
+//			ClearGridPosition (delta.Bottom.Coordinates);
 			// shuffle down
-			delta.Top.Coordinates = new Coordinates (targetCoordinates.X, targetCoordinates.Y + 2);
-			delta.Middle.Coordinates = new Coordinates (targetCoordinates.X, targetCoordinates.Y + 1);
-			delta.Bottom.Coordinates = targetCoordinates;
-			if (state.Mine.CoordinatesInBounds (delta.Top.Coordinates)) {
-				if (!delta.Top.HasEnteredBounds)
-					delta.Top.HasEnteredBounds = true;
-				state.Mine [delta.Top.Coordinates] = delta.Top.Jewel;
-				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Top.Jewel, Original = originalTop, New = delta.Top.Coordinates, IsDeltaGroupMovement = true });
+			Coordinates targetDeltaTopCoordinates = new Coordinates (targetCoordinates.X, targetCoordinates.Y + 2);
+			Coordinates targetDeltaMiddleCoordinates = new Coordinates (targetCoordinates.X, targetCoordinates.Y + 1);
+			Coordinates targetDeltaBottomCoordinates = targetCoordinates;
+			
+			if (state.Mine.CoordinatesInBounds (targetDeltaTopCoordinates)) {
+//				if (!delta.Top.HasEnteredBounds)
+//					delta.Top.HasEnteredBounds = true;
+//				state.Mine [delta.Top.Coordinates] = delta.Top.Jewel;
+				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Top.Jewel, Original = originalTop, New = targetDeltaTopCoordinates, JewelGroupMember = delta.Top, IsDeltaGroupMovement = true });
 			}
-			if (state.Mine.CoordinatesInBounds (delta.Middle.Coordinates)) {
-				if (!delta.Middle.HasEnteredBounds)
-					delta.Middle.HasEnteredBounds = true;
-				state.Mine [delta.Middle.Coordinates] = delta.Middle.Jewel;
-				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Middle.Jewel, Original = originalMiddle, New = delta.Middle.Coordinates, IsDeltaGroupMovement = true });
+			if (state.Mine.CoordinatesInBounds (targetDeltaMiddleCoordinates)) {
+//				if (!delta.Middle.HasEnteredBounds)
+//					delta.Middle.HasEnteredBounds = true;
+//				state.Mine [delta.Middle.Coordinates] = delta.Middle.Jewel;
+				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Middle.Jewel, Original = originalMiddle, New = targetDeltaMiddleCoordinates, JewelGroupMember = delta.Middle, IsDeltaGroupMovement = true });
 			}
-			if (state.Mine.CoordinatesInBounds (delta.Bottom.Coordinates)) {
-				if (!delta.Bottom.HasEnteredBounds)
-					delta.Bottom.HasEnteredBounds = true;
-				state.Mine [delta.Bottom.Coordinates] = delta.Bottom.Jewel;
-				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Bottom.Jewel, Original = originalBottom, New = delta.Bottom.Coordinates, IsDeltaGroupMovement = true });
+			if (state.Mine.CoordinatesInBounds (targetDeltaBottomCoordinates)) {
+//				if (!delta.Bottom.HasEnteredBounds)
+//					delta.Bottom.HasEnteredBounds = true;
+//				state.Mine [delta.Bottom.Coordinates] = delta.Bottom.Jewel;
+				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = delta.Bottom.Jewel, Original = originalBottom, New = targetDeltaBottomCoordinates, JewelGroupMember = delta.Bottom, IsDeltaGroupMovement = true });
 			}
 			return (true);
 		}
@@ -830,10 +927,11 @@ namespace JewelMine.Engine
 				}
 				if (targetCoordinates == null)
 					return (false);
-				// otherwise we can move the delta to the required or closest position
+				// otherwise we can move the jewel to the required or closest position
 				Jewel target = (Jewel)state.Mine [coordinates];
-				state.Mine [targetCoordinates] = target;
-				state.Mine [coordinates] = null;
+				
+				//state.Mine [targetCoordinates] = target;
+				//state.Mine [coordinates] = null;
 				logicUpdate.JewelMovements.Add (new JewelMovement () { Jewel = target, Original = coordinates, New = targetCoordinates });
 				return (true);
 			}

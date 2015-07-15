@@ -13,6 +13,7 @@ namespace JewelMine.Engine
     public interface IGameLogic
     {
         GameLogicUpdate PerformGameLogic(GameLogicInput logicInput);
+		GameMovementLogicUpdate PerformGameMovementLogic (float nextTickTime, float lastTickTime);
         GameState State { get; }
     }
 }
