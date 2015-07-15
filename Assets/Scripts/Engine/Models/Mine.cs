@@ -36,7 +36,9 @@ namespace JewelMine.Engine.Models
             MarkedCollisions = new List<MarkedCollisionGroup>();
             InvalidMarkedCollisions = new List<MarkedCollisionGroup>();
             FinalisedCollisions = new List<CollisionGroup>();
-            MarkedJewelMovements = new List<JewelMovement>();
+            ImmediateJewelMovements = new List<JewelMovement>();
+            InProgressJewelMovements = new List<JewelMovement>();
+            FinalisedJewelMovements = new List<JewelMovement>();
         }
 
         /// <summary>
@@ -88,9 +90,19 @@ namespace JewelMine.Engine.Models
         public List<CollisionGroup> FinalisedCollisions { get; private set; }
         
         /// <summary>
-        /// The marked jewel movements.
+        /// The immediate jewel movements.
         /// </summary>
-		public List<JewelMovement> MarkedJewelMovements = new List<JewelMovement>();
+		public List<JewelMovement> ImmediateJewelMovements { get; private set; }
+        
+        /// <summary>
+        /// The in-progress jewel movements (to be animated).
+        /// </summary>
+		public List<JewelMovement> InProgressJewelMovements { get; private set; }
+		
+		/// <summary>
+		/// The finalised jewel movements.
+		/// </summary>
+		public List<JewelMovement> FinalisedJewelMovements { get; private set; }
 
         /// <summary>
         /// Gets the grid.

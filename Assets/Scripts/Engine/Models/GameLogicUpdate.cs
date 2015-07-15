@@ -17,7 +17,9 @@ namespace JewelMine.Engine.Models
 		/// </summary>
 		public GameLogicUpdate ()
 		{
-			JewelMovements = new List<JewelMovement> ();
+			ImmediateJewelMovements = new List<JewelMovement>();
+			InProgressJewelMovements = new List<JewelMovement> ();
+			FinalisedJewelMovements = new List<JewelMovement>();
 			Collisions = new List<MarkedCollisionGroup> ();
 			InvalidCollisions = new List<MarkedCollisionGroup> ();
 			FinalisedCollisions = new List<CollisionGroup> ();
@@ -25,12 +27,24 @@ namespace JewelMine.Engine.Models
 		}
 
 		/// <summary>
-		/// Gets the jewel movements.
+		/// Gets the immediate jewel movements.
+		/// </summary>
+		/// <value>The immediate jewel movements.</value>
+		public List<JewelMovement> ImmediateJewelMovements { get; private set; }
+
+		/// <summary>
+		/// Gets the in-progress jewel movements.
 		/// </summary>
 		/// <value>
 		/// The jewel movements.
 		/// </value>
-		public List<JewelMovement> JewelMovements { get; private set; }
+		public List<JewelMovement> InProgressJewelMovements { get; private set; }
+		
+		/// <summary>
+		/// Gets the finalised jewel movements.
+		/// </summary>
+		/// <value>The finalised jewel movements.</value>
+		public List<JewelMovement> FinalisedJewelMovements { get; private set; }
 
 		/// <summary>
 		/// Gets the collisions.

@@ -47,12 +47,13 @@ public class ViewController : IGameView
 	}
 	
 	/// <summary>
-	/// Updates the view for interpolar movement.
+	/// Updates the view for in-progress movement.
 	/// </summary>
 	/// <param name="movementUpdate">Movement update.</param>
-	public void UpdateViewForInterpolarMovement (GameMovementLogicUpdate movementUpdate)
+	/// <param name="inProgressMovementUpdate">In progress movement update.</param>
+	public void UpdateViewInProgressMovement (GameInProgressMovementLogicUpdate inProgressMovementUpdate)
 	{
-		ProcessInterpolarJewelMovements (movementUpdate);
+		ProcessInProgressJewelMovement (inProgressMovementUpdate);
 	}
 	
 	/// <summary>
@@ -65,9 +66,8 @@ public class ViewController : IGameView
 		ProcessUIEvents (uiEventUpdate);
 		ProcessGameState (logicUpdate);
 		ProcessNewJewels (logicUpdate);
-		ProcessJewelSwaps (logicUpdate);
-		//ProcessJewelMovements (logicUpdate);
-		//ProcessDeltaGroupJewelMovements (logicUpdate);
+		ProcessImmediateJewelMovement (logicUpdate);
+		ProcessFinalisedJewelMovements (logicUpdate);
 		ProcessFinalisedGroupCollisions (logicUpdate);
 		ProcessGroupCollisions ();
 		ProcessInvalidGroupCollisions (logicUpdate);
@@ -162,25 +162,23 @@ public class ViewController : IGameView
 	}
 
 	/// <summary>
-	/// Processes the jewel swaps.
+	/// Processes the immediate jewel movement.
 	/// </summary>
 	/// <param name="logicUpdate">Logic update.</param>
-	private void ProcessJewelSwaps (GameLogicUpdate logicUpdate)
+	private void ProcessImmediateJewelMovement (GameLogicUpdate logicUpdate)
 	{
-		var normalMovements = logicUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null && x.IsDeltaJewelSwap);
-		foreach (var jewelMovement in normalMovements) {
+		foreach (var jewelMovement in logicUpdate.ImmediateJewelMovements) {
 			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
 		}
 	}
 	
 	/// <summary>
-	/// Processes the jewel movements.
+	/// Processes the finalised jewel movements.
 	/// </summary>
 	/// <param name="logicUpdate">Logic update.</param>
-	private void ProcessJewelMovements (GameLogicUpdate logicUpdate)
+	private void ProcessFinalisedJewelMovements (GameLogicUpdate logicUpdate)
 	{
-		var normalMovements = logicUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null && !x.IsDeltaJewelSwap && !x.IsDeltaGroupMovement);
-		foreach (var jewelMovement in normalMovements) {
+		foreach (var jewelMovement in logicUpdate.FinalisedJewelMovements) {
 			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
 		}
 	}
@@ -189,28 +187,16 @@ public class ViewController : IGameView
 	/// Processes the interpolar jewel movements.
 	/// </summary>
 	/// <param name="movementUpdate">Movement update.</param>
-	private void ProcessInterpolarJewelMovements (GameMovementLogicUpdate movementUpdate)
+	private void ProcessInProgressJewelMovement (GameInProgressMovementLogicUpdate movementUpdate)
 	{
-		var normalMovements = movementUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null && !x.IsDeltaJewelSwap && !x.IsDeltaGroupMovement);
-		foreach (var jewelMovement in normalMovements) {
-			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.NewInterpolar.X, jewelMovement.NewInterpolar.Y, 0);
-		}
-		
-		var deltaMovement = movementUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null && !x.IsDeltaJewelSwap && x.IsDeltaGroupMovement);
-		foreach (var jewelMovement in deltaMovement) {
-			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.NewInterpolar.X, jewelMovement.NewInterpolar.Y, 0);
-		}
-	}
-	
-	/// <summary>
-	/// Processes the delta group jewel movements.
-	/// </summary>
-	/// <param name="logicUpdate">Logic update.</param>
-	private void ProcessDeltaGroupJewelMovements (GameLogicUpdate logicUpdate)
-	{
-		var deltaMovement = logicUpdate.JewelMovements.Where (x => x.Jewel.GameObject != null && !x.IsDeltaJewelSwap && x.IsDeltaGroupMovement);
-		foreach (var jewelMovement in deltaMovement) {
-			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+		foreach (var jewelMovement in movementUpdate.InProgressJewelMovements) {
+			if (jewelMovement.Original.HasInvalidatedCoordinates) {
+				// if the jewel origin is an invalidated coordinate, just shove the jewel in it's new position
+				jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+			} else {
+				// move the jewel via it's interpolar coordinates calculated using LERP
+				jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.NewInterpolar.X, jewelMovement.NewInterpolar.Y, 0);
+			}
 		}
 	}
 
@@ -220,7 +206,9 @@ public class ViewController : IGameView
 	/// <param name="logicUpdate">Logic update.</param>
 	private void ProcessNewJewels (GameLogicUpdate logicUpdate)
 	{
-		var newJewels = logicUpdate.JewelMovements.Where (x => x.Jewel.GameObject == null);
+		List<JewelMovement> newJewels = new List<JewelMovement> ();
+		newJewels.AddRange (logicUpdate.InProgressJewelMovements.Where (x => x.Jewel.GameObject == null).ToArray ());
+		newJewels.AddRange (logicUpdate.ImmediateJewelMovements.Where (x => x.Jewel.GameObject == null).ToArray ());
 		foreach (var jewelMovement in newJewels) {
 			GameObject targetType = jewelTypeDictionary [jewelMovement.Jewel.JewelType];
 			GameObject newJewelGameObject = (GameObject)GameObject.Instantiate (targetType, new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0), Quaternion.identity);
@@ -278,9 +266,11 @@ public class ViewController : IGameView
 		foreach (MarkedCollisionGroup mcg in stateProvider.State.Mine.MarkedCollisions) {
 			foreach (CollisionGroupMember m in mcg.Members) {
 				if (mcg.CollisionTickCount % 2 != 0) {
-					if(m.Jewel.GameObject != null) m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = context.CollisionGroupMaterial;
+					if (m.Jewel.GameObject != null)
+						m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = context.CollisionGroupMaterial;
 				} else {
-					if(m.Jewel.GameObject != null) m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = m.Jewel.GameObject.GetComponent<JewelMaterial> ().rendererMaterial;
+					if (m.Jewel.GameObject != null)
+						m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = m.Jewel.GameObject.GetComponent<JewelMaterial> ().rendererMaterial;
 				}
 			}
 		}

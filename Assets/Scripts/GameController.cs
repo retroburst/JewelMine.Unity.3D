@@ -158,8 +158,8 @@ public class GameController : MonoBehaviour
 			nextTickTime = Time.time + GameHelpers.ConvertMillisecondsToSeconds (gameLogic.State.Difficulty.TickSpeedMilliseconds);
 			lastTickTime = Time.time;
 		}
-		GameMovementLogicUpdate movementUpdate = gameLogic.PerformGameMovementLogic(nextTickTime, lastTickTime);
-		view.UpdateViewForInterpolarMovement(movementUpdate);
+		GameInProgressMovementLogicUpdate inProgressMovementUpdate = gameLogic.PerformGameInProgressMovementLogic(nextTickTime, lastTickTime);
+		view.UpdateViewInProgressMovement(inProgressMovementUpdate);
 	}
 
 	/// <summary>
