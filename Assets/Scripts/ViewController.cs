@@ -69,7 +69,7 @@ public class ViewController : IGameView
 		ProcessImmediateJewelMovement (logicUpdate);
 		ProcessFinalisedJewelMovements (logicUpdate);
 		ProcessFinalisedGroupCollisions (logicUpdate);
-		ProcessGroupCollisions ();
+		ProcessGroupCollisions (logicUpdate);
 		ProcessInvalidGroupCollisions (logicUpdate);
 		ProcessScore (logicUpdate);
 		ProcessLevel (logicUpdate);
@@ -140,7 +140,7 @@ public class ViewController : IGameView
 	/// <param name="logicUpdate">Logic update.</param>
 	private void ProcessInvalidGroupCollisions (GameLogicUpdate logicUpdate)
 	{
-		foreach (MarkedCollisionGroup mcg in stateProvider.State.Mine.InvalidMarkedCollisions) {
+		foreach (MarkedCollisionGroup mcg in logicUpdate.InvalidCollisions) {
 			foreach (CollisionGroupMember m in mcg.Members) {
 				if (m.Jewel.GameObject != null) {
 					m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = m.Jewel.GameObject.GetComponent<JewelMaterial> ().rendererMaterial;
@@ -269,11 +269,12 @@ public class ViewController : IGameView
 	}
 
 	/// <summary>
-	/// Updates the group collisions.
+	/// Processes the group collisions.
 	/// </summary>
-	private void ProcessGroupCollisions ()
+	/// <param name="logicUpdate">Logic update.</param>
+	private void ProcessGroupCollisions (GameLogicUpdate logicUpdate)
 	{
-		foreach (MarkedCollisionGroup mcg in stateProvider.State.Mine.MarkedCollisions) {
+		foreach (MarkedCollisionGroup mcg in logicUpdate.Collisions) {
 			foreach (CollisionGroupMember m in mcg.Members) {
 				if (mcg.CollisionTickCount % 2 != 0) {
 					if (m.Jewel.GameObject != null)
