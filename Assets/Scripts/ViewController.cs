@@ -142,7 +142,9 @@ public class ViewController : IGameView
 	{
 		foreach (MarkedCollisionGroup mcg in stateProvider.State.Mine.InvalidMarkedCollisions) {
 			foreach (CollisionGroupMember m in mcg.Members) {
-				m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = m.Jewel.GameObject.GetComponent<JewelMaterial> ().rendererMaterial;
+				if (m.Jewel.GameObject != null) {
+					m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = m.Jewel.GameObject.GetComponent<JewelMaterial> ().rendererMaterial;
+				}
 			}
 		}
 	}
@@ -156,7 +158,7 @@ public class ViewController : IGameView
 		foreach (var collision in logicUpdate.FinalisedCollisions) {
 			foreach (var member in collision.Members) {
 				GameObject.Instantiate (context.ExplosionPrefab, member.Jewel.GameObject.transform.position, Quaternion.identity);
-				GameObject.Destroy (member.Jewel.GameObject);
+				if(member.Jewel.GameObject != null) { GameObject.Destroy (member.Jewel.GameObject); }
 			}
 		}
 	}
@@ -168,7 +170,9 @@ public class ViewController : IGameView
 	private void ProcessImmediateJewelMovement (GameLogicUpdate logicUpdate)
 	{
 		foreach (var jewelMovement in logicUpdate.ImmediateJewelMovements) {
-			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+			if (jewelMovement.Jewel.GameObject != null) {
+				jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+			}
 		}
 	}
 	
@@ -179,7 +183,9 @@ public class ViewController : IGameView
 	private void ProcessFinalisedJewelMovements (GameLogicUpdate logicUpdate)
 	{
 		foreach (var jewelMovement in logicUpdate.FinalisedJewelMovements) {
-			jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+			if (jewelMovement.Jewel.GameObject != null) {
+				jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+			}
 		}
 	}
 	
@@ -192,10 +198,14 @@ public class ViewController : IGameView
 		foreach (var jewelMovement in movementUpdate.InProgressJewelMovements) {
 			if (jewelMovement.Original.HasInvalidatedCoordinates) {
 				// if the jewel origin is an invalidated coordinate, just shove the jewel in it's new position
-				jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+				if (jewelMovement.Jewel.GameObject != null) {
+					jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+				}
 			} else {
 				// move the jewel via it's interpolar coordinates calculated using LERP
-				jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.NewInterpolar.X, jewelMovement.NewInterpolar.Y, 0);
+				if (jewelMovement.Jewel.GameObject != null) {
+					jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.NewInterpolar.X, jewelMovement.NewInterpolar.Y, 0);
+				}
 			}
 		}
 	}
@@ -267,10 +277,14 @@ public class ViewController : IGameView
 			foreach (CollisionGroupMember m in mcg.Members) {
 				if (mcg.CollisionTickCount % 2 != 0) {
 					if (m.Jewel.GameObject != null)
+					{
 						m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = context.CollisionGroupMaterial;
+					}
 				} else {
 					if (m.Jewel.GameObject != null)
+					{
 						m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = m.Jewel.GameObject.GetComponent<JewelMaterial> ().rendererMaterial;
+					}
 				}
 			}
 		}
