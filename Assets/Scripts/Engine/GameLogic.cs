@@ -104,7 +104,7 @@ namespace JewelMine.Engine
 			// add a delta if required
 			ProcessAddDelta (logicUpdate);
 			// store and arrange the movements for this tick
-			ProcessJewelMovements(logicUpdate);			
+			ProcessJewelMovements (logicUpdate);			
 			// return the logic result
 			return (logicUpdate);
 		}
@@ -116,16 +116,16 @@ namespace JewelMine.Engine
 		private void ProcessJewelMovements (GameLogicUpdate logicUpdate)
 		{
 			// move all in progress movements from last tick to finalised
-			state.Mine.FinalisedJewelMovements.Clear();
-			state.Mine.FinalisedJewelMovements.AddRange(state.Mine.InProgressJewelMovements);
+			state.Mine.FinalisedJewelMovements.Clear ();
+			state.Mine.FinalisedJewelMovements.AddRange (state.Mine.InProgressJewelMovements);
 			// add the new in progress movements
 			state.Mine.InProgressJewelMovements.Clear ();
 			state.Mine.InProgressJewelMovements.AddRange (logicUpdate.InProgressJewelMovements);
 			// keep a copy of the immediate movements
-			state.Mine.ImmediateJewelMovements.Clear();
-			state.Mine.ImmediateJewelMovements.AddRange(logicUpdate.ImmediateJewelMovements);
+			state.Mine.ImmediateJewelMovements.Clear ();
+			state.Mine.ImmediateJewelMovements.AddRange (logicUpdate.ImmediateJewelMovements);
 			// but the finalised movements into the logic update
-			logicUpdate.FinalisedJewelMovements.AddRange(state.Mine.FinalisedJewelMovements);
+			logicUpdate.FinalisedJewelMovements.AddRange (state.Mine.FinalisedJewelMovements);
 		}
 
 		/// <summary>
@@ -136,8 +136,10 @@ namespace JewelMine.Engine
 		public GameInProgressMovementLogicUpdate PerformGameInProgressMovementLogic (float nextTickTime, float lastTickTime)
 		{
 			GameInProgressMovementLogicUpdate result = new GameInProgressMovementLogicUpdate ();
-			ProcessInterpolarForInProgressMovements (nextTickTime, lastTickTime);
-			result.InProgressJewelMovements.AddRange (state.Mine.InProgressJewelMovements);
+			if (state.PlayState == GamePlayState.Playing) {
+				ProcessInterpolarForInProgressMovements (nextTickTime, lastTickTime);
+				result.InProgressJewelMovements.AddRange (state.Mine.InProgressJewelMovements);
+			}
 			return(result);
 		}
 		
@@ -381,7 +383,7 @@ namespace JewelMine.Engine
 		{
 			float percentageOfJourneyTime = 0.0f;
 			percentageOfJourneyTime = ((Time.time - lastTickTime) / (nextTickTime - lastTickTime));
-			Debug.Log(string.Format("Precentage of journey time: {0}", percentageOfJourneyTime));
+			// Debug.Log(string.Format("Precentage of journey time: {0}", percentageOfJourneyTime));
 			// round the percentage up
 			if (percentageOfJourneyTime < 0.1f)
 				percentageOfJourneyTime = 0.1f;

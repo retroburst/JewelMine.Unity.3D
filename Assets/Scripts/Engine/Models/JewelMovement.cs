@@ -8,6 +8,7 @@ namespace JewelMine.Engine.Models
 	/// <summary>
 	/// Represents a jewel movement.
 	/// </summary>
+	[Serializable]
 	public class JewelMovement
 	{
 		/// <summary>
