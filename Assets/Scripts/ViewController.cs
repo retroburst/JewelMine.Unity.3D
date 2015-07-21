@@ -286,9 +286,11 @@ public class ViewController : IGameView
 			GetGameStateText (out stateText, out stateSubtext);
 			context.GameStateText.text = stateText;
 			context.GameStateSubtext.text = stateSubtext;
+			context.GameStatePanel.SetActive(true);
 		} else {
 			context.GameStateText.text = string.Empty;
 			context.GameStateSubtext.text = string.Empty;
+			context.GameStatePanel.SetActive(false);
 		}
 
 		if (stateProvider.State.PlayState == GamePlayState.GameOver) {

@@ -47,6 +47,12 @@ public class ViewControllerContext
 	/// </summary>
 	/// <value>The game state text.</value>
 	public Text GameStateText { get; set; }
+	
+	/// <summary>
+	/// Gets or sets the game state panel.
+	/// </summary>
+	/// <value>The game state panel.</value>
+	public GameObject GameStatePanel { get; set; }
 
 	/// <summary>
 	/// Gets or sets the game state subtext.

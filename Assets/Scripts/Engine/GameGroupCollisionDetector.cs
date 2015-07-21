@@ -394,7 +394,6 @@ namespace JewelMine.Engine
 				Logger.LogFormat("GameGroupCollisionDetector->RemoveFromMine: removed jewel {0} at {1}.", member.Jewel.JewelType.ToString(), member.Coordinates.ToString());
                 state.Mine[member.Coordinates] = null;
             }
-            //TODO: remove debugging
             else
             {
 				Logger.LogWarning("GameGroupCollisionDetector->RemoveFromMine: target was null or it did not equal the expected jewel.");

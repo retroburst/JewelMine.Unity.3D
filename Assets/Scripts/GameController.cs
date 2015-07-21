@@ -8,6 +8,10 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
+// TODO:
+// Put some dark transparent square behind game status text if possible
+
+
 /// <summary>
 /// Game controller manages the major components
 /// of the game and runs the game loop.
@@ -30,6 +34,7 @@ public class GameController : MonoBehaviour
 	public Text gameStateText = null;
 	public Text gameStateSubtext = null;
 	public List<Text> gameMessageSlots = null;
+	public GameObject gameStatePanel = null;
 	public GameObject explosionPrefab = null;
 	private bool savedUserPrefSoundEffectsMuted = false;
 	private bool savedUserPrefBackgroundMusicMuted = false;
@@ -83,6 +88,7 @@ public class GameController : MonoBehaviour
 		result.SplashController = splashController;
 		result.OptionsController = optionsController;
 		result.AudioSystem = audioSystem;
+		result.GameStatePanel = gameStatePanel;
 		return(result);
 	}
 
