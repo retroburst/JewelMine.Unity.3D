@@ -369,6 +369,7 @@ namespace JewelMine.Engine
 				bool added = AddDelta (logicUpdate);
 				if (!added) {
 					GameOver (logicUpdate);
+					return;
 				}
 			}
 		}
@@ -700,12 +701,12 @@ namespace JewelMine.Engine
 		/// <returns></returns>
 		private bool AddDelta (GameLogicUpdate logicUpdate)
 		{
-			int[] free = FindFreeCoordinatesForDelta ();
-			if (free.Length == 0) {
+			int[] freeVisibleStartingPoints = FindFreeCoordinatesForDelta (state.Mine.VisibleDepthUpperBound);
+			if (freeVisibleStartingPoints.Length == 0) {
 				return (false);
 			}
-			int randomIndex = UnityEngine.Random.Range (0, free.Length);
-			int targetCoorindinate = free [randomIndex];
+			int randomIndex = UnityEngine.Random.Range (0, freeVisibleStartingPoints.Length);
+			int targetCoorindinate = freeVisibleStartingPoints [randomIndex];
 			JewelGroup delta = GenerateRandomDeltaJewelGroup ();
 			state.Mine.Delta = delta;
 			state.Mine.Grid [targetCoorindinate, state.Mine.DepthUpperBound] = delta.Bottom.Jewel;
@@ -720,11 +721,11 @@ namespace JewelMine.Engine
 		/// Finds the free coordinates for delta.
 		/// </summary>
 		/// <returns></returns>
-		private int[] FindFreeCoordinatesForDelta ()
+		private int[] FindFreeCoordinatesForDelta (int y)
 		{
 			List<int> free = new List<int> ();
 			for (int x = 0; x < state.Mine.Columns; x++) {
-				if (state.Mine.Grid [x, state.Mine.DepthUpperBound] == null)
+				if (state.Mine.Grid [x, y] == null)
 					free.Add (x);
 			}
 			return (free.ToArray ());

@@ -20,7 +20,7 @@ namespace JewelMine.Engine.Models
 		/// <param name="level">Level.</param>
         public GameState(GameLogicUserSettings userSettings, DifficultyLevel level)
         {
-            Mine = new Mine(userSettings.MineColumns, userSettings.MineDepth);
+            Mine = new Mine(userSettings.MineColumns, userSettings.MineDepth, userSettings.MineVisibleDepth);
             Difficulty = new GameDifficulty(level, userSettings);
             PlayState = GamePlayState.NotStarted;
             Level = GameConstants.GAME_DEFAULT_LEVEL;

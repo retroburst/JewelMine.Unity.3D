@@ -9,8 +9,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // TODO:
-// Put some dark transparent square behind game status text if possible
-
+// Add points below **
+// Bug** can keep game going after Game Over by pressing pause continually
+// Bug** on occasion after several finalised collision groups there might be a gap of a jewel - the model is saying there is still something there
+// Bug** game over text didn't stretch as expected on Mac OSX build
 
 /// <summary>
 /// Game controller manages the major components
@@ -295,6 +297,7 @@ public class GameController : MonoBehaviour
 		settings.SaveGamePath = Application.persistentDataPath;
 		settings.MineColumns = configurableSettings.MineColumns;
 		settings.MineDepth = configurableSettings.MineDepth;
+		settings.MineVisibleDepth = configurableSettings.MineVisibleDepth;
 		settings.EasyDifficultySettings = configurableSettings.EasyDifficultySettings;
 		settings.ModerateDifficultySettings = configurableSettings.ModerateDifficultySettings;
 		settings.HardDifficultySettings = configurableSettings.HardDifficultySettings;

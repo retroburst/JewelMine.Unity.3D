@@ -17,20 +17,20 @@ namespace JewelMine.Engine.Models
         /// Initializes a new instance of the <see cref="Mine"/> class.
         /// </summary>
         public Mine()
-            : this(GameConstants.GAME_MINE_DEFAULT_COLUMN_SIZE, GameConstants.GAME_MINE_DEFAULT_DEPTH_SIZE)
+			: this(GameConstants.GAME_MINE_DEFAULT_COLUMN_SIZE, GameConstants.GAME_MINE_DEFAULT_DEPTH_SIZE, GameConstants.GAME_MINE_DEFAULT_DEPTH_SIZE)
         { }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Mine"/> class.
-        /// </summary>
-        /// <param name="columns">The columns.</param>
-        /// <param name="depth">The depth.</param>
-        public Mine(int columns, int depth)
+		/// <summary>
+		/// Initializes a new instance of the <see cref="JewelMine.Engine.Models.Mine"/> class.
+		/// </summary>
+		/// <param name="columns">Columns.</param>
+		/// <param name="depth">Depth.</param>
+		/// <param name="visibleDepth">Visible depth.</param>
+        public Mine(int columns, int depth, int visibleDepth)
         {
-            if (Columns < 0) Columns = GameConstants.GAME_MINE_DEFAULT_COLUMN_SIZE;
-            if (Depth < 0) Depth = GameConstants.GAME_MINE_DEFAULT_DEPTH_SIZE;
             Columns = columns;
             Depth = depth;
+            VisibleDepth = visibleDepth;
             Delta = null;
             Grid = new MineObject[Columns, Depth];
             MarkedCollisions = new List<MarkedCollisionGroup>();
@@ -56,6 +56,12 @@ namespace JewelMine.Engine.Models
         /// The depth.
         /// </value>
         public int Depth { get; private set; }
+        
+		/// <summary>
+		/// Gets the visible depth.
+		/// </summary>
+		/// <value>The visible depth.</value>
+        public int VisibleDepth { get; private set; }
 
         /// <summary>
         /// Gets the delta.
@@ -187,6 +193,15 @@ namespace JewelMine.Engine.Models
 		public int DepthUpperBound
 		{
 			get{ return(Depth-1); }
+		}
+		
+		/// <summary>
+		/// Gets the visible depth upper bound.
+		/// </summary>
+		/// <value>The visible depth upper bound.</value>
+		public int VisibleDepthUpperBound
+		{
+			get{ return(VisibleDepth-1); }
 		}
 
     }

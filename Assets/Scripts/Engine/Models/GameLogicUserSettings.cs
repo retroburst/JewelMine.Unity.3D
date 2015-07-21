@@ -17,6 +17,7 @@ namespace JewelMine.Engine.Models
 		{
 			MineColumns = GameConstants.GAME_MINE_DEFAULT_COLUMN_SIZE;
 			MineDepth = GameConstants.GAME_MINE_DEFAULT_DEPTH_SIZE;
+			MineVisibleDepth = GameConstants.GAME_MINE_DEFAULT_DEPTH_SIZE;
 		}
 
 		/// <summary>
@@ -44,6 +45,12 @@ namespace JewelMine.Engine.Models
 		/// </summary>
 		/// <value>The mine depth.</value>
 		public int MineDepth { get; set; }
+		
+		/// <summary>
+		/// Gets or sets the mine visible depth.
+		/// </summary>
+		/// <value>The mine visible depth.</value>
+		public int MineVisibleDepth { get; set; }
 
 		/// <summary>
 		/// Gets or sets the easy difficulty settings.
