@@ -75,6 +75,37 @@ public class ViewController : IGameView
 		ProcessLevel (logicUpdate);
 		ProcessMessages (logicUpdate);
 		context.AudioSystem.PlaySounds (logicUpdate);
+		if (Debug.isDebugBuild) {
+			DebugCheckAllJewelPositions ();
+		}
+	}
+
+	/// <summary>
+	/// Debugs the check all jewel positions.
+	/// </summary>
+	private void DebugCheckAllJewelPositions ()
+	{
+		for (int x=0; x <= stateProvider.State.Mine.Grid.GetUpperBound(0); x++) {
+			for (int y=0; y <= stateProvider.State.Mine.Grid.GetUpperBound(1); y++) {
+				MineObject m = stateProvider.State.Mine.Grid [x, y];
+				if (m != null && m is Jewel) {
+					Jewel target = (Jewel)m;
+					if (target.GameObject != null) {
+						if (stateProvider.State.Mine.InProgressJewelMovements.Any (movement => movement.Jewel == target))
+							continue;
+						if (target.GameObject.transform.position.x != x || target.GameObject.transform.position.y != y) {
+							string message = string.Format ("Excpected jewel {0} of type {1} to be at {2} but was actually at {3} in the game world.",
+								target.Identifier.ToString (),
+								target.JewelType.ToString (),
+								new Coordinates (x, y).ToString (),
+								new CoordinatesF (target.GameObject.transform.position.x, target.GameObject.transform.position.y)
+							);
+							Logger.LogErrorFormat (message);
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	/// <summary>
@@ -158,7 +189,9 @@ public class ViewController : IGameView
 		foreach (var collision in logicUpdate.FinalisedCollisions) {
 			foreach (var member in collision.Members) {
 				GameObject.Instantiate (context.ExplosionPrefab, member.Jewel.GameObject.transform.position, Quaternion.identity);
-				if(member.Jewel.GameObject != null) { GameObject.Destroy (member.Jewel.GameObject); }
+				if (member.Jewel.GameObject != null) {
+					GameObject.Destroy (member.Jewel.GameObject);
+				}
 			}
 		}
 	}
@@ -172,6 +205,7 @@ public class ViewController : IGameView
 		foreach (var jewelMovement in logicUpdate.ImmediateJewelMovements) {
 			if (jewelMovement.Jewel.GameObject != null) {
 				jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+				Logger.LogFormat ("ViewController->ProcessImmediateJewelMovement: moved jewel {0} from {1} to {2}.", jewelMovement.Jewel, jewelMovement.Original, jewelMovement.New);
 			}
 		}
 	}
@@ -185,6 +219,7 @@ public class ViewController : IGameView
 		foreach (var jewelMovement in logicUpdate.FinalisedJewelMovements) {
 			if (jewelMovement.Jewel.GameObject != null) {
 				jewelMovement.Jewel.GameObject.transform.position = new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0);
+				Logger.LogFormat ("ViewController->ProcessFinalisedJewelMovements: moved jewel {0} from {1} to {2}.", jewelMovement.Jewel, jewelMovement.Original, jewelMovement.New);
 			}
 		}
 	}
@@ -277,13 +312,11 @@ public class ViewController : IGameView
 		foreach (MarkedCollisionGroup mcg in logicUpdate.Collisions) {
 			foreach (CollisionGroupMember m in mcg.Members) {
 				if (mcg.CollisionTickCount % 2 != 0) {
-					if (m.Jewel.GameObject != null)
-					{
+					if (m.Jewel.GameObject != null) {
 						m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = context.CollisionGroupMaterial;
 					}
 				} else {
-					if (m.Jewel.GameObject != null)
-					{
+					if (m.Jewel.GameObject != null) {
 						m.Jewel.GameObject.GetComponent<MeshRenderer> ().material = m.Jewel.GameObject.GetComponent<JewelMaterial> ().rendererMaterial;
 					}
 				}

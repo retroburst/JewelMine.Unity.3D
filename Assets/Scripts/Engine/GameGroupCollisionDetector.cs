@@ -1,4 +1,5 @@
 ﻿using JewelMine.Engine.Models;
+using UnityEngine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace JewelMine.Engine
         /// <param name="logicUpdate">The logic update.</param>
         private void CheckMarkedCollisionGroupsStillValid(GameLogicUpdate logicUpdate)
         {
+			state.Mine.InvalidMarkedCollisions.Clear();
             logicUpdate.InvalidCollisions.Clear();
             // for each collision group, check that each jewel is still
             // in it's position since the collision, if not remove it
@@ -45,7 +47,11 @@ namespace JewelMine.Engine
                     }
                 }
             }
-            if (logicUpdate.InvalidCollisions.Count > 0) state.Mine.MarkedCollisions.RemoveAll(x => logicUpdate.InvalidCollisions.Contains(x));
+            if (logicUpdate.InvalidCollisions.Count > 0) {
+				Logger.LogFormat("GameGroupCollisionDetector->CheckMarkedCollisionGroupsStillValid: found {0} invalid collisions.", logicUpdate.InvalidCollisions.Count);
+            	state.Mine.InvalidMarkedCollisions.AddRange(logicUpdate.InvalidCollisions);
+            	state.Mine.MarkedCollisions.RemoveAll(x => logicUpdate.InvalidCollisions.Contains(x));
+            }
         }
 
         /// <summary>
@@ -129,6 +135,7 @@ namespace JewelMine.Engine
                 {
                     Jewel searchJewel = (Jewel)state.Mine[coordinates];
                     if (searchJewel.JewelType == target.JewelType
+					    && IsJewelStationary(searchJewel, coordinates)
                         && !IsAlreadyMarkedCollision(searchJewel)
                         && (state.Mine.Delta == null || !state.Mine.Delta.IsGroupMember(searchJewel)))
                     {
@@ -152,6 +159,8 @@ namespace JewelMine.Engine
         /// </summary>
         private void AddNewMarkedCollisionGroups()
         {
+        	int newMarkedCollisionsDebugCount = 0;
+        	
             for (int x = state.Mine.Columns - 1; x >= 0; x--)
             {
                 for (int y = state.Mine.Depth - 1; y >= 0; y--)
@@ -183,9 +192,12 @@ namespace JewelMine.Engine
                     {
                         state.Mine.MarkedCollisions.Add(largestCollisionGroup);
                         AddSecondaryCollisionsToGroup(largestCollisionGroup);
+						newMarkedCollisionsDebugCount++;
                     }
                 }
             }
+            
+			if(newMarkedCollisionsDebugCount > 0) { Logger.LogFormat("Found {0} new marked collisions.", newMarkedCollisionsDebugCount); }
         }
 
         /// <summary>
@@ -246,6 +258,7 @@ namespace JewelMine.Engine
                 {
                     Jewel searchJewel = (Jewel)state.Mine[coordinates];
                     if (searchJewel.JewelType == target.JewelType
+					    && IsJewelStationary(searchJewel, coordinates)
                         && !IsAlreadyMarkedCollision(target)
                         && !IsAlreadyMarkedCollision(searchJewel)
                         && (state.Mine.Delta == null || !state.Mine.Delta.IsGroupMember(searchJewel)))
@@ -302,6 +315,7 @@ namespace JewelMine.Engine
                 {
                     Jewel searchJewel = (Jewel)state.Mine[coordinates];
                     if (searchJewel.JewelType == target.JewelType
+					    && IsJewelStationary(searchJewel, coordinates)
                         && !IsAlreadyMarkedCollision(searchJewel)
                         && !groupMembers.Any(x => x.Jewel == searchJewel)
                         && (state.Mine.Delta == null || !state.Mine.Delta.IsGroupMember(searchJewel)))
@@ -330,6 +344,25 @@ namespace JewelMine.Engine
         {
             return (state.Mine.MarkedCollisions.Any(x => x.IsGroupMember(target)));
         }
+        
+        /// <summary>
+        /// Determines whether a jewel is stationary at the specified target coordinates.
+        /// </summary>
+        /// <returns><c>true</c> if this jewel is stationary the specified target coordinates; otherwise, <c>false</c>.</returns>
+        /// <param name="target">Target.</param>
+        /// <param name="coordinates">Coordinates.</param>
+        private bool IsJewelStationary(Jewel target, Coordinates coordinates)
+        {
+        	if(state.Mine[coordinates] == target)
+        	{
+        		return(coordinates.Y == 0 || state.Mine.Grid[coordinates.X, coordinates.Y - 1] != null);
+        	}
+        	else
+        	{
+				Logger.LogWarningFormat("GameGroupCollisionDetector->IsJewelStationary: target jewel {0} was not at expected coordinates {1}.", target.JewelType.ToString(), coordinates.ToString());
+        	}
+        	return(false);
+        }
 
         /// <summary>
         /// Finalises the collision groups.
@@ -340,12 +373,13 @@ namespace JewelMine.Engine
             // move any marked collisions to finalised collisions
             // add new finalised collisions to logic update
             // remove finalised jewels from mine grid
+			if(collisions.Length > 0) { Logger.LogFormat("GameGroupCollisionDetector->FinaliseCollisionGroups: finalising {0} collisions.", collisions.Length); }
             logicUpdate.FinalisedCollisions.Clear();
             state.Mine.FinalisedCollisions.Clear();
             state.Mine.FinalisedCollisions.AddRange(collisions);
+			logicUpdate.FinalisedCollisions.AddRange(collisions);
             state.Mine.MarkedCollisions.RemoveAll(x => collisions.Contains(x));
             state.Mine.FinalisedCollisions.ForEach(x => x.Members.ForEach(y => RemoveFromMine(y)));
-            logicUpdate.FinalisedCollisions.AddRange(collisions);
         }
 
         /// <summary>
@@ -357,7 +391,13 @@ namespace JewelMine.Engine
             MineObject target = state.Mine[member.Coordinates];
             if (target != null && target == member.Jewel)
             {
+				Logger.LogFormat("GameGroupCollisionDetector->RemoveFromMine: removed jewel {0} at {1}.", member.Jewel.JewelType.ToString(), member.Coordinates.ToString());
                 state.Mine[member.Coordinates] = null;
+            }
+            //TODO: remove debugging
+            else
+            {
+				Logger.LogWarning("GameGroupCollisionDetector->RemoveFromMine: target was null or it did not equal the expected jewel.");
             }
         }
 

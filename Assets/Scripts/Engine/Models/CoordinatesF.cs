@@ -74,5 +74,14 @@ namespace JewelMine.Engine.Models
 		/// The y.
 		/// </value>
 		public float Y { get; set; }
+		
+		/// <summary>
+		/// Returns a <see cref="System.String"/> that represents the current <see cref="JewelMine.Engine.Models.Coordinates"/>.
+		/// </summary>
+		/// <returns>A <see cref="System.String"/> that represents the current <see cref="JewelMine.Engine.Models.Coordinates"/>.</returns>
+		public override string ToString ()
+		{
+			return string.Format ("[Coordinates: X={0}, Y={1}]", X, Y);
+		}
 	}
 }

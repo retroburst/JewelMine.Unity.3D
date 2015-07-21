@@ -301,8 +301,7 @@ namespace JewelMine.Engine
 				if (userInputMovement && originalDeltaMovement == MovementType.Down)
 					numPositionsToMove = state.Mine.Depth;
 				MoveDelta (deltaMovement, logicUpdate, numPositionsToMove);
-				if (IsDeltaStationary ())
-					deltaStationary = true;
+				if (IsDeltaStationary ()) { deltaStationary = true; }
 				if (deltaStationary) {
 					if (state.Mine.Delta.StationarySince.HasValue && (state.Mine.Delta.StationarySince.Value + state.Difficulty.DeltaStationaryTimeSpan) < DateTime.Now) {
 						// delta is now in position and a new one will be added
@@ -383,7 +382,7 @@ namespace JewelMine.Engine
 		{
 			float percentageOfJourneyTime = 0.0f;
 			percentageOfJourneyTime = ((Time.time - lastTickTime) / (nextTickTime - lastTickTime));
-			// Debug.Log(string.Format("Precentage of journey time: {0}", percentageOfJourneyTime));
+			// Logger.Log(string.Format("Precentage of journey time: {0}", percentageOfJourneyTime));
 			// round the percentage up
 			if (percentageOfJourneyTime < 0.1f)
 				percentageOfJourneyTime = 0.1f;
@@ -521,10 +520,19 @@ namespace JewelMine.Engine
 			JewelMovement middleJewelMovement = new JewelMovement (){ Jewel = delta.Middle.Jewel, Original = delta.Middle.Coordinates, New = delta.Bottom.Coordinates, JewelGroupMember = delta.Middle, IsDeltaJewelSwap = true };
 			JewelMovement bottomJewelMovement = new JewelMovement (){ Jewel = delta.Bottom.Jewel, Original = delta.Bottom.Coordinates, New = delta.Top.Coordinates, JewelGroupMember = delta.Bottom, IsDeltaJewelSwap = true };
 			
+			Jewel originalTop = delta.Top.Jewel;
+			Jewel originalMiddle = delta.Middle.Jewel;
+			Jewel originalBottom = delta.Bottom.Jewel;
+			
 			delta.Top.Jewel = delta.Bottom.Jewel;
 			delta.Bottom.Jewel = delta.Middle.Jewel;
 			delta.Middle.Jewel = top;
 			
+			// re-map any in-progress movement
+			RemapDeltaInProgressMovement(logicUpdate, originalTop, delta.Top);
+			RemapDeltaInProgressMovement(logicUpdate, originalMiddle, delta.Middle);
+			RemapDeltaInProgressMovement(logicUpdate, originalBottom, delta.Bottom);
+
 			if (state.Mine.CoordinatesInBounds (delta.Top.Coordinates)) {
 				state.Mine [delta.Top.Coordinates] = delta.Top.Jewel;
 				logicUpdate.ImmediateJewelMovements.Add (topJewelMovement);
@@ -538,6 +546,23 @@ namespace JewelMine.Engine
 				logicUpdate.ImmediateJewelMovements.Add (bottomJewelMovement);
 			}
 			logicUpdate.DeltaJewelsSwapped = true;
+			Logger.LogFormat("GameLogic->SwapDeltaJewels: swapped delta jewels\n\nTop:{0}\n\nMiddle:{1}\n\nBottom:{2}", topJewelMovement, middleJewelMovement, bottomJewelMovement);
+		}
+		
+		/// <summary>
+		/// Remaps the delta in progress movement.
+		/// </summary>
+		/// <param name="logicUpdate">Logic update.</param>
+		/// <param name="originalJewel">Original jewel.</param>
+		/// <param name="newJewelGroupMember">New jewel group member.</param>
+		private void RemapDeltaInProgressMovement(GameLogicUpdate logicUpdate, Jewel originalJewel, JewelGroupMember newJewelGroupMember)
+		{
+			var movements = state.Mine.InProgressJewelMovements.Where(x => x.Jewel == originalJewel && x.IsDeltaGroupMovement).ToArray();
+			foreach(var movement in movements)
+			{
+				movement.Jewel = newJewelGroupMember.Jewel;
+				movement.JewelGroupMember = newJewelGroupMember;
+			}
 		}
 
 		/// <summary>

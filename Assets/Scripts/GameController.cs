@@ -8,16 +8,6 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-//DONE: do not pause after game restart from game over or game won
-//DONE: pass in constants (such as "Tap to continue" for mobile version)
-//DONE: mobile phone version of main scene
-//DONE: pass in difficulty constants for mobile version
-//DONE: bigger buttons and panel for UI on mobile
-//TODO: nicer styling of the options panel and control buttons
-//TODO: clean, refactor
-//TODO: register as apple developer (go through rigmarole with xcode etc) and get on app store for free
-//TODO: test on android and get on google play for free
-
 /// <summary>
 /// Game controller manages the major components
 /// of the game and runs the game loop.
@@ -49,12 +39,14 @@ public class GameController : MonoBehaviour
 	public OptionsController optionsController = null;
 	public ConfigurableSettings configurableSettings = null;
 	public SplashController splashController = null;
+	private object lockObject = null;
 	
 	/// <summary>
 	/// Start this instance.
 	/// </summary>
 	public void Start ()
 	{
+		lockObject = new object ();
 		RestoreUserPreferences ();
 		logicInput = new GameLogicInput ();
 		uiEventUpdate = new GameUIEventUpdate ();
@@ -148,18 +140,20 @@ public class GameController : MonoBehaviour
 	{
 		// get input from traditional controls
 		ProcessInput ();
-		if (Time.time >= nextTickTime) {
-			ProcessAxisInput ();
-			GameLogicUpdate logicUpdate = gameLogic.PerformGameLogic (logicInput);
-			view.UpdateView (logicUpdate, uiEventUpdate);
-			// reset user input descriptors
-			logicInput.Clear ();
-			uiEventUpdate.Clear ();
-			nextTickTime = Time.time + GameHelpers.ConvertMillisecondsToSeconds (gameLogic.State.Difficulty.TickSpeedMilliseconds);
-			lastTickTime = Time.time;
+		lock (lockObject) {
+			if (Time.time >= nextTickTime) {
+				ProcessAxisInput ();
+				GameLogicUpdate logicUpdate = gameLogic.PerformGameLogic (logicInput);
+				view.UpdateView (logicUpdate, uiEventUpdate);
+				// reset user input descriptors
+				logicInput.Clear ();
+				uiEventUpdate.Clear ();
+				nextTickTime = Time.time + GameHelpers.ConvertMillisecondsToSeconds (gameLogic.State.Difficulty.TickSpeedMilliseconds);
+				lastTickTime = Time.time;
+			}
 		}
-		GameInProgressMovementLogicUpdate inProgressMovementUpdate = gameLogic.PerformGameInProgressMovementLogic(nextTickTime, lastTickTime);
-		view.UpdateViewInProgressMovement(inProgressMovementUpdate);
+		GameInProgressMovementLogicUpdate inProgressMovementUpdate = gameLogic.PerformGameInProgressMovementLogic (nextTickTime, lastTickTime);
+		view.UpdateViewInProgressMovement (inProgressMovementUpdate);
 	}
 
 	/// <summary>
@@ -178,15 +172,11 @@ public class GameController : MonoBehaviour
 	/// </summary>
 	private void ProcessInput ()
 	{
-		if (optionsController.OptionsShowing || splashController.SplashShowing)
-		{
-			if(Input.GetKeyUp(KeyCode.Escape) && splashController.SplashShowing)
-			{
-				HideSplash();
-			}
-			else if(Input.GetKeyUp(KeyCode.Escape) && optionsController.OptionsShowing)
-			{
-				HideOptions();
+		if (optionsController.OptionsShowing || splashController.SplashShowing) {
+			if (Input.GetKeyUp (KeyCode.Escape) && splashController.SplashShowing) {
+				HideSplash ();
+			} else if (Input.GetKeyUp (KeyCode.Escape) && optionsController.OptionsShowing) {
+				HideOptions ();
 			}
 			return;
 		}
@@ -233,10 +223,10 @@ public class GameController : MonoBehaviour
 			logicInput.PauseGame = true;
 		}
 		if (Input.GetKeyUp (KeyCode.Escape) && !splashController.SplashShowing) {
-			ShowSplash();
+			ShowSplash ();
 		}
 		if (Input.GetKeyUp (KeyCode.Menu) && !optionsController.OptionsShowing) {
-			ShowOptions();
+			ShowOptions ();
 		}
 	}
 
@@ -427,7 +417,7 @@ public class GameController : MonoBehaviour
 	/// <summary>
 	/// Shows the options.
 	/// </summary>
-	public void ShowOptions()
+	public void ShowOptions ()
 	{
 		uiEventUpdate.ShowOptions = true;
 		logicInput.PauseGame = true;
@@ -436,7 +426,7 @@ public class GameController : MonoBehaviour
 	/// <summary>
 	/// Hides the options.
 	/// </summary>
-	public void HideOptions()
+	public void HideOptions ()
 	{
 		uiEventUpdate.HideOptions = true;
 		logicInput.GameStarted = true;
@@ -445,7 +435,7 @@ public class GameController : MonoBehaviour
 	/// <summary>
 	/// Shows the splash.
 	/// </summary>
-	public void ShowSplash()
+	public void ShowSplash ()
 	{
 		uiEventUpdate.ShowSplash = true;
 		logicInput.PauseGame = true;
@@ -454,7 +444,7 @@ public class GameController : MonoBehaviour
 	/// <summary>
 	/// Hides the splash.
 	/// </summary>
-	public void HideSplash()
+	public void HideSplash ()
 	{
 		uiEventUpdate.HideSplash = true;
 		logicInput.GameStarted = true;

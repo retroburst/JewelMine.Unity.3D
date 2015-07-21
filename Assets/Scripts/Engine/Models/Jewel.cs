@@ -39,6 +39,15 @@ namespace JewelMine.Engine.Models
         public Guid Identifier { get; private set; }
 
 		/// <summary>
+		/// Returns a <see cref="System.String"/> that represents the current <see cref="JewelMine.Engine.Models.Jewel"/>.
+		/// </summary>
+		/// <returns>A <see cref="System.String"/> that represents the current <see cref="JewelMine.Engine.Models.Jewel"/>.</returns>
+		public override string ToString ()
+		{
+			return string.Format ("[Jewel: JewelType={0}, Identifier={1}]", JewelType, Identifier);
+		}
+
+		/// <summary>
 		/// Gets or sets the game object.
 		/// </summary>
 		/// <value>The game object.</value>

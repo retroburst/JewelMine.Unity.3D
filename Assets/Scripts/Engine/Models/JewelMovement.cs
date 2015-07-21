@@ -67,5 +67,15 @@ namespace JewelMine.Engine.Models
 		/// </summary>
 		/// <value>The new interpolar.</value>
 		public CoordinatesF NewInterpolar { get; set; }
+		
+		/// <summary>
+		/// Returns a <see cref="System.String"/> that represents the current <see cref="JewelMine.Engine.Models.JewelMovement"/>.
+		/// </summary>
+		/// <returns>A <see cref="System.String"/> that represents the current <see cref="JewelMine.Engine.Models.JewelMovement"/>.</returns>
+		public override string ToString ()
+		{
+			return string.Format ("[JewelMovement: Jewel={0}, IsDeltaGroupMovement={1}, IsDeltaJewelSwap={2}, JewelGroupMember={3}, Original={4}, OriginalInterpolar={5}, New={6}, NewInterpolar={7}]", Jewel, IsDeltaGroupMovement, IsDeltaJewelSwap, JewelGroupMember, Original, OriginalInterpolar, New, NewInterpolar);
+		}
+		
 	}
 }

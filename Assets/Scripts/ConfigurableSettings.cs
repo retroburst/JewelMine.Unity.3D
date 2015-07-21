@@ -33,4 +33,5 @@ public class ConfigurableSettings : MonoBehaviour {
 	public DifficultySettings ModerateDifficultySettings = null;
 	public DifficultySettings HardDifficultySettings = null;
 	public DifficultySettings ImpossibleDifficultySettings = null;
+	
 }
