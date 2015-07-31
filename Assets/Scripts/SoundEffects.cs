@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
+/// <summary>
+/// Manages and plays sound effects.
+/// </summary>
 public class SoundEffects : MonoBehaviour {
 	public List<AudioClip> audioClips = null;
 	private AudioSource audioPlayer = null;
@@ -35,8 +38,7 @@ public class SoundEffects : MonoBehaviour {
 	/// </summary>
 	public void PlayCollision()
 	{
-		audioPlayer.clip = audioClipTypeDictionary[AudioClipType.Collision];
-		audioPlayer.Play();
+		audioPlayer.PlayOneShot(audioClipTypeDictionary[AudioClipType.Collision]);
 	}
 
 	/// <summary>
@@ -44,8 +46,7 @@ public class SoundEffects : MonoBehaviour {
 	/// </summary>
 	public void PlayLevelUp()
 	{
-		audioPlayer.clip = audioClipTypeDictionary[AudioClipType.LevelUp];
-		audioPlayer.Play();
+		audioPlayer.PlayOneShot(audioClipTypeDictionary[AudioClipType.LevelUp]);
 	}
 
 	/// <summary>
@@ -53,8 +54,7 @@ public class SoundEffects : MonoBehaviour {
 	/// </summary>
 	public void PlayStationary()
 	{
-		audioPlayer.clip = audioClipTypeDictionary[AudioClipType.Stationary];
-		audioPlayer.Play();
+		audioPlayer.PlayOneShot(audioClipTypeDictionary[AudioClipType.Stationary]);
 	}
 
 	/// <summary>
@@ -62,8 +62,7 @@ public class SoundEffects : MonoBehaviour {
 	/// </summary>
 	public void PlaySwap()
 	{
-		audioPlayer.clip = audioClipTypeDictionary[AudioClipType.Swap];
-		audioPlayer.Play();
+		audioPlayer.PlayOneShot(audioClipTypeDictionary[AudioClipType.Swap]);
 	}
 
 	private enum AudioClipType {

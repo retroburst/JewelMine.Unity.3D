@@ -10,10 +10,7 @@ using UnityEngine.UI;
 
 // TODO:
 // Add points below **
-// Bug** can keep game going after Game Over by pressing pause continually
 // Bug** on occasion after several finalised collision groups there might be a gap of a jewel - the model is saying there is still something there
-// Bug** game over text didn't stretch as expected on Mac OSX build
-// Bug** sound sources are not mixing, for instance only hearing the level up noise when it continually goes up
 
 /// <summary>
 /// Game controller manages the major components
@@ -359,16 +356,6 @@ public class GameController : MonoBehaviour
 		if (pauseState)
 			logicInput.GameStarted = true;
 		else
-			logicInput.PauseGame = true;
-	}
-
-	/// <summary>
-	/// Pauses the game.
-	/// </summary>
-	public void PauseGame ()
-	{
-		bool pauseState = gameLogic.State.PlayState == GamePlayState.Paused;
-		if (!pauseState)
 			logicInput.PauseGame = true;
 	}
 
