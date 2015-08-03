@@ -369,13 +369,13 @@ namespace JewelMine.Engine
 		{
 			MineObject target = state.Mine [member.Coordinates];
 			if (target != null && target == member.Jewel) {
-				Logger.LogFormat ("GameGroupCollisionDetector->RemoveFromMine: removed jewel {0} at {1}.", member.Jewel.JewelType.ToString (), member.Coordinates.ToString ());
+				Logger.LogFormat ("GameGroupCollisionDetector->RemoveFromMine: removed jewel {0} at {1}.", member.Jewel, member.Coordinates);
 				state.Mine [member.Coordinates] = null;
 			} else {
 				if (target == null) {
-					Logger.LogWarningFormat ("GameGroupCollisionDetector->RemoveFromMine: target was null, there was no jewel {0} at {1} as expected.", member.Jewel.ToString(), member.Coordinates.ToString());
+					Logger.LogWarningFormat ("GameGroupCollisionDetector->RemoveFromMine: target was null, there was no jewel {0} at {1} as expected.", member.Jewel, member.Coordinates);
 				} else {
-					Logger.LogWarningFormat ("GameGroupCollisionDetector->RemoveFromMine: target does not equal expected jewel. Expected jewel {0} at {1}, but found {2}.", member.Jewel.ToString(), member.Coordinates.ToString(), target.ToString());
+					Logger.LogWarningFormat ("GameGroupCollisionDetector->RemoveFromMine: target does not equal expected jewel. Expected jewel {0} at {1}, but found {2}.", member.Jewel, member.Coordinates, target);
 				}
 			}
 		}

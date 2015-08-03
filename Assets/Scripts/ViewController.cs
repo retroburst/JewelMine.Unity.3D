@@ -96,10 +96,6 @@ public class ViewController : IGameView
 						{	
 							continue;
 						}
-						if(y != 0 && stateProvider.State.Mine.Grid[x, y-1] == null)
-						{
-							Logger.LogWarningFormat("Found a hole under jewel {0} at {1}. Hole was at {2}.", target, (new Coordinates(x, y)), (new Coordinates(x, y-1)));
-						}
 						if (target.GameObject.transform.position.x != x || target.GameObject.transform.position.y != y) {
 							string message = string.Format ("Excpected jewel {0} of type {1} to be at {2} but was actually at {3} in the game world.",
 								target.Identifier.ToString (),
@@ -195,9 +191,14 @@ public class ViewController : IGameView
 	{
 		foreach (var collision in logicUpdate.FinalisedCollisions) {
 			foreach (var member in collision.Members) {
-				GameObject.Instantiate (context.ExplosionPrefab, member.Jewel.GameObject.transform.position, Quaternion.identity);
 				if (member.Jewel.GameObject != null) {
+					Logger.LogFormat("ViewController->ProcessFinalisedGroupCollisions: finalised collision destroying game object of member jewel {0} at {1}.", member.Jewel, member.Coordinates);
+					GameObject.Instantiate (context.ExplosionPrefab, member.Jewel.GameObject.transform.position, Quaternion.identity);
 					GameObject.Destroy (member.Jewel.GameObject);
+				}
+				else
+				{
+					Logger.LogWarningFormat("ViewController->ProcessFinalisedGroupCollisions: finalised collision but member jewel {0} at {1} has had it's game object already destroyed.", member.Jewel, member.Coordinates);
 				}
 			}
 		}
@@ -273,6 +274,7 @@ public class ViewController : IGameView
 	/// </summary>
 	private void ReInitialiseView ()
 	{
+		Logger.Log("ViewController->ReInitialiseView: destroying all existing jewel game objects.");
 		GameObject[] jewels = GameObject.FindGameObjectsWithTag ("Jewel");
 		jewels.ForEach (x => GameObject.Destroy (x));
 		AddInitialJewelsToView ();
@@ -305,11 +307,17 @@ public class ViewController : IGameView
 		}
 
 		if (logicUpdate.DifficultyChanged)
+		{
 			ReInitialiseView ();
+		}
 		if (logicUpdate.GameLoaded)
+		{
 			ReInitialiseView ();
+		}
 		if (logicUpdate.GameWasRestarted)
+		{
 			ReInitialiseView ();
+		}
 	}
 
 	/// <summary>

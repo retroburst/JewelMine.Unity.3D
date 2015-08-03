@@ -330,6 +330,7 @@ namespace JewelMine.Engine
 		private void ProcessCollisions (GameLogicUpdate logicUpdate)
 		{
 			state.Mine.MarkedCollisions.ForEach (x => x.IncrementCollisionTickCount ());
+			collisionDetector.MarkGroupCollisions (logicUpdate);
 			var markedCollisionsForFinalising = state.Mine.MarkedCollisions.Where (x => x.CollisionTickCount >= state.CollisionFinailseTickCount).ToArray ();
 			collisionDetector.FinaliseCollisionGroups (logicUpdate, markedCollisionsForFinalising);
 			if (markedCollisionsForFinalising.Length > 0) {
@@ -337,7 +338,6 @@ namespace JewelMine.Engine
 				scores.ForEach (x => logicUpdate.Messages.Add (string.Format (GameConstants.GAME_MESSAGE_POINTS_SCORED_PATTERN, x.Value)));
 				state.Score += scores.Sum (x => x.Value);
 			}
-			collisionDetector.MarkGroupCollisions (logicUpdate);
 		}
 
 		/// <summary>
