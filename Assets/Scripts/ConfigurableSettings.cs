@@ -29,6 +29,9 @@ public class ConfigurableSettings : MonoBehaviour {
 	public int MineColumns = GameConstants.GAME_MINE_DEFAULT_COLUMN_SIZE;
 	public int MineDepth = GameConstants.GAME_MINE_DEFAULT_DEPTH_SIZE;
 	public int MineVisibleDepth = GameConstants.GAME_MINE_DEFAULT_DEPTH_SIZE;
+	
+	public bool DebugRestrictAvailableJewelTypes = false;
+	public int DebugRestrictAvailableJewelTypesCount = 4; 
 
 	public DifficultySettings EasyDifficultySettings = null;
 	public DifficultySettings ModerateDifficultySettings = null;

@@ -88,11 +88,18 @@ public class ViewController : IGameView
 		for (int x=0; x <= stateProvider.State.Mine.Grid.GetUpperBound(0); x++) {
 			for (int y=0; y <= stateProvider.State.Mine.Grid.GetUpperBound(1); y++) {
 				MineObject m = stateProvider.State.Mine.Grid [x, y];
+				if(m != null && m.GetType() != typeof(Jewel)) { Logger.LogWarningFormat ("The mine object at {0} is not of type Jewel but is a [{1}].", (new Coordinates(x, y)), m.GetType().Name); }
 				if (m != null && m is Jewel) {
 					Jewel target = (Jewel)m;
 					if (target.GameObject != null) {
 						if (stateProvider.State.Mine.InProgressJewelMovements.Any (movement => movement.Jewel == target))
+						{	
 							continue;
+						}
+						if(y != 0 && stateProvider.State.Mine.Grid[x, y-1] == null)
+						{
+							Logger.LogWarningFormat("Found a hole under jewel {0} at {1}. Hole was at {2}.", target, (new Coordinates(x, y)), (new Coordinates(x, y-1)));
+						}
 						if (target.GameObject.transform.position.x != x || target.GameObject.transform.position.y != y) {
 							string message = string.Format ("Excpected jewel {0} of type {1} to be at {2} but was actually at {3} in the game world.",
 								target.Identifier.ToString (),

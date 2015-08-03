@@ -75,6 +75,19 @@ namespace JewelMine.Engine.Models
 		/// </summary>
 		/// <value>The impossible difficulty settings.</value>
 		public IGameDifficultySettingsProvider ImpossibleDifficultySettings { get; set; }
+		
+		/// <summary>
+		/// Gets or sets a value indicating whether this <see cref="JewelMine.Engine.Models.GameLogicUserSettings"/> debug
+		/// restrict available jewel types.
+		/// </summary>
+		/// <value><c>true</c> if debug restrict available jewel types; otherwise, <c>false</c>.</value>
+		public bool DebugRestrictAvailableJewelTypes { get; set; }
+		
+		/// <summary>
+		/// Gets or sets the debug restrict available jewel types count.
+		/// </summary>
+		/// <value>The debug restrict available jewel types count.</value>
+		public int DebugRestrictAvailableJewelTypesCount { get; set; }
 
 	}
 }

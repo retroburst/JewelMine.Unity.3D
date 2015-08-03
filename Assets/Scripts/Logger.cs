@@ -147,7 +147,7 @@ public static class Logger
 	public static void LogWarningFormat (string format, params object[] args)
 	{
 		if (Debug.isDebugBuild)
-			LogWarningFormat (format, args);
+			Debug.LogWarningFormat (format, args);
 	}
 	
 	/// <summary>

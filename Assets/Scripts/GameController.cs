@@ -11,6 +11,7 @@ using UnityEngine.UI;
 // TODO:
 // Add points below **
 // Bug** on occasion after several finalised collision groups there might be a gap of a jewel - the model is saying there is still something there
+// Bug** when pressing down to get the delta to drop immediately, if all jewels are not on the screen yet, they bounce down seperately
 
 /// <summary>
 /// Game controller manages the major components
@@ -45,6 +46,7 @@ public class GameController : MonoBehaviour
 	public ConfigurableSettings configurableSettings = null;
 	public SplashController splashController = null;
 	private object lockObject = null;
+	private bool initialised = false;
 	
 	/// <summary>
 	/// Start this instance.
@@ -65,6 +67,7 @@ public class GameController : MonoBehaviour
 		swipeInput.RightSwipeDetected += HandleRightSwipeDetected;
 		swipeInput.DownSwipeDetected += HandleDownSwipeDetected;
 		swipeInput.TapDetected += HandleTapDetected;
+		initialised = true;
 	}
 
 	/// <summary>
@@ -144,6 +147,9 @@ public class GameController : MonoBehaviour
 	/// </summary>
 	public void Update ()
 	{
+		if (!initialised) {
+			return;
+		}
 		// get input from traditional controls
 		ProcessInput ();
 		lock (lockObject) {
@@ -300,6 +306,8 @@ public class GameController : MonoBehaviour
 		settings.ModerateDifficultySettings = configurableSettings.ModerateDifficultySettings;
 		settings.HardDifficultySettings = configurableSettings.HardDifficultySettings;
 		settings.ImpossibleDifficultySettings = configurableSettings.ImpossibleDifficultySettings;
+		settings.DebugRestrictAvailableJewelTypes = configurableSettings.DebugRestrictAvailableJewelTypes;
+		settings.DebugRestrictAvailableJewelTypesCount = configurableSettings.DebugRestrictAvailableJewelTypesCount;
 	}
 
 	/// <summary>

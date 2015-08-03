@@ -667,7 +667,14 @@ namespace JewelMine.Engine
 		/// <returns></returns>
 		private JewelType GenerateRandomJewelType ()
 		{
-			int randomIndex = UnityEngine.Random.Range (0, jewelTypes.Length);
+			int randomIndex = 0;
+			if (userSettings.DebugRestrictAvailableJewelTypes) {
+				randomIndex = UnityEngine.Random.Range (0, Math.Min(userSettings.DebugRestrictAvailableJewelTypesCount-1, jewelTypes.Length));
+			}
+			else
+			{
+				randomIndex = UnityEngine.Random.Range (0, jewelTypes.Length);
+			}
 			return (jewelTypes [randomIndex]);
 		}
 
@@ -678,10 +685,16 @@ namespace JewelMine.Engine
 		/// <returns></returns>
 		private JewelType GenerateRandomJewelType (params JewelType[] avoidTypes)
 		{
-			JewelType[] jewelTypesToUse = jewelTypes.Where (x => !avoidTypes.Contains (x)).ToArray ();
+			JewelType[] jewelTypesToUse = null;
+			if (userSettings.DebugRestrictAvailableJewelTypes) {
+				jewelTypesToUse = jewelTypes.Take (userSettings.DebugRestrictAvailableJewelTypesCount).Where (x => !avoidTypes.Contains (x)).ToArray ();
+			} else {
+				jewelTypesToUse = jewelTypes.Where (x => !avoidTypes.Contains (x)).ToArray ();
+			}
 			// if surrounded by all types of jewels (i.e. avoid all types) return a random
-			if (jewelTypesToUse.Length == 0)
+			if (jewelTypesToUse.Length == 0) {
 				return (GenerateRandomJewelType ());
+			}
 			int randomIndex = UnityEngine.Random.Range (0, jewelTypesToUse.Length);
 			return (jewelTypesToUse [randomIndex]);
 		}
