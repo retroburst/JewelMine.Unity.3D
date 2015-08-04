@@ -10,7 +10,6 @@ using UnityEngine.UI;
 
 // TODO:
 // Add points below **
-// Bug** on occasion after several finalised collision groups there might be a gap of a jewel - the model is saying there is still something there
 // Bug** when pressing down to get the delta to drop immediately, if all jewels are not on the screen yet, they bounce down seperately
 
 /// <summary>

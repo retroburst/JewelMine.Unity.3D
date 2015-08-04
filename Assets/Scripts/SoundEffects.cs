@@ -38,7 +38,7 @@ public class SoundEffects : MonoBehaviour {
 	/// </summary>
 	public void PlayCollision()
 	{
-		audioPlayer.PlayOneShot(audioClipTypeDictionary[AudioClipType.Collision]);
+		audioPlayer.PlayOneShot(audioClipTypeDictionary[AudioClipType.Collision], 1.0f);
 	}
 
 	/// <summary>
@@ -46,7 +46,7 @@ public class SoundEffects : MonoBehaviour {
 	/// </summary>
 	public void PlayLevelUp()
 	{
-		audioPlayer.PlayOneShot(audioClipTypeDictionary[AudioClipType.LevelUp]);
+		audioPlayer.PlayOneShot(audioClipTypeDictionary[AudioClipType.LevelUp], 0.50f);
 	}
 
 	/// <summary>
@@ -54,7 +54,7 @@ public class SoundEffects : MonoBehaviour {
 	/// </summary>
 	public void PlayStationary()
 	{
-		audioPlayer.PlayOneShot(audioClipTypeDictionary[AudioClipType.Stationary]);
+		audioPlayer.PlayOneShot(audioClipTypeDictionary[AudioClipType.Stationary], 0.50f);
 	}
 
 	/// <summary>
@@ -62,9 +62,9 @@ public class SoundEffects : MonoBehaviour {
 	/// </summary>
 	public void PlaySwap()
 	{
-		audioPlayer.PlayOneShot(audioClipTypeDictionary[AudioClipType.Swap]);
+		audioPlayer.PlayOneShot(audioClipTypeDictionary[AudioClipType.Swap], 0.35f);
 	}
-
+	
 	private enum AudioClipType {
 		Collision,
 		LevelUp,
