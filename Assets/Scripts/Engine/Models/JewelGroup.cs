@@ -57,20 +57,6 @@ namespace JewelMine.Engine.Models
         }
 
         /// <summary>
-        /// Gets a value indicating whether this instance has whole group entered bounds.
-        /// </summary>
-        /// <value>
-        /// <c>true</c> if this instance has whole group entered bounds; otherwise, <c>false</c>.
-        /// </value>
-        public bool HasWholeGroupEnteredBounds
-        {
-            get
-            {
-                return (Top.HasEnteredBounds && Middle.HasEnteredBounds && Bottom.HasEnteredBounds);
-            }
-        }
-
-        /// <summary>
         /// Determines whether [is group member] [the specified jewel].
         /// </summary>
         /// <param name="jewel">The jewel.</param>
