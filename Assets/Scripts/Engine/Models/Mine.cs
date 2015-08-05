@@ -150,7 +150,7 @@ namespace JewelMine.Engine.Models
         }
 
         /// <summary>
-        /// Coordinateses the in bounds.
+        /// Coordinateses in bounds.
         /// </summary>
         /// <param name="target">The target.</param>
         /// <returns></returns>
@@ -160,6 +160,18 @@ namespace JewelMine.Engine.Models
             return (target.X >= 0 && target.X < Columns
                 && target.Y >= 0 && target.Y < Depth);
         }
+        
+        /// <summary>
+        /// Coordinateses in visible bounds.
+        /// </summary>
+        /// <returns><c>true</c>, if in visible bounds was coordinatesed, <c>false</c> otherwise.</returns>
+        /// <param name="target">Target.</param>
+		public bool CoordinatesInVisibleBounds(Coordinates target)
+		{
+			if (target == null) throw new ArgumentException("Argument cannot be null.", "target");
+			return (target.X >= 0 && target.X < Columns
+			        && target.Y >= 0 && target.Y < VisibleDepth);
+		}
 
         /// <summary>
         /// Determines whether this instance is empty.

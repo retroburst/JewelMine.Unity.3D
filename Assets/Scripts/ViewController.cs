@@ -85,8 +85,8 @@ public class ViewController : IGameView
 	/// </summary>
 	private void DebugCheckAllJewelPositions ()
 	{
-		for (int x=0; x <= stateProvider.State.Mine.Grid.GetUpperBound(0); x++) {
-			for (int y=0; y <= stateProvider.State.Mine.Grid.GetUpperBound(1); y++) {
+		for (int x=0; x <= stateProvider.State.Mine.ColumnsUpperBound; x++) {
+			for (int y=0; y <= stateProvider.State.Mine.DepthUpperBound; y++) {
 				MineObject m = stateProvider.State.Mine.Grid [x, y];
 				if(m != null && m.GetType() != typeof(Jewel)) { Logger.LogWarningFormat ("The mine object at {0} is not of type Jewel but is a [{1}].", (new Coordinates(x, y)), m.GetType().Name); }
 				if (m != null && m is Jewel) {

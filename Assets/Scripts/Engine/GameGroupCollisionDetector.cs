@@ -124,7 +124,7 @@ namespace JewelMine.Engine
 		private void AddNewMembersToMarkedCollisionGroupByDirection (Jewel target, Coordinates targetCoordinates, Func<Coordinates, Coordinates> moveSearch, MarkedCollisionGroup group)
 		{
 			Coordinates coordinates = moveSearch (targetCoordinates);
-			while (state.Mine.CoordinatesInBounds(coordinates)) {
+			while (state.Mine.CoordinatesInVisibleBounds(coordinates)) {
 				// see how many in a row up that are not already marked
 				if (state.Mine [coordinates] != null && state.Mine [coordinates] is Jewel) {
 					Jewel searchJewel = (Jewel)state.Mine [coordinates];
@@ -151,7 +151,7 @@ namespace JewelMine.Engine
 			int newMarkedCollisionsDebugCount = 0;
         	
 			for (int x = state.Mine.Columns - 1; x >= 0; x--) {
-				for (int y = state.Mine.Depth - 1; y >= 0; y--) {
+				for (int y = state.Mine.VisibleDepth - 1; y >= 0; y--) {
 					List<MarkedCollisionGroup> foundCollisionGroups = new List<MarkedCollisionGroup> ();
 					MineObject mineObject = state.Mine.Grid [x, y];
 					if (mineObject == null || mineObject.GetType () != typeof(Jewel))
@@ -245,7 +245,7 @@ namespace JewelMine.Engine
 		private void FindCollisionsByDirection (Jewel target, Coordinates targetCoordinates, Func<Coordinates, Coordinates> moveSearch, List<CollisionGroupMember> foundCollisions)
 		{
 			Coordinates coordinates = moveSearch (targetCoordinates);
-			while (state.Mine.CoordinatesInBounds(coordinates)) {
+			while (state.Mine.CoordinatesInVisibleBounds(coordinates)) {
 				// see how many in a row up that are not already marked
 				if (state.Mine [coordinates] != null && state.Mine [coordinates] is Jewel) {
 					Jewel searchJewel = (Jewel)state.Mine [coordinates];
@@ -295,7 +295,7 @@ namespace JewelMine.Engine
 		private void FindSeconadryCollisionsByDirection (Jewel target, Coordinates targetCoordinates, Func<Coordinates, Coordinates> moveSearch, List<CollisionGroupMember> foundCollisions, CollisionGroupMember[] groupMembers)
 		{
 			Coordinates coordinates = moveSearch (targetCoordinates);
-			while (state.Mine.CoordinatesInBounds(coordinates)) {
+			while (state.Mine.CoordinatesInVisibleBounds(coordinates)) {
 				// see how many in a row up that are not already marked
 				if (state.Mine [coordinates] != null && state.Mine [coordinates] is Jewel) {
 					Jewel searchJewel = (Jewel)state.Mine [coordinates];
