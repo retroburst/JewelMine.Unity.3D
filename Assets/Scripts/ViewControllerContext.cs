@@ -96,4 +96,10 @@ public class ViewControllerContext
 	/// <value>The audio system.</value>
 	public IGameAudioSystem AudioSystem { get; set; }
 	
+	/// <summary>
+	/// Gets or sets the game object pool manager.
+	/// </summary>
+	/// <value>The game object pool manager.</value>
+	public GameObjectPoolManager GameObjectPoolManager { get; set; }
+	
 }

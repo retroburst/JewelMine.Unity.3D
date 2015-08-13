@@ -193,8 +193,10 @@ public class ViewController : IGameView
 			foreach (var member in collision.Members) {
 				if (member.Jewel.GameObject != null) {
 					Logger.LogFormat("ViewController->ProcessFinalisedGroupCollisions: finalised collision destroying game object of member jewel {0} at {1}.", member.Jewel, member.Coordinates);
-					GameObject.Instantiate (context.ExplosionPrefab, member.Jewel.GameObject.transform.position, Quaternion.identity);
-					GameObject.Destroy (member.Jewel.GameObject);
+					GameObject pooledExplosion = context.GameObjectPoolManager.GetPool(context.ExplosionPrefab).Take(member.Jewel.GameObject.transform.position, Quaternion.identity);
+					pooledExplosion.SetActive(true);
+					// allow the pool to re-allocate this jewel
+					member.Jewel.GameObject.SetActive(false);
 				}
 				else
 				{
@@ -264,8 +266,9 @@ public class ViewController : IGameView
 		newJewels.AddRange (logicUpdate.ImmediateJewelMovements.Where (x => x.Jewel.GameObject == null).ToArray ());
 		foreach (var jewelMovement in newJewels) {
 			GameObject targetType = jewelTypeDictionary [jewelMovement.Jewel.JewelType];
-			GameObject newJewelGameObject = (GameObject)GameObject.Instantiate (targetType, new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0), Quaternion.identity);
-			jewelMovement.Jewel.GameObject = newJewelGameObject;
+			GameObject pooledJewelGameObject = context.GameObjectPoolManager.GetPool(targetType).Take(new Vector3 (jewelMovement.New.X, jewelMovement.New.Y, 0), Quaternion.identity);
+			jewelMovement.Jewel.GameObject = pooledJewelGameObject;
+			pooledJewelGameObject.SetActive(true);
 		}
 	}
 	
@@ -276,7 +279,7 @@ public class ViewController : IGameView
 	{
 		Logger.Log("ViewController->ReInitialiseView: destroying all existing jewel game objects.");
 		GameObject[] jewels = GameObject.FindGameObjectsWithTag ("Jewel");
-		jewels.ForEach (x => GameObject.Destroy (x));
+		jewels.ForEach (x => x.SetActive(false));
 		AddInitialJewelsToView ();
 		context.DifficultyText.text = stateProvider.State.Difficulty.DifficultyLevel.ToString ();
 	}
@@ -377,8 +380,9 @@ public class ViewController : IGameView
 					Jewel jewel = (Jewel)stateProvider.State.Mine.Grid [x, y];
 					if (jewel.GameObject == null) {
 						GameObject targetType = jewelTypeDictionary [jewel.JewelType];
-						GameObject newJewelGameObject = (GameObject)GameObject.Instantiate (targetType, new Vector3 (x, y, 0), Quaternion.identity);
-						jewel.GameObject = newJewelGameObject;
+						GameObject pooledJewelGameObject = context.GameObjectPoolManager.GetPool(targetType).Take(new Vector3 (x, y, 0), Quaternion.identity);
+						pooledJewelGameObject.SetActive(true);
+						jewel.GameObject = pooledJewelGameObject;
 					}
 				}
 			}

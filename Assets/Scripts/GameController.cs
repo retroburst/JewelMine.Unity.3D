@@ -8,10 +8,6 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-// TODO:
-// Add points below **
-// Bug** when pressing down to get the delta to drop immediately, if all jewels are not on the screen yet, they bounce down seperately
-
 /// <summary>
 /// Game controller manages the major components
 /// of the game and runs the game loop.
@@ -44,14 +40,19 @@ public class GameController : MonoBehaviour
 	public OptionsController optionsController = null;
 	public ConfigurableSettings configurableSettings = null;
 	public SplashController splashController = null;
+	public int jewelPoolSize = 20;
+	public int explosionPoolSize = 10;
 	private object lockObject = null;
 	private bool initialised = false;
+	private GameObjectPoolManager gameObjectPoolManager = null;
 	
 	/// <summary>
 	/// Start this instance.
 	/// </summary>
 	public void Start ()
 	{
+		gameObjectPoolManager = new GameObjectPoolManager(10);
+		InitialiseGameObjectPools();
 		lockObject = new object ();
 		RestoreUserPreferences ();
 		logicInput = new GameLogicInput ();
@@ -68,7 +69,16 @@ public class GameController : MonoBehaviour
 		swipeInput.TapDetected += HandleTapDetected;
 		initialised = true;
 	}
-
+	
+	/// <summary>
+	/// Initialises the game object pools.
+	/// </summary>
+	private void InitialiseGameObjectPools()
+	{
+		gameObjectPoolManager.AddPools(jewelPrefabs, jewelPoolSize);
+		gameObjectPoolManager.AddPool(explosionPrefab, explosionPoolSize);
+	}
+	
 	/// <summary>
 	/// Builds the view controller context.
 	/// </summary>
@@ -91,6 +101,7 @@ public class GameController : MonoBehaviour
 		result.OptionsController = optionsController;
 		result.AudioSystem = audioSystem;
 		result.GameStatePanel = gameStatePanel;
+		result.GameObjectPoolManager = gameObjectPoolManager;
 		return(result);
 	}
 
