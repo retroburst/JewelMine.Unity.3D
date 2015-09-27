@@ -102,6 +102,7 @@ public class GameController : MonoBehaviour
 		result.AudioSystem = audioSystem;
 		result.GameStatePanel = gameStatePanel;
 		result.GameObjectPoolManager = gameObjectPoolManager;
+		result.StartCoroutineMethod = StartCoroutine;
 		return(result);
 	}
 
@@ -195,9 +196,14 @@ public class GameController : MonoBehaviour
 	private void ProcessInput ()
 	{
 		if (optionsController.OptionsShowing || splashController.SplashShowing) {
-			if (Input.GetKeyUp (KeyCode.Escape) && splashController.SplashShowing) {
+			// if splash showing and user pressed escape - quit game
+			if(splashController.SplashShowing && Input.GetKeyUp(KeyCode.Escape)) {
+				QuitGame();
+			// else any other key pressed - play game
+			} else if (splashController.SplashShowing && Input.anyKey) {
 				HideSplash ();
-			} else if (Input.GetKeyUp (KeyCode.Escape) && optionsController.OptionsShowing) {
+			// if options showing and escape pressed - hide options
+			} else if (optionsController.OptionsShowing && Input.GetKeyUp (KeyCode.Escape)) {
 				HideOptions ();
 			}
 			return;

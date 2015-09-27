@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using JewelMine.Engine;
@@ -101,5 +102,11 @@ public class ViewControllerContext
 	/// </summary>
 	/// <value>The game object pool manager.</value>
 	public GameObjectPoolManager GameObjectPoolManager { get; set; }
+	
+	/// <summary>
+	/// Gets or sets the start coroutine method.
+	/// </summary>
+	/// <value>The start coroutine method.</value>
+	public Func<IEnumerator, Coroutine> StartCoroutineMethod { get; set; }
 	
 }
