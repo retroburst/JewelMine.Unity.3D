@@ -8,6 +8,8 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
+//BUG: retart level leaves the score and level number same as before game was restarted
+
 /// <summary>
 /// Game controller manages the major components
 /// of the game and runs the game loop.
@@ -32,6 +34,7 @@ public class GameController : MonoBehaviour
 	public List<Text> gameMessageSlots = null;
 	public GameObject gameStatePanel = null;
 	public GameObject explosionPrefab = null;
+	public GameObject fireworksPrefab = null;
 	private bool savedUserPrefSoundEffectsMuted = false;
 	private bool savedUserPrefBackgroundMusicMuted = false;
 	private DifficultyLevel savedUserPrefDifficulty = DifficultyLevel.Easy;
@@ -42,9 +45,11 @@ public class GameController : MonoBehaviour
 	public SplashController splashController = null;
 	public int jewelPoolSize = 20;
 	public int explosionPoolSize = 10;
+	public int fireworksPoolSize = 1;
 	private object lockObject = null;
 	private bool initialised = false;
 	private GameObjectPoolManager gameObjectPoolManager = null;
+	public Vector3 fireworksPosition = Vector3.zero;
 	
 	/// <summary>
 	/// Start this instance.
@@ -77,6 +82,7 @@ public class GameController : MonoBehaviour
 	{
 		gameObjectPoolManager.AddPools(jewelPrefabs, jewelPoolSize);
 		gameObjectPoolManager.AddPool(explosionPrefab, explosionPoolSize);
+		gameObjectPoolManager.AddPool(fireworksPrefab, fireworksPoolSize);
 	}
 	
 	/// <summary>
@@ -103,6 +109,8 @@ public class GameController : MonoBehaviour
 		result.GameStatePanel = gameStatePanel;
 		result.GameObjectPoolManager = gameObjectPoolManager;
 		result.StartCoroutineMethod = StartCoroutine;
+		result.FireworksPrefab = fireworksPrefab;
+		result.FireworksPosition = fireworksPosition;
 		return(result);
 	}
 
@@ -255,6 +263,10 @@ public class GameController : MonoBehaviour
 		}
 		if (Input.GetKeyUp (KeyCode.Menu) && !optionsController.OptionsShowing) {
 			ShowOptions ();
+		}
+		if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
+		{
+			logicInput.ForceGameWin = true;
 		}
 	}
 

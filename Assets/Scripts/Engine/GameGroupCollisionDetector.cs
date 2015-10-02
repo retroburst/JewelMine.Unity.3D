@@ -367,18 +367,29 @@ namespace JewelMine.Engine
 		/// <param name="member">The member.</param>
 		private void RemoveFromMine (CollisionGroupMember member)
 		{
-			MineObject target = state.Mine [member.Coordinates];
-			if (target != null && target == member.Jewel) {
-				Logger.LogFormat ("GameGroupCollisionDetector->RemoveFromMine: removed jewel {0} at {1}.", member.Jewel, member.Coordinates);
-				state.Mine [member.Coordinates] = null;
+			RemoveFromMine (member.Jewel, member.Coordinates);
+		}
+		
+		/// <summary>
+		/// Removes from mine.
+		/// </summary>
+		/// <param name="jewel">Jewel.</param>
+		/// <param name="coordinates">Coordinates.</param>
+		private void RemoveFromMine (Jewel jewel, Coordinates coordinates)
+		{
+			MineObject target = state.Mine [coordinates];
+			if (target != null && target == jewel) {
+				Logger.LogFormat ("GameGroupCollisionDetector->RemoveFromMine: removed jewel {0} at {1}.", jewel, coordinates);
+				state.Mine [coordinates] = null;
 			} else {
 				if (target == null) {
-					Logger.LogWarningFormat ("GameGroupCollisionDetector->RemoveFromMine: target was null, there was no jewel {0} at {1} as expected.", member.Jewel, member.Coordinates);
+					Logger.LogWarningFormat ("GameGroupCollisionDetector->RemoveFromMine: target was null, there was no jewel {0} at {1} as expected.", jewel, coordinates);
 				} else {
-					Logger.LogWarningFormat ("GameGroupCollisionDetector->RemoveFromMine: target does not equal expected jewel. Expected jewel {0} at {1}, but found {2}.", member.Jewel, member.Coordinates, target);
+					Logger.LogWarningFormat ("GameGroupCollisionDetector->RemoveFromMine: target does not equal expected jewel. Expected jewel {0} at {1}, but found {2}.", jewel, coordinates, target);
 				}
 			}
 		}
+
 
 	}
 }

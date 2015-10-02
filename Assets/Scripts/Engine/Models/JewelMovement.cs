@@ -36,7 +36,7 @@ namespace JewelMine.Engine.Models
 		/// For use when movement is a delta jewel.
 		/// </summary>
 		/// <value>The jewel group member.</value>
-		public JewelGroupMember JewelGroupMember {get; set;}
+		public JewelGroupMember JewelGroupMember { get; set;}
 
 		/// <summary>
 		/// Gets or sets the original coordinates.

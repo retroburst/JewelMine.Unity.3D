@@ -31,6 +31,29 @@ public static class Logger
 	}
 	
 	/// <summary>
+	/// Logs in the specified format.
+	/// </summary>
+	/// <param name="context">Context.</param>
+	/// <param name="format">Format.</param>
+	/// <param name="args">Arguments.</param>
+	public static void LogFormat (UnityEngine.Object context, string format, params object[] args)
+	{
+		if (Debug.isDebugBuild)
+			Debug.LogFormat (context, format, args);
+	}
+	
+	/// <summary>
+	/// Logs in the specified format.
+	/// </summary>
+	/// <param name="format">Format.</param>
+	/// <param name="args">Arguments.</param>
+	public static void LogFormat (string format, params object[] args)
+	{
+		if (Debug.isDebugBuild)
+			Debug.LogFormat (format, args);
+	}
+	
+	/// <summary>
 	/// Logs the error.
 	/// </summary>
 	/// <param name="message">Message.</param>
@@ -94,30 +117,7 @@ public static class Logger
 		if (Debug.isDebugBuild)
 			Debug.LogException (exception);
 	}
-	
-	/// <summary>
-	/// Logs in the specified format.
-	/// </summary>
-	/// <param name="context">Context.</param>
-	/// <param name="format">Format.</param>
-	/// <param name="args">Arguments.</param>
-	public static void LogFormat (UnityEngine.Object context, string format, params object[] args)
-	{
-		if (Debug.isDebugBuild)
-			Debug.LogFormat (context, format, args);
-	}
-	
-	/// <summary>
-	/// Logs in the specified format.
-	/// </summary>
-	/// <param name="format">Format.</param>
-	/// <param name="args">Arguments.</param>
-	public static void LogFormat (string format, params object[] args)
-	{
-		if (Debug.isDebugBuild)
-			Debug.LogFormat (format, args);
-	}
-	
+
 	/// <summary>
 	/// Logs the warning.
 	/// </summary>

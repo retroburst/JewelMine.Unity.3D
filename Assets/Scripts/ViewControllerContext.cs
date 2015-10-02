@@ -18,6 +18,18 @@ public class ViewControllerContext
 	/// </summary>
 	/// <value>The jewel prefabs.</value>
 	public List<GameObject> JewelPrefabs { get; set; }
+	
+	/// <summary>
+	/// Gets or sets the fireworks prefab.
+	/// </summary>
+	/// <value>The fireworks prefab.</value>
+	public GameObject FireworksPrefab { get; set; }
+	
+	/// <summary>
+	/// Gets or sets the fireworks position.
+	/// </summary>
+	/// <value>The fireworks position.</value>
+	public Vector3 FireworksPosition { get; set; }
 
 	/// <summary>
 	/// Gets or sets the collision material.

@@ -48,6 +48,7 @@ public class GameObjectPool
 				if (!pool [i].activeInHierarchy)
 					return(pool [i]);
 			}
+			Logger.LogWarning(string.Format("GameObjectPool->Take: creating a new instance of '{0}' as none available in game object pool.", targetPreFabrication.name));
 			GameObject newPooledObject = (GameObject)GameObject.Instantiate (targetPreFabrication);
 			newPooledObject.SetActive (false);
 			pool.Add (newPooledObject);

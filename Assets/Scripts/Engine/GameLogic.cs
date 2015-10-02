@@ -104,7 +104,7 @@ namespace JewelMine.Engine
 			// add a delta if required
 			ProcessAddDelta (logicUpdate);
 			// store and arrange the movements for this tick
-			ProcessJewelMovements (logicUpdate);			
+			ProcessJewelMovements (logicUpdate);		
 			// return the logic result
 			return (logicUpdate);
 		}
@@ -255,6 +255,11 @@ namespace JewelMine.Engine
 					StartGame (logicUpdate);
 					immediateReturn = false;
 				}
+			}
+			if(logicInput.ForceGameWin)
+			{
+				GameWon(logicUpdate);
+				immediateReturn = true;
 			}
 		}
 

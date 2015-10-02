@@ -25,6 +25,7 @@ namespace JewelMine.Engine.Models
 			ChangeDifficulty = false;
 			SaveGame = false;
 			LoadGame = false;
+			ForceGameWin = false;
 		}
 
 		/// <summary>
@@ -87,5 +88,11 @@ namespace JewelMine.Engine.Models
 		///   <c>true</c> if [load game]; otherwise, <c>false</c>.
 		/// </value>
 		public bool LoadGame { get; set; }
+		
+		/// <summary>
+		/// Gets or sets the force game win.
+		/// </summary>
+		/// <value><c>true</c> if force game window; otherwise, <c>false</c>.</value>
+		public bool ForceGameWin { get; set; }
 	}
 }

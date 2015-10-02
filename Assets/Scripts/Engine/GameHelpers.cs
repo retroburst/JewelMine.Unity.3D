@@ -69,6 +69,23 @@ namespace JewelMine.Engine
 		{
 			return ((float)TimeSpan.FromMilliseconds(source).TotalSeconds);
 		}
+		
+		/// <summary>
+		/// Randomize the specified list.
+		/// </summary>
+		/// <param name="list">List.</param>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
+		public static List<T> ShuffleList<T>(List<T> list)
+		{
+			List<T> result = new List<T>();
+			while (list.Count > 0)
+			{
+				int index = UnityEngine.Random.Range(0, list.Count);
+				result.Add(list[index]);
+				list.RemoveAt(index);
+			}
+			return(result);
+		}
 
     }
 }

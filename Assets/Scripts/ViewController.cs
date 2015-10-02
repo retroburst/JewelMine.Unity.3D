@@ -156,8 +156,9 @@ public class ViewController : IGameView
 	/// <param name="logicUpdate">Logic update.</param>
 	private void ProcessLevel (GameLogicUpdate logicUpdate)
 	{
-		if (logicUpdate.LevelIncremented || logicUpdate.DifficultyChanged)
-			context.LevelText.text = string.Format (context.ConfigurableSettings.GameMessageLevelPattern, stateProvider.State.Level);
+		if (logicUpdate.LevelIncremented || logicUpdate.DifficultyChanged) {
+			SetLevelText (stateProvider.State.Level);
+		}
 	}
 
 	/// <summary>
@@ -166,8 +167,27 @@ public class ViewController : IGameView
 	/// <param name="logicUpdate">Logic update.</param>
 	private void ProcessScore (GameLogicUpdate logicUpdate)
 	{
-		if (logicUpdate.FinalisedCollisions.Count > 0 || logicUpdate.DifficultyChanged)
-			context.ScoreText.text = string.Format (context.ConfigurableSettings.GameMessageScorePattern, stateProvider.State.Score.ToString (context.ConfigurableSettings.GameMessageScoreFormatString));
+		if (logicUpdate.FinalisedCollisions.Count > 0 || logicUpdate.DifficultyChanged) {
+			SetScoreText (stateProvider.State.Score);
+		}
+	}
+	
+	/// <summary>
+	/// Sets the level text.
+	/// </summary>
+	/// <param name="level">Level.</param>
+	private void SetLevelText (int level)
+	{
+		context.LevelText.text = string.Format (context.ConfigurableSettings.GameMessageLevelPattern, level);
+	}
+	
+	/// <summary>
+	/// Sets the score text.
+	/// </summary>
+	/// <param name="score">Score.</param>
+	private void SetScoreText (long score)
+	{
+		context.ScoreText.text = string.Format (context.ConfigurableSettings.GameMessageScorePattern, score.ToString (context.ConfigurableSettings.GameMessageScoreFormatString));
 	}
 
 	/// <summary>
@@ -282,6 +302,8 @@ public class ViewController : IGameView
 		jewels.ForEach (x => x.SetActive (false));
 		AddInitialJewelsToView ();
 		context.DifficultyText.text = stateProvider.State.Difficulty.DifficultyLevel.ToString ();
+		SetScoreText (stateProvider.State.Score);
+		SetLevelText (stateProvider.State.Level);
 	}
 	
 	/// <summary>
@@ -304,7 +326,13 @@ public class ViewController : IGameView
 			context.GameStateSubtext.text = string.Empty;
 			context.GameStatePanel.SetActive (false);
 		}
-
+		
+		// re-initialise view for these events
+		if (logicUpdate.DifficultyChanged || logicUpdate.GameLoaded || logicUpdate.GameWasRestarted) {
+			ReInitialiseView ();
+		}
+		
+		// if game won
 		if (stateProvider.State.PlayState == GamePlayState.GameWon) {
 			if (!animateGameWon) {
 				animateGameWon = true;
@@ -312,16 +340,6 @@ public class ViewController : IGameView
 			}
 		} else if (stateProvider.State.PlayState != GamePlayState.GameWon && animateGameWon) {
 			animateGameWon = false;
-		}
-
-		if (logicUpdate.DifficultyChanged) {
-			ReInitialiseView ();
-		}
-		if (logicUpdate.GameLoaded) {
-			ReInitialiseView ();
-		}
-		if (logicUpdate.GameWasRestarted) {
-			ReInitialiseView ();
 		}
 	}
 	
@@ -331,55 +349,15 @@ public class ViewController : IGameView
 	/// <returns>The game won.</returns>
 	private IEnumerator AnimateGameWon ()
 	{
-		GameObject[,] jewels = new GameObject[stateProvider.State.Mine.Columns, stateProvider.State.Mine.Depth];
-		// clear all jewels
-		GameObject[] activeJewels = GameObject.FindGameObjectsWithTag ("Jewel");
-		activeJewels.ForEach (x => x.SetActive (false));
-		
-		JewelType[] jewelTypes = (JewelType[])Enum.GetValues (typeof(JewelType)).Cast<JewelType> ().Where (x => x != JewelType.Unknown).ToArray ();
-		// fill the screen with jewels
-		for (int y=0; y < stateProvider.State.Mine.Depth; y++) {
-			for (int x=0; x < stateProvider.State.Mine.Columns; x++) {
-				JewelType type = jewelTypes [UnityEngine.Random.Range (0, jewelTypes.Length - 1)];
-				GameObject targetType = jewelTypeDictionary [type];
-				GameObject pooledJewelGameObject = context.GameObjectPoolManager.GetPool (targetType).Take (new Vector3 (x, y, 0), Quaternion.identity);
-				pooledJewelGameObject.SetActive (true);
-				jewels [x, y] = pooledJewelGameObject;
-				//yield return new WaitForSeconds(0.1f);
-			}
-		}
-		
+		GameObject fireworks = context.GameObjectPoolManager
+			.GetPool(context.FireworksPrefab)
+			.Take();
+		fireworks.transform.position = context.FireworksPosition;
+		fireworks.SetActive(true);
 		while (animateGameWon) {
-			// animate fireworks
-			for (int x=0; x < stateProvider.State.Mine.Columns; x++) {
-				jewels [x, 0].SetActive (false);
-				//yield return new WaitForSeconds(0.1f);
-			}
-			
-			for (int y=1; y < stateProvider.State.Mine.Depth; y++) {
-				for (int x=0; x < stateProvider.State.Mine.Columns; x++) {
-					GameObject go = jewels [x, y];
-					go.transform.position = new Vector3 (x, y - 1, 0.0f); //Vector3.Slerp (go.transform.position, new Vector3 (x, y - 1, 0.0f), 1.0f);
-					jewels [x, y - 1] = go;
-				}
-			}
-			
-			for (int x=0; x < stateProvider.State.Mine.Columns; x++) {
-				JewelType type = jewelTypes [UnityEngine.Random.Range (0, jewelTypes.Length - 1)];
-				int y = stateProvider.State.Mine.Depth-1;
-				GameObject targetType = jewelTypeDictionary [type];
-				GameObject pooledJewelGameObject = context.GameObjectPoolManager.GetPool (targetType).Take (new Vector3 (x, y, 0), Quaternion.identity);
-				pooledJewelGameObject.SetActive (true);
-				jewels [x, y] = pooledJewelGameObject;
-				//yield return new WaitForSeconds(0.1f);
-			}
-			
-			// retrn yield wait for seonds
-			yield return new WaitForSeconds (0.5f);
+			yield return new WaitForSeconds (1.0f);
 		}
-		// this is causing issues
-		//activeJewels = GameObject.FindGameObjectsWithTag ("Jewel");
-		//activeJewels.ForEach (x => x.SetActive (false));
+		fireworks.SetActive(false);
 		yield return(null);
 	}
 
