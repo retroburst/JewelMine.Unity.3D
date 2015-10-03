@@ -8,8 +8,6 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-//BUG: retart level leaves the score and level number same as before game was restarted
-
 /// <summary>
 /// Game controller manages the major components
 /// of the game and runs the game loop.
@@ -218,14 +216,14 @@ public class GameController : MonoBehaviour
 		}
 
 		if (gameLogic.State.PlayState == GamePlayState.NotStarted || gameLogic.State.PlayState == GamePlayState.Paused) {
-			if (Input.GetButtonUp ("Submit")) {
+			if (Input.GetButtonUp ("Submit") || Input.GetMouseButton(0)) {
 				logicInput.GameStarted = true;
 				return;
 			}
 		}
 
 		if (gameLogic.State.PlayState == GamePlayState.GameOver || gameLogic.State.PlayState == GamePlayState.GameWon) {
-			if (Input.GetButtonUp ("Submit")) {
+			if (Input.GetButtonUp ("Submit") || Input.GetMouseButton(0)) {
 				logicInput.RestartGame = true;
 				return;
 			}
