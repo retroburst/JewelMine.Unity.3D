@@ -1,4 +1,5 @@
 ﻿using JewelMine.Engine.Models;
+using UnityEngine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -85,6 +86,33 @@ namespace JewelMine.Engine
 				list.RemoveAt(index);
 			}
 			return(result);
+		}
+		
+		/// <summary>
+		/// Determines whether this instance is running on android.
+		/// </summary>
+		/// <returns><c>true</c> if this instance is running on android; otherwise, <c>false</c>.</returns>
+		public static bool IsRunningOnAndroid()
+		{
+			return(Application.platform == RuntimePlatform.Android);
+		}
+		
+		/// <summary>
+		/// Determines whether this instance is running on web GL.
+		/// </summary>
+		/// <returns><c>true</c> if this instance is running on web G; otherwise, <c>false</c>.</returns>
+		public static bool IsRunningOnWebGL()
+		{
+			return(Application.platform == RuntimePlatform.WebGLPlayer);
+		}
+		
+		/// <summary>
+		/// Determines whether this instance is running on IOS.
+		/// </summary>
+		/// <returns><c>true</c> if this instance is running on IO; otherwise, <c>false</c>.</returns>
+		public static bool IsRunningOnIOS()
+		{
+			return(Application.platform == RuntimePlatform.IPhonePlayer);
 		}
 
     }

@@ -9,12 +9,25 @@ using JewelMine.Engine;
 /// </summary>
 public class SplashController : MonoBehaviour
 {
+	/// <summary>
+	/// The splash panel game object.
+	/// </summary>
 	public GameObject splashPanelGameObject = null;
-
+	
+	/// <summary>
+	/// The play button text component.
+	/// </summary>
 	public Text playButtonTextComponent = null;
-
+	
+	/// <summary>
+	/// Gets a value indicating whether this <see cref="SplashController"/> splash showing.
+	/// </summary>
+	/// <value><c>true</c> if splash showing; otherwise, <c>false</c>.</value>
 	public bool SplashShowing { get; private set; }
 
+	/// <summary>
+	/// The objects to disable when splash displayed.
+	/// </summary>
 	public List<GameObject> disableWhenDisplayed = null;
 
 	/// <summary>

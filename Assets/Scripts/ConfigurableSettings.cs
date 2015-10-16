@@ -11,6 +11,9 @@ public class ConfigurableSettings : MonoBehaviour {
 	public string GameMessagePausedText = "PAUSED";
 	public string GameMessagePausedSubtext = "Press submit to continue...";
 	
+	public string GameMessageNotStartedText = "READY?";
+	public string GameMessageNotStartedSubtext = "Press submit to play...";
+	
 	public string GameMessageGameOverText = "GAME OVER!";
 	public string GameMessageGameOverSubtext = "Press submit to restart.";
 	

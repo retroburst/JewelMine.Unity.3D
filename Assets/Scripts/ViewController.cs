@@ -33,6 +33,7 @@ public class ViewController : IGameView
 		gameMessageController = new GameMessageController (context.GameMessageSlots, context.ConfigurableSettings.GameMessageVisibleTime);
 		AddInitialJewelsToView ();
 		context.DifficultyText.text = stateProvider.State.Difficulty.DifficultyLevel.ToString ();
+		context.GameStatePanel.SetActive(false);
 	}
 
 	/// <summary>
@@ -313,14 +314,22 @@ public class ViewController : IGameView
 	{
 		if (stateProvider.State.PlayState != GamePlayState.Playing) {
 			if (stateProvider.State.PlayState == GamePlayState.NotStarted) {
-				context.SplashController.ShowSplashPanel (stateProvider.State.PlayState);
+				// don't display the splash on web gl - the icon doesn't render well
+				if(!GameHelpers.IsRunningOnWebGL())
+				{
+					context.SplashController.ShowSplashPanel (stateProvider.State.PlayState);
+				}
 			}
 			string stateText = string.Empty;
 			string stateSubtext = string.Empty;
 			GetGameStateText (out stateText, out stateSubtext);
 			context.GameStateText.text = stateText;
 			context.GameStateSubtext.text = stateSubtext;
-			context.GameStatePanel.SetActive (true);
+			// don't show the state panel if the splash or options menu are showing
+			if(!context.SplashController.SplashShowing && !context.OptionsController.OptionsShowing) 
+			{
+				context.GameStatePanel.SetActive (true);
+			}
 		} else {
 			context.GameStateText.text = string.Empty;
 			context.GameStateSubtext.text = string.Empty;
@@ -403,6 +412,10 @@ public class ViewController : IGameView
 		case GamePlayState.Paused:
 			stateText = context.ConfigurableSettings.GameMessagePausedText;
 			stateSubText = context.ConfigurableSettings.GameMessagePausedSubtext;
+			break;
+		case GamePlayState.NotStarted:
+			stateText = context.ConfigurableSettings.GameMessageNotStartedText;
+			stateSubText = context.ConfigurableSettings.GameMessageNotStartedSubtext;
 			break;
 		}
 	}
